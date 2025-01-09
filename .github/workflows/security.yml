@@ -1,0 +1,14 @@
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 3 * * *"
+
+jobs:
+  drupal_security:
+    name: Drupal security
+    uses: digitalpolygon/github-actions-library/.github/workflows/drupal_security.yml@1.0.0

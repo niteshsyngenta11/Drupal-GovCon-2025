@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# ###
+# Deploys Leaf Home Mapletree project Pantheon multidev and dev environments.
+# ###
+
+# Exit if anything fails
+set -eo pipefail
+
+# Cut gitignore at the cut mark.
+terminus build:gitignore:cut
+
+# Authenticate with Terminus
+terminus -n auth:login --machine-token="$TERMINUS_TOKEN"
+
+# Environment from which multidevs will be created.
+CREATE_MDS_FROM="dev"
+TERMINUS_ENV="dev"
+
+# If its a PR to development or production branch, create a multidev.
+if [[ -n "$PR_NUMBER" ]] ; then
+  TERMINUS_ENV="pr-${PR_NUMBER}"
+fi
+
+echo "Preparing $TERMINUS_ENV multidev from $CREATE_MDS_FROM for $TERMINUS_SITE"
+
+set +e
+  TERMINUS_ENV_EXISTS=$(terminus env:list "$TERMINUS_SITE" --field=ID | grep -w $TERMINUS_ENV)
+set -e
+
+if [[ -z "$TERMINUS_ENV_EXISTS" ]]
+  then
+    echo "Site $TERMINUS_SITE does not have a $TERMINUS_ENV multidev. Creating multidev from $CREATE_MDS_FROM..."
+    terminus -n build:env:create "$TERMINUS_SITE.$CREATE_MDS_FROM" "$TERMINUS_ENV" --pr-id="$PR_NUMBER" --yes --db-only
+  else
+    echo "Pushing to TERMINUS_ENV $TERMINUS_ENV on $TERMINUS_SITE"
+    # Push to Pantheon
+    terminus -n build:env:push "$TERMINUS_SITE.$TERMINUS_ENV" --yes
+fi
+
+# Clear the environment cache
+terminus -n env:clear-cache "$TERMINUS_SITE.$TERMINUS_ENV"
+
+# Delete old multidev environments associated
+# with a PR that has been merged or closed.
+terminus -n build:env:delete:pr "$TERMINUS_SITE" --yes

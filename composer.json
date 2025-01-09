@@ -23,7 +23,8 @@
         "drupal/gutenberg": "^3.0@dev",
         "drupal/gutenberg_starter": "^1.1",
         "drupal/twig_debugger": "^1.1",
-        "drush/drush": "^13.3"
+        "drush/drush": "^13.3",
+        "pantheon-systems/drupal-integrations": "^11.0"
     },
     "conflict": {
         "drupal/drupal": "*"
