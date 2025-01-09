@@ -1,0 +1,24 @@
+# Ignore IDE settings.
+/.idea/
+
+# Ignore scratch space.
+/scratch/
+
+# Compose-managed files.
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+
+# Ignore configuration files that may contain sensitive information.
+/web/sites/*/services*.yml
+
+# Ignore paths that contain user-generated content.
+/web/sites/default/files/
+/web/sites/default/private/
+/private_files/
+
+node_modules
+/.drush-lock-update
+.phpcs-cache

@@ -1,0 +1,21 @@
+.image-card {
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+
+  .image-card-button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+  }
+}

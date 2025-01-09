@@ -1,0 +1,7 @@
+name: Cambridge Blocks (New and improved)
+type: module
+description: Cambridge blocks for Gutenberg.
+package: Gutenberg
+core_version_requirement: ^9.5 || ^10 || ^11
+dependencies:
+  - gutenberg:gutenberg

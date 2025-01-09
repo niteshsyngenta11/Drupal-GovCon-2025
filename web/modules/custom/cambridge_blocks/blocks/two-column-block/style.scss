@@ -1,0 +1,11 @@
+.two-column-block {
+  .wp-block-column {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    p {
+      margin: 24px;
+    }
+  }
+}
