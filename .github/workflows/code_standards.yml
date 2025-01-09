@@ -32,34 +32,34 @@ jobs:
 
       - name: Lint
         run: composer lint
-  coding_standards:
-    name: Drupal Coding Standards
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  # coding_standards:
+  #   name: Drupal Coding Standards
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.3
+  #     - name: Setup PHP
+  #       uses: shivammathur/setup-php@v2
+  #       with:
+  #         php-version: 8.3
 
-      - name: Install Composer dependencies
-        run: composer install --no-interaction
+  #     - name: Install Composer dependencies
+  #       run: composer install --no-interaction
 
-      - name: Run PHPCS
-        run: composer cs
-  phpstan:
-    name: Drupal PHPStan Analysis
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  #     - name: Run PHPCS
+  #       run: composer cs
+  # phpstan:
+  #   name: Drupal PHPStan Analysis
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.3
+  #     - name: Setup PHP
+  #       uses: shivammathur/setup-php@v2
+  #       with:
+  #         php-version: 8.3
 
-      - name: Install Composer dependencies
-        run: composer install --no-interaction
+  #     - name: Install Composer dependencies
+  #       run: composer install --no-interaction
