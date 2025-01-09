@@ -32,7 +32,7 @@ if (!defined("PANTHEON_VERSION")) {
 $pantheon_services_file = __DIR__ . '/services.pantheon.preproduction.yml';
 if (
   isset($_ENV['PANTHEON_ENVIRONMENT']) &&
-  (($_ENV['PANTHEON_ENVIRONMENT'] == 'live') || ($_ENV['PANTHEON_ENVIRONMENT'] == 'test'))
+  ( ($_ENV['PANTHEON_ENVIRONMENT'] == 'live') || ($_ENV['PANTHEON_ENVIRONMENT'] == 'test') )
 ) {
   $pantheon_services_file = __DIR__ . '/services.pantheon.production.yml';
 }
@@ -68,8 +68,7 @@ $is_installer_url = (strpos($_SERVER['SCRIPT_NAME'], '/core/install.php') === 0)
 if (empty($settings['config_sync_directory'])) {
   if ($is_installer_url) {
     $settings['config_sync_directory'] = 'sites/default/files';
-  }
-  else {
+  } else {
     $settings['config_sync_directory'] = getenv('DOCROOT') ? '../config' : 'sites/default/config';
   }
 }
@@ -109,7 +108,7 @@ if (isset($_SERVER['PRESSFLOW_SETTINGS'])) {
   foreach ($pressflow_settings as $key => $value) {
     // One level of depth should be enough for $conf and $database.
     if ($key == 'conf') {
-      foreach ($value as $conf_key => $conf_value) {
+      foreach($value as $conf_key => $conf_value) {
         $conf[$conf_key] = $conf_value;
       }
     }
@@ -171,11 +170,11 @@ if (isset($_ENV['PANTHEON_ROLLING_TMP']) && isset($_ENV['PANTHEON_DEPLOYMENT_IDE
 
 /**
  * Install the Pantheon Service Provider to hook Pantheon services into
- * Drupal 8. This service provider handles operations such as clearing the
+ * Drupal 11. This service provider handles operations such as clearing the
  * Pantheon edge cache whenever the Drupal cache is rebuilt.
  */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $GLOBALS['conf']['container_service_providers']['PantheonServiceProvider'] = '\Pantheon\Internal\PantheonServiceProvider';
+  $GLOBALS['conf']['container_service_providers']['PantheonServiceProvider'] = '\Pantheon\Internal\PantheonServiceProvider11';
 }
 
 /**
