@@ -1,0 +1,22 @@
+uuid: 8b1f1337-4c6e-4373-b9d7-b5d7bf7cdfa5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: 7vI48WhpM7N-P51FCFZ_8hIZ0D04_T-atJ3HDs9EkHc
+id: gutenberg_starter_content
+theme: gutenberg_starter
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

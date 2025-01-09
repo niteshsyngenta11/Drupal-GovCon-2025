@@ -1,0 +1,22 @@
+uuid: 96e10874-6379-4285-a994-91cdae7a918c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: zHdwtEz6MbRgdG8A0BQD6PKjm2cefepEef54BQUY7QY
+id: gutenberg_starter_breadcrumbs
+theme: gutenberg_starter
+region: breadcrumb
+weight: -8
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

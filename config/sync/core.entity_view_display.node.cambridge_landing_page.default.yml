@@ -1,0 +1,28 @@
+uuid: 9910ef62-e108-47f6-95cf-ff5e65cb6695
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cambridge_landing_page.field_components
+    - node.type.cambridge_landing_page
+  module:
+    - text
+    - user
+id: node.cambridge_landing_page.default
+targetEntityType: node
+bundle: cambridge_landing_page
+mode: default
+content:
+  field_components:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

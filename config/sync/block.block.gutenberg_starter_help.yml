@@ -1,0 +1,31 @@
+uuid: 2d061fbf-9260-4d5c-a711-f6342a6feebf
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+    - node
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: ZY2ctexVa9q5YGtlLBMfzk9odps83l3lOAa29MAHmDg
+id: gutenberg_starter_help
+theme: gutenberg_starter
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page

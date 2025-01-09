@@ -1,0 +1,18 @@
+uuid: ae50b93e-7e5e-4aa7-8ffe-78267314a97b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Cambridge Landing Page'
+type: cambridge_landing_page
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

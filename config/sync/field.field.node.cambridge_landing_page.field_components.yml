@@ -1,0 +1,24 @@
+uuid: 5fed1a16-3254-43d5-81dc-003bed2e172d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - filter.format.gutenberg
+    - node.type.cambridge_landing_page
+  module:
+    - text
+id: node.cambridge_landing_page.field_components
+field_name: field_components
+entity_type: node
+bundle: cambridge_landing_page
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - gutenberg
+field_type: text_long

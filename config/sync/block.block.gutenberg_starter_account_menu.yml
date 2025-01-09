@@ -1,0 +1,27 @@
+uuid: 4a3126f6-7ed5-42ab-ac34-5398f38b25ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: u119Yy72T03YyfVGqWdi2GZh-wGlDEfnTVzYnNF8uIk
+id: gutenberg_starter_account_menu
+theme: gutenberg_starter
+region: menu
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

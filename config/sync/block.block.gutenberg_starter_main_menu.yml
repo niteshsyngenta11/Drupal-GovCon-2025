@@ -1,0 +1,27 @@
+uuid: fc8016b6-352a-4ad6-b500-5c01ac6a3fe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: EnTj9MBKg0Mi7addiZEHPbypf3_xBspk_jDUSQI9DWk
+id: gutenberg_starter_main_menu
+theme: gutenberg_starter
+region: menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

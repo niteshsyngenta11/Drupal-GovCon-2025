@@ -1,0 +1,48 @@
+cambridge_landing_page_allowed_blocks:
+  - core-embed/facebook
+  - core-embed/flickr
+  - core-embed/instagram
+  - core-embed/soundcloud
+  - core-embed/spotify
+  - core-embed/twitter
+  - core-embed/vimeo
+  - core-embed/youtube
+  - core/audio
+  - core/block
+  - core/button
+  - core/buttons
+  - core/code
+  - core/column
+  - core/columns
+  - core/cover
+  - core/details
+  - core/embed
+  - core/file
+  - core/gallery
+  - core/group
+  - core/html
+  - core/image
+  - core/media-text
+  - core/preformatted
+  - core/pullquote
+  - core/quote
+  - core/separator
+  - core/spacer
+  - core/table
+  - core/text-columns
+  - core/verse
+  - core/video
+  - media/all
+cambridge_landing_page_allowed_content_block_types: {  }
+cambridge_landing_page_allowed_drupal_blocks:
+  - search_form_block
+  - system_breadcrumb_block
+cambridge_landing_page_enable_full: true
+cambridge_landing_page_template: ''
+cambridge_landing_page_template_lock: none
+cambridge_landing_page_allowed_image_styles:
+  full: full
+  large: large
+  medium: medium
+  thumbnail: thumbnail
+  wide: wide

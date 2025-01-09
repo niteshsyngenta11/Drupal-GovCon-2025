@@ -1,0 +1,22 @@
+uuid: 43f64e6b-5f26-4a1d-9b6a-abfb03476c44
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: rcx9eq8UU_mcB_kkLoL-hZI78ljtT-8stnCM37cETds
+id: gutenberg_starter_messages
+theme: gutenberg_starter
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

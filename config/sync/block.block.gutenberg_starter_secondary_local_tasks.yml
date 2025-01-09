@@ -1,0 +1,22 @@
+uuid: bc65f07f-af83-4b3d-a574-95caea048552
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: lZDtHSpfh7p6-kkmuRbqLm74aTNXgIICHmuvMKeOlGo
+id: gutenberg_starter_secondary_local_tasks
+theme: gutenberg_starter
+region: tabs
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }
