@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a3e9287d597e08f1e3907e3f3b79bcd",
+    "content-hash": "9fcdcb4acf1da2875d2ab1d1da0995b2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1600,55 +1600,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/gutenberg",
                 "issues": "https://www.drupal.org/project/issues/gutenberg"
-            }
-        },
-        {
-            "name": "drupal/gutenberg_starter",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/gutenberg_starter.git",
-                "reference": "1.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gutenberg_starter-1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": "e1bb12c6272d7be2f9f1f592097caded2a1541f1"
-            },
-            "require": {
-                "drupal/core": "^10 || ^11",
-                "drupal/gutenberg": "*"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "drupal": {
-                    "version": "1.1.0",
-                    "datestamp": "1723459969",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "marcofernandes",
-                    "homepage": "https://www.drupal.org/user/2127558"
-                },
-                {
-                    "name": "thorandre",
-                    "homepage": "https://www.drupal.org/user/223878"
-                }
-            ],
-            "description": "A good starting point for developers to create a custom theme for Drupal Gutenberg content.<br/><a href='https://www.drupal.org/docs/contributed-themes/gutenberg_starter'>Check theme's documentation.</a><br/>\nInstall/enable Gutenberg module before enabling this theme.\n<div role=\"contentinfo\" aria-labelledby=\"message-warning-title\" class=\"messages-list__item messages messages--warning\">\n  <div class=\"messages__header\">\n    <h2 id=\"message-warning-title\" class=\"messages__title\">\n      Warning\n    </h2>\n  </div>\n  <div class=\"messages__content\">\n    This theme is not intended to be used in production environments, just as a reference.\n  </div>\n</div>",
-            "homepage": "https://www.drupal.org/project/gutenberg_starter",
-            "support": {
-                "source": "https://git.drupalcode.org/project/gutenberg_starter"
             }
         },
         {
