@@ -1,0 +1,15 @@
+/* Styles Applied in FE */
+.wp-block-columns {
+    max-width: 670px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-block-columns.alignwide {
+    max-width: 954px;
+}
+
+.wp-block-columns.alignfull,
+.wp-block-columns.alignfull.alignwide {
+    max-width: none;
+}
