@@ -21,7 +21,7 @@ env:
   GITHUB_OWNER: ${{ github.repository_owner }}
   PRODUCTION_BRANCH: "main"
   PR_NUMBER: ${{ github.event.number }}
-  TERMINUS_SITE: "drutten"
+  TERMINUS_SITE: "drupal-govcon"
 
 jobs:
   build:
