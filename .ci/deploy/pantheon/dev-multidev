@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ###
-# Deploys Leaf Home Mapletree project Pantheon multidev and dev environments.
+# Deploys govcon project Pantheon multidev and dev environments.
 # ###
 
 # Exit if anything fails
@@ -40,6 +40,11 @@ fi
 
 # Clear the environment cache
 terminus -n env:clear-cache "$TERMINUS_SITE.$TERMINUS_ENV"
+
+# Run Drush cim and clear cache
+echo "Importing configuration on $TERMINUS_ENV..."
+terminus -n remote:drush "$TERMINUS_SITE.$TERMINUS_ENV" -- cim -y
+terminus -n remote:drush "$TERMINUS_SITE.$TERMINUS_ENV" -- cr
 
 # Delete old multidev environments associated
 # with a PR that has been merged or closed.
