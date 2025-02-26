@@ -96,6 +96,20 @@ jobs:
         run: |
           composer install --optimize-autoloader --no-progress --no-dev
 
+      # - name: Install DDEV
+      #   run: |
+      #     LATEST_DDEV_VERSION=$(curl -s https://api.github.com/repos/ddev/ddev/releases/latest | jq -r '.tag_name')
+      #     wget "https://github.com/ddev/ddev/releases/download/${LATEST_DDEV_VERSION}/ddev_linux_amd64.deb"
+      #     sudo dpkg -i ddev_linux_amd64.deb
+      #     ddev --version
+      #     ddev config global --instrumentation-opt-in=false --omit-containers=ddev-ssh-agent
+
+      # - name: Start DDEV
+      #   run: ddev start
+
+      # - name: Run Frontend Production Build
+      #   run: ddev frontend prod
+
       # Deploy to Pantheon
       - name: Deploy to Pantheon
         env:

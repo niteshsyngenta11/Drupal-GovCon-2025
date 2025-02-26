@@ -1,0 +1,52 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
+$radius: 0.35rem;
+$border-width: 2px;
+$color-bg: transparent;
+$offset: 4px;
+$transition: 0.3s;
+
+button {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  border: solid $border-width map.get(color.$colors, "heading-primary");
+  outline: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+  background-color: $color-bg;
+  border-radius: $radius;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: map.get(color.$colors, "heading-primary");
+
+  &.primary::after {
+    background-color: map.get(color.$colors, "primary-lighter");
+  }
+
+  &.secondary::after {
+    background-color: map.get(color.$colors, "secondary");
+  }
+
+  &::after {
+    content: "";
+    border: 0;
+    top: $offset;
+    left: $offset;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: $radius;
+    transition: all $transition ease-in-out;
+  }
+
+  &:hover::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

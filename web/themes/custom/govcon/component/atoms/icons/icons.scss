@@ -1,0 +1,58 @@
+@use "sass:string";
+
+$uniqueid: string.unique-id();
+
+@font-face {
+  font-family: 'icon--font';
+  src: url('assets/fonts/icons/icon--font.eot?v=#{$uniqueid}');
+  src: url('assets/fonts/icons/icon--font.eot?v=#{$uniqueid}#iefix') format('eot'),
+    url('assets/fonts/icons/icon--font.woff?v=#{$uniqueid}') format('woff'),
+    url('assets/fonts/icons/icon--font.ttf?v=#{$uniqueid}') format('truetype');
+  font-display: swap;
+}
+
+@mixin icon-styles {
+  font-family: 'icon--font', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+  line-height: 1;
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: '';
+
+  @if $filename == facebook {
+    $char: '\e901';
+  }
+  @if $filename == x {
+    $char: '\e900';
+  }
+
+  @return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %icon;
+    }
+    @else {
+      @include icon-styles;
+    }
+    content: icon-char($filename);
+  }
+}
+
+$icons-values: (
+  facebook: facebook,
+  x: x,
+);

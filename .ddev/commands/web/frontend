@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+## Description: Command to build theme and storybook.
+## Usage: frontend [flags]
+## Example: frontend dev|prod|watch:theme|watch:storybook
+## Flags: []
+set -eo pipefail
+
+echo "Running frontend build..."
+cd web/themes/custom/govcon
+yarn install
+
+run_prod_build() {
+  echo "Running Production Build"
+  yarn prod && yarn build-storybook
+}
+
+run_dev_build() {
+  echo "Running Dev Build"
+  yarn dev && yarn build-storybook
+}
+
+run_watch_theme() {
+  echo "Watching changes for theme"
+  yarn watch
+}
+
+run_watch_storybook() {
+  echo "Watching changes for storybook"
+  yarn storybook
+}
+
+if [ $# -eq 0 ] ; then
+  run_prod_build
+  exit
+fi
+
+case $1 in
+  dev)
+    run_dev_build
+    ;;
+  prod)
+    run_prod_build
+    ;;
+  watch:theme)
+    run_watch_theme
+    ;;
+  watch:storybook)
+    run_watch_storybook
+    ;;
+esac

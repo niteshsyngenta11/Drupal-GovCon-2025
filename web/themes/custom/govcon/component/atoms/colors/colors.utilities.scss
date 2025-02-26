@@ -1,0 +1,11 @@
+@use "./color.scss" as color;
+@use "sass:map";
+
+@each $color-name, $color-value in color.$colors {
+  .bg-#{$color-name} {
+    background-color: map.get(color.$colors, $color-name) !important;
+  }
+  .text-#{$color-name} {
+    color: map.get(color.$colors, $color-name) !important;
+  }
+}

@@ -1,0 +1,7 @@
+primary:
+  label: "Button"
+  modifier: "primary"
+
+secondary:
+  label: "Button"
+  modifier: "secondary"

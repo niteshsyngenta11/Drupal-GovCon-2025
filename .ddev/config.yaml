@@ -1,4 +1,4 @@
-name: drupal-gutenberg
+name: drupal-govcon
 type: drupal11
 docroot: web
 php_version: "8.3"
@@ -12,7 +12,18 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
+nodejs_version: "22"
 corepack_enable: true
+webimage_extra_packages:
+  - yarn
+hooks:
+  post-start:
+    - exec: "corepack enable && yarn set version stable"
+web_extra_exposed_ports:
+    - name: storybook
+      container_port: 6006
+      http_port: 6007
+      https_port: 6006
 
 # Key features of DDEV's config.yaml:
 

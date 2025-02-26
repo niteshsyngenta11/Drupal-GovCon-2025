@@ -1,0 +1,41 @@
+{
+  "name": "govcon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006 --ci",
+    "build-storybook": "storybook build",
+    "prod": "yarn build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@storybook/addon-essentials": "^8.5.8",
+    "@storybook/addon-interactions": "^8.5.8",
+    "@storybook/addon-onboarding": "^8.5.1",
+    "@storybook/blocks": "^8.5.1",
+    "@storybook/builder-vite": "^8.5.8",
+    "@storybook/html": "^8.5.8",
+    "@storybook/html-vite": "^8.5.8",
+    "@storybook/test": "^8.5.8",
+    "glob": "^11.0.1",
+    "path": "^0.12.7",
+    "prettier": "^3.5.2",
+    "prop-types": "^15.8.1",
+    "sass": "^1.85.1",
+    "storybook": "^8.5.1",
+    "vite": "^6.2.0",
+    "vite-plugin-twig": "^2.1.1",
+    "vite-plugin-twig-drupal": "^1.6.0"
+  },
+  "packageManager": "yarn@4.6.0",
+  "dependencies": {
+    "twig-loader": "^0.5.5",
+    "yaml-loader": "^0.8.1"
+  }
+}

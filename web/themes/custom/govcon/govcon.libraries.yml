@@ -1,0 +1,7 @@
+global-styling:
+  css:
+    theme:
+      dist/style.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

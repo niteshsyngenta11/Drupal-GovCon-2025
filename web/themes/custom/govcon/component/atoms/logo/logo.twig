@@ -1,0 +1,8 @@
+<div class="logo">
+  {% if variant == 'primary' %}
+    <img
+  src="{{ primary_logo }}" alt="Primary Logo" />
+    {% elseif variant == 'secondary' %}
+    <img src="{{ secondary_logo }}" alt="Secondary Logo" />
+  {% endif %}
+</div>

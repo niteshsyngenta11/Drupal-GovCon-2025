@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import buttonStories from "./button.stories";
+import buttonTwig from "./button.twig";
+import "./_button.scss";
+
+<Meta title="Atoms/Button" of={buttonStories} />
+
+# Button
+
+Buttons trigger actions in your application. Use them wisely.
+
+## Variants
+
+### Primary Button
+
+A button with primary emphasis.
+
+<Canvas>
+  <Story name="Primary">
+    {buttonTwig({ label: "Primary Button", modifier: "primary" })}
+  </Story>
+</Canvas>
+
+### Secondary Button
+
+A button with secondary emphasis.
+
+<Canvas>
+  <Story name="Secondary">
+    {buttonTwig({ label: "Secondary Button", modifier: "secondary" })}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgTypes of={buttonStories} /> 
