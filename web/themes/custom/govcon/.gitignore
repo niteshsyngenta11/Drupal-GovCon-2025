@@ -1,3 +1,5 @@
 storybook-static
 dist
 .yarn
+
+*storybook.log

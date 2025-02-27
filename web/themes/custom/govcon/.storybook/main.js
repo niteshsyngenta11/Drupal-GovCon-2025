@@ -1,54 +1,68 @@
-import path from "path";
-import { glob } from "glob";
+/** @type { import('@storybook/html-webpack5').StorybookConfig } */
+const path = require('path');
 
-/** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
+  stories: ["../components/**/*.mdx", "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  addons: [
+    "@storybook/addon-webpack5-compiler-swc",
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-a11y",
+    // "@chromatic-com/storybook",
+    "@storybook/addon-interactions",
+    {
+      name: '@storybook/addon-styling-webpack',
+      options: {
+        rules: [
+          {
+            test: /\.s[ac]ss$/i,
+            use: [
+              "style-loader",
+              "css-loader",
+              {
+                loader: "sass-loader",
+                options: {
+                  sourceMap: true,
+                  implementation: require.resolve("sass")
+                }
+              },
+            ],
+          },
+        ]
+      }
+    }
+  ],
   framework: {
-    name: "@storybook/html-vite",
+    name: "@storybook/html-webpack5",
     options: {},
   },
-  stories: [
-    "../component/**/*.mdx",
-    "../component/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  addons: ["@storybook/addon-essentials"],
-  viteFinal: async (config) => {
-    const aliases = {
-      "@atoms": path.resolve(__dirname, "../component/atoms"),
-      "@molecules": path.resolve(__dirname, "../component/molecules"),
-      "@organisms": path.resolve(__dirname, "../component/organisms"),
-      "@templates": path.resolve(__dirname, "../component/templates"),
-      "@pages": path.resolve(__dirname, "../component/pages"),
-      "assets": path.resolve(__dirname, "../assets"),
-    };
-
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      ...aliases,
-    };
-
-    // Generate CSS files is dist folder
-    const scssFiles = glob.sync("component/**/*.scss");
-    const outputPaths = scssFiles.map((sourcePath) => {
-      const relativePath = path.relative(path.resolve(__dirname, "../"), sourcePath);
-      return path.join("", relativePath.replace(/\.scss$/, ".css"));
-    });
-    config.build = {
-      rollupOptions: {
-        output: {
-          assetFileNames: (assetInfo) => {
-            if (assetInfo.name.endsWith(".css")) {
-              const matchedPath = outputPaths.find((p) => p.endsWith(assetInfo.name));
-              return matchedPath || `[name][extname]`;
-            }
-            return "[name]-[hash][extname]";
-          },
-        },
-      },
-    };
-
-    return config;
+  docs: {
+    autodocs: "tag",
   },
+  staticDirs: ['../assets'],
+  webpackFinal: async(config) => {
+    config.module.rules.push(
+      {
+        test: /\.twig$/,
+        use: "twigjs-loader",
+      },
+      {
+        test: /\.ya?ml$/,
+        use: "yaml-loader",
+      }
+    );
+    const alises = {
+      "@atoms": path.resolve(__dirname, '../', 'components/atoms'),
+      "@molecules": path.resolve(__dirname, '../', 'components/molecules'),
+      "@organisms": path.resolve(__dirname, '../', 'components/organisms'),
+      "@templates": path.resolve(__dirname, '../', 'components/templates'),
+      "@pages": path.resolve(__dirname, '../', 'components/pages'),
+      "bootstrap": path.resolve(__dirname, '../', 'node_modules/bootstrap'),
+      "assets": path.resolve(__dirname, '../', 'assets'),
+      "lite-youtube-embed": path.resolve(__dirname, '../', 'node_modules/lite-youtube-embed'),
+    };
+    Object.assign(config.resolve.alias, alises);
+    return config;
+  }
 };
-
 export default config;

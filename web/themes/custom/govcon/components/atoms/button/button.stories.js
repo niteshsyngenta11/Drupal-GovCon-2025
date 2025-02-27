@@ -1,6 +1,6 @@
 // button.stories.js
 import Button from './button.twig';
-import './_button.scss';
+import './button.scss';
 import buttonData from "./button.data.yml";
 
 export default {

@@ -1,7 +1,14 @@
-/** @type { import('@storybook/react').Preview } */
-import '/component/style.scss';
-import '/component/style-storybook.scss';
+/** @type { import('@storybook/html').Preview } */
+// import Twig from "twig";
+// import { setupTwig } from "./setupTwig";
 
+// Add style to storybook.
+import '../components/style.scss';
+import '../components/style-storybook.scss';
+
+// setupTwig(Twig);
+
+// Add viewports for our example device widths.
 const deviceViewports = {
   phone: {
     name: 'Phone',
@@ -62,11 +69,20 @@ const preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages', '*'],
+      },
+    },
     viewport: {
       viewports: deviceViewports,
     },
+    docs: {
+      toc: true,
+    },
     layout: 'fullscreen',
-  },
+  }
 };
 
 export default preview;
