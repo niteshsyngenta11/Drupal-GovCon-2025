@@ -10,6 +10,7 @@ dependencies:
     - comment
     - contextual
     - file
+    - govcon_custom
     - node
     - path
     - system
@@ -41,6 +42,7 @@ permissions:
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
+  - 'manage custom settings'
   - 'revert all revisions'
   - 'view all revisions'
   - 'view own unpublished content'

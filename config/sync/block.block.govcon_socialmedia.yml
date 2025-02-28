@@ -1,0 +1,25 @@
+uuid: 6bbd4e6e-3d31-4d30-9d4a-a60f9c9973f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-media
+  module:
+    - system
+  theme:
+    - govcon
+id: govcon_socialmedia
+theme: govcon
+region: footer
+weight: -1
+provider: null
+plugin: 'system_menu_block:social-media'
+settings:
+  id: 'system_menu_block:social-media'
+  label: 'Social Media'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

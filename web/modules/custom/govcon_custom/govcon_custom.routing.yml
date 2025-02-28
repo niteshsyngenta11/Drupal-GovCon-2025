@@ -1,0 +1,15 @@
+govcon_custom.settings:
+  path: '/admin/config/govcon-custom'
+  defaults:
+    _controller: '\Drupal\govcon_custom\Controller\GovConCustomController::overview'
+    _title: 'GovCon Custom'
+  requirements:
+    _permission: 'access administration pages'
+
+govcon_custom.footer_settings_form:
+  path: '/admin/config/govcon-custom/footer-settings'
+  defaults:
+    _form: '\Drupal\govcon_custom\Form\FooterSettingsForm'
+    _title: 'Footer Settings'
+  requirements:
+    _permission: 'manage custom footer configurations'

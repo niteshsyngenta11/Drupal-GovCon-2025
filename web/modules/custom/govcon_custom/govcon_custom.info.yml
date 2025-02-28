@@ -1,0 +1,5 @@
+name: 'GovCon Custom'
+type: module
+description: 'Provides custom configuration for the site.'
+core_version_requirement: ^10 || ^11
+package: GovCon

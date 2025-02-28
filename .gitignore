@@ -22,3 +22,6 @@
 node_modules
 /.drush-lock-update
 .phpcs-cache
+
+# Ignore .vscode folder.
+.vscode/

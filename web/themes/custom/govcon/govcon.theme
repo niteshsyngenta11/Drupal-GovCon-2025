@@ -1,2 +1,25 @@
 <?php
 
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function govcon_preprocess_page(array &$variables) {
+  $config = \Drupal::config('govcon_footer_settings.settings');
+  // Prepare footer data.
+  $footer_data = [
+    'footer_image' => '',
+    'footer_description' => $config->get('footer_description') ?? '',
+    'footer_cta_label' => $config->get('footer_cta_label') ?? '',
+    'footer_cta_url' => $config->get('footer_cta_url') ?? '',
+  ];
+  // Load the footer image if it's set.
+  if ($fid = $config->get('footer_image')) {
+    if ($file = File::load($fid)) {
+      $footer_data['footer_image'] = $file->getFileUri();
+    }
+  }
+  // Pass the footer data to the page template.
+  $variables['footer_data'] = $footer_data;
+}

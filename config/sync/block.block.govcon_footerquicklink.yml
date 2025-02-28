@@ -1,0 +1,25 @@
+uuid: 2b22ede2-1b3b-4359-bf0b-099443c4964c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-quick-link
+  module:
+    - system
+  theme:
+    - govcon
+id: govcon_footerquicklink
+theme: govcon
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-quick-link'
+settings:
+  id: 'system_menu_block:footer-quick-link'
+  label: 'Footer Quick Link'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
