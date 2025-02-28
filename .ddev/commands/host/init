@@ -1,0 +1,27 @@
+#!/bin/bash
+
+## Description: Initialize application.
+## Usage: init
+## Example: ddev init
+
+# This can't work unless you have a solr service,
+# See https://ddev.readthedocs.io/en/stable/users/extend/additional-services/
+
+# Tear down and startup environment.
+ddev stop --remove-data --omit-snapshot
+ddev start --skip-confirmation
+
+# Ensure authorizations.
+ddev auth ssh
+
+# Ensure application dependencies are installed.
+ddev composer install --no-interaction
+
+# Install application(s).
+ddev exec -- drush site:install --no-interaction --account-name=admin --account-pass=admin
+ddev exec -- drush edel shortcut
+ddev exec -- drush cset system.site uuid 0365e755-6b62-478e-9f9a-5a48a18d3459 --yes
+ddev exec -- drush cim -y
+
+echo "Your site is ready to use. Below is the information."
+ddev describe

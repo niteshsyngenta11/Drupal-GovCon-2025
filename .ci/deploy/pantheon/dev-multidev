@@ -38,13 +38,12 @@ if [[ -z "$TERMINUS_ENV_EXISTS" ]]
     terminus -n build:env:push "$TERMINUS_SITE.$TERMINUS_ENV" --yes
 fi
 
-# Clear the environment cache
-terminus -n env:clear-cache "$TERMINUS_SITE.$TERMINUS_ENV"
-
-# Run Drush cim and clear cache
+# Run Drush cim
 echo "Importing configuration on $TERMINUS_ENV..."
 terminus -n remote:drush "$TERMINUS_SITE.$TERMINUS_ENV" -- cim -y
-terminus -n remote:drush "$TERMINUS_SITE.$TERMINUS_ENV" -- cr
+
+# Clear the environment cache
+terminus -n env:clear-cache "$TERMINUS_SITE.$TERMINUS_ENV"
 
 # Delete old multidev environments associated
 # with a PR that has been merged or closed.
