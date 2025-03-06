@@ -10,6 +10,7 @@ mix.webpackConfig({
       '@organisms': path.resolve(__dirname, 'components/organisms'),
       '@templates': path.resolve(__dirname, 'components/templates'),
       '@pages': path.resolve(__dirname, 'components/pages'),
+      '@base': path.resolve(__dirname, 'components/base'),
       'assets': path.resolve(__dirname, 'assets'),
     }
   }

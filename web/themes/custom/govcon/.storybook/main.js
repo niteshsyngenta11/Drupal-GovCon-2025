@@ -40,7 +40,7 @@ const config = {
     autodocs: "tag",
   },
   staticDirs: ['../assets'],
-  webpackFinal: async(config) => {
+  webpackFinal: async (config) => {
     config.module.rules.push(
       {
         test: /\.twig$/,
@@ -57,9 +57,8 @@ const config = {
       "@organisms": path.resolve(__dirname, '../', 'components/organisms'),
       "@templates": path.resolve(__dirname, '../', 'components/templates'),
       "@pages": path.resolve(__dirname, '../', 'components/pages'),
-      "bootstrap": path.resolve(__dirname, '../', 'node_modules/bootstrap'),
+      "@base": path.resolve(__dirname, '../', 'components/base'),
       "assets": path.resolve(__dirname, '../', 'assets'),
-      "lite-youtube-embed": path.resolve(__dirname, '../', 'node_modules/lite-youtube-embed'),
     };
     Object.assign(config.resolve.alias, alises);
     return config;

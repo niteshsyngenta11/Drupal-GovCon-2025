@@ -1,5 +1,4 @@
 @use '@atoms/colors/color.scss' as color;
-@use "sass:map";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 body {
@@ -11,42 +10,36 @@ h1,
 .h1 {
   font-size: 40px;
   font-weight: 600;
-  line-height: 115%;
 }
 
 h2,
 .h2 {
   font-size: 32px;
   font-weight: 600;
-  line-height: 115%;
 }
 
 h3,
 .h3 {
   font-size: 22px;
   font-weight: 600;
-  line-height: 115%;
 }
 
 h4,
 .h4 {
   font-size: 16px;
   font-weight: 600;
-  line-height: 115%;
 }
 
 h5,
 .h5 {
   font-size: 15px;
   font-weight: 500;
-  line-height: 115%;
 }
 
 h6,
 .h6 {
   font-size: 13px;
   font-weight: 500;
-  line-height: 115%;
 }
 
 p,
@@ -54,32 +47,32 @@ p,
   font-family: "Roboto Mono", "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 162%;
+  line-height: 1.6;
 }
 
 // Lead text
 .lead {
   font-size: 1.25rem;
   font-weight: 400;
-  color: map.get(color.$colors, "dark");
+  color: color.$dark;
 }
 
 // Inline text elements
 mark {
-  background-color: map.get(color.$colors, "secondary");
+  background-color: color.$secondary;
   padding: 0.2em;
-  color: map.get(color.$colors, "light");
+  color: color.$light;
 }
 
 del,
 s {
   text-decoration: line-through;
-  color: map.get(color.$colors, "disabled");
+  color: color.$gray;
 }
 
 ins {
   text-decoration: underline;
-  color: map.get(color.$colors, "link-dark");
+  color: color.$primary-dark;
 }
 
 u {
@@ -88,7 +81,7 @@ u {
 
 small {
   font-size: 0.875rem;
-  color: map.get(color.$colors, "dark");
+  color: color.$dark;
 }
 
 strong {
@@ -101,16 +94,16 @@ em {
 
 // Blockquotes
 blockquote {
-  border-left: 4px solid map.get(color.$colors, "primary-dark");
+  border-left: 4px solid color.$primary-dark;
   padding-left: 1rem;
   margin: 1rem 0;
   font-style: italic;
-  color: map.get(color.$colors, "primary-dark");
+  color: color.$primary-dark;
 }
 
 .blockquote-footer {
   font-size: 0.875rem;
-  color: map.get(color.$colors, "dark");
+  color: color.$dark;
   margin-top: 0.5rem;
 }
 
@@ -127,21 +120,34 @@ blockquote {
   text-align: right;
 }
 
-$links: (
-  "link-light": map.get(color.$colors, "link-light"),
-  "link-hover": map.get(color.$colors, "link-hover"),
-  "link-visited": map.get(color.$colors, "link-visited"),
-  "link-dark": map.get(color.$colors, "link-dark"),
-);
+.text-uppercase {
+  text-transform: uppercase;
+}
 
-@each $link-name, $link-color in $links {
-  .#{$link-name} {
-    color: $link-color;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+.text-lowercase {
+  text-transform: lowercase;
+}
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
 }

@@ -1,5 +1,4 @@
-@use '@atoms/colors/color.scss' as color;
-@use "sass:map";
+@use '@atoms/colors/color' as color;
 
 $radius: 0.35rem;
 $border-width: 2px;
@@ -7,11 +6,11 @@ $color-bg: transparent;
 $offset: 4px;
 $transition: 0.3s;
 
-button {
+.button {
   font-family: "Poppins", serif;
   font-weight: 600;
-  border: solid $border-width map.get(color.$colors, "heading-primary");
-  outline: 0;
+  outline: solid $border-width color.$primary-black;
+  outline-offset: -$border-width;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   letter-spacing: 0.08rem;
@@ -20,27 +19,32 @@ button {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: map.get(color.$colors, "heading-primary");
+  color: color.$primary-black;
+  z-index: 2;
 
   &.primary::after {
-    background-color: map.get(color.$colors, "primary-lighter");
+    background-color: color.$skyblue;
   }
 
   &.secondary::after {
-    background-color: map.get(color.$colors, "secondary");
+    background-color: color.$secondary;
   }
 
   &::after {
     content: "";
-    border: 0;
+    position: absolute;
     top: $offset;
     left: $offset;
-    position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
     border-radius: $radius;
     transition: all $transition ease-in-out;
+  }
+
+  &:hover {
+    outline: solid $border-width color.$primary-black;
+    text-decoration: none;
   }
 
   &:hover::after {

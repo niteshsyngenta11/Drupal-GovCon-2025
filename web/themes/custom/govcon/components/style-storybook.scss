@@ -1,5 +1,11 @@
-@use './atoms/colors/colors.layout.scss';
+@use '@atoms/colors/colors.layout.scss';
+@use '@atoms/icons/icons-preview.scss';
+@use '@atoms/link/link.demo.scss';
 
-div#storybook-root {
+div#storybook-root,
+.sbdocs-preview {
   padding: 2rem;
+}
+div#storybook-root:has(.site-header) {
+  padding: 0rem;
 }

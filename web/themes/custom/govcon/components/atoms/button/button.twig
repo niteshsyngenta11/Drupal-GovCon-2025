@@ -1,3 +1,23 @@
-<button class="button {{ modifier|default('') }}">
+{#
+  /**
+  * Available variables:
+  * - button - default button class for the button design
+  * - modifier - Add additional button classes based on Design primary or secondary
+  * - src_url - Source Link Url
+  * - src_target - Target Type
+  * - label - Button Label
+  */
+#}
+
+{# <a class="button {{ modifier|default('') }}" href="{{ src_url }}" target="{{ src_target }}">
   {{ label }}
-</button>
+</a> #}
+
+ {% include "@atoms/link/link.twig" with { 
+  link_url: src_url,
+  link_title: label,
+  link_target: src_target,
+  link_content: label,
+  link_classes: ["button", modifier|default('')]
+ } %}
+

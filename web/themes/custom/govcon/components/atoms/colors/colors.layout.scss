@@ -1,7 +1,5 @@
 .demo {
   &__colours {
-    display: flex;
-    flex-direction: column;
     gap: 2rem;
   }
 
@@ -28,8 +26,6 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -42,11 +38,8 @@
     }
 
     &__info {
-      display: flex;
-      flex-direction: column;
       gap: 0.5rem;
       padding: 1rem;
-      align-items: center;
     }
 
     &__code {

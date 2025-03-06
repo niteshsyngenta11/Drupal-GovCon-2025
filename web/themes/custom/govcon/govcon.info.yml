@@ -19,12 +19,14 @@ libraries:
 components:
   namespaces:
     atoms:
-      - component/atoms
+      - components/atoms
     molecules:
-      - component/molecules
+      - components/molecules
     organisms:
-      - component/organisms
-    templates:
-      - component/templates
+      - components/organisms
     pages:
-      - component/pages
+      - components/pages
+    partials:
+      - templates
+    components:
+      - components

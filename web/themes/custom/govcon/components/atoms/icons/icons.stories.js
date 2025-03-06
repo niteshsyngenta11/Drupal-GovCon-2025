@@ -2,7 +2,7 @@ import CreateIcons from './icons.twig';
 import iconsData from './icons.json';
 
 export default {
-  title: 'Atoms/Icon',
+  title: 'Atoms/Icons',
   render: ({ ...args }) => {
     return CreateIcons({ ...args });
   },

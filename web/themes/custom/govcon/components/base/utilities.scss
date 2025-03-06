@@ -1,0 +1,98 @@
+// Variables
+$container-width: 1368px;
+$container-fluid-width: 100%;
+$spacer: 1rem;
+
+// Container Classes
+.container {
+  max-width: $container-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: $container-fluid-width;
+  margin: 0 auto;
+}
+
+// Centering Utilities
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+// Display Utilities
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+// Flexbox Utilities
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.align-start {
+  align-items: flex-start !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.align-end {
+  align-items: flex-end !important;
+}
+
+// Overflow Utilities
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+// Position Utilities
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}

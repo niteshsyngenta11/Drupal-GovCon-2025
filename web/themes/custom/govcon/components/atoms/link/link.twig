@@ -1,0 +1,22 @@
+{#
+  /**
+  * Available variables:
+  * - link_content - the content of the link (typically text)
+  * - link_url - the url this link should poing to
+  * - link_attributes - array of attribute,value pairs
+  * - link_base_class - the base class name
+  * - link_modifiers - array of modifiers to add to the base classname
+  * - link_blockname - blockname prepended to the base classname
+  * - link_classes- Add Classes
+  *
+  * Available blocks:
+  * - link_content - used to replace the content of the link
+  *     Example: to insert the image component
+  */
+#}
+
+<a class="{{ link_classes|join(' ') | trim }}" {% if link_target %} target="{{ link_target }}" {% endif %} {% if link_title %} title="{{ link_title }}" {% endif %} {% if aria_label %} aria-label="{{ aria_label }}" {% endif %} href="{{ link_url }}">
+  {% block link_content %}
+    {{ link_content }}
+  {% endblock %}
+</a>

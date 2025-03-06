@@ -1,0 +1,10 @@
+type: "user account"
+menu__items:
+  - title: "Login"
+    url: "/login"
+    classes: ""
+    below: []
+  - title: "Get Free Token Now"
+    url: "/get"
+    classes: "button secondary"
+    below: []

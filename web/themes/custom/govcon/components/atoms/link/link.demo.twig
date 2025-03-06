@@ -1,0 +1,54 @@
+<div class="container link__demo">
+  <h1>
+    Links
+  </h1>
+  <hr>
+  <br>
+  <h3>
+    Default link
+  </h3>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo debitis laboriosam corrupti
+    {% include "./link.twig" with {
+      link_url: link_url,
+      link_title: link_title,
+      link_target: link_target,
+      link_content: link_content,
+      link_classes: link_classes
+    } %}
+    quas voluptates, assumenda perferendis ea ut, vero provident eligendi. Nam amet quas vel minima ipsa quibusdam
+    dolores? Autem, consequatur quaerat.
+  </p>
+  <br>
+  <h3>
+    Hovered link
+  </h3>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo debitis laboriosam corrupti
+    {% include "./link.twig" with {
+      link_url: link_url,
+      link_title: link_title,
+      link_target: link_target,
+      link_content: link_content,
+      link_classes: ['hover']
+    } %}
+    quas voluptates, assumenda perferendis ea ut, vero provident eligendi. Nam amet quas vel minima ipsa quibusdam
+    dolores? Autem, consequatur quaerat.
+  </p>
+  <br>
+  <h3>
+    Visited link
+  </h3>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo debitis laboriosam corrupti
+    {% include "./link.twig" with {
+      link_url: link_url,
+      link_title: link_title,
+      link_target: link_target,
+      link_content: link_content,
+      link_classes: ['visited']
+    } %}
+    quas voluptates, assumenda perferendis ea ut, vero provident eligendi. Nam amet quas vel minima ipsa quibusdam
+    dolores? Autem, consequatur quaerat.
+  </p>
+</div>

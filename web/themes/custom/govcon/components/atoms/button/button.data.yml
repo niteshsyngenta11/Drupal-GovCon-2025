@@ -1,7 +1,11 @@
 primary:
   label: "Button"
   modifier: "primary"
+  src_url: "#"
+  src_target: '_self'
 
 secondary:
   label: "Button"
   modifier: "secondary"
+  src_url: "#"
+  src_target: '_self'

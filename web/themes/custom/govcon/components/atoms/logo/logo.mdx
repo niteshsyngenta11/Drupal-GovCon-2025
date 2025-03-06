@@ -16,7 +16,7 @@ The primary logo variant.
 
 <Canvas>
   <Story name="Primary">
-    {logoTwig({ variant: "primary", primary_logo: "/assets/images/Default.png" })}
+    {logoTwig({ src_path: "/assets/images/Default.png", src_alt: "Logo" })}
   </Story>
 </Canvas>
 
@@ -26,7 +26,17 @@ The secondary logo variant.
 
 <Canvas>
   <Story name="Secondary">
-    {logoTwig({ variant: "secondary", secondary_logo: "/assets/images/Blue.png" })}
+    {logoTwig({ src_path: "/assets/images/Blue.png", src_alt: "Logo" })}
+  </Story>
+</Canvas>
+
+### Default Logo
+
+The default logo variant.
+
+<Canvas>
+  <Story name="Default">
+    {logoTwig({ src_path: "/logo.svg", src_alt: "Logo" })}
   </Story>
 </Canvas>
 

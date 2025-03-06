@@ -1,4 +1,4 @@
-<div class="demo__colours">
+<div class="demo__colours d-flex flex-column">
   <h1 class="demo__title">Color</h1>
 
   {% for palette in palettes %}
@@ -7,9 +7,9 @@
     <div class="demo__grid">
       {% for color in palette.colors %}
         {% set color_class = color.name|lower|replace({' ': '-'}) %}
-        <div class="demo__item">
+        <div class="demo__item d-flex flex-column">
           <div class="demo__item__bg bg-{{ color_class }}"></div>
-          <div class="demo__item__info">
+          <div class="demo__item__info d-flex flex-column align-center">
             <div class="demo__item__code">{{ color.code }}</div>
             <div class="demo__item__name">{{ color.name }}</div>
             <div class="demo__item__class">

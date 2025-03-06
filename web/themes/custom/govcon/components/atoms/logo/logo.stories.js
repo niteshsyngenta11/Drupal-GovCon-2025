@@ -2,30 +2,29 @@ import logoTemplate from './logo.twig';
 
 import primaryLogo from '../../../assets/images/Default.png';
 import secondaryLogo from '../../../assets/images/Blue.png';
+import defaultLogo from '../../../logo.svg';
 
 export default {
   title: 'Atoms/Logo',
-  component: logoTemplate, // Similar to the Button example
-  argTypes: {
-    variant: {
-      control: { type: 'select' },
-      options: ['primary', 'secondary'],
-    },
-    primary_logo: { control: 'text' },
-    secondary_logo: { control: 'text' },
-  },
+  component: logoTemplate,
 };
 
-const Template = (args) => logoTemplate(args); // Direct function call like your button
+const Template = (args) => logoTemplate(args);
 
 export const Primary = Template.bind({});
 Primary.args = {
-  variant: 'primary',
-  primary_logo: primaryLogo,
+  src_path: primaryLogo,
+  src_alt: 'Primary Logo',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  variant: 'secondary',
-  secondary_logo: secondaryLogo,
+  src_path: secondaryLogo,
+  src_alt: 'Secondary Logo',
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  src_path: defaultLogo,
+  src_alt: 'Default Logo',
 };

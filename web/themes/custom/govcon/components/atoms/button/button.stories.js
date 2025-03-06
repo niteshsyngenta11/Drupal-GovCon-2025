@@ -12,6 +12,11 @@ export default {
       control: 'select',
       options: ['primary', 'secondary'],
     },
+    src_url: { control: 'text' },
+    src_target: {
+      control: 'select',
+      options: ['_self', '_blank'],
+    },
   },
 };
 

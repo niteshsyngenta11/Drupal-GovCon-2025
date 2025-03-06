@@ -1,7 +1,6 @@
 global-styling:
   css:
     theme:
-      dist/style.css: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
+      dist/components/style.css: {}
+  js:
+    dist/components/organisms/header/header.js: {}

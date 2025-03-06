@@ -1,8 +1,21 @@
+{#
+  /**
+  * Logo Component
+  *
+  * Available variables:
+  * - src_path: Image source URL (Required)
+  * - src_alt: Alternative text for accessibility (Required)
+  * - width: Image width in pixels (Optional, defaults to "auto")
+  * - height: Image height in pixels (Optional, defaults to "auto")
+  */
+#}
+
 <div class="logo">
-  {% if variant == 'primary' %}
-    <img
-  src="{{ primary_logo }}" alt="Primary Logo" />
-    {% elseif variant == 'secondary' %}
-    <img src="{{ secondary_logo }}" alt="Secondary Logo" />
-  {% endif %}
+  <img
+    src="{{ src_path }}"
+    alt="{{ src_alt|default('') }}"
+    {% if fetchpriority == 'high' %} fetchpriority="{{ fetchpriority|default('') }}"  {% endif %}
+    width="{{ width|default('auto')}}"
+    height="{{ height|default('auto') }}"
+  />
 </div>
