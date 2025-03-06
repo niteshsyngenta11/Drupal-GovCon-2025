@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_components
+    - field.field.node.landing_page.field_gutenberg_components
     - field.field.node.landing_page.field_metatags
     - node.type.landing_page
   module:
@@ -15,12 +15,12 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  field_components:
+  field_gutenberg_components:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 104
     region: content
   field_metatags:
     type: metatag_empty_formatter

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.landing_page.field_components
+    - field.field.node.landing_page.field_gutenberg_components
     - field.field.node.landing_page.field_metatags
     - node.type.landing_page
   module:
@@ -21,9 +21,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_components:
+  field_gutenberg_components:
     type: text_textarea
-    weight: 8
+    weight: 27
     region: content
     settings:
       rows: 5

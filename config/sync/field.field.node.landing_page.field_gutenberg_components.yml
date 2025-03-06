@@ -1,18 +1,18 @@
-uuid: 3fdf30fa-5861-4c08-aef9-644d01d7a7a0
+uuid: b67981f9-5d77-4886-b4e7-d5f8874271cf
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_components
+    - field.storage.node.field_gutenberg_components
     - filter.format.gutenberg
     - node.type.landing_page
   module:
     - text
-id: node.landing_page.field_components
-field_name: field_components
+id: node.landing_page.field_gutenberg_components
+field_name: field_gutenberg_components
 entity_type: node
 bundle: landing_page
-label: Components
+label: 'Gutenberg Components'
 description: ''
 required: false
 translatable: false
