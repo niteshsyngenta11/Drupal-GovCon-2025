@@ -1,0 +1,10 @@
+uuid: 98aa3653-b7a8-409f-9356-6fc9110c3a7d
+langcode: en
+status: true
+dependencies: {  }
+id: node__sponsor
+label: 'Content: Sponsor'
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:field_sponsorship_type]'
+  title: '[node:title] | [site:name]'

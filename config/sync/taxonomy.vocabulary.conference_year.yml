@@ -1,0 +1,9 @@
+uuid: f1e481de-bc73-4e0b-9c67-a37e49a7bd2f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Conference Year'
+vid: conference_year
+description: null
+weight: 0
+new_revision: false
