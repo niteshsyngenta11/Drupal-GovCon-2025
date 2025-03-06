@@ -16,7 +16,7 @@ class FooterSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-    return ['govcon_footer_settings.settings'];
+    return ['govcon_custom.settings'];
   }
 
   /**
@@ -30,7 +30,7 @@ class FooterSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('govcon_footer_settings.settings');
+    $config = $this->config('govcon_custom.settings');
     $form['footer_left'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Footer Left'),
@@ -130,7 +130,7 @@ class FooterSettingsForm extends ConfigFormBase {
       $file->setPermanent();
       $file->save();
     }
-    $this->config('govcon_footer_settings.settings')
+    $this->config('govcon_custom.settings')
       ->set('footer_image', $file_id)
       ->set('footer_description', $form_state->getValue('footer_description'))
       ->set('footer_cta_label', $form_state->getValue('footer_cta_label'))

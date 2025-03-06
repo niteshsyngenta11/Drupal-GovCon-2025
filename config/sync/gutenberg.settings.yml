@@ -40,7 +40,72 @@ cambridge_landing_page_allowed_drupal_blocks:
 cambridge_landing_page_enable_full: true
 cambridge_landing_page_template: ''
 cambridge_landing_page_template_lock: none
+demo_enable_full: false
+demo_template: ''
+demo_template_lock: none
+field_metatags_allowed_blocks:
+  - core-embed/facebook
+  - core-embed/flickr
+  - core-embed/instagram
+  - core-embed/soundcloud
+  - core-embed/spotify
+  - core-embed/twitter
+  - core-embed/vimeo
+  - core-embed/youtube
+  - core/block
+  - core/button
+  - core/buttons
+  - core/column
+  - core/columns
+  - core/cover
+  - core/embed
+  - core/gallery
+  - core/image
+  - core/video
+field_metatags_allowed_content_block_types: {  }
+field_metatags_allowed_drupal_blocks:
+  - search_form_block
+  - system_breadcrumb_block
+field_metatags_enable_full: true
+field_metatags_template: "[\r\n  [\"core/heading\", {\"level\": 1, \"content\": \"{{title}}\"}],\r\n  [\"core/paragraph\", {\"placeholder\": \"Insert text\"}]\r\n]"
+field_metatags_template_lock: none
+landing_page_allowed_blocks:
+  - core/block
+  - core/button
+  - core/buttons
+  - core/column
+  - core/columns
+  - core/cover
+  - core/embed
+  - core/gallery
+  - core/image
+  - core/video
+landing_page_allowed_content_block_types: {  }
+landing_page_allowed_drupal_blocks:
+  - search_form_block
+  - system_breadcrumb_block
+landing_page_enable_full: true
+landing_page_template: "[\r\n[\"drupal/simple-text\", {\"placeholder\": \"Insert Page Title\",\"tag\":\"h1\", \"mappingFields\":[{\"field\": \"title\"}]}]\r\n]"
+landing_page_template_lock: none
 cambridge_landing_page_allowed_image_styles:
+  full: full
+  large: large
+  medium: medium
+  thumbnail: thumbnail
+  wide: wide
+field_metatags_allowed_image_styles:
+  full: full
+  large: large
+  medium: medium
+  thumbnail: thumbnail
+  wide: wide
+landing_page_allowed_image_styles:
+  full: full
+  large: large
+  medium: medium
+  thumbnail: thumbnail
+  wide: wide
+demo_allowed_image_styles:
   full: full
   large: large
   medium: medium

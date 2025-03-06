@@ -6,7 +6,7 @@ use Drupal\file\Entity\File;
  * Implements hook_preprocess_HOOK() for page templates.
  */
 function govcon_preprocess_page(array &$variables) {
-  $config = \Drupal::config('govcon_footer_settings.settings');
+  $config = \Drupal::config('govcon_custom.settings');
   // Prepare footer data.
   $footer_data = [
     'footer_image' => '',

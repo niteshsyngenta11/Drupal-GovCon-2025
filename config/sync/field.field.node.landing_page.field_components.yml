@@ -1,17 +1,17 @@
-uuid: 5fed1a16-3254-43d5-81dc-003bed2e172d
+uuid: 3fdf30fa-5861-4c08-aef9-644d01d7a7a0
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_components
     - filter.format.gutenberg
-    - node.type.cambridge_landing_page
+    - node.type.landing_page
   module:
     - text
-id: node.cambridge_landing_page.field_components
+id: node.landing_page.field_components
 field_name: field_components
 entity_type: node
-bundle: cambridge_landing_page
+bundle: landing_page
 label: Components
 description: ''
 required: false
