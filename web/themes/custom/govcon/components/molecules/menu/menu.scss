@@ -65,6 +65,7 @@ nav {
     @include mixins.media-breakpoint-up(lg) {
       background: color.$light;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: -1;
     }
 
     li {
@@ -102,14 +103,13 @@ nav {
             position: absolute;
             right: 10px;
             top: 55%;
-            transform: translateY(-50%);
+            transform: translateY(-50%) rotate(90deg);
             cursor: pointer;
-            transition: transform 0.3s ease-in-out;
           }
 
           &.open .chevron-icon {
-            transform: rotate(90deg);
-            top: 5%;
+            transform: rotate(270deg);
+            top: 0%;
           }
 
           ul.dropdown-menu {
