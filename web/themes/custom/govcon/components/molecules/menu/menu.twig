@@ -1,7 +1,7 @@
 <nav class="menu {{ classes | default('') }}">
   <ul class="menu__list main-menu">
     {% for item in menu__items %}
-      <li class="menu__item {% if item.below %} has-below {% endif %}">
+      <li class="menu__item {% if item.below %} has-below {% endif %} {{ item.in_active_trail ? 'active' : '' }}">
         {% set link_classes = ['menu__link', 'text-primary-black'] %}
 
         {% if item.classes is defined and item.classes is not empty %}
@@ -32,7 +32,7 @@
           <span class="chevron-icon icon--chevron-right"></span>
           <ul class="submenu dropdown-menu">
             {% for child in item.below %}
-              <li class="submenu__item">
+              <li class="submenu__item {{ child.in_active_trail ? 'active' : '' }} ">
                 {% set child_classes = ['submenu__link', 'text-primary-black'] %}
 
                 {% if menu_type == 'main' %}
@@ -56,8 +56,8 @@
               </li>
             {% endfor %}
           </ul>
-      {% endif %}
-    </li>
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 </nav>

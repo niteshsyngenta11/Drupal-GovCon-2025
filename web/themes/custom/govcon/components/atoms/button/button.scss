@@ -7,8 +7,8 @@ $offset: 4px;
 $transition: 0.3s;
 
 .button {
-  font-family: "Poppins", serif;
-  font-weight: 600;
+  font-family: "Poppins", serif !important;
+  font-weight: 600 !important;
   outline: solid $border-width color.$primary-black;
   outline-offset: -$border-width;
   padding: 0.5rem 1rem;
@@ -19,7 +19,7 @@ $transition: 0.3s;
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  color: color.$primary-black;
+  color: color.$primary-black !important;
   z-index: 2;
 
   &.primary::after {

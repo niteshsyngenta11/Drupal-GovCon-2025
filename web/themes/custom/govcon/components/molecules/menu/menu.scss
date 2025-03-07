@@ -45,6 +45,10 @@ nav {
         text-decoration: none;
       }
 
+      &.active {
+        text-decoration: underline;
+      }
+
       &:hover {
         a:not(.button) {
           text-decoration: underline;
@@ -72,7 +76,8 @@ nav {
       padding: 16px;
       z-index: 3;
 
-      &:hover {
+      &:hover,
+      &.active {
         @include mixins.media-breakpoint-up(lg) {
           background: color.$skyblue;
         }
@@ -119,7 +124,7 @@ nav {
           &.open ul.dropdown-menu {
             display: block;
             position: relative;
-            padding: 1px 25px;
+            padding: 0px 0px 1px;
             margin: 10px 0;
             width: 100%;
             top: 0;

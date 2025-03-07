@@ -3,8 +3,9 @@
 @use '@molecules/menu/menu.scss';
 
 header {
-  z-index: 1;
-  position: relative;
+  z-index: 99;
+  position: sticky;
+  top: 0;
 }
 
 .site-header {
@@ -28,10 +29,6 @@ header {
 @include mixins.media-breakpoint-down(lg) {
   .site-header {
     box-shadow: unset;
-
-    .container {
-      padding: 15px 25px;
-    }
 
     img {
       width: 120px;
