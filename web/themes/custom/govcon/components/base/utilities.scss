@@ -1,5 +1,6 @@
 // Variables
-$container-width: 1368px;
+$container-width: 1400px;
+$container-wide: 1920px;
 $container-fluid-width: 100%;
 $spacer: 1rem;
 
@@ -8,6 +9,8 @@ $spacer: 1rem;
   max-width: $container-width;
   width: 100%;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .container-fluid {

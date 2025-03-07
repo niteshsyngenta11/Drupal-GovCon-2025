@@ -1,7 +1,7 @@
 # Add client libraries to be attached to the node edit page where the editor is.
 # Useful for tweaking the admin UI.
 libraries-edit:
-  # - gutenberg_starter/editor
+  - govcon/editor
 
 # Add client libraries to be attached to the node page.
 # Useful for custom blocks using javascript behaviors.
@@ -165,32 +165,32 @@ theme-support:
         - px
         - em
         - rem
-        - '%'
+        - "%"
       spacingSizes:
         theme:
-        - name: 1
-          size: 8px
-          slug: 10
-        - name: 2
-          size: 16px
-          slug: 20
-        - name: 3
-          size: 32px
-          slug: 30
-        - name: 4
-          size: 64px
-          slug: 40
-        - name: 5
-          size: 128px
-          slug: 50
-        - name: 6
-          size: 172px
-          slug: 60
+          - name: 1
+            size: 8px
+            slug: 10
+          - name: 2
+            size: 16px
+            slug: 20
+          - name: 3
+            size: 32px
+            slug: 30
+          - name: 4
+            size: 64px
+            slug: 40
+          - name: 5
+            size: 128px
+            slug: 50
+          - name: 6
+            size: 172px
+            slug: 60
 
     # layout must be defined when using align wide setting on version 3.0 or above.
     layout:
-      contentSize: 680px
-      wideSize: 954px
+      contentSize: 1368px
+      wideSize: 1920px
     color:
       custom: false
       background: true
@@ -204,60 +204,73 @@ theme-support:
       link: true
       palette:
         theme:
-        - name: Primary
-          slug: primary
-          color: "red"
-        - name: Primary Light
-          slug: primary-light
-          color: "#F7F4FF"
-        - name: Primary Dark
-          slug: primary-dark
-          color: "#584980"
-        - name: Secondary
-          slug: secondary
-          color: "#FFC884"
-        - name: Tertiary
-          slug: tertiary
-          color: "#FFC7C6"
-        - name: Contrast
-          slug: contrast
-          color: "#3556D1"
-        - name: Dark
-          slug: dark
-          color: "#000000"
-        - name: Light
-          slug: light
-          color: "#ffffff"
+          - name: Primary
+            slug: primary
+            color: "#285A83"
+          - name: Primary Lighter
+            slug: primary-lighter
+            color: "#7AD1E7"
+          - name: Primary Light
+            slug: primary-light
+            color: "#107DB5"
+          - name: Primary Dark
+            slug: primary-dark
+            color: "#213B75"
+          - name: Secondary
+            slug: secondary
+            color: "#F93E5A"
+          - name: Surface
+            slug: surface
+            color: "#F4FAFF"
+          - name: Tertiary
+            slug: tertiary
+            color: "#FFC7C6"
+          - name: Contrast
+            slug: contrast
+            color: "#3556D1"
+          - name: Dark
+            slug: dark
+            color: "#132B3F"
+          - name: Light
+            slug: light
+            color: "#ffffff"
+          - name: black
+            slug: black
+            color: "#000000"
 
       customDuotone: true
       duotone:
         theme:
           - colors:
-            - '#000'
-            - '#fff'
-            slug: 'greyscale'
-            name: 'Greyscale'
+              - "#000"
+              - "#fff"
+            slug: "greyscale"
+            name: "Greyscale"
           - colors:
-            - '#fff'
-            - '#000'
-            slug: 'greyscale-negative'
-            name: 'Greyscale (Negative)'
+              - "#fff"
+              - "#000"
+            slug: "greyscale-negative"
+            name: "Greyscale (Negative)"
 
       gradients:
         theme:
+          - name: GovCon Primary Gradient
+            gradient: "linear-gradient(135deg, #285A83E5 0%, #132B3F 100%)"
+            slug: primary-govcon-gradient
           - name: Primary to secondary
-            gradient: 'linear-gradient(135deg, #CEBAFF 0%, #FFC884 100%)'
+            gradient: "linear-gradient(135deg, #CEBAFF 0%, #FFC884 100%)"
             slug: primary-to-secondary
           - name: Primary to contrast
-            gradient: 'linear-gradient(135deg, #CEBAFF 0%, #3556D1 100%)'
+            gradient: "linear-gradient(135deg, #CEBAFF 0%, #3556D1 100%)"
             slug: primary-to-contrast
           - name: Secondary to light
-            gradient: 'linear-gradient(to right bottom, #FFC884, #FFFFFF)'
+            gradient: "linear-gradient(to right bottom, #FFC884, #FFFFFF)"
             slug: secondary-to-light
 
     typography:
       lineHeight: true
       fontWeight: true
+      fontFamily: true
       # Check css/components/blocks.css for font sizes classes.
       fontSizes:
         theme:
@@ -276,7 +289,44 @@ theme-support:
           - name: Extra Large
             size: "4rem"
             slug: extra-large
-
+          - name: H1
+            size: "40px"
+            weight: 600
+            lineHeight: "115%"
+            slug: h1
+          - name: H2
+            size: "32px"
+            weight: 600
+            lineHeight: "115%"
+            slug: h2
+          - name: H3
+            size: "22px"
+            weight: 600
+            lineHeight: "115%"
+            slug: h3
+          - name: H4
+            size: "16px"
+            weight: 600
+            lineHeight: "115%"
+            slug: h4
+          - name: H5
+            size: "15px"
+            weight: 500
+            lineHeight: "115%"
+            slug: h5
+          - name: H6
+            size: "13px"
+            weight: 500
+            lineHeight: "115%"
+            slug: h6
+      fontFamilies:
+        theme:
+          - name: Roboto Mono
+            slug: roboto-mono
+            fontFamily: "'Roboto Mono', monospace"
+          - name: Poppins
+            slug: poppins
+            fontFamily: "'Poppins', sans-serif"
     styles:
       spacing:
         blockGap: 1.5rem
@@ -314,79 +364,336 @@ theme-support:
     - categories:
         - sections
       content: |-
-        <!-- wp:cover {"url":"https://images.unsplash.com/photo-1496865534669-25ec2a3a0fd3?q=80\u0026w=1587\u0026auto=format\u0026fit=crop\u0026ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","id":6,"dimRatio":40,"focalPoint":{"x":0.52,"y":0.84},"minHeight":740,"minHeightUnit":"px","gradient":"primary-to-secondary","isDark":false,"align":"full","textColor":"dark","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark"}}}},"layout":{"type":"constrained"},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"72ac2d15-27fa-4300-a2b3-157d0b927e7f","data-image-style":"original"}} -->
-        <div class="wp-block-cover alignfull is-light has-dark-color has-text-color has-link-color" style="min-height:740px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-40 has-background-dim wp-block-cover__gradient-background has-background-gradient has-primary-to-secondary-gradient-background"></span><img class="wp-block-cover__image-background wp-image-6" alt="" src="https://images.unsplash.com/photo-1496865534669-25ec2a3a0fd3?q=80&amp;w=1587&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="object-position:52% 84%" data-object-fit="cover" data-object-position="52% 84%" data-entity-type="file" data-entity-uuid="72ac2d15-27fa-4300-a2b3-157d0b927e7f" data-image-style="original"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
-        <div class="wp-block-columns"><!-- wp:column -->
-        <div class="wp-block-column"><!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"0.9"}}} -->
-        <h1 class="wp-block-heading" style="line-height:0.9">The future of content creation</h1>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Drupal Gutenberg is the easiest-to-use content editor for your Drupal installation. Creating beautiful landing pages has never been so easy.</p>
-        <!-- /wp:paragraph --></div>
+        <!-- wp:column {"width":""} -->
+        <div class="wp-block-column"><!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"},"blockGap":{"left":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"><!-- wp:column {"width":"360px","layout":{"type":"default"}} -->
+        <div class="wp-block-column" style="flex-basis:360px"><!-- wp:image {"id":15,"width":"360px","sizeSlug":"full","linkDestination":"none","className":"is-style-default","style":{"border":{"radius":"8px"}},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"cdbbfebc-ad8d-4e6a-807d-4d307ca85d99","data-image-style":"original"}} -->
+        <figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><img src="https://placehold.co/360x270.png" alt="" class="wp-image-15" style="border-radius:8px;width:360px" data-entity-type="file" data-entity-uuid="cdbbfebc-ad8d-4e6a-807d-4d307ca85d99" data-image-style="original"/></figure>
+        <!-- /wp:image --></div>
         <!-- /wp:column -->
 
-        <!-- wp:column -->
-        <div class="wp-block-column"></div>
+        <!-- wp:column {"width":"66.66%","style":{"spacing":{"padding":{"right":"0","left":"0"}}}} -->
+        <div class="wp-block-column" style="padding-right:0;padding-left:0;flex-basis:66.66%"><!-- wp:paragraph {"textColor":"light","fontFamily":"roboto-mono","style":{"elements":{"link":{"color":{"text":"var:preset|color|light"}}}}} -->
+        <p class="has-light-color has-text-color has-link-color has-roboto-mono-font-family">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt.&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt.&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt.&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt.&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt.&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quod eo liquidius faciet, si perspexerit rerum inter eas verborumne sit controversia. Quae qui non vident, nihil umquam magnum ac cognitione dignum amaverunt.&nbsp;</p>
+        <!-- /wp:paragraph --></div>
         <!-- /wp:column --></div>
-        <!-- /wp:columns --></div></div>
-        <!-- /wp:cover -->
-      description: 'Hero section.'
-      name: gutenberg-starterkit/hero
-      title: 'Hero'
+        <!-- /wp:columns --></div>
+        <!-- /wp:column -->
+      description: "Image with Text (25/75)"
+      name: govcon/image-with-text
+      title: "Image with Text"
 
     - categories:
         - sections
       content: |-
-        <!-- wp:columns {"templateLock":"all","lock":{"move":true,"remove":true},"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|20"}}}} -->
-        <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Fusce</h3>
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column {"width":"66.66%","backgroundColor":"dark","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|40"}}} -->
+        <div class="wp-block-column has-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30);flex-basis:66.66%"><!-- wp:heading {"textColor":"light","style":{"elements":{"link":{"color":{"text":"var:preset|color|light"}}}}} -->
+        <h2 class="wp-block-heading has-light-color has-text-color has-link-color">Featured Sessions</h2>
+        <!-- /wp:heading -->
+
+        <!-- wp:columns {"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-columns has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":4} -->
+        <h4 class="wp-block-heading">Suzanne Dergacheva, John Cloys</h4>
         <!-- /wp:heading -->
 
         <!-- wp:paragraph -->
-        <p>Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Ligula arcu tristique sapien</p>
+        <p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
-        <!-- /wp:button --></div>
-        <!-- /wp:buttons --></div>
+        <!-- wp:heading {"level":4} -->
+        <h4 class="wp-block-heading"><a href="#">View Session Info</a> </h4>
+        <!-- /wp:heading --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+
+        <!-- wp:columns {"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-columns has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:heading {"level":3} -->
+        <h3 class="wp-block-heading">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:heading {"level":4} -->
+        <h4 class="wp-block-heading">Suzanne Dergacheva, John Cloys</h4>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:heading {"level":4} -->
+        <h4 class="wp-block-heading"><a href="#">View Session Info</a> </h4>
+        <!-- /wp:heading --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Proin</h3>
-        <!-- /wp:heading -->
+        <!-- wp:column {"width":"33.33%"} -->
+        <div class="wp-block-column" style="flex-basis:33.33%"></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+      description: "Featured pattern (75/25 column)"
+      name: gutenberg-starter/featured
+      title: "Featured"
 
-        <!-- wp:paragraph -->
-        <p>Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros.</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100,"className":"is-style-outline"} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
-        <!-- /wp:button --></div>
-        <!-- /wp:buttons --></div>
+    - categories:
+        - sections
+      content: |-
+        <!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
+        <div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--60);margin-bottom:var(--wp--preset--spacing--60)"><!-- wp:column {"verticalAlignment":"center","width":"66.66%"} -->
+        <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:66.66%"><!-- wp:heading {"textColor":"light","fontFamily":"poppins","fontSize":"h1","style":{"elements":{"link":{"color":{"text":"var:preset|color|light"}}}}} -->
+        <h2 class="wp-block-heading has-light-color has-text-color has-link-color has-poppins-font-family has-h-1-font-size">Innovate Together: Connect, Learn, and Empower Through Open Source</h2>
+        <!-- /wp:heading --></div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Suspendisse</h3>
+        <!-- wp:column {"width":"33.33%","backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-column has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30);flex-basis:33.33%"><!-- wp:heading {"fontFamily":"poppins"} -->
+        <h2 class="wp-block-heading has-poppins-font-family">Did you say free?</h2>
         <!-- /wp:heading -->
 
-        <!-- wp:paragraph -->
-        <p>Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi.</p>
+        <!-- wp:paragraph {"fontFamily":"roboto-mono"} -->
+        <p class="has-roboto-mono-font-family">Training, sessions, coffee and lunch. It's all included and at no charge!</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100,"className":"is-style-outline"} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
+        <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+        <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Get Your Ticket</a></div>
         <!-- /wp:button --></div>
         <!-- /wp:buttons --></div>
         <!-- /wp:column --></div>
         <!-- /wp:columns -->
-      description: 'Three columns with title, text and link. Locked.'
-      name: gutenberg-starter/three-columns
-      title: 'Three Columns'
+      description: "Hero with card pattern"
+      name: govcon/hero-with-card
+      title: "Hero with card"
+
+    - categories:
+        - sections
+      content: |-
+        <!-- wp:columns {"align":"full","backgroundColor":"primary-lighter","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"0","right":"0"}}}} -->
+        <div class="wp-block-columns alignfull has-primary-lighter-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":{"left":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-columns" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"backgroundColor":"surface","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|30"}}} -->
+        <div class="wp-block-column has-surface-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"align":"center","id":15,"width":"381px","sizeSlug":"full","linkDestination":"none","className":"is-style-default","style":{"border":{"radius":"8px"}},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"cdbbfebc-ad8d-4e6a-807d-4d307ca85d99","data-image-style":"original"}} -->
+        <figure class="wp-block-image aligncenter size-full is-resized has-custom-border is-style-default"><img src="https://placehold.co/380x270.png" alt="Banner Image" class="wp-image-15" style="border-radius:8px;width:381px" data-entity-type="file" data-entity-uuid="cdbbfebc-ad8d-4e6a-807d-4d307ca85d99" data-image-style="original"/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}}} -->
+        <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"h3"} -->
+        <h3 class="wp-block-heading has-h-3-font-size">Heading</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+        <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"backgroundColor":"surface","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|30"}}} -->
+        <div class="wp-block-column has-surface-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"align":"center","id":15,"width":"400px","height":"auto","sizeSlug":"full","linkDestination":"none","className":"is-style-default","style":{"border":{"radius":"8px"}},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"cdbbfebc-ad8d-4e6a-807d-4d307ca85d99","data-image-style":"original"}} -->
+        <figure class="wp-block-image aligncenter size-full is-resized has-custom-border is-style-default"><img src="https://placehold.co/380x270.png" alt="Banner Image" class="wp-image-15" style="border-radius:8px;width:400px;height:auto" data-entity-type="file" data-entity-uuid="cdbbfebc-ad8d-4e6a-807d-4d307ca85d99" data-image-style="original"/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}}} -->
+        <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"h3"} -->
+        <h3 class="wp-block-heading has-h-3-font-size">Heading</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+        <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"backgroundColor":"surface","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|30"}}} -->
+        <div class="wp-block-column has-surface-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"align":"center","id":15,"width":"400px","height":"auto","sizeSlug":"full","linkDestination":"none","className":"is-style-default","style":{"border":{"radius":"8px"}},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"cdbbfebc-ad8d-4e6a-807d-4d307ca85d99","data-image-style":"original"}} -->
+        <figure class="wp-block-image aligncenter size-full is-resized has-custom-border is-style-default"><img src="https://placehold.co/380x270.png" alt="Banner Image" class="wp-image-15" style="border-radius:8px;width:400px;height:auto" data-entity-type="file" data-entity-uuid="cdbbfebc-ad8d-4e6a-807d-4d307ca85d99" data-image-style="original"/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}}} -->
+        <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"h3"} -->
+        <h3 class="wp-block-heading has-h-3-font-size">Heading</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+        <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+      description: "Vertical Card"
+      name: govcon/vertical-card
+      title: "Vertical Card"
+
+    - categories:
+        - sections
+      content: |-
+        <!-- wp:columns {"align":"full","backgroundColor":"primary-lighter","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"0","right":"0"}}}} -->
+        <div class="wp-block-columns alignfull has-primary-lighter-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:columns {"verticalAlignment":null,"style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"0","left":"var:preset|spacing|20"}}}} -->
+        <div class="wp-block-columns" style="margin-top:0;margin-bottom:0"><!-- wp:column {"verticalAlignment":"center","width":"","backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-column is-vertically-aligned-center has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:columns {"verticalAlignment":null,"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"200px","layout":{"type":"default"}} -->
+        <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:200px"><!-- wp:image {"align":"center","id":16,"width":"200px","height":"200px","scale":"cover","sizeSlug":"full","linkDestination":"none","mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"370ef95d-c845-4b6f-964c-e584677e9544","data-image-style":"original"}} -->
+        <figure class="wp-block-image aligncenter size-full is-resized"><img src="https://placehold.co/200x200.png" alt="" class="wp-image-16" style="object-fit:cover;width:200px;height:200px" data-entity-type="file" data-entity-uuid="370ef95d-c845-4b6f-964c-e584677e9544" data-image-style="original"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"style":{"spacing":{"padding":{"right":"0","left":"0"},"blockGap":"var:preset|spacing|20"}}} -->
+        <div class="wp-block-column" style="padding-right:0;padding-left:0"><!-- wp:heading {"level":3,"fontSize":"h3"} -->
+        <h3 class="wp-block-heading has-h-3-font-size">Heading</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+        <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"verticalAlignment":"center","width":"","backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-column is-vertically-aligned-center has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:columns {"verticalAlignment":null,"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"200px","layout":{"type":"default"}} -->
+        <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:200px"><!-- wp:image {"align":"center","id":16,"width":"200px","height":"200px","scale":"cover","sizeSlug":"full","linkDestination":"none","mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"370ef95d-c845-4b6f-964c-e584677e9544","data-image-style":"original"}} -->
+        <figure class="wp-block-image aligncenter size-full is-resized"><img src="https://placehold.co/200x200.png" alt="" class="wp-image-16" style="object-fit:cover;width:200px;height:200px" data-entity-type="file" data-entity-uuid="370ef95d-c845-4b6f-964c-e584677e9544" data-image-style="original"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"style":{"spacing":{"padding":{"right":"0","left":"0"},"blockGap":"var:preset|spacing|20"}}} -->
+        <div class="wp-block-column" style="padding-right:0;padding-left:0"><!-- wp:heading {"level":3,"fontSize":"h3"} -->
+        <h3 class="wp-block-heading has-h-3-font-size">Heading</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+        <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+      description: "Horizontal Card"
+      name: govcon/horizontal-card
+      title: "Horizontal Card"
+
+    - categories:
+        - sections
+      content: |-
+        <!-- wp:column {"verticalAlignment":"center","width":"","backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"layout":{"type":"default"}} -->
+        <div class="wp-block-column is-vertically-aligned-center has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:columns {"verticalAlignment":null,"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|30"}}}} -->
+        <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"200px","layout":{"type":"default"}} -->
+        <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:200px"><!-- wp:image {"align":"center","id":16,"width":"200px","height":"200px","scale":"cover","sizeSlug":"full","linkDestination":"none","mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"370ef95d-c845-4b6f-964c-e584677e9544","data-image-style":"original"}} -->
+        <figure class="wp-block-image aligncenter size-full is-resized"><img src="https://placehold.co/200x200.png" alt="" class="wp-image-16" style="object-fit:cover;width:200px;height:200px" data-entity-type="file" data-entity-uuid="370ef95d-c845-4b6f-964c-e584677e9544" data-image-style="original"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column {"style":{"spacing":{"padding":{"right":"0","left":"0"},"blockGap":"var:preset|spacing|20"}}} -->
+        <div class="wp-block-column" style="padding-right:0;padding-left:0"><!-- wp:heading {"level":3,"fontSize":"h3"} -->
+        <h3 class="wp-block-heading has-h-3-font-size">Heading</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+        <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column -->
+      description: "Vertical Card Pattern with Image Heading Description & Button"
+      name: govcon/vertical-card-pattern
+      title: "Vertical Card Pattern"
+
+    - categories:
+        - sections
+      content: |-
+        <!-- wp:column {"backgroundColor":"surface","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|30"}}} -->
+        <div class="wp-block-column has-surface-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"align":"center","id":15,"width":"381px","sizeSlug":"full","linkDestination":"none","className":"is-style-default","style":{"border":{"radius":"8px"}},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"cdbbfebc-ad8d-4e6a-807d-4d307ca85d99","data-image-style":"original"}} -->
+        <figure class="wp-block-image aligncenter size-full is-resized has-custom-border is-style-default"><img src="https://placehold.co/380x270.png" alt="Banner Image" class="wp-image-15" style="border-radius:8px;width:381px" data-entity-type="file" data-entity-uuid="cdbbfebc-ad8d-4e6a-807d-4d307ca85d99" data-image-style="original"/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}}} -->
+        <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"h3"} -->
+        <h3 class="wp-block-heading has-h-3-font-size">Heading</h3>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph -->
+        <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:buttons -->
+        <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+        <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column -->
+      description: "Horizontal Card Pattern with Image Heading Description & Button"
+      name: govcon/horizontal-card-pattern
+      title: "Horizontal Card Pattern"
+    - categories:
+        - sections
+      content: |-
+        <!-- wp:columns {"align":"full","backgroundColor":"dark","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"0","left":"0","right":"0"}}}} -->
+        <div class="wp-block-columns alignfull has-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"width":""} -->
+        <div class="wp-block-column"><!-- wp:columns {"verticalAlignment":"center"} -->
+        <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+        <div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"id":17,"width":"1368px","sizeSlug":"full","linkDestination":"none","className":"is-style-default","style":{"border":{"radius":"8px"}},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"781427cd-cb04-4d51-8a6d-e657d9ca826c","data-image-style":"original"}} -->
+        <figure class="wp-block-image size-full is-resized has-custom-border is-style-default"><img src="https://placehold.co/1368x400.png" alt="" class="wp-image-17" style="border-radius:8px;width:1368px" data-entity-type="file" data-entity-uuid="781427cd-cb04-4d51-8a6d-e657d9ca826c" data-image-style="original"/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns -->
+      description: "Hero Long Image"
+      name: govcon/hero-horizontal-image
+      title: "Hero Horizontal Image"

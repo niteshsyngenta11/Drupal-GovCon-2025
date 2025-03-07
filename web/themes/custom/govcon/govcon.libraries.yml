@@ -4,3 +4,8 @@ global-styling:
       dist/components/style.css: {}
   js:
     dist/components/organisms/header/header.js: {}
+
+editor:
+  css:
+    theme:
+      dist/components/gutenberg/gutenberg-style.css: {}

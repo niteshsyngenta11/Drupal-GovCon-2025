@@ -1,0 +1,44 @@
+@use "@base/utilities.scss" as utility;
+@use "@base/mixins.scss" as mixins;
+
+.wp-block-columns {
+  max-width: utility.$container-width;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.wp-block-columns.alignwide {
+  max-width: utility.$container-wide;
+}
+
+.wp-block-columns.alignfull {
+  max-width: utility.$container-fluid-width;
+}
+
+.wp-block-button__link {
+  background-color: unset;
+  border-radius: 0;
+  box-shadow: none;
+  color: unset;
+  font-size: 1.125em;
+  padding: 0;
+  text-decoration: none;
+}
+
+.block-editor-block-patterns-list {
+  .block-editor-block-preview__container {
+    padding-top: 20px !important;
+
+    iframe {
+      max-width: none !important;
+    }
+  }
+
+  div[data-wp-component="VisuallyHidden"] {
+    height: auto !important;
+    width: auto !important;
+    clip: unset !important;
+    clip-path: unset !important;
+  }
+}
