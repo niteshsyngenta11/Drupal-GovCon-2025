@@ -1,0 +1,23 @@
+uuid: 3ce14c27-1feb-420e-a8fa-6936df2c1654
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_important_date
+    - node.type.special_announcement
+  module:
+    - datetime
+_core:
+  default_config_hash: cI80Z5FRWulnrrd_OnXJRgc5ZMpKZtvtQKA0v_6iDDs
+id: node.special_announcement.field_important_date
+field_name: field_important_date
+entity_type: node
+bundle: special_announcement
+label: Posted
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

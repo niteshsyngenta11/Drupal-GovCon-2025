@@ -1,0 +1,26 @@
+uuid: 62302e25-8541-49b0-9feb-67031e268efa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.special_announcement
+  module:
+    - text
+_core:
+  default_config_hash: hJRKAyDtvakqYI7-O02GVOvUV4H9GCrIQJWfxt5QTGw
+id: node.special_announcement.body
+field_name: body
+entity_type: node
+bundle: special_announcement
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,10 +1,12 @@
-uuid: 092d0aa7-62fd-4c1d-82e0-76c86ca3e987
+uuid: 313c71b5-98eb-4fcf-8e49-142c83e56324
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
+_core:
+  default_config_hash: cDB1UyKHklq-bedbJHG9YMLqu0IiHapwxjNhMKVN1po
 id: node.field_conference_year
 field_name: field_conference_year
 entity_type: node

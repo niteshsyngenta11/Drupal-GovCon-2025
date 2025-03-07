@@ -1,20 +1,24 @@
-uuid: 3c65a829-a022-4266-9d95-935ac87f0721
+uuid: 6193e4dd-9abd-45a3-a90c-0abdb94f43c5
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_conference_year
-    - node.type.sponsor
+    - node.type.special_announcement
     - taxonomy.vocabulary.conference_year
-id: node.sponsor.field_conference_year
+_core:
+  default_config_hash: 7RHHqiPS3oNVTgiNCBFOO7T8CTP9njVdDLtJ_SBkDO4
+id: node.special_announcement.field_conference_year
 field_name: field_conference_year
 entity_type: node
-bundle: sponsor
+bundle: special_announcement
 label: 'Conference Year'
 description: ''
 required: true
-translatable: false
-default_value: {  }
+translatable: true
+default_value:
+  -
+    target_uuid: 6c70bf77-c283-4313-a529-fc476232523f
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

@@ -1,0 +1,10 @@
+uuid: 2028de4e-4361-4225-841e-df518e286f52
+langcode: en
+status: true
+dependencies: {  }
+id: node__special_announcement
+label: 'Content: Special Announcement'
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:body]'
+  title: '[node:title] | [site:name]'

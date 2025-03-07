@@ -1,0 +1,25 @@
+uuid: 76a5cf65-893d-4e65-94ee-d898133b01e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sort_order
+    - node.type.special_announcement
+  module:
+    - options
+_core:
+  default_config_hash: vhx_hvaaFIx-mYYneYb12MWm4oOKq-adS-Di-MarMv0
+id: node.special_announcement.field_sort_order
+field_name: field_sort_order
+entity_type: node
+bundle: special_announcement
+label: 'Sort Order'
+description: 'Sets the display weighting of this announcement. 1 displays first.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 5
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

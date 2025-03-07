@@ -1,0 +1,25 @@
+uuid: 55ca9401-bf63-4117-a573-71796ed0523c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_critical
+    - node.type.special_announcement
+_core:
+  default_config_hash: YYZQRGwLvGXVPwACBvaHBWdVHsPUAAuYEkOxPMrGJ7k
+id: node.special_announcement.field_is_critical
+field_name: field_is_critical
+entity_type: node
+bundle: special_announcement
+label: 'Is Critical Announcement?'
+description: 'Select if this is a critical announcement that will display at the head of the page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

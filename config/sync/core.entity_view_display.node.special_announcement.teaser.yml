@@ -1,0 +1,44 @@
+uuid: 2b371a15-8afb-42ce-b94c-1be994e46e97
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.special_announcement.body
+    - field.field.node.special_announcement.field_conference_year
+    - field.field.node.special_announcement.field_critical_announcement_text
+    - field.field.node.special_announcement.field_important_date
+    - field.field.node.special_announcement.field_is_critical
+    - field.field.node.special_announcement.field_metatags
+    - field.field.node.special_announcement.field_sort_order
+    - node.type.special_announcement
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: WaCgVV9vKDR5R_E7mlZVysBr-A_W0q6dsaSdZdHPNNo
+id: node.special_announcement.teaser
+targetEntityType: node
+bundle: special_announcement
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_conference_year: true
+  field_critical_announcement_text: true
+  field_important_date: true
+  field_is_critical: true
+  field_metatags: true
+  field_sort_order: true

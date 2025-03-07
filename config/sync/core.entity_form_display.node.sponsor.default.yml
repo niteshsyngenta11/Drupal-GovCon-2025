@@ -27,14 +27,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_conference_year:
-    type: entity_reference_autocomplete
-    weight: 124
+    type: options_select
+    weight: 6
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose

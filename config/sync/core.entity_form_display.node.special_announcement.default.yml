@@ -1,0 +1,139 @@
+uuid: b5bed890-42d7-4ac6-bd4e-6c9d85960f93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.special_announcement.body
+    - field.field.node.special_announcement.field_conference_year
+    - field.field.node.special_announcement.field_critical_announcement_text
+    - field.field.node.special_announcement.field_important_date
+    - field.field.node.special_announcement.field_is_critical
+    - field.field.node.special_announcement.field_metatags
+    - field.field.node.special_announcement.field_sort_order
+    - node.type.special_announcement
+  module:
+    - datetime
+    - metatag
+    - path
+    - text
+_core:
+  default_config_hash: KPHsafuGc3Z8g36B7Ew6ui5lL69HKhiHLGIKRDdhkDE
+id: node.special_announcement.default
+targetEntityType: node
+bundle: special_announcement
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 9
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_conference_year:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_critical_announcement_text:
+    type: text_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_important_date:
+    type: datetime_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_is_critical:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_sort_order:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

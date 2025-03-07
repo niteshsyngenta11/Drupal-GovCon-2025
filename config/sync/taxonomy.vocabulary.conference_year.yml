@@ -1,9 +1,11 @@
-uuid: f1e481de-bc73-4e0b-9c67-a37e49a7bd2f
+uuid: c580a027-fb1b-4ac8-9a57-12780c0023fd
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: dRnvTSrl0u8br3aGAHFUMjG8wRuGVSf97ymtlAvbfD0
 name: 'Conference Year'
 vid: conference_year
-description: null
+description: 'The year of the conference.'
 weight: 0
 new_revision: false

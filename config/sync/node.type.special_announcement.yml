@@ -1,0 +1,19 @@
+uuid: c37bbe8b-7dad-4b88-bcf2-0414f1643427
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: vfjvmOIOF6TP3tLE2nqqgsZRVIgwGlL84ncaQ8vScPY
+name: 'Special Announcement'
+type: special_announcement
+description: 'This will only display on the homepage, in order to have time-limited announcements.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false
