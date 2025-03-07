@@ -1,0 +1,130 @@
+blocks:
+  -
+    info: 'Featured Sessions'
+    langcode: en
+    uuid: 917a7955-2a4b-42c3-a6a6-531bccfe20fd
+    bundle: reusable_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: |-
+            <!-- wp:group {"backgroundColor":"dark","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"},"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center"},"metadata":{"name":"Featured Sessions"}} -->
+            <div class="wp-block-group has-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"textColor":"light","style":{"elements":{"link":{"color":{"text":"var:preset|color|light"}}}}} -->
+            <h2 class="wp-block-heading has-light-color has-text-color has-link-color">Featured Sessions</h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:group {"templateLock":false,"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"left"},"metadata":{"name":"Featured Card"}} -->
+            <div class="wp-block-group has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph -->
+            <p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:heading {"level":4} -->
+            <h4 class="wp-block-heading">Suzanne Dergacheva, John Cloys</h4>
+            <!-- /wp:heading -->
+
+            <!-- wp:heading {"level":4} -->
+            <h4 class="wp-block-heading"><a href="#">View Session Info</a> </h4>
+            <!-- /wp:heading --></div>
+            <!-- /wp:group -->
+
+            <!-- wp:group {"templateLock":false,"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"left"},"metadata":{"name":"Featured Card"}} -->
+            <div class="wp-block-group has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph -->
+            <p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:heading {"level":4} -->
+            <h4 class="wp-block-heading">Suzanne Dergacheva, John Cloys</h4>
+            <!-- /wp:heading -->
+
+            <!-- wp:heading {"level":4} -->
+            <h4 class="wp-block-heading"><a href="#">View Session Info</a> </h4>
+            <!-- /wp:heading --></div>
+            <!-- /wp:group --></div>
+            <!-- /wp:group -->
+          summary: null
+          format: plain_text
+      field_pattern_category:
+        -
+          target_id: '3'
+      field_pattern_sync_status:
+        -
+          value: unsynced
+  -
+    info: 'Featured Card'
+    langcode: en
+    uuid: 7f200459-349a-4f52-a465-207a68507cb6
+    bundle: reusable_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: |-
+            <!-- wp:group {"templateLock":false,"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"left"},"metadata":{"name":"Featured Card"}} -->
+            <div class="wp-block-group has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph -->
+            <p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:heading {"level":4} -->
+            <h4 class="wp-block-heading">Suzanne Dergacheva, John Cloys</h4>
+            <!-- /wp:heading -->
+
+            <!-- wp:heading {"level":4} -->
+            <h4 class="wp-block-heading"><a href="#">View Session Info</a> </h4>
+            <!-- /wp:heading --></div>
+            <!-- /wp:group -->
+          summary: null
+          format: plain_text
+      field_pattern_category:
+        -
+          target_id: '1'
+      field_pattern_sync_status:
+        -
+          value: unsynced
+taxonomies:
+  conference_year:
+    -
+      vid: conference_year
+      tid: '2'
+      langcode: en
+      name: '2025'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 20ace8c3-cfc2-4583-9cc7-d220f893efe0
+  pattern_categories:
+    -
+      vid: pattern_categories
+      tid: '1'
+      langcode: en
+      name: 'Custom Blocks'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 733187a5-a1a7-4717-bdbb-b41c2df6f13e
+    -
+      vid: pattern_categories
+      tid: '3'
+      langcode: en
+      name: Sections
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 08df036e-5341-428f-95c3-5526074af9a2

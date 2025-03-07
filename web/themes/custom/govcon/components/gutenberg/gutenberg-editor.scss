@@ -1,18 +1,20 @@
 @use "@base/utilities.scss" as utility;
 @use "@base/mixins.scss" as mixins;
 
-.wp-block-columns {
+.wp-block-columns,
+.wp-block-group,
+.wp-block-stack {
   max-width: utility.$container-width;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-.wp-block-columns.alignwide {
+.alignwide {
   max-width: utility.$container-wide;
 }
 
-.wp-block-columns.alignfull {
+.alignfull {
   max-width: utility.$container-fluid-width;
 }
 

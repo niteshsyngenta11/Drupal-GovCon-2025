@@ -20,6 +20,7 @@
         "drupal/gutenberg": "^3.0@dev",
         "drupal/menu_link_attributes": "^1.5",
         "drupal/metatag": "^2.1",
+        "drupal/structure_sync": "^2.0",
         "drupal/twig_debugger": "^1.1",
         "drupal/twig_tweak": "^3.4",
         "drush/drush": "^13.3",

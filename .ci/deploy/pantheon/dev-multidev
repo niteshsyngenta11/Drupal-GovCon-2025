@@ -40,7 +40,8 @@ fi
 
 # Run Drush cim
 echo "Importing configuration on $TERMINUS_ENV..."
-terminus -n remote:drush "$TERMINUS_SITE.$TERMINUS_ENV" -- cim -y
+terminus -n remote:drush "$TERMINUS_SITE.$TERMINUS_ENV" -- deploy -y
+terminus -n remote:drush "$TERMINUS_SITE.$TERMINUS_ENV" -- ia --yes --choice=full
 
 # Clear the environment cache
 terminus -n env:clear-cache "$TERMINUS_SITE.$TERMINUS_ENV"

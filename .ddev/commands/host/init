@@ -16,6 +16,10 @@ ddev composer install
 echo "Pulling latest database from dev."
 ddev pull pantheon -y
 
+echo "Running drush deploy"
+ddev drush deploy -y
+ddev drush ia --yes --choice=full
+
 echo "Executing frontend setup and build"
 ddev frontend
 
