@@ -1,0 +1,21 @@
+uuid: 3b001879-8087-451c-a942-aaf99b00c59e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_date_time
+    - node.type.session_archive
+  module:
+    - datetime
+id: node.session_archive.field_session_date_time
+field_name: field_session_date_time
+entity_type: node
+bundle: session_archive
+label: 'Date / Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

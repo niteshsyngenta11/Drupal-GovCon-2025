@@ -87,6 +87,7 @@ landing_page_allowed_drupal_blocks:
 landing_page_enable_full: true
 landing_page_template: "[\r\n[\"drupal/simple-text\", {\"placeholder\": \"Insert Page Title\",\"tag\":\"h1\", \"mappingFields\":[{\"field\": \"title\"}]}]\r\n]"
 landing_page_template_lock: none
+sponsor_enable_full: false
 cambridge_landing_page_allowed_image_styles:
   full: full
   large: large
@@ -111,4 +112,4 @@ demo_allowed_image_styles:
   medium: medium
   thumbnail: thumbnail
   wide: wide
-sponsor_enable_full: false
+session_archive_enable_full: false

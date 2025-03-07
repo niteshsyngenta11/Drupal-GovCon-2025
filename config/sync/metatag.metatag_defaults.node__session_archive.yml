@@ -1,0 +1,10 @@
+uuid: 05ef54a7-b2da-42c4-b20f-dae63d510dc6
+langcode: en
+status: true
+dependencies: {  }
+id: node__session_archive
+label: 'Content: Session Archive'
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:body]'
+  title: '[node:title] | [site:name]'

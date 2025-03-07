@@ -1,0 +1,17 @@
+uuid: 55f86729-ea8a-4230-a3a1-a9c6effca4e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Session Archive'
+type: session_archive
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

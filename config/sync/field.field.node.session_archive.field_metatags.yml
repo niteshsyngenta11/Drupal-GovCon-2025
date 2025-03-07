@@ -1,0 +1,21 @@
+uuid: fa8382ec-4646-4df0-bc7e-32f51323fc25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.session_archive
+  module:
+    - metatag
+id: node.session_archive.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: session_archive
+label: Metatags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag
