@@ -1,6 +1,5 @@
 import userAccount from './user-account.twig';
 import menuData from './user-account.yml';
-import './user-account.scss';
 
 export default {
   title: 'Molecules/Menu/User Account',

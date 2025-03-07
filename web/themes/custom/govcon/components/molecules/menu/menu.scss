@@ -45,7 +45,7 @@ nav {
         text-decoration: none;
       }
 
-      &.active {
+      &.active a {
         text-decoration: underline;
       }
 
@@ -80,6 +80,7 @@ nav {
       &.active {
         @include mixins.media-breakpoint-up(lg) {
           background: color.$skyblue;
+          text-decoration: none;
         }
       }
 

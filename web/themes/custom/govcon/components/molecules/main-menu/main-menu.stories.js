@@ -1,6 +1,5 @@
 import menuTwig from './main-menu.twig';
 import menuData from './main-menu.yml';
-import './main-menu.scss';
 
 export default {
   title: 'Molecules/Menu/Main Menu',
