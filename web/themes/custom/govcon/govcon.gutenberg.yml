@@ -189,7 +189,7 @@ theme-support:
 
     # layout must be defined when using align wide setting on version 3.0 or above.
     layout:
-      contentSize: 1368px
+      contentSize: 1400px # added 1400 = 1368 + 32(Padding horizontal)
       wideSize: 1920px
     color:
       custom: false

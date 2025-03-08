@@ -4,8 +4,22 @@
 /* Gutenberg Layout Handling */
 .wp-block-columns {
   max-width: utility.$container-width;
-  margin: 0 auto;
-  padding-inline: 16px;
+  margin: 0 auto !important;
+  padding: 32px 16px;
+
+  @include mixins.media-breakpoint-up(md) {
+    &:not([class*=" "]) {
+      gap: 16px;
+    }
+  }
+}
+
+.gutenberg-container > .wp-block-group {
+  &:not(.alignwide):not(.alignfull) {
+    max-width: utility.$container-width;
+    margin: 0 auto;
+    padding-inline: 16px;
+  }
 }
 
 .alignwide {
@@ -71,36 +85,7 @@ html :where(.wp-block) {
   margin-inline: unset;
 }
 
-.wp-block-image {
-  margin: 0;
-
-  @include mixins.media-breakpoint-up(md) {
-    img {
-      max-width: unset;
-    }
-  }
-}
-
-/* Utility Classes */
-.wp-block-group-is-layout-flex {
-  display: flex;
-}
-
-.wp-block-group-is-layout-constrained {
-  display: block;
-}
-
-.is-vertical {
-  display: flex;
-  flex-direction: column;
-}
-
-.is-layout-flex {
-  display: flex !important;
-}
-
-@include mixins.media-breakpoint-down(md) {
-  .horizontal-card {
-    flex-direction: column;
-  }
+.vertical-card,
+.horizontal-card {
+  box-shadow: 4px 4px 4px 2px #00000033;
 }

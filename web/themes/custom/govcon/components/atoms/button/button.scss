@@ -6,7 +6,8 @@ $color-bg: transparent;
 $offset: 4px;
 $transition: 0.3s;
 
-.button {
+.button,
+.wp-block-button {
   font-family: "Poppins", serif !important;
   font-weight: 600 !important;
   outline: solid $border-width color.$primary-black;
@@ -22,10 +23,6 @@ $transition: 0.3s;
   color: color.$primary-black !important;
   z-index: 2;
 
-  &.primary::after {
-    background-color: color.$skyblue;
-  }
-
   &.secondary::after {
     background-color: color.$secondary;
   }
@@ -40,6 +37,7 @@ $transition: 0.3s;
     z-index: -1;
     border-radius: $radius;
     transition: all $transition ease-in-out;
+    background-color: color.$skyblue;
   }
 
   &:hover {
