@@ -94,3 +94,9 @@ main .wp-block-group:nth-child(1) {
 .is-layout-flex {
   display: flex !important;
 }
+
+@include mixins.media-breakpoint-down(md) {
+  .horizontal-card {
+    flex-direction: column;
+  }
+}

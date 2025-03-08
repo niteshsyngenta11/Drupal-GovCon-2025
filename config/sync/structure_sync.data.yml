@@ -2,7 +2,7 @@ blocks:
   -
     info: 'Vertical Card'
     langcode: en
-    uuid: e954d768-5580-4207-bfb8-e735a6a83297
+    uuid: 46ea7a9f-78a8-4862-985a-df367f0bddad
     bundle: reusable_block
     revision_id: null
     rev_id_current: null
@@ -10,13 +10,53 @@ blocks:
       body:
         -
           value: |-
-            <!-- wp:group {"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"0"},"border":{"radius":"4px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"},"metadata":{"name":"Vertical Card"}} -->
-            <div class="wp-block-group has-light-background-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--20)"><!-- wp:image {"sizeSlug":"original"} -->
+            <!-- wp:group {"lock":{"move":true,"remove":false},"className":"vertical-card","backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"0"},"border":{"radius":"4px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"},"metadata":{"name":"Vertical Card"}} -->
+            <div class="wp-block-group vertical-card has-light-background-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"sizeSlug":"original"} -->
             <figure class="wp-block-image size-original"><img src="https://placehold.co/380x270.png" alt=""/></figure>
             <!-- /wp:image -->
 
             <!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30","bottom":"0"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
             <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:0"><!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">Heading</h3>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph -->
+            <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:buttons -->
+            <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+            <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+            <!-- /wp:button --></div>
+            <!-- /wp:buttons --></div>
+            <!-- /wp:group --></div>
+            <!-- /wp:group -->
+          summary: null
+          format: plain_text
+      field_pattern_category:
+        -
+          target_id: '1'
+      field_pattern_sync_status:
+        -
+          value: unsynced
+  -
+    info: 'Horizontal Card'
+    langcode: en
+    uuid: 068b6a77-c197-446f-ba78-470936264a88
+    bundle: reusable_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: |-
+            <!-- wp:group {"lock":{"move":true,"remove":false},"className":"horizontal-card","backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|30"},"border":{"radius":"4px"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center","justifyContent":"center","orientation":"horizontal"},"metadata":{"name":"Horizontal Card"}} -->
+            <div class="wp-block-group horizontal-card has-light-background-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"width":"200px","height":"200px","scale":"cover","sizeSlug":"original"} -->
+            <figure class="wp-block-image size-original is-resized"><img src="https://placehold.co/200x200.png" alt="" style="object-fit:cover;width:200px;height:200px"/></figure>
+            <!-- /wp:image -->
+
+            <!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:heading {"level":3} -->
             <h3 class="wp-block-heading">Heading</h3>
             <!-- /wp:heading -->
 
