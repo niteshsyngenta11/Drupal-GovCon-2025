@@ -1,8 +1,8 @@
 blocks:
   -
-    info: 'Featured Sessions'
+    info: 'Vertical Card'
     langcode: en
-    uuid: 917a7955-2a4b-42c3-a6a6-531bccfe20fd
+    uuid: e954d768-5580-4207-bfb8-e735a6a83297
     bundle: reusable_block
     revision_id: null
     rev_id_current: null
@@ -10,52 +10,32 @@ blocks:
       body:
         -
           value: |-
-            <!-- wp:group {"backgroundColor":"dark","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"},"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center"},"metadata":{"name":"Featured Sessions"}} -->
-            <div class="wp-block-group has-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:heading {"textColor":"light","style":{"elements":{"link":{"color":{"text":"var:preset|color|light"}}}}} -->
-            <h2 class="wp-block-heading has-light-color has-text-color has-link-color">Featured Sessions</h2>
-            <!-- /wp:heading -->
+            <!-- wp:group {"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"0"},"border":{"radius":"4px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"},"metadata":{"name":"Vertical Card"}} -->
+            <div class="wp-block-group has-light-background-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--20)"><!-- wp:image {"sizeSlug":"original"} -->
+            <figure class="wp-block-image size-original"><img src="https://placehold.co/380x270.png" alt=""/></figure>
+            <!-- /wp:image -->
 
-            <!-- wp:group {"templateLock":false,"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"left"},"metadata":{"name":"Featured Card"}} -->
-            <div class="wp-block-group has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3} -->
-            <h3 class="wp-block-heading">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>
-            <!-- /wp:heading -->
-
-            <!-- wp:paragraph -->
-            <p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:heading {"level":4} -->
-            <h4 class="wp-block-heading">Suzanne Dergacheva, John Cloys</h4>
-            <!-- /wp:heading -->
-
-            <!-- wp:heading {"level":4} -->
-            <h4 class="wp-block-heading"><a href="#">View Session Info</a> </h4>
-            <!-- /wp:heading --></div>
-            <!-- /wp:group -->
-
-            <!-- wp:group {"templateLock":false,"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"left"},"metadata":{"name":"Featured Card"}} -->
-            <div class="wp-block-group has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3} -->
-            <h3 class="wp-block-heading">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>
+            <!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30","bottom":"0"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
+            <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:0"><!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">Heading</h3>
             <!-- /wp:heading -->
 
             <!-- wp:paragraph -->
-            <p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>
+            <p>Welcome to our platform! Here, you can explore a variety of features designed to enhance your experience. Dive in and discover all the possibilities!</p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":4} -->
-            <h4 class="wp-block-heading">Suzanne Dergacheva, John Cloys</h4>
-            <!-- /wp:heading -->
-
-            <!-- wp:heading {"level":4} -->
-            <h4 class="wp-block-heading"><a href="#">View Session Info</a> </h4>
-            <!-- /wp:heading --></div>
+            <!-- wp:buttons -->
+            <div class="wp-block-buttons"><!-- wp:button {"className":"button primary"} -->
+            <div class="wp-block-button button primary"><a class="wp-block-button__link wp-element-button">Button</a></div>
+            <!-- /wp:button --></div>
+            <!-- /wp:buttons --></div>
             <!-- /wp:group --></div>
             <!-- /wp:group -->
           summary: null
           format: plain_text
       field_pattern_category:
         -
-          target_id: '3'
+          target_id: '1'
       field_pattern_sync_status:
         -
           value: unsynced
@@ -92,6 +72,25 @@ blocks:
       field_pattern_category:
         -
           target_id: '1'
+      field_pattern_sync_status:
+        -
+          value: unsynced
+  -
+    info: 'Featured Sessions'
+    langcode: en
+    uuid: 917a7955-2a4b-42c3-a6a6-531bccfe20fd
+    bundle: reusable_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<!-- wp:group {\"backgroundColor\":\"dark\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\"},\"blockGap\":\"0\"}},\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\",\"verticalAlignment\":\"center\"},\"metadata\":{\"name\":\"Featured Sessions\"}} -->\r\n<div class=\"wp-block-group has-dark-background-color has-background\" style=\"padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)\"><!-- wp:heading {\"textColor\":\"light\",\"style\":{\"elements\":{\"link\":{\"color\":{\"text\":\"var:preset|color|light\"}}}}} -->\r\n<h2 class=\"wp-block-heading has-light-color has-text-color has-link-color\">Featured Sessions</h2>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:group {\"templateLock\":false,\"lock\":{\"move\":true,\"remove\":false},\"backgroundColor\":\"light\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\",\"left\":\"var:preset|spacing|30\",\"right\":\"var:preset|spacing|30\"},\"blockGap\":\"0\"}},\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\",\"verticalAlignment\":\"center\",\"justifyContent\":\"left\"},\"metadata\":{\"name\":\"Featured Card\"}} -->\r\n<div class=\"wp-block-group has-light-background-color has-background\" style=\"padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)\"><!-- wp:heading {\"level\":3} -->\r\n<h3 class=\"wp-block-heading\">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:heading {\"level\":4} -->\r\n<h4 class=\"wp-block-heading\">Suzanne Dergacheva, John Cloys</h4>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:heading {\"level\":4} -->\r\n<h4 class=\"wp-block-heading\"><a href=\"#\">View Session Info</a> </h4>\r\n<!-- /wp:heading --></div>\r\n<!-- /wp:group -->\r\n\r\n<!-- wp:group {\"templateLock\":false,\"lock\":{\"move\":true,\"remove\":false},\"backgroundColor\":\"light\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\",\"left\":\"var:preset|spacing|30\",\"right\":\"var:preset|spacing|30\"},\"blockGap\":\"0\"}},\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\",\"verticalAlignment\":\"center\",\"justifyContent\":\"left\"},\"metadata\":{\"name\":\"Featured Card\"}} -->\r\n<div class=\"wp-block-group has-light-background-color has-background\" style=\"padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)\"><!-- wp:heading {\"level\":3} -->\r\n<h3 class=\"wp-block-heading\">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:heading {\"level\":4} -->\r\n<h4 class=\"wp-block-heading\">Suzanne Dergacheva, John Cloys</h4>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:heading {\"level\":4} -->\r\n<h4 class=\"wp-block-heading\"><a href=\"#\">View Session Info</a> </h4>\r\n<!-- /wp:heading --></div>\r\n<!-- /wp:group --></div>\r\n<!-- /wp:group -->"
+          summary: ''
+          format: plain_text
+      field_pattern_category:
+        -
+          target_id: '3'
       field_pattern_sync_status:
         -
           value: unsynced
