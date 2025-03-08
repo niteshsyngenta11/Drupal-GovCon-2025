@@ -1,5 +1,24 @@
 blocks:
   -
+    info: 'Hero Image'
+    langcode: en
+    uuid: 91ada721-d323-4240-b6a3-e9d3eddeffb3
+    bundle: reusable_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<!-- wp:group {\"lock\":{\"move\":true,\"remove\":false},\"className\":\"hero-image\",\"backgroundColor\":\"light\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\",\"left\":\"var:preset|spacing|30\",\"right\":\"var:preset|spacing|30\"},\"blockGap\":\"var:preset|spacing|30\"},\"border\":{\"radius\":\"4px\"}},\"layout\":{\"type\":\"flex\",\"flexWrap\":\"nowrap\",\"verticalAlignment\":\"center\",\"justifyContent\":\"center\",\"orientation\":\"horizontal\"},\"metadata\":{\"name\":\"Hero Image Pattern\"}} -->\r\n<div class=\"wp-block-group hero-image has-light-background-color has-background\" style=\"border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)\"><!-- wp:image {\"width\":\"1368px\",\"height\":\"400px\",\"scale\":\"cover\",\"sizeSlug\":\"original\",\"style\":{\"border\":{\"radius\":\"8px\"}}} -->\r\n<figure class=\"wp-block-image size-original is-resized has-custom-border\"><img src=\"https://placehold.co/1368x400.png\" alt=\"\" style=\"border-radius:8px;object-fit:cover;width:1368px;height:400px\"/></figure>\r\n<!-- /wp:image --></div>\r\n<!-- /wp:group -->"
+          summary: ''
+          format: plain_text
+      field_pattern_category:
+        -
+          target_id: '1'
+      field_pattern_sync_status:
+        -
+          value: unsynced
+  -
     info: 'Vertical Card'
     langcode: en
     uuid: 46ea7a9f-78a8-4862-985a-df367f0bddad
