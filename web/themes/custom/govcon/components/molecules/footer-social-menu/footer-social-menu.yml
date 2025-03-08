@@ -1,0 +1,8 @@
+type: 'footer social menu'
+menu__items:
+  - title: 'Facebook'
+    url: '/fb'
+    icon: 'facebook'
+  - title: 'Twitter'
+    url: '/twitter'
+    icon: 'x'

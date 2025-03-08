@@ -55,11 +55,9 @@
     </section>
   </main>
 
-  {% if page.footer %}
-    <footer id="footer">
-      <div class="footer-content">
-        {{ page.footer }}
-      </div>
-    </footer>
-  {% endif %}
+  <footer id="footer">
+    {% if page.footer %}
+      {% include "@partials/layout/_footer-partials.twig" %}
+    {% endif %}
+  </footer>
 </div>

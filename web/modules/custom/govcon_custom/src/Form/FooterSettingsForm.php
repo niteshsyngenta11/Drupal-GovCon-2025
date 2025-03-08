@@ -41,7 +41,7 @@ class FooterSettingsForm extends ConfigFormBase {
       '#description' => $this->t('Upload a footer logo. Allowed file types: jpg, jpeg, png, webp.'),
       '#default_value' => $config->get('footer_image') ? [(int) $config->get('footer_image')] : [],
       '#upload_location' => 'public://',
-      '#required' => TRUE,
+      '#required' => FALSE,
     ];
     $form['footer_right'] = [
       '#type' => 'fieldset',

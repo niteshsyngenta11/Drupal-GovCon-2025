@@ -1,0 +1,62 @@
+@use '@atoms/colors/color.scss' as color;
+@use '@base/mixins.scss' as mixins;
+@use '@molecules/cta-card/cta-card.scss';
+@use "@molecules/footer-main-menu/footer-main-menu.scss";
+@use "@molecules/footer-quick-link-menu/footer-quick-link-menu.scss";
+@use "@molecules/footer-social-menu/footer-social-menu.scss";
+@use "sass:map";
+
+.site__footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 16px;
+  row-gap: 32px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mixins.media-breakpoint-down(md) {
+      > div {
+        width: 100%;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+.site__footer-container__text {
+  color: map.get(color.$colors, "white");
+
+  a,
+  a:visited {
+    color: map.get(color.$colors, "white");
+  }
+}
+
+.footer-left__column {
+  width: 10%;
+
+  @include mixins.media-breakpoint-down(md) {
+    justify-content: center;
+    display: flex;
+
+    img {
+      max-width: 128px;
+    }
+  }
+}
+
+.footer-centre__column {
+  width: 53%;
+}
+
+.footer-right__column {
+  width: 19%;
+}
+
+.footer-left__column-left_menu-icon_menu {
+  margin: 32px 0;
+}

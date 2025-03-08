@@ -9,15 +9,10 @@
   */
 #}
 
-{# <a class="button {{ modifier|default('') }}" href="{{ src_url }}" target="{{ src_target }}">
-  {{ label }}
-</a> #}
-
- {% include "@atoms/link/link.twig" with { 
+ {% include "@atoms/link/link.twig" with {
   link_url: src_url,
   link_title: label,
   link_target: src_target,
   link_content: label,
   link_classes: ["button", modifier|default('')]
  } %}
-

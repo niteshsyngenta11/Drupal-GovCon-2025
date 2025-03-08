@@ -9,17 +9,20 @@ function govcon_preprocess_page(array &$variables) {
   $config = \Drupal::config('govcon_custom.settings');
   // Prepare footer data.
   $footer_data = [
-    'footer_image' => '',
+    'src_path' => '',
+    'src_alt' => 'Drupal GovCon Footer Logo',
     'footer_description' => $config->get('footer_description') ?? '',
     'footer_cta_label' => $config->get('footer_cta_label') ?? '',
     'footer_cta_url' => $config->get('footer_cta_url') ?? '',
   ];
   // Load the footer image if it's set.
-  if ($fid = $config->get('footer_image')) {
+  if ($config && $fid = $config->get('footer_image')) {
     if ($file = File::load($fid)) {
-      $footer_data['footer_image'] = $file->getFileUri();
+      if ($image = $file->getFileUri()) {
+        $image_url = Drupal::service('file_url_generator')->generateAbsoluteString($image);
+        $footer_data['src_path'] = $image_url;
+      }
     }
   }
-  // Pass the footer data to the page template.
   $variables['footer_data'] = $footer_data;
 }

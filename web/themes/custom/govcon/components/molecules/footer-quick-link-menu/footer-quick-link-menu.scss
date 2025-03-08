@@ -1,0 +1,8 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
+.footer-quick-links {
+  a {
+    color: map.get(color.$colors, "light");
+  }
+}

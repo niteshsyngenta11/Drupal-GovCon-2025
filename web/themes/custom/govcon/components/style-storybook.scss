@@ -7,6 +7,6 @@ div#storybook-root,
   padding: 2rem;
 }
 
-div#storybook-root:has(.site-header) {
+div#storybook-root:has(.site-header), div#storybook-root:has(.site-footer) {
   padding: 0rem;
 }

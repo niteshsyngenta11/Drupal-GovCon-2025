@@ -24,4 +24,4 @@ definitions:
     parent: ''
     weight: -49
     expanded: false
-    enabled: true
+    enabled: false

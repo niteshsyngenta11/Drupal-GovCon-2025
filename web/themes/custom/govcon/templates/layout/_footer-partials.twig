@@ -1,0 +1,13 @@
+{% embed "@organisms/footer/footer.twig" with { footer_data: footer_data } %}
+  {% block footer__social__icons %}
+    {{ page.footer.govcon_socialmedia }}
+  {% endblock %}
+
+  {% block footer__quick_links %}
+    {{ page.footer.govcon_footerquicklink }}
+  {% endblock %}
+  
+  {% block footer__main_menu %}
+    {{ page.footer.govcon_footer }}
+  {% endblock %}
+{% endembed %}
