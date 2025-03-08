@@ -33,7 +33,7 @@ menu__items:
     url: "/store"
     classes: ""
     below: []
-  - title: "Venuw"
+  - title: "Venue"
     url: "/venue"
     classes: ""
     below: []

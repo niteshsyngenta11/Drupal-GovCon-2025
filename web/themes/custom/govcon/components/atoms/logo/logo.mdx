@@ -1,6 +1,5 @@
-import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
-import logoStories from "./logo.stories";
-import logoTwig from "./logo.twig";
+import { Meta, Canvas, Controls, Story } from "@storybook/blocks";
+import * as logoStories from "./logo.stories";
 
 <Meta title="Atoms/Logo" of={logoStories} />
 
@@ -10,36 +9,20 @@ The Logo component is used to display different variations of the brand logo.
 
 ## Variants
 
+### Default Logo
+
+The Default logo variant.
+
+<Canvas of={logoStories.Default} />
+
 ### Primary Logo
 
-The primary logo variant.
+The Primary logo variant.
 
-<Canvas>
-  <Story name="Primary">
-    {logoTwig({ src_path: "/assets/images/Default.png", src_alt: "Logo" })}
-  </Story>
-</Canvas>
+<Canvas of={logoStories.Primary} />
 
 ### Secondary Logo
 
 The secondary logo variant.
 
-<Canvas>
-  <Story name="Secondary">
-    {logoTwig({ src_path: "/assets/images/Blue.png", src_alt: "Logo" })}
-  </Story>
-</Canvas>
-
-### Default Logo
-
-The default logo variant.
-
-<Canvas>
-  <Story name="Default">
-    {logoTwig({ src_path: "/logo.svg", src_alt: "Logo" })}
-  </Story>
-</Canvas>
-
-## Props
-
-<ArgTypes of={logoStories} />
+<Canvas of={logoStories.Secondary} />

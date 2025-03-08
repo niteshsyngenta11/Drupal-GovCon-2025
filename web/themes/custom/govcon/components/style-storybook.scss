@@ -2,6 +2,8 @@
 @use '@atoms/icons/icons-preview.scss';
 @use '@atoms/link/link.demo.scss';
 @use '@molecules/footer-menu/footer-menu.storybook.scss';
+@use './gutenberg/gutenberg-storybook.scss';
+@use '../../../../modules/contrib/gutenberg/js/vendor/gutenberg/block-library/style.css';
 
 div#storybook-root,
 .sbdocs-preview {

@@ -1,0 +1,254 @@
+:root {
+  --wp--preset--spacing--10: 8px;
+  --wp--preset--spacing--20: 16px;
+  --wp--preset--spacing--30: 32px;
+  --wp--preset--spacing--40: 64px;
+  --wp--preset--spacing--50: 128px;
+  --wp--preset--spacing--60: 172px;
+}
+
+:root {
+  .has-primary-color {
+    color: #285A83
+  }
+
+  .has-primary-background-color {
+    background-color: #285A83
+  }
+
+  .has-primary-border-color {
+    border-color: #285A83
+  }
+
+  .has-primary-lighter-color {
+    color: #7AD1E7
+  }
+
+  .has-primary-lighter-background-color {
+    background-color: #7AD1E7
+  }
+
+  .has-primary-lighter-border-color {
+    border-color: #7AD1E7
+  }
+
+  .has-primary-light-color {
+    color: #107DB5
+  }
+
+  .has-primary-light-background-color {
+    background-color: #107DB5
+  }
+
+  .has-primary-light-border-color {
+    border-color: #107DB5
+  }
+
+  .has-primary-dark-color {
+    color: #213B75
+  }
+
+  .has-primary-dark-background-color {
+    background-color: #213B75
+  }
+
+  .has-primary-dark-border-color {
+    border-color: #213B75
+  }
+
+  .has-secondary-color {
+    color: #F93E5A
+  }
+
+  .has-secondary-background-color {
+    background-color: #F93E5A
+  }
+
+  .has-secondary-border-color {
+    border-color: #F93E5A
+  }
+
+  .has-surface-color {
+    color: #F4FAFF
+  }
+
+  .has-surface-background-color {
+    background-color: #F4FAFF
+  }
+
+  .has-surface-border-color {
+    border-color: #F4FAFF
+  }
+
+  .has-tertiary-color {
+    color: #FFC7C6
+  }
+
+  .has-tertiary-background-color {
+    background-color: #FFC7C6
+  }
+
+  .has-tertiary-border-color {
+    border-color: #FFC7C6
+  }
+
+  .has-contrast-color {
+    color: #3556D1
+  }
+
+  .has-contrast-background-color {
+    background-color: #3556D1
+  }
+
+  .has-contrast-border-color {
+    border-color: #3556D1
+  }
+
+  .has-dark-color {
+    color: #132B3F
+  }
+
+  .has-dark-background-color {
+    background-color: #132B3F
+  }
+
+  .has-dark-border-color {
+    border-color: #132B3F
+  }
+
+  .has-light-color {
+    color: #ffffff
+  }
+
+  .has-light-background-color {
+    background-color: #ffffff
+  }
+
+  .has-light-border-color {
+    border-color: #ffffff
+  }
+
+  .has-black-color {
+    color: #000000
+  }
+
+  .has-black-background-color {
+    background-color: #000000
+  }
+
+  .has-black-border-color {
+    border-color: #000000
+  }
+}
+
+:root {
+  .has-primary-govcon-gradient-gradient-background {
+    background: linear-gradient(135deg, #285A83E5 0%, #132B3F 100%)
+  }
+
+  .has-primary-to-secondary-gradient-background {
+    background: linear-gradient(135deg, #CEBAFF 0%, #FFC884 100%)
+  }
+
+  .has-primary-to-contrast-gradient-background {
+    background: linear-gradient(135deg, #CEBAFF 0%, #3556D1 100%)
+  }
+
+  .has-secondary-to-light-gradient-background {
+    background: linear-gradient(to right bottom, #FFC884, #FFFFFF)
+  }
+}
+
+:root {
+  .has-extra-small-font-size {
+    font-size: 0.8125rem
+  }
+
+  .has-small-font-size {
+    font-size: 0.875rem
+  }
+
+  .has-normal-font-size {
+    font-size: 1.25rem
+  }
+
+  .has-large-font-size {
+    font-size: 2rem
+  }
+
+  .has-extra-large-font-size {
+    font-size: 4rem
+  }
+
+  .has-h1-font-size {
+    font-size: 40px
+  }
+
+  .has-h2-font-size {
+    font-size: 32px
+  }
+
+  .has-h3-font-size {
+    font-size: 22px
+  }
+
+  .has-h4-font-size {
+    font-size: 16px
+  }
+
+  .has-h5-font-size {
+    font-size: 15px
+  }
+
+  .has-h6-font-size {
+    font-size: 13px
+  }
+}
+
+
+.wp-container-core-group-layout-1 {
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.wp-container-core-columns-layout-1 {
+  flex-wrap: nowrap;
+  gap: 2em var(--wp--preset--spacing--30);
+}
+
+.wp-container-core-group-layout-3 {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wp-container-core-columns-layout-2 {
+  flex-wrap: nowrap;
+  gap: 2em var(--wp--preset--spacing--30);
+}
+
+.wp-container-core-columns-layout-3 {
+  flex-wrap: nowrap;
+  gap: 2em var(--wp--preset--spacing--30);
+}
+
+.wp-container-core-columns-layout-4 {
+  flex-wrap: nowrap;
+  gap: 2em var(--wp--preset--spacing--20);
+}
+
+.wp-container-content-1 {
+  flex-grow: 1;
+}
+
+.wp-container-content-2 {
+  flex-grow: 1;
+}
+
+.wp-container-content-3 {
+  flex-grow: 1;
+}
+
+.wp-container-core-group-layout-12 {
+  flex-direction: column;
+  align-items: flex-start;
+}
