@@ -13,10 +13,13 @@ settings:
   allowed_values:
     -
       value: 'yes'
-      label: 'Yes'
+      label: 'In-Person or Virtual,'
     -
       value: 'no'
-      label: 'No'
+      label: 'In-Person Only'
+    -
+      value: virtual_only
+      label: 'Virtual Only'
   allowed_values_function: ''
 module: options
 locked: false

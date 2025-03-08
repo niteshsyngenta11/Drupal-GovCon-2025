@@ -16,11 +16,13 @@ dependencies:
     - field.field.node.session_archive.field_session_date_time
     - field.field.node.session_archive.field_session_track
     - field.field.node.session_archive.field_status
+    - field.field.node.session_archive.field_supporting_documents
     - field.field.node.session_archive.field_video
     - image.style.thumbnail
     - node.type.session_archive
   module:
     - datetime
+    - file
     - image
     - link
     - metatag
@@ -130,6 +132,13 @@ content:
     weight: 131
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_supporting_documents:
+    type: file_generic
+    weight: 133
+    region: content
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
   field_video:
     type: entity_reference_autocomplete

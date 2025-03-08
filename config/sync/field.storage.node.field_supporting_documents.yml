@@ -1,0 +1,23 @@
+uuid: c6fe21cc-bdfb-4efc-8386-d878259ee686
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_supporting_documents
+field_name: field_supporting_documents
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
