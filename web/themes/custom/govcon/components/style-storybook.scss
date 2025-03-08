@@ -1,6 +1,7 @@
 @use '@atoms/colors/colors.layout.scss';
 @use '@atoms/icons/icons-preview.scss';
 @use '@atoms/link/link.demo.scss';
+@use '@molecules/footer-menu/footer-menu.storybook.scss';
 
 div#storybook-root,
 .sbdocs-preview {

@@ -11,7 +11,7 @@ export default {
 
 
 export const FooterMainMenu = () => {
-  return footerMainMenu({ items: footerMainMenuData.menu__items, custom_class: 'bg-dark' });
+  return footerMainMenu({ items: footerMainMenuData.menu__items });
 };
 
 export const FooterQuickLinkMenu = () => {

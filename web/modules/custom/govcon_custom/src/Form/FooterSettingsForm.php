@@ -115,8 +115,6 @@ class FooterSettingsForm extends ConfigFormBase {
       if (!in_array($file->getMimeType(), $allowed_mime_types)) {
         $form_state->setErrorByName('footer_image', $this->t('Only PNG, JPG, JPEG, and WEBP files are allowed.'));
       }
-    } else {
-      $form_state->setErrorByName('footer_image', $this->t('Invalid or missing file upload!'));
     }
   }
 
