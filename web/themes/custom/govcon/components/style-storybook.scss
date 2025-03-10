@@ -13,3 +13,9 @@ div#storybook-root,
 div#storybook-root:has(.site-header), div#storybook-root:has(.site-footer) {
   padding: 0rem;
 }
+
+#story--atoms-button--primary, #story--atoms-button--secondary {
+  height: 130px;
+  display: flex;
+  align-items: center;
+}
