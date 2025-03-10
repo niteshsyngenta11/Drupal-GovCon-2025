@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import footerMainStories from "./footer-main-menu.stories";
+import footerMainMenuTwig from "./footer-main-menu.html.twig";
+
+<Meta title="Molecules/Footer Main Menu Docs" of={footerMainStories} name="Footer Main Menu Docs" />
+
+# Footer Main Menu
+
+The Footer Main Menu component displays structured navigation links in the footer. It ensures accessibility and responsiveness while maintaining a clean layout.
+
+## Default Menu
+
+<Canvas>
+  <Story name="Footer Main Menu">
+    {footerMainMenuTwig({ items: footerMainStories?.args?.items || [] })}
+  </Story>
+</Canvas>
+
+## Structure
+
+The **Footer Main Menu** is built using `footer-menu.twig` and imported into `footer-main-menu.html.twig`. It follows a hierarchical structure, allowing multi-level navigation.
+
+### **Key Features**
+- Displays **primary navigation links** in the footer.
+- Supports **nested menus** with hierarchical structure.
+- Uses **flexbox** for alignment and **responsive wrapping**.
+- Accessible markup with **ARIA attributes**.
+
+## Styles
+
+The footer main menu follows these styles:
+
+| Class | Description |
+|-------|------------|
+| `.footer-main-menu` | Main wrapper applying flexbox layout. |
+| `.footer-menu__items` | Holds menu items with proper spacing. |
+| `.footer-menu__item` | Individual menu item styling. |
+
+### **Responsive Behavior**
+- On larger screens, the menu is **center-aligned** and spread evenly.
+- On **smaller screens**, items **wrap** and align to the left for better readability.
+
+## Custom Class (`custom_class`)
+
+The `custom_class` prop allows customization of the menu's styling. It is applied as an additional CSS class to the `<ul>` element inside the `footer-menu.twig` template.
+
+### **Usage in Twig**
+```twig
+<ul class="footer-menu__items {{ custom_class }}">
