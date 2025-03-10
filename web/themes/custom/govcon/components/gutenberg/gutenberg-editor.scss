@@ -93,3 +93,7 @@ html :where(.wp-block) {
 .is-layout-flex {
   display: flex;
 }
+
+.is-vertical {
+  flex-direction: column;
+}
