@@ -89,3 +89,7 @@ html :where(.wp-block) {
 .horizontal-card {
   box-shadow: 4px 4px 4px 2px #00000033;
 }
+
+.is-layout-flex {
+  display: flex;
+}
