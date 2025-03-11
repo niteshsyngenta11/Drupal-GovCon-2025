@@ -1,0 +1,49 @@
+<div class="listing-card">
+  {% if image %}
+    <div class="listing-card__image">
+      <img src="{{ image }}" alt="{{ image_alt }}"></div>
+    {% endif %}
+
+    <div class="listing-card__content">
+      <h3 class="listing-card__heading">
+        {{ heading }}
+      </h3>
+
+      {% if subheading %}
+        <h4 class="listing-card__subheading">
+          {{ subheading }}
+        </h4>
+      {% endif %}
+
+      {% if description %}
+        <p class="listing-card__description">
+          {{ description }}
+        </p>
+      {% endif %}
+
+      {% if link %}
+        {% include "@atoms/link/link.twig" with {
+        link_url: link.url,
+        link_title: link.title,
+        link_target: link.target,
+        link_content: link.content,
+        link_classes: link.classes|merge(["listing-card__cta", "icon--arrow-right", "icon--after"])
+      } %}
+      {% endif %}
+
+    </div>
+
+    {% if fields %}
+      <div class="listing-card__fields">
+        {% for field in fields %}
+          <div class="listing-card__field">
+            <strong>
+              {{ field.label }}
+              :
+            </strong>
+            {{ field.value }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>

@@ -1,0 +1,30 @@
+.listing-card {
+  background: #f8fbff;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.listing-card__image img {
+  width: 220px;
+  border-radius: 8px;
+}
+
+.listing-card__content {
+  text-align: left;
+}
+
+.listing-card__fields {
+  background: #76c7f2;
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.listing-card__field {
+  font-weight: bold;
+}

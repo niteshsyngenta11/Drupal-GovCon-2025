@@ -1,0 +1,18 @@
+image: "https://placehold.co/220x200.png"
+image_alt: "Sample image"
+heading: "Heading"
+subheading: "Subheading"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+link:
+  url: "#"
+  title: "Button"
+  target: "_blank"
+  content: "Button"
+  classes: ["text-cobalt", "h4"]
+fields:
+  - label: "Field One"
+    value: "Field one content"
+  - label: "Field Two"
+    value: "Field two content"
+  - label: "Field Three"
+    value: "Field three content"
