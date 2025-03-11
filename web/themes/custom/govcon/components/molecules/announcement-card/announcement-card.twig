@@ -10,14 +10,13 @@
     {{ description }}
   </p>
   {% if link %}
-    {% set additional_classes = ["text-cobalt", "mb-0", "h4", "icon--arrow-right", "icon-after", "text-decoration-none"] %}
+    {% set additional_classes = "" %}
 
-    {% include "@atoms/link/link.twig" with {
+    {% include "@atoms/button/button.twig" with {
       link_url: link.url,
-      link_title: link.title,
-      link_target: link.target,
-      link_content: link.content,
-      link_classes: link.classes|merge(additional_classes)
+      src_target: link.target,
+      label: link.content,
+      modifier: "ghost icon--arrow-right icon-after " ~ link.classes 
     } %}
   {% endif %}
 </div>

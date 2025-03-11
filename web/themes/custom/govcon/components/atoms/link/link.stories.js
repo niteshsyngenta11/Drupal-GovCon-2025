@@ -1,5 +1,4 @@
 import CreateLink from './link.demo.twig';
-import './link.scss';
 
 export default {
   title: 'Atoms/Link',

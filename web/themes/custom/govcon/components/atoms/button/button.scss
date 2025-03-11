@@ -52,3 +52,23 @@ $transition: 0.3s;
     height: 100%;
   }
 }
+
+a.ghost {
+  font-family: "Poppins", serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.icon--arrow-right.icon-after:after {
+    font-size: 12px;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+  }
+
+  &:hover {
+    &.icon--arrow-right.icon-after::after {
+      transform: translateX(4px);
+    }
+  }
+}
