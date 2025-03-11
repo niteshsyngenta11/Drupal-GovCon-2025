@@ -18,5 +18,6 @@
 <a class="{{ link_classes|join(' ') | trim }}" {% if link_target %} target="{{ link_target }}" {% endif %} {% if link_title %} title="{{ link_title }}" {% endif %} {% if aria_label %} aria-label="{{ aria_label }}" {% endif %} href="{{ link_url }}">
   {% block link_content %}
     {{ link_content }}
+    {{ link_icon ? ' <i class="icon--arrow-right"></i>'  }}
   {% endblock %}
 </a>

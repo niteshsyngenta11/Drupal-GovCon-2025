@@ -1,0 +1,26 @@
+@use '@atoms/colors/color' as color;
+
+.announcement-card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.announcement-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 32px;
+  min-height: 381px;
+
+  .wp-block-separator {
+    margin: 16px auto;
+    opacity: 0.3;
+  }
+
+  .announcement-link {
+    margin-top: auto;
+    text-decoration: none;
+  }
+}

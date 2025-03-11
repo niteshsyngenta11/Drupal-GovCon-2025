@@ -1,0 +1,26 @@
+<div class="announcement-card-row">
+  {% for announcement in announcements %}
+    <div class="announcement-card bg-skyblue">
+      <h3 class="wp-block-heading">
+        {{ announcement.title }}
+      </h3>
+      <p>
+        {{ announcement.date }}
+      </p>
+      <hr class="wp-block-separator has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color has-background is-style-wide" />
+      <p>
+        {{ announcement.description }}
+      </p>
+      {% if announcement.link %}
+        {% include "@atoms/link/link.twig" with {
+          link_url: announcement.link.url,
+          link_title: announcement.link.title,
+          link_target: announcement.link.target,
+          link_content: announcement.link.content,
+          link_icon: true,
+          link_classes: announcement.link.classes
+        } %}
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
