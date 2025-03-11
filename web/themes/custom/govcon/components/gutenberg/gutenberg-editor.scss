@@ -90,10 +90,26 @@ html :where(.wp-block) {
   box-shadow: 4px 4px 4px 2px #00000033;
 }
 
-.is-layout-flex {
-  display: flex;
-}
+.gutenberg-container,
+.editor-styles-wrapper {
+  a {
+    color: inherit
+  }
 
-.is-vertical {
-  flex-direction: column;
+  ul, ol {
+    padding-left: 32px;
+    margin: 16px 0;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: auto;
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
 }
