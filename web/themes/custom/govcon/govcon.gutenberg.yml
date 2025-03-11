@@ -148,7 +148,7 @@ theme-support:
   __experimentalFeatures:
     settings:
       spacing:
-        blockGap: true
+        blockGap: false
 
     border:
       radius: true
@@ -159,7 +159,7 @@ theme-support:
     spacing:
       margin: true
       padding: true
-      blockGap: true
+      blockGap: false
       customSpacingSize: false
       units:
         - px
@@ -201,7 +201,7 @@ theme-support:
       text: true
       defaultPalette: false
       heading: true
-      link: true
+      link: false
       palette:
         theme:
           - name: Primary

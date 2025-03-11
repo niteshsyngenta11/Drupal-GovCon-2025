@@ -98,8 +98,26 @@ html :where(.wp-block) {
   flex-direction: column;
 }
 
-.gutenberg-container {
+.gutenberg-container,
+.editor-styles-wrapper {
   a {
     color: inherit
+  }
+
+  ul, ol {
+    padding-left: 32px;
+    margin: 16px 0;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: auto;
+  }
+
+  li {
+    margin-bottom: 12px;
   }
 }
