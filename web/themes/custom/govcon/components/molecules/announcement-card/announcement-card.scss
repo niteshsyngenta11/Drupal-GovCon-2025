@@ -1,0 +1,29 @@
+@use '@atoms/colors/color' as color;
+@use '@base/mixins.scss' as mixins;
+
+.announcement-card {
+  hr {
+    height: 2px;
+    opacity: 0.3;
+  }
+
+  a.announcement-link {
+    &.icon--arrow-right.icon-after::after {
+      font-size: 80%;
+      transition: transform 0.3s ease-in-out;
+      display: inline-block;
+    }
+
+    &:hover {
+      &.icon--arrow-right.icon-after::after {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  @include mixins.media-breakpoint-down(lg) {
+    .announcement-description {
+      display: none;
+    }
+  }
+}

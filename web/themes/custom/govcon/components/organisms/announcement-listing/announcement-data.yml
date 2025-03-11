@@ -14,7 +14,14 @@ announcements:
     description: "Training schedules are now LIVE! Register for training!"
     link:
       url: "#"
-      title: "Click Here"
+      title: "See Announcement"
       target: "_blank"
-      content: "Click Here"
+      content: "See Announcement"
       classes: ["announcement-link", "text-cobalt", "h4"]
+
+viewAnnouncement:
+  url: "#"
+  title: "View All Announcement"
+  target: "_blank"
+  content: "View All Announcement"
+  classes: ["text-light", "h4"]
