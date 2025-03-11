@@ -97,3 +97,9 @@ html :where(.wp-block) {
 .is-vertical {
   flex-direction: column;
 }
+
+.gutenberg-container {
+  a {
+    color: inherit
+  }
+}

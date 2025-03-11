@@ -332,24 +332,15 @@ theme-support:
         blockGap: 1.5rem
 
     blocks:
-      core/heading:
-        # Setting color to a block type will override the global color settings.
-        # Colors set here must be also defined in the global color settings.
-        color:
-          palette:
-            theme:
-              - slug: primary
-                color: "#CEBAFF"
-                name: Primary
-              - slug: primary-dark
-                color: "#584980"
-                name: Primary Dark
-              - slug: dark
-                color: "#000000"
-                name: Dark
-              - slug: light
-                color: "#ffffff"
-                name: Light
+      # core/heading:
+      #   # Setting color to a block type will override the global color settings.
+      #   # Colors set here must be also defined in the global color settings.
+      #   color:
+      #     palette:
+      #       theme:
+      #         - slug: primary
+      #           color: "#CEBAFF"
+      #           name: Primary
       core/button:
         border:
           radius: false
