@@ -1,4 +1,4 @@
-<nav class="menu {{ classes | default('') }}">
+<nav class="menu {{ classes | default('') }}" aria-label="{{ menu_type == 'main' ? 'Site Menu' : 'User Account Menu' }}">
   <ul class="menu__list main-menu">
     {% for item in menu__items %}
       <li class="menu__item {% if item.below %} has-below {% endif %} {{ item.in_active_trail ? 'active' : '' }}">
