@@ -18,6 +18,113 @@ $spacer: 1rem;
   margin: 0 auto;
 }
 
+// Spacing values
+$space-values: (
+  0,
+  8,
+  16,
+  24,
+  32,
+  40,
+  48,
+  56,
+  64
+);
+
+// Generate margin and padding classes
+@each $space in $space-values {
+  .m-#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  .mt-#{$space} {
+    margin-top: #{$space}px !important;
+  }
+
+  .mb-#{$space} {
+    margin-bottom: #{$space}px !important;
+  }
+
+  .ml-#{$space} {
+    margin-left: #{$space}px !important;
+  }
+
+  .mr-#{$space} {
+    margin-right: #{$space}px !important;
+  }
+
+  .mx-#{$space} {
+    margin-left: #{$space}px !important;
+    margin-right: #{$space}px !important;
+  }
+
+  .my-#{$space} {
+    margin-top: #{$space}px !important;
+    margin-bottom: #{$space}px !important;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
+
+  .pt-#{$space} {
+    padding-top: #{$space}px !important;
+  }
+
+  .pb-#{$space} {
+    padding-bottom: #{$space}px !important;
+  }
+
+  .pl-#{$space} {
+    padding-left: #{$space}px !important;
+  }
+
+  .pr-#{$space} {
+    padding-right: #{$space}px !important;
+  }
+
+  .px-#{$space} {
+    padding-left: #{$space}px !important;
+    padding-right: #{$space}px !important;
+  }
+
+  .py-#{$space} {
+    padding-top: #{$space}px !important;
+    padding-bottom: #{$space}px !important;
+  }
+}
+
+// Auto margin classes
+.m-auto {
+  margin: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
 // Centering Utilities
 .mx-auto {
   margin-left: auto !important;

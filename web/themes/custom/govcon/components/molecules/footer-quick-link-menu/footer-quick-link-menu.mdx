@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import footerQuickLinkStories from "./footer-quick-link-menu.stories";
+import footerQuickLinkMenuTwig from "./footer-quick-link-menu.html.twig";
+
+<Meta title="Molecules/Menu/Footer Quick Link Menu Docs" of={footerQuickLinkStories} name="Footer Quick Link Menu Docs" />
+
+# Footer Quick Links
+
+The **Footer Quick Links** component displays a list of important links in the footer. It follows a structured format and allows customization using the `custom_class` prop.
+
+## Component Preview
+
+<Canvas>
+  <Story name="Footer Quick Links">
+    {footerQuickLinkMenuTwig({ items: footerQuickLinkStories?.args?.items || [] })}
+  </Story>
+</Canvas>
+
+## Custom Class (`custom_class`)
+
+The `custom_class` prop allows customization of the quick links menu styling.
+
+### **Applied Classes**
+| Class | Description |
+|-------|------------|
+| `"footer-quick-links body-text bg-dark"` | Default class for quick links, applying body text styles and a dark background. |
+
+### **Twig Usage**
+```twig
+{% include '@molecules/footer-menu/footer-menu.twig' with { items: items, custom_class: 'footer-quick-links body-text bg-dark'} only %}
