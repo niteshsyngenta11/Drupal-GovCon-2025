@@ -1,0 +1,12 @@
+@use '@atoms/colors/color' as color;
+
+.announcement-card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.announcement-card hr {
+  height: 2px;
+  opacity: 0.3;
+}

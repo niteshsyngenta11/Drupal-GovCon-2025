@@ -2,9 +2,11 @@ import announcementCard from './announcement-card.twig';
 import data from './announcement-data.yml';
 
 export default {
-  title: "Molecules/Announcement Card"
+  title: "Molecules/Announcement Card",
+  argTypes: {},
 };
 
-const Card = () => announcementCard(data);
+const Template = (args) => announcementCard(args);
 
-export const Default = Card.bind({});
+export const Default = Template.bind({});
+Default.args = data;

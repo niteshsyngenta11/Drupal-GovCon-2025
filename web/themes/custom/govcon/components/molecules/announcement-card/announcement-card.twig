@@ -1,26 +1,23 @@
-<div class="announcement-card-row">
-  {% for announcement in announcements %}
-    <div class="announcement-card bg-skyblue">
-      <h3 class="wp-block-heading">
-        {{ announcement.title }}
-      </h3>
-      <p>
-        {{ announcement.date }}
-      </p>
-      <hr class="wp-block-separator has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color has-background is-style-wide" />
-      <p>
-        {{ announcement.description }}
-      </p>
-      {% if announcement.link %}
-        {% include "@atoms/link/link.twig" with {
-          link_url: announcement.link.url,
-          link_title: announcement.link.title,
-          link_target: announcement.link.target,
-          link_content: announcement.link.content,
-          link_icon: true,
-          link_classes: announcement.link.classes
-        } %}
-      {% endif %}
-    </div>
-  {% endfor %}
+<div class="announcement-card bg-skyblue d-flex p-32 border-radius-xxs justify-between flex-column">
+  <h3 class="mb-4">
+    {{ title }}
+  </h3>
+  <p class="mb-0">
+    {{ date }}
+  </p>
+  <hr class="has-text-color has-primary-color has-primary-background-color has-background my-16" />
+  <p>
+    {{ description }}
+  </p>
+  {% if link %}
+    {% set additional_classes = ["text-cobalt", "mb-0", "h4", "icon--arrow-right", "icon-after", "text-decoration-none"] %}
+
+    {% include "@atoms/link/link.twig" with {
+      link_url: link.url,
+      link_title: link.title,
+      link_target: link.target,
+      link_content: link.content,
+      link_classes: link.classes|merge(additional_classes)
+    } %}
+  {% endif %}
 </div>
