@@ -3,11 +3,11 @@ import pageData from './session-archive.yml';
 import './session-archive.scss';
 
 export default {
-  title: "Molecules/Templates/Session archive"
+  title: "Molecules/Templates/Session archive Details"
 }
 
 const Component = (args) => htmlComponent(args);
 
-export const Default = Component.bind({});
+export const Session_Archive = Component.bind({});
 
-Default.args = pageData;
+Session_Archive.args = pageData;
