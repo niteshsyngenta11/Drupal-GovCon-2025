@@ -6,6 +6,18 @@ import announcementTwig from "./announcement.twig";
 
 # Announcement Detail Page
 
+# Purpose
+
+The Announcement Detail template is designed to present important announcements with clarity, ensuring users can quickly grasp key information such as the title, description, and post date.
+
+# Usage
+
+This component displays announcement details in a structured manner. It typically includes:
+
+- **Title**: The title of the announcement.  
+- **Description**: A brief description of the announcement.  
+- **Post Date**: The date when the announcement was published.  
+
 <Canvas>
   <Story name="Announcement Detail Page">
     {announcementTwig({ items: announcementStories?.args?.items || [] })}
@@ -13,16 +25,6 @@ import announcementTwig from "./announcement.twig";
 </Canvas>
 
 The `Announcement` component is used to display announcement details, including a title, description, and post date.
-
-## Usage: Storybook Data
-
-```jsx
-<Announcement 
-  announcement_page_title={{ value: "New Feature Release" }}
-  announcement_description={{ value: "We are excited to introduce a new feature that enhances user experience." }}
-  announcement_post_date={{ label: "Post Date", value: "2025-03-12" }}
-/>
-```
 
 ## Props
 
@@ -35,9 +37,3 @@ The `Announcement` component is used to display announcement details, including 
 ## Data Source
 The **node template (`node--announcement.html.twig`)** populates the component using Drupal fields:
 ```twig
-{% include '@templates/announcement/announcement.twig' with {
-  announcement_title: { value: label }, 
-  announcement_description: { value: content.body },
-  announcement_post_date: { label: content.field_important_date['#title'], value: content.field_important_date },
-} %}
-```

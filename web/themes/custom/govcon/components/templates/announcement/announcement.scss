@@ -2,9 +2,6 @@
   padding: 50px 0;
 
   &_content {
-    &-label::after {
-      content: ":";
-    }
 
     &-item {
       display: flex;

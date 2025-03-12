@@ -9,3 +9,8 @@ editor:
   css:
     theme:
       dist/components/gutenberg/gutenberg-style.css: {}
+
+announcement:
+  css:
+    theme:
+      dist/components/templates/announcement/announcement.css: {}

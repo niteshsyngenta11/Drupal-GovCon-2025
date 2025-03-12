@@ -1,3 +1,5 @@
+{{ attach_library('govcon/announcement') }}
+
 {% include '@templates/announcement/announcement.twig' with {
   announcement_page_title: { value: label }, 
   announcement_description: { value: content.body },
