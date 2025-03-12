@@ -4,6 +4,7 @@
 @use '@molecules/footer-menu/footer-menu.storybook.scss';
 @use './gutenberg/gutenberg-storybook.scss';
 @use '../../../../modules/contrib/gutenberg/js/vendor/gutenberg/block-library/style.css';
+@use '@organisms/announcement-listing/announcement-listing-demo.scss';
 
 div#storybook-root,
 .sbdocs-preview {
