@@ -1,17 +1,17 @@
 primary:
   label: "Button"
-  modifier: "button primary"
+  modifier: ""
   src_url: "#"
   src_target: '_self'
 
 secondary:
   label: "Button"
-  modifier: "button secondary"
+  modifier: "secondary"
   src_url: "#"
   src_target: '_self'
 
-ghost:
+button_with_icon:
   label: "Button"
-  modifier: "ghost icon--arrow-right icon-after"
+  modifier: "button-with-icon icon--arrow-right icon-after"
   src_url: "#"
   src_target: '_self'

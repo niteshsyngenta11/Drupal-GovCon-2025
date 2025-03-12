@@ -6,7 +6,7 @@ $color-bg: transparent;
 $offset: 4px;
 $transition: 0.3s;
 
-.button,
+.button:not(.button-with-icon),
 .wp-block-button {
   font-family: "Poppins", serif !important;
   font-weight: 600 !important;
@@ -53,7 +53,7 @@ $transition: 0.3s;
   }
 }
 
-a.ghost {
+a.button-with-icon {
   font-family: "Poppins", serif !important;
   font-weight: 600 !important;
   font-size: 1rem;
