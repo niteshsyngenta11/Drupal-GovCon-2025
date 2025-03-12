@@ -9,3 +9,8 @@ editor:
   css:
     theme:
       dist/components/gutenberg/gutenberg-style.css: {}
+
+session-archive:
+  css:
+    theme:
+      dist/components/templates/session-archive/session-archive.css: {}

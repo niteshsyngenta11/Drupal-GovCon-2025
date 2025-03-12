@@ -5,6 +5,17 @@ import sessionArchiveTwig from "./session-archive.twig";
 <Meta title="Templates/Session Archive Docs" of={sessionArchiveStories} name="Session Archive Docs" />
 
 # Session Archive Detail Page
+---
+
+# Purpose
+The session archive template is designed to display **session details** in an organized manner. It helps structure **session page data**, including the title, description, schedule, and other relevant details.
+
+# Usage
+- Integrate the Twig template** into your Drupal theme or component-based system.  
+- Ensure SCSS is compiled and linked** to apply styles correctly.  
+- Pass dynamic session data** via the template to display relevant information.  
+- Extend or customize** the template based on specific project needs.
+---
 
 <Canvas>
   <Story name="Footer Main Menu">
@@ -25,75 +36,10 @@ import sessionArchiveTwig from "./session-archive.twig";
 | `session_room`          | Object   | The location or room of the session.            |
 | `session_status`        | Object   | The status of the session.                      |
 | `session_track`         | Object   | The track under which the session falls.        |
-## Template Structure
-The component is built using **Twig** (`session-archive.twig`):
-```twig
-<div class="session_archive">
-  <div class="session_archive-container container">
-    <div class="session_archive-container-page_title session_archive-title">
-      <h1 class="session_page_title typography__heading">
-        <span>{{ session_page_title.value }}</span>
-      </h1>
-    </div>
-    <div class="session_archive-container-presenters session_archive-presenters">
-      <span>{{ session_presenters.label }} {{ session_presenters.value }}</span>    
-    </div>
-    {% if session_video.value %}
-      <div class="session_archive-container-video session_archive-video">
-        {{ session_video.value | raw }}
-      </div>
-    {% endif %}
-    <div class="session_archive-container-description session_archive-description body-text">
-      <span>{{ session_description.value }}</span>    
-    </div>
-  </div>
-</div>
-```
-## Styling
-The component uses SCSS (`session-archive.scss`) for styling:
-```scss
-.session_archive {
-  padding: 50px 0;
-  .session_archive-container {
-    &-page_title {
-      .session_page_title {
-        color: map.get(color.$colors, "dark");
-      }
-    }
-    &-description {
-      padding: 20px 0;
-    }
-  }
-}
-```
-## Storybook Integration
-The component is registered in **Storybook** (`session-archive.stories.js`):
-```js
-import htmlComponent from './session-archive.twig';
-import pageData from './session-archive.yml';
-import './session-archive.scss';
-export default {
-  title: "Templates/Session archive Details"
-}
-const Component = (args) => htmlComponent(args);
-export const Session_Archive = Component.bind({});
-Session_Archive.args = pageData;
-```
+
 ## Data Source
 The **node template (`node--session-archive.html.twig`)** populates the component using Drupal fields:
-```twig
-{% include '@templates/session-archive/session-archive.twig' with {
-  session_page_title: { value: label },  
-  session_video: { value: content.field_video },
-  session_description: { value: content.body },  
-  session_experience_level: { label: content.field_experience_level['#title'], value: content.field_experience_level },  
-  session_conference_year: { label: content.field_conference_year['#title'], value: content.field_conference_year },  
-  session_date_time: { label: content.field_session_date_time['#title'], value: content.field_session_date_time },  
-  session_room: { label: content.field_room['#title'], value: content.field_room },  
-  session_status: { label: content.field_status['#title'], value: content.field_status },  
-  session_track: { label: content.field_session_track['#title'], value: content.field_session_track },
-} %}
-```
+
 ## Summary
 The `SessionArchive` component is a structured way to display **session archives**, ensuring a clean, accessible, and reusable design in **Drupal + Storybook** environments.
 ---

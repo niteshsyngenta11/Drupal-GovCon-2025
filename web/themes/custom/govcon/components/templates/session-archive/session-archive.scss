@@ -40,16 +40,12 @@
           padding: 4px 8px;
           background: map.get(color.$colors, "light");
           font-weight: 700;
-
-          &::after {
-            content: ":";
-          }
         }
       }
     }
 
     .session_label {
-      width: fit-content;
+      width: auto;
 
       span {
         background-color: map.get(color.$colors, "dark");

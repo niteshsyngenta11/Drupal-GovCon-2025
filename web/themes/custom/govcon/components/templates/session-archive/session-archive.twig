@@ -24,7 +24,7 @@
         <div class="session_group-content">
           {% if session_experience_level.label %}
             <div class="session_group-content-item">
-              <span class="session_group-content_label">{{ session_experience_level.label }}</span> 
+              <span class="session_group-content_label">{{ session_experience_level.label }}:</span> 
               {{ session_experience_level.value }} 
             </div>
           {% endif %}     
@@ -40,7 +40,7 @@
           <div class="session_group-content">
             {% if session_conference_year.label %}
               <div class="session_group-content-item">
-                <span class="session_group-content_label">{{ session_conference_year.label }}</span> 
+                <span class="session_group-content_label">{{ session_conference_year.label }}:</span> 
                 {{ session_conference_year.value }}   
               </div>
             {% endif %}    
@@ -48,7 +48,7 @@
           <div class="session_group-content">
             {% if session_date_time.label %}
               <div class="session_group-content-item">
-                <span class="session_group-content_label">{{ session_date_time.label }}</span>
+                <span class="session_group-content_label">{{ session_date_time.label }}:</span>
                 {{ session_date_time.value | date("D, m/d/Y - g:ia T")}}   
               </div>
             {% endif %}     
@@ -56,7 +56,7 @@
           <div class="session_group-content">
             {% if session_room.label %}
               <div class="session_group-content-item">
-                <span class="session_group-content_label">{{ session_room.label }}</span>
+                <span class="session_group-content_label">{{ session_room.label }}:</span>
                 {{ session_room.value }}
               </div>
             {% endif %}      
@@ -67,13 +67,13 @@
     <div class="session_archive-container-other-info session_archive-other_info">
       <div class="session_archive-other_info-status session_group-content">
         <div class="session_group-content-item">
-          <span class="session_group-content_label">{{ session_status.label }}</span>
+          <span class="session_group-content_label">{{ session_status.label }}:</span>
           {{ session_status.value }}
         </div>
       </div>
       <div class="session_archive-other_info-session_track session_group-content">
         <div class="session_group-content-item">
-          <span class="session_group-content_label">{{ session_track.label }}</span>
+          <span class="session_group-content_label">{{ session_track.label }}:</span>
           {{ session_track.value }}
         </div>
       </div>
