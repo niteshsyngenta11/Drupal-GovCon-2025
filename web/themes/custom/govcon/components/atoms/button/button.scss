@@ -6,8 +6,8 @@ $color-bg: transparent;
 $offset: 4px;
 $transition: 0.3s;
 
-.button,
-.wp-block-button {
+.button:not(.button-with-icon),
+.wp-block-button:not(.button-with-icon) {
   font-family: "Poppins", serif !important;
   font-weight: 600 !important;
   outline: solid $border-width color.$primary-black;
@@ -50,5 +50,31 @@ $transition: 0.3s;
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+a.button-with-icon,
+.wp-block-button.button-with-icon {
+  font-family: "Poppins", serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem;
+  padding: 8px 0;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: color.$cobalt;
+
+  &.icon--arrow-right.icon-after:after {
+    font-size: 12px;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+  }
+
+  &:hover {
+    &.icon--arrow-right.icon-after::after {
+      transform: translateX(4px);
+    }
   }
 }

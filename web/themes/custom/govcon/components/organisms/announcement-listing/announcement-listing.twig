@@ -1,0 +1,21 @@
+<div class="announcement-card-row">
+  {% for announcement in announcements %}
+    {% include "@molecules/announcement-card/announcement-card.twig" with {
+      title: announcement.title,
+      date: announcement.date,
+      description: announcement.description,
+      link: announcement.link
+    } %}
+  {% endfor %}
+  {# View all announcements #}
+  {% if allAnnouncement %}
+    {% set allAnnouncement_links_classes = ["mb-0", "all-announcement-link", "body-text"] %}
+    {% include "@atoms/link/link.twig" with {
+      link_url: allAnnouncement.url,
+      link_title: allAnnouncement.title,
+      link_target: allAnnouncement.target,
+      link_content: allAnnouncement.content,
+      link_classes: allAnnouncement.classes|merge(allAnnouncement_links_classes)
+    } %}
+  {% endif %}
+</div>

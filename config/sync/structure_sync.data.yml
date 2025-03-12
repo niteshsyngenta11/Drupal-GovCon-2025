@@ -1,5 +1,48 @@
 blocks:
   -
+    info: 'Button with Icon'
+    langcode: en
+    uuid: 300515d9-f833-448d-966e-6b865f077ca6
+    bundle: reusable_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<!-- wp:buttons -->\r\n<div class=\"wp-block-buttons\"><!-- wp:button {\"className\":\"button-with-icon icon arrow-right icon-after\"} -->\r\n<div class=\"wp-block-button button-with-icon icon--arrow-right icon-after\"><a class=\"wp-block-button__link wp-element-button\">Button with Icon</a></div>\r\n<!-- /wp:button --></div>\r\n<!-- /wp:buttons -->"
+          summary: ''
+          format: plain_text
+      field_pattern_category:
+        -
+          target_id: '4'
+      field_pattern_sync_status:
+        -
+          value: unsynced
+  -
+    info: 'Secondary Button'
+    langcode: en
+    uuid: 588435cb-09f6-4079-b1fb-8c7e587c571e
+    bundle: reusable_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: |-
+            <!-- wp:buttons -->
+            <div class="wp-block-buttons"><!-- wp:button {"className":"secondary"} -->
+            <div class="wp-block-button secondary"><a class="wp-block-button__link wp-element-button">Secondary Button</a></div>
+            <!-- /wp:button --></div>
+            <!-- /wp:buttons -->
+          summary: null
+          format: plain_text
+      field_pattern_category:
+        -
+          target_id: '4'
+      field_pattern_sync_status:
+        -
+          value: unsynced
+  -
     info: 'Featured Card'
     langcode: en
     uuid: 7f200459-349a-4f52-a465-207a68507cb6

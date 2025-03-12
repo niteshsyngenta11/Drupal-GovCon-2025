@@ -21,6 +21,7 @@ $spacer: 1rem;
 // Spacing values
 $space-values: (
   0,
+  4,
   8,
   16,
   24,
@@ -205,4 +206,24 @@ $space-values: (
 
 .position-absolute {
   position: absolute !important;
+}
+
+// Border
+
+.border-radius-xxs {
+  border-radius: 4px;
+}
+
+.border-radius-xs {
+  border-radius: 8px;
+}
+
+.border-none {
+  border: 0;
+}
+
+// Text Styles
+
+.text-decoration-none {
+  text-decoration: none !important;
 }

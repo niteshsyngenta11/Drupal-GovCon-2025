@@ -1,0 +1,22 @@
+<div class="announcement-card bg-skyblue d-flex p-32 border-radius-xxs justify-between flex-column">
+  <h3 class="mb-4">
+    {{ title }}
+  </h3>
+  <p class="mb-0">
+    {{ date }}
+  </p>
+  <hr class="has-text-color has-primary-color has-primary-background-color has-background my-16" />
+  <p class="announcement-description">
+    {{ description }}
+  </p>
+  {% if link %}
+    {% set additional_classes = "" %}
+
+    {% include "@atoms/button/button.twig" with {
+      link_url: link.url,
+      src_target: link.target,
+      label: link.content,
+      modifier: "button-with-icon icon--arrow-right icon-after " ~ link.classes 
+    } %}
+  {% endif %}
+</div>
