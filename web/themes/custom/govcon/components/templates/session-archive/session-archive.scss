@@ -8,7 +8,7 @@
   .session_archive-container {
     &-page_title {
       .session_page_title {
-        color: map.get(color.$colors, "deep-sky");
+        color: map.get(color.$colors, "dark");
       }
     }
 
@@ -17,8 +17,8 @@
     }
     
     .session_group {
-      padding: .35em .625em .75em;
-      margin: 1em 0 2em;
+      padding: 5.6px 10px 12px;
+      margin: 16px 0px 32px;
       border: 1px solid map.get(color.$colors, "gray");
       border-radius: 0; 
 
@@ -36,9 +36,9 @@
         }
 
         &_label {
-          margin: .25rem .5rem .25rem 0;
-          padding: .25rem .5rem;
-          background: map.get(color.$colors, "light-yellow");
+          margin: 4px 8px 0;
+          padding: 4px 8px;
+          background: map.get(color.$colors, "light");
           font-weight: 700;
 
           &::after {
@@ -52,12 +52,12 @@
       width: fit-content;
 
       span {
-        background-color: map.get(color.$colors, "navy-blue");
+        background-color: map.get(color.$colors, "dark");
         color: map.get(color.$colors, "light");
         font-weight: 700;
-        padding: .25em .5em;
+        padding: 4px 8px;
         text-transform: uppercase;
-        letter-spacing: .02em;
+        letter-spacing: 0.32px;
       }
     }
   }

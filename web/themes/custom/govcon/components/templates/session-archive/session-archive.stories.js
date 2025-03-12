@@ -3,7 +3,7 @@ import pageData from './session-archive.yml';
 import './session-archive.scss';
 
 export default {
-  title: "Molecules/Templates/Session archive Details"
+  title: "Templates/Session archive Details"
 }
 
 const Component = (args) => htmlComponent(args);
