@@ -4,7 +4,7 @@
 @use '@molecules/footer-menu/footer-menu.storybook.scss';
 @use './gutenberg/gutenberg-storybook.scss';
 @use '../../../../modules/contrib/gutenberg/js/vendor/gutenberg/block-library/style.css';
-@use '@base/mixins.scss' as mixin;
+@use '@organisms/announcement-listing/announcement-listing-demo.scss';
 
 div#storybook-root,
 .sbdocs-preview {
@@ -19,10 +19,4 @@ div#storybook-root:has(.site-header), div#storybook-root:has(.site-footer) {
   height: 130px;
   display: flex;
   align-items: center;
-}
-
-@include mixin.media-breakpoint-down(md) {
-  .announcement-listing-container.p-32 {
-    padding-inline: 16px !important;
-  }
 }
