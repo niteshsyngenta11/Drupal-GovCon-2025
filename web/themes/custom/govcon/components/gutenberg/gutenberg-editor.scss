@@ -19,6 +19,10 @@
     max-width: utility.$container-width;
     margin: 0 auto;
     padding-inline: 16px;
+
+    .wp-block-columns {
+      padding: 32px 0;
+    }
   }
 }
 
@@ -112,4 +116,8 @@ html :where(.wp-block) {
   li {
     margin-bottom: 12px;
   }
+}
+
+.wp-block-group-is-layout-flex:not(.alignfull) {
+  display: flex;
 }
