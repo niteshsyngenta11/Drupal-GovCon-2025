@@ -1,0 +1,46 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import sessionArchiveStories from "./session-archive.stories";
+import sessionArchiveTwig from "./session-archive.twig";
+
+<Meta title="Templates/Session Archive Docs" of={sessionArchiveStories} name="Session Archive Docs" />
+
+# Session Archive Detail Page
+---
+
+# Purpose
+The session archive template is designed to display **session details** in an organized manner. It helps structure **session page data**, including the title, description, schedule, and other relevant details.
+
+# Usage
+- Integrate the Twig template** into your Drupal theme or component-based system.  
+- Ensure SCSS is compiled and linked** to apply styles correctly.  
+- Pass dynamic session data** via the template to display relevant information.  
+- Extend or customize** the template based on specific project needs.
+---
+
+<Canvas>
+  <Story name="Footer Main Menu">
+    {sessionArchiveTwig({ items: sessionArchiveStories?.args?.items || [] })}
+  </Story>
+</Canvas>
+
+## Props
+| Prop Name               | Type     | Description                                      |
+|-------------------------|----------|--------------------------------------------------|
+| `session_page_title`    | Object   | The title of the session.                        |
+| `session_video`         | Object   | Embedded video content (if available).           |
+| `session_description`   | Object   | The session description.                         |
+| `session_presenters`    | Object   | List of presenters.                              |
+| `session_experience_level` | Object | Experience level required for the session.      |
+| `session_conference_year` | Object | The year of the conference.                     |
+| `session_date_time`     | Object   | The date and time of the session.               |
+| `session_room`          | Object   | The location or room of the session.            |
+| `session_status`        | Object   | The status of the session.                      |
+| `session_track`         | Object   | The track under which the session falls.        |
+
+## Data Source
+The **node template (`node--session-archive.html.twig`)** populates the component using Drupal fields:
+
+## Summary
+The `SessionArchive` component is a structured way to display **session archives**, ensuring a clean, accessible, and reusable design in **Drupal + Storybook** environments.
+---
+```
