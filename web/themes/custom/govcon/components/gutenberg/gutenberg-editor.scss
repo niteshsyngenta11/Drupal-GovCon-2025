@@ -113,3 +113,7 @@ html :where(.wp-block) {
     margin-bottom: 12px;
   }
 }
+
+.wp-block-group-is-layout-flex {
+  display: flex;
+}
