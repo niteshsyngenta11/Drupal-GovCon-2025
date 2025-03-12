@@ -1,12 +1,19 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
 .announcement {
   padding: 50px 0;
 
-  &_content {
-
-    &-item {
-      display: flex;
-      align-items: center;
-      column-gap: 5px;
+  &_container {
+    &-page_title {
+      color: map.get(color.$colors, "dark");
     }
+  }
+
+  .announcement_content-label {
+    margin: 4px 8px 0 0;
+    padding: 4px 8px;
+    background: map.get(color.$colors, "light");
+    font-weight: 700;
   }
 }
