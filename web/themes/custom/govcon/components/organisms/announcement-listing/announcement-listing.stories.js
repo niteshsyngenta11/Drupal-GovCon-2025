@@ -1,5 +1,6 @@
 import announcementComponent from './announcement-listing-demo.twig';
 import data from './announcement-data.yml';
+import './announcement-listing.scss';
 
 export default {
   title: "Organisms/Announcement Listing",
