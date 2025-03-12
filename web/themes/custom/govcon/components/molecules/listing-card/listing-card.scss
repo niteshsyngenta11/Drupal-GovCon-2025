@@ -7,6 +7,7 @@
 }
 
 .listing-card__fields {
+  overflow-wrap: anywhere;
   flex-wrap: wrap;
   column-gap: 8rem;
   row-gap: 1rem;
