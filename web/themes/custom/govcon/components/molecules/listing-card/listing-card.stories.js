@@ -1,6 +1,5 @@
 import ListingCard from './listing-card.twig';
 import data from './listing-card.yml';
-import './listing-card.scss';
 
 export default {
   title: 'Molecules/Listing Card',
@@ -11,8 +10,6 @@ export default {
     heading: { control: 'text' },
     subheading: { control: 'text' },
     description: { control: 'text' },
-    cta_label: { control: 'text' },
-    cta_url: { control: 'text' },
     fields: { control: 'object' },
   },
 };

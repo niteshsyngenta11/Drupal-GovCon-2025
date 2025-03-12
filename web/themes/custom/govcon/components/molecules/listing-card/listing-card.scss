@@ -6,16 +6,23 @@
   gap: 2rem;
 }
 
-.listing-card__content {
-  text-align: left;
-}
-
 .listing-card__fields {
-  display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  column-gap: 8rem;
+  row-gap: 1rem;
+  padding-inline: 32px;
 }
 
-.listing-card__field {
-  font-weight: bold;
+@include mixins.media-breakpoint-down(lg) {
+  .listing-card .upper-card {
+    flex-direction: column;
+  }
+
+  .listing-card__fields {
+    padding-inline: 16px;
+  }
+
+  .listing-card__field {
+    gap: 4px;
+  }
 }

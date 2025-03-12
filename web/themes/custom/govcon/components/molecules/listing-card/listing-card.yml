@@ -16,3 +16,5 @@ fields:
     value: "Field two content"
   - label: "Field Three"
     value: "Field three content"
+  - label: "Field Four"
+    value: "Field Four content"
