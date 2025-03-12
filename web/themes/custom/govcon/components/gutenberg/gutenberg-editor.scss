@@ -114,6 +114,6 @@ html :where(.wp-block) {
   }
 }
 
-.wp-block-group-is-layout-flex {
+.wp-block-group-is-layout-flex:not(.alignfull) {
   display: flex;
 }
