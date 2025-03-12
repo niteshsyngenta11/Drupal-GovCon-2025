@@ -1,5 +1,6 @@
 import ListingCard from './listing-card.twig';
 import data from './listing-card.yml';
+import './listing-card.scss';
 
 export default {
   title: 'Molecules/Listing Card',
