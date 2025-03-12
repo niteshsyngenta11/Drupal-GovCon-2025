@@ -23,12 +23,12 @@
           </p>
         {% endif %}
 
-        {% if link %}
+        {% if cta %}
           {% include "@atoms/button/button.twig" with {
-          label: link.content,
+          label: cta.content,
           modifier: "button-with-icon icon--arrow-right icon-after",
-          src_url: link.url,
-          src_target: link.target,
+          src_url: cta.url,
+          src_target: cta.target,
           } %}
         {% endif %}
       </div>
