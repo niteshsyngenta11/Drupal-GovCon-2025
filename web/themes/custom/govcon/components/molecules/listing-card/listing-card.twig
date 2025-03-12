@@ -1,40 +1,43 @@
-<div class="listing-card">
-  {% if image %}
-    <div class="listing-card__image">
-      <img src="{{ image }}" alt="{{ image_alt }}"></div>
+<div class="listing-card border-xs">
+  <div class="upper-card bg-light p-32 d-flex">
+    {% if image %}
+      <div class="listing-card__image">
+        <img src="{{ image }}" alt="{{ image_alt }}" class="border-xs">
+      </div>
     {% endif %}
 
-    <div class="listing-card__content">
-      <h3 class="listing-card__heading">
-        {{ heading }}
-      </h3>
+      <div class="listing-card__content">
+        <h3 class="listing-card__heading">
+          {{ heading }}
+        </h3>
 
-      {% if subheading %}
-        <h4 class="listing-card__subheading">
-          {{ subheading }}
-        </h4>
-      {% endif %}
+        {% if subheading %}
+          <h4 class="listing-card__subheading">
+            {{ subheading }}
+          </h4>
+        {% endif %}
 
-      {% if description %}
-        <p class="listing-card__description">
-          {{ description }}
-        </p>
-      {% endif %}
+        {% if description %}
+          <p class="listing-card__description">
+            {{ description }}
+          </p>
+        {% endif %}
 
-      {% if link %}
-        {% include "@atoms/link/link.twig" with {
+        {% if link %}
+          {% include "@atoms/link/link.twig" with {
         link_url: link.url,
         link_title: link.title,
         link_target: link.target,
         link_content: link.content,
         link_classes: link.classes|merge(["listing-card__cta", "icon--arrow-right", "icon--after"])
       } %}
-      {% endif %}
+        {% endif %}
 
+      </div>
     </div>
 
     {% if fields %}
-      <div class="listing-card__fields">
+      <div class="listing-card__fields body-text py-8 px-32 bg-skyblue">
         {% for field in fields %}
           <div class="listing-card__field">
             <strong>
@@ -47,3 +50,4 @@
       </div>
     {% endif %}
   </div>
+  
