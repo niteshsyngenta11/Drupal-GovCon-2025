@@ -35,7 +35,7 @@ mode: default
 content:
   body:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 109
@@ -54,7 +54,7 @@ content:
     region: content
   field_conference_year:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -62,7 +62,7 @@ content:
     region: content
   field_experience_level:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 102
@@ -112,7 +112,7 @@ content:
     region: content
   field_room:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -120,7 +120,7 @@ content:
     region: content
   field_session_date_time:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
       timezone_override: ''
       format_type: medium
@@ -129,7 +129,7 @@ content:
     region: content
   field_session_track:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -137,7 +137,7 @@ content:
     region: content
   field_status:
     type: list_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 111
@@ -152,7 +152,7 @@ content:
     region: content
   field_video:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
