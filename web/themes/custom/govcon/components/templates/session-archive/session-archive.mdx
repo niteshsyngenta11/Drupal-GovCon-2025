@@ -1,0 +1,100 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import sessionArchiveStories from "./session-archive.stories";
+import sessionArchiveTwig from "./session-archive.twig";
+
+<Meta title="Templates/Session Archive Docs" of={sessionArchiveStories} name="Session Archive Docs" />
+
+# Session Archive Detail Page
+
+<Canvas>
+  <Story name="Footer Main Menu">
+    {sessionArchiveTwig({ items: sessionArchiveStories?.args?.items || [] })}
+  </Story>
+</Canvas>
+
+## Props
+| Prop Name               | Type     | Description                                      |
+|-------------------------|----------|--------------------------------------------------|
+| `session_page_title`    | Object   | The title of the session.                        |
+| `session_video`         | Object   | Embedded video content (if available).           |
+| `session_description`   | Object   | The session description.                         |
+| `session_presenters`    | Object   | List of presenters.                              |
+| `session_experience_level` | Object | Experience level required for the session.      |
+| `session_conference_year` | Object | The year of the conference.                     |
+| `session_date_time`     | Object   | The date and time of the session.               |
+| `session_room`          | Object   | The location or room of the session.            |
+| `session_status`        | Object   | The status of the session.                      |
+| `session_track`         | Object   | The track under which the session falls.        |
+## Template Structure
+The component is built using **Twig** (`session-archive.twig`):
+```twig
+<div class="session_archive">
+  <div class="session_archive-container container">
+    <div class="session_archive-container-page_title session_archive-title">
+      <h1 class="session_page_title typography__heading">
+        <span>{{ session_page_title.value }}</span>
+      </h1>
+    </div>
+    <div class="session_archive-container-presenters session_archive-presenters">
+      <span>{{ session_presenters.label }} {{ session_presenters.value }}</span>    
+    </div>
+    {% if session_video.value %}
+      <div class="session_archive-container-video session_archive-video">
+        {{ session_video.value | raw }}
+      </div>
+    {% endif %}
+    <div class="session_archive-container-description session_archive-description body-text">
+      <span>{{ session_description.value }}</span>    
+    </div>
+  </div>
+</div>
+```
+## Styling
+The component uses SCSS (`session-archive.scss`) for styling:
+```scss
+.session_archive {
+  padding: 50px 0;
+  .session_archive-container {
+    &-page_title {
+      .session_page_title {
+        color: map.get(color.$colors, "dark");
+      }
+    }
+    &-description {
+      padding: 20px 0;
+    }
+  }
+}
+```
+## Storybook Integration
+The component is registered in **Storybook** (`session-archive.stories.js`):
+```js
+import htmlComponent from './session-archive.twig';
+import pageData from './session-archive.yml';
+import './session-archive.scss';
+export default {
+  title: "Templates/Session archive Details"
+}
+const Component = (args) => htmlComponent(args);
+export const Session_Archive = Component.bind({});
+Session_Archive.args = pageData;
+```
+## Data Source
+The **node template (`node--session-archive.html.twig`)** populates the component using Drupal fields:
+```twig
+{% include '@templates/session-archive/session-archive.twig' with {
+  session_page_title: { value: label },  
+  session_video: { value: content.field_video },
+  session_description: { value: content.body },  
+  session_experience_level: { label: content.field_experience_level['#title'], value: content.field_experience_level },  
+  session_conference_year: { label: content.field_conference_year['#title'], value: content.field_conference_year },  
+  session_date_time: { label: content.field_session_date_time['#title'], value: content.field_session_date_time },  
+  session_room: { label: content.field_room['#title'], value: content.field_room },  
+  session_status: { label: content.field_status['#title'], value: content.field_status },  
+  session_track: { label: content.field_session_track['#title'], value: content.field_session_track },
+} %}
+```
+## Summary
+The `SessionArchive` component is a structured way to display **session archives**, ensuring a clean, accessible, and reusable design in **Drupal + Storybook** environments.
+---
+```
