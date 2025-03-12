@@ -1,0 +1,32 @@
+session_page_title:
+  value: "Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website"
+
+session_description:
+  value: "In this session, we will discuss the importance of redesigning Princeton's School of Public and International Affairs."
+
+session_video:
+  value: '<iframe width="200" height="113" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>'
+
+session_experience_level:
+  label: "Experience Level"
+  value: "Beginner"
+
+session_conference_year:
+  label: "Conference Year"
+  value: "2025"
+
+session_date_time:
+  label: "Date/Time"
+  value: "Fri, 09/25/2020 - 1:30pm"
+
+session_room:
+  label: "Room"
+  value: "Mobomo"
+
+session_status:
+  label: "Status"
+  value: "Accepted"
+
+session_track:
+  label: "Session Track"
+  value: "Site Building and Using Drupal"

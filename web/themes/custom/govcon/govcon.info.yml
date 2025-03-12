@@ -25,7 +25,7 @@ components:
     organisms:
       - components/organisms
     templates:
-      - components/templates
+    - components/templates
     pages:
       - components/pages
     partials:

@@ -1,0 +1,60 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
+
+.session_archive {
+  padding: 50px 0;
+
+  .session_archive-container {
+    &-page_title {
+      .session_page_title {
+        color: map.get(color.$colors, "dark");
+      }
+    }
+
+    &-description {
+      padding: 20px 0;
+    }
+    
+    .session_group {
+      padding: 5px 10px 12px;
+      margin: 16px 0px 32px;
+      border: 1px solid map.get(color.$colors, "gray");
+      border-radius: 0; 
+
+      &-content {
+        margin: 15px 0;
+        
+        &-item {
+          display: flex;
+          align-items: center;
+
+          a {
+            text-decoration: none;
+            color: map.get(color.$colors, "black");
+          }
+        }
+
+        &_label {
+          margin: 4px 8px 0;
+          padding: 4px 8px;
+          background: map.get(color.$colors, "light");
+          font-weight: 700;
+        }
+      }
+    }
+
+    .session_label {
+      width: auto;
+
+      span {
+        background-color: map.get(color.$colors, "dark");
+        color: map.get(color.$colors, "light");
+        font-weight: 700;
+        padding: 4px 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.32px;
+      }
+    }
+  }
+}
