@@ -32,7 +32,7 @@ content:
     region: content
   field_important_date:
     type: datetime_default
-    label: inline
+    label: hidden
     settings:
       timezone_override: ''
       format_type: month_day_year

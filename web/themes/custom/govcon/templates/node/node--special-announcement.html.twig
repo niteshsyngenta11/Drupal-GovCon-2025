@@ -1,0 +1,5 @@
+{% include '@templates/announcement/announcement.twig' with {
+  announcement_page_title: { value: label }, 
+  announcement_description: { value: content.body },
+  announcement_post_date: { label: content.field_important_date['#title'], value: content.field_important_date },
+} %}

@@ -1,0 +1,22 @@
+uuid: 2e5e01a3-81c8-4168-a4d7-0ca54b79dbd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: announcement_node_pattern
+label: 'Announcement Node Pattern'
+type: 'canonical_entities:node'
+pattern: '/[node:field_conference_year:entity:name]/announcement/[node:title]'
+selection_criteria:
+  4e86afaa-bd28-4900-9dbc-1cd7558ac80e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 4e86afaa-bd28-4900-9dbc-1cd7558ac80e
+    context_mapping:
+      node: node
+    bundles:
+      special_announcement: special_announcement
+selection_logic: and
+weight: -5
+relationships: {  }

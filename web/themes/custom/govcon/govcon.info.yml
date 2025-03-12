@@ -24,6 +24,8 @@ components:
       - components/molecules
     organisms:
       - components/organisms
+    templates:
+      - components/templates
     pages:
       - components/pages
     partials:

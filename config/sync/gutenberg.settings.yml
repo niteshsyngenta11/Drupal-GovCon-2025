@@ -34,7 +34,7 @@ cambridge_landing_page_allowed_blocks:
   - core/video
   - media/all
 cambridge_landing_page_allowed_content_block_types: {  }
-cambridge_landing_page_allowed_drupal_blocks: {}
+cambridge_landing_page_allowed_drupal_blocks: {  }
 cambridge_landing_page_enable_full: true
 cambridge_landing_page_template: ''
 cambridge_landing_page_template_lock: none
@@ -97,7 +97,7 @@ landing_page_allowed_blocks:
   - core/verse
   - core/video
 landing_page_allowed_content_block_types: {  }
-landing_page_allowed_drupal_blocks: {}
+landing_page_allowed_drupal_blocks: {  }
 landing_page_enable_full: true
 landing_page_template: ''
 landing_page_template_lock: none
