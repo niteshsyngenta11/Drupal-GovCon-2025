@@ -1,0 +1,27 @@
+announcements:
+  - title: "How to Release or Update Your Ticket"
+    date: "August 5, 2024"
+    description: "Schedules change. Things happen. We understand. If you can't make the conference - or the days you're attending have changed - or you forgot to include..."
+    link:
+      url: "#"
+      title: "See Announcement"
+      target: "_self"
+      content: "See Announcement"
+      classes: ["announcement-link", "text-cobalt", "h4"]
+
+  - title: "Training Schedule Posted!"
+    date: "July 20, 2024"
+    description: "Training schedules are now LIVE! Register for training!"
+    link:
+      url: "#"
+      title: "See Announcement"
+      target: "_blank"
+      content: "See Announcement"
+      classes: ["announcement-link", "text-cobalt", "h4"]
+
+viewAnnouncement:
+  url: "#"
+  title: "View All Announcement"
+  target: "_blank"
+  content: "View All Announcement"
+  classes: ["text-light", "h4"]

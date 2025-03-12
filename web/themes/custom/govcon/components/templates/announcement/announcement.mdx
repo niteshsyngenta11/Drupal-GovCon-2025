@@ -1,0 +1,39 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import announcementStories from "./announcement.stories";
+import announcementTwig from "./announcement.twig";
+
+<Meta title="Templates/Announcement Docs" of={announcementStories} name="Announcement Docs" />
+
+# Announcement Detail Page
+
+# Purpose
+
+The Announcement Detail template is designed to present important announcements with clarity, ensuring users can quickly grasp key information such as the title, description, and post date.
+
+# Usage
+
+This component displays announcement details in a structured manner. It typically includes:
+
+- **Title**: The title of the announcement.  
+- **Description**: A brief description of the announcement.  
+- **Post Date**: The date when the announcement was published.  
+
+<Canvas>
+  <Story name="Announcement Detail Page">
+    {announcementTwig({ items: announcementStories?.args?.items || [] })}
+  </Story>
+</Canvas>
+
+The `Announcement` component is used to display announcement details, including a title, description, and post date.
+
+## Props
+
+| Prop Name                | Type     | Description |
+|--------------------------|----------|-------------|
+| `announcement_page_title` | object   | Contains the announcement title. Use `value` for the text. |
+| `announcement_description` | object   | Contains the announcement description. Use `value` for the text. |
+| `announcement_post_date`  | object   | Contains the post date. Includes `label` and `value`. |
+
+## Data Source
+The **node template (`node--announcement.html.twig`)** populates the component using Drupal fields:
+```twig

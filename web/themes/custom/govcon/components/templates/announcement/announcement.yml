@@ -1,0 +1,9 @@
+announcement_page_title:
+  value: "Announcement Page Title"
+
+announcement_description:
+  value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula diam nibh, et imperdiet nibh consequat non. Nunc sit amet turpis et purus molestie varius. Nam sed bibendum turpis. Maecenas eu odio non felis aliquet consequat efficitur vel leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ut dolor hendrerit, posuere libero quis, gravida lorem. Integer eget magna quis massa malesuada viverra eu id nibh. Morbi et fringilla libero. Praesent vitae volutpat nisl. Cras vehicula, sem non volutpat commodo, metus nisi mollis tellus, id ornare orci elit ut eros. Nam condimentum lacus quam, blandit elementum mi sollicitudin sed."
+
+announcement_post_date:
+  label: "Post Date"
+  value: "2022-01-01"

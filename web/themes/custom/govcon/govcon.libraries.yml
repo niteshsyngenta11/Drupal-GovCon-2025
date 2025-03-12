@@ -14,3 +14,8 @@ session-archive:
   css:
     theme:
       dist/components/templates/session-archive/session-archive.css: {}
+      
+announcement:
+  css:
+    theme:
+      dist/components/templates/announcement/announcement.css: {}
