@@ -49,7 +49,7 @@
             {% if session_date_time.label %}
               <div class="session_group-content-item">
                 <span class="session_group-content_label">{{ session_date_time.label }}</span>
-                {{ session_date_time.value }}   
+                {{ session_date_time.value | date("D, m/d/Y - g:ia T")}}   
               </div>
             {% endif %}     
           </div>
