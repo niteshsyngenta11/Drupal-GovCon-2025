@@ -1,0 +1,11 @@
+uuid: f918b9af-61a0-488c-b358-da666d440264
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.recent_announcement
+label: 'Recent Announcement'
+description: 'Recent Announcement View Mode for Homepage'
+targetEntityType: node
+cache: true

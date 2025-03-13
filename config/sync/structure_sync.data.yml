@@ -1,5 +1,24 @@
 blocks:
   -
+    info: 'Featured Section'
+    langcode: en
+    uuid: 9fef02e8-8394-4a82-a898-783c50e11aa6
+    bundle: reusable_block
+    revision_id: null
+    rev_id_current: null
+    fields:
+      body:
+        -
+          value: "<!-- wp:group {\"className\":\"featured-section\",\"layout\":{\"type\":\"constrained\"},\"metadata\":{\"name\":\"Featured Section\"}} -->\r\n<div class=\"wp-block-group featured-section\"><!-- wp:columns -->\r\n<div class=\"wp-block-columns\"><!-- wp:column {\"width\":\"67.6%\"} -->\r\n<div class=\"wp-block-column\" style=\"flex-basis:67.6%\"><!-- wp:group {\"lock\":{\"move\":true,\"remove\":false},\"backgroundColor\":\"dark\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\",\"left\":\"var:preset|spacing|30\",\"right\":\"var:preset|spacing|30\"},\"blockGap\":\"var:preset|spacing|30\"},\"border\":{\"radius\":\"4px\"}},\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\",\"verticalAlignment\":\"center\"},\"metadata\":{\"name\":\"Featured Sessions\"}} -->\r\n<div class=\"wp-block-group has-dark-background-color has-background\" style=\"border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)\"><!-- wp:heading {\"className\":\"m-0\",\"textColor\":\"light\",\"style\":{\"elements\":{\"link\":{\"color\":{\"text\":\"var:preset|color|light\"}}}}} -->\r\n<h2 class=\"wp-block-heading m-0 has-light-color has-text-color has-link-color\">Featured Sessions</h2>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:group {\"templateLock\":false,\"lock\":{\"move\":true,\"remove\":false},\"backgroundColor\":\"light\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\",\"left\":\"var:preset|spacing|30\",\"right\":\"var:preset|spacing|30\"},\"blockGap\":\"0\"},\"border\":{\"radius\":\"4px\"}},\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\",\"verticalAlignment\":\"center\",\"justifyContent\":\"left\"},\"metadata\":{\"name\":\"Featured Card\"}} -->\r\n<div class=\"wp-block-group has-light-background-color has-background\" style=\"border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)\"><!-- wp:heading {\"level\":3} -->\r\n<h3 class=\"wp-block-heading\">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:heading {\"level\":4} -->\r\n<h4 class=\"wp-block-heading\">Suzanne Dergacheva, John Cloys</h4>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:buttons -->\r\n<div class=\"wp-block-buttons\"><!-- wp:button {\"className\":\"button-with-icon icon\\u002d\\u002darrow-right icon-after\"} -->\r\n<div class=\"wp-block-button button-with-icon icon--arrow-right icon-after\"><a class=\"wp-block-button__link wp-element-button\">View Session Info</a></div>\r\n<!-- /wp:button --></div>\r\n<!-- /wp:buttons --></div>\r\n<!-- /wp:group -->\r\n\r\n<!-- wp:group {\"templateLock\":false,\"lock\":{\"move\":true,\"remove\":false},\"backgroundColor\":\"light\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\",\"left\":\"var:preset|spacing|30\",\"right\":\"var:preset|spacing|30\"},\"blockGap\":\"0\"},\"border\":{\"radius\":\"4px\"}},\"layout\":{\"type\":\"flex\",\"orientation\":\"vertical\",\"verticalAlignment\":\"center\",\"justifyContent\":\"left\"},\"metadata\":{\"name\":\"Featured Card\"}} -->\r\n<div class=\"wp-block-group has-light-background-color has-background\" style=\"border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)\"><!-- wp:heading {\"level\":3} -->\r\n<h3 class=\"wp-block-heading\">4 Essential Checklists to Manage Drupal Projects</h3>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:heading {\"level\":4} -->\r\n<h4 class=\"wp-block-heading\">Daniel Schiavone</h4>\r\n<!-- /wp:heading -->\r\n\r\n<!-- wp:paragraph -->\r\n<p>There are two types of mistakes, errors of ignorance (mistakes we make because we don’t know enough), and errors of ineptitude (mistakes we make because we ...</p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:buttons -->\r\n<div class=\"wp-block-buttons\"><!-- wp:button {\"className\":\"button-with-icon icon\\u002d\\u002darrow-right icon-after\"} -->\r\n<div class=\"wp-block-button button-with-icon icon--arrow-right icon-after\"><a class=\"wp-block-button__link wp-element-button\">View Session Info</a></div>\r\n<!-- /wp:button --></div>\r\n<!-- /wp:buttons --></div>\r\n<!-- /wp:group -->\r\n\r\n<!-- wp:paragraph {\"className\":\"m-0\",\"textColor\":\"light\",\"style\":{\"elements\":{\"link\":{\"color\":{\"text\":\"var:preset|color|light\"}}}}} -->\r\n<p class=\"m-0 has-light-color has-text-color has-link-color\"><a href=\"#\">View all sessions</a></p>\r\n<!-- /wp:paragraph --></div>\r\n<!-- /wp:group --></div>\r\n<!-- /wp:column -->\r\n\r\n<!-- wp:column {\"width\":\"28%\"} -->\r\n<div class=\"wp-block-column\" style=\"flex-basis:28%\"><!-- wp:drupalblock/views-block-announcements-recent-announcement {\"blockId\":\"views_block:announcements-recent_announcement\"} -->\r\n<div class=\"wp-block-drupalblock-views-block-announcements-recent-announcement\"></div>\r\n<!-- /wp:drupalblock/views-block-announcements-recent-announcement --></div>\r\n<!-- /wp:column --></div>\r\n<!-- /wp:columns --></div>\r\n<!-- /wp:group -->"
+          summary: ''
+          format: plain_text
+      field_pattern_category:
+        -
+          target_id: '3'
+      field_pattern_sync_status:
+        -
+          value: unsynced
+  -
     info: 'Two Column card'
     langcode: en
     uuid: 6f97004f-7272-446a-8d07-7e480f13424d
@@ -436,86 +455,6 @@ blocks:
       field_pattern_sync_status:
         -
           value: unsynced
-  -
-    info: 'Featured Section'
-    langcode: en
-    uuid: 9fef02e8-8394-4a82-a898-783c50e11aa6
-    bundle: reusable_block
-    revision_id: null
-    rev_id_current: null
-    fields:
-      body:
-        -
-          value: |-
-            <!-- wp:group {"className":"featured-section","layout":{"type":"constrained"},"metadata":{"name":"Featured Section"}} -->
-            <div class="wp-block-group featured-section"><!-- wp:columns -->
-            <div class="wp-block-columns"><!-- wp:column {"width":"67.6%"} -->
-            <div class="wp-block-column" style="flex-basis:67.6%"><!-- wp:group {"lock":{"move":true,"remove":false},"backgroundColor":"dark","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|30"},"border":{"radius":"4px"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center"},"metadata":{"name":"Featured Sessions"}} -->
-            <div class="wp-block-group has-dark-background-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"className":"m-0","textColor":"light","style":{"elements":{"link":{"color":{"text":"var:preset|color|light"}}}}} -->
-            <h2 class="wp-block-heading m-0 has-light-color has-text-color has-link-color">Featured Sessions</h2>
-            <!-- /wp:heading -->
-
-            <!-- wp:group {"templateLock":false,"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"0"},"border":{"radius":"4px"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"left"},"metadata":{"name":"Featured Card"}} -->
-            <div class="wp-block-group has-light-background-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3} -->
-            <h3 class="wp-block-heading">Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website</h3>
-            <!-- /wp:heading -->
-
-            <!-- wp:heading {"level":4} -->
-            <h4 class="wp-block-heading">Suzanne Dergacheva, John Cloys</h4>
-            <!-- /wp:heading -->
-
-            <!-- wp:paragraph -->
-            <p>In this session, we’ll give you an in-depth case study that guides you through the UX, visual design, and development process we followed to create a new digital ...</p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:buttons -->
-            <div class="wp-block-buttons"><!-- wp:button {"className":"button-with-icon icon\u002d\u002darrow-right icon-after"} -->
-            <div class="wp-block-button button-with-icon icon--arrow-right icon-after"><a class="wp-block-button__link wp-element-button">View Session Info</a></div>
-            <!-- /wp:button --></div>
-            <!-- /wp:buttons --></div>
-            <!-- /wp:group -->
-
-            <!-- wp:group {"templateLock":false,"lock":{"move":true,"remove":false},"backgroundColor":"light","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"0"},"border":{"radius":"4px"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"left"},"metadata":{"name":"Featured Card"}} -->
-            <div class="wp-block-group has-light-background-color has-background" style="border-radius:4px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:heading {"level":3} -->
-            <h3 class="wp-block-heading">4 Essential Checklists to Manage Drupal Projects</h3>
-            <!-- /wp:heading -->
-
-            <!-- wp:heading {"level":4} -->
-            <h4 class="wp-block-heading">Daniel Schiavone</h4>
-            <!-- /wp:heading -->
-
-            <!-- wp:paragraph -->
-            <p>There are two types of mistakes, errors of ignorance (mistakes we make because we don’t know enough), and errors of ineptitude (mistakes we make because we ...</p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:buttons -->
-            <div class="wp-block-buttons"><!-- wp:button {"className":"button-with-icon icon\u002d\u002darrow-right icon-after"} -->
-            <div class="wp-block-button button-with-icon icon--arrow-right icon-after"><a class="wp-block-button__link wp-element-button">View Session Info</a></div>
-            <!-- /wp:button --></div>
-            <!-- /wp:buttons --></div>
-            <!-- /wp:group -->
-
-            <!-- wp:paragraph {"className":"m-0","textColor":"light","style":{"elements":{"link":{"color":{"text":"var:preset|color|light"}}}}} -->
-            <p class="m-0 has-light-color has-text-color has-link-color"><a href="#">View all sessions</a></p>
-            <!-- /wp:paragraph --></div>
-            <!-- /wp:group --></div>
-            <!-- /wp:column -->
-
-            <!-- wp:column {"width":"28%"} -->
-            <div class="wp-block-column" style="flex-basis:28%"><!-- wp:paragraph -->
-            <p>Add Announcement view block here.</p>
-            <!-- /wp:paragraph --></div>
-            <!-- /wp:column --></div>
-            <!-- /wp:columns --></div>
-            <!-- /wp:group -->
-          summary: null
-          format: plain_text
-      field_pattern_category:
-        -
-          target_id: '3'
-      field_pattern_sync_status:
-        -
-          value: unsynced
 taxonomies:
   conference_year:
     -
@@ -559,4 +498,3 @@ taxonomies:
       weight: '0'
       parent: '0'
       uuid: 08df036e-5341-428f-95c3-5526074af9a2
-

@@ -97,7 +97,9 @@ landing_page_allowed_blocks:
   - core/verse
   - core/video
 landing_page_allowed_content_block_types: {  }
-landing_page_allowed_drupal_blocks: {  }
+landing_page_allowed_drupal_blocks:
+  - 'views_block:announcements-all_announcement'
+  - 'views_block:announcements-recent_announcement'
 landing_page_enable_full: true
 landing_page_template: ''
 landing_page_template_lock: none

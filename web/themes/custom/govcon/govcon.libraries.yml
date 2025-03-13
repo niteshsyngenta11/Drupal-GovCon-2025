@@ -19,3 +19,14 @@ announcement:
   css:
     theme:
       dist/components/templates/announcement/announcement.css: {}
+
+listing-card:
+  css:
+    theme:
+      dist/components/molecules/listing-card/listing-card.css: {}
+      dist/components/organisms/announcement-listing/announcement-listing.css: {}
+
+announcement-listing:
+  css:
+    theme:
+      dist/components/organisms/announcement-listing/announcement-listing.css: {}

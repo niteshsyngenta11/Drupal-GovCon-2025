@@ -1,0 +1,14 @@
+{{ attach_library('govcon/announcement-listing') }}
+
+{{ title_prefix }}
+{{ title_suffix }}
+
+{% include "@molecules/announcement-card/announcement-card.twig" with {
+  title: node.label(),
+  date: content.field_important_date[0]['#markup'], 
+  description: content.body,
+  link: {
+    url: url,
+    content: "See Announcement",
+  }
+} %}

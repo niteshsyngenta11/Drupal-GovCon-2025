@@ -1,0 +1,13 @@
+{{ attach_library('govcon/listing-card') }}
+
+{% set formatted_date = content.field_important_date[0]['#markup']|date('F j, Y') %}
+
+{% include "@molecules/listing-card/listing-card.twig" with {
+  heading: formatted_date,
+  subheading: node.label(),
+  description: content.body,
+  cta: {
+    url: url,
+    content: "See Announcement"
+  }
+} %}

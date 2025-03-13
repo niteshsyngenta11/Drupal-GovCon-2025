@@ -1,0 +1,59 @@
+uuid: a4679d7d-7d70-4027-9248-f8d79f3c338c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.listing_view
+    - field.field.node.special_announcement.body
+    - field.field.node.special_announcement.field_conference_year
+    - field.field.node.special_announcement.field_critical_announcement_text
+    - field.field.node.special_announcement.field_important_date
+    - field.field.node.special_announcement.field_is_critical
+    - field.field.node.special_announcement.field_metatags
+    - field.field.node.special_announcement.field_sort_order
+    - node.type.special_announcement
+  module:
+    - datetime
+    - metatag
+    - text
+    - user
+_core:
+  default_config_hash: dRs1rpyRUI40Ls7ISmPsEubZcpteL2SGoUF1fyhDRTU
+id: node.special_announcement.listing_view
+targetEntityType: node
+bundle: special_announcement
+mode: listing_view
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_important_date:
+    type: datetime_custom
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F j, Y'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_metatags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_conference_year: true
+  field_critical_announcement_text: true
+  field_is_critical: true
+  field_sort_order: true
