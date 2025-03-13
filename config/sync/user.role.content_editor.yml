@@ -7,6 +7,7 @@ dependencies:
   module:
     - comment
     - contextual
+    - editoria11y
     - file
     - govcon_custom
     - node
@@ -33,7 +34,9 @@ permissions:
   - 'edit own comments'
   - 'edit terms in tags'
   - 'manage custom settings'
+  - 'mark as hidden in editoria11y'
   - 'revert all revisions'
   - 'view all revisions'
+  - 'view editoria11y checker'
   - 'view own unpublished content'
   - 'view the administration theme'
