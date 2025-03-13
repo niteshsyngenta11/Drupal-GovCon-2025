@@ -152,19 +152,21 @@ p {
   margin-bottom: 1rem;
 }
 
-ul, ol {
-  padding-left: 32px;
-  margin: 16px 0;
-}
+section.content {
+  ul, ol {
+    padding-left: 32px;
+    margin: 16px 0;
+  }
 
-ul {
-  list-style: disc;
-}
+  ul {
+    list-style: disc;
+  }
 
-ol {
-  list-style: auto;
-}
+  ol {
+    list-style: auto;
+  }
 
-li {
-  margin-bottom: 12px;
+  li {
+    margin-bottom: 12px;
+  }
 }
