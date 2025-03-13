@@ -128,3 +128,13 @@ html :where(.wp-block) {
 .wp-block-group-is-layout-flex:not(.alignfull) {
   display: flex;
 }
+
+.featured-section {
+  .wp-block-columns {
+    gap: 64px;
+
+    @include mixins.media-breakpoint-down(md) {
+      gap: 32px;
+    }
+  }
+}
