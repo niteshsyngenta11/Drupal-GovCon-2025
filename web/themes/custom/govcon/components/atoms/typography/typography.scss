@@ -151,3 +151,20 @@ h6 {
 p {
   margin-bottom: 1rem;
 }
+
+ul, ol {
+  padding-left: 32px;
+  margin: 16px 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: auto;
+}
+
+li {
+  margin-bottom: 12px;
+}
