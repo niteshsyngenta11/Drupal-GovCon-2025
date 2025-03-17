@@ -42,7 +42,7 @@ content:
     region: content
   field__sides_link:
     type: link
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -144,7 +144,7 @@ content:
     region: content
   field_supporting_documents:
     type: file_default
-    label: above
+    label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }

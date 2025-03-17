@@ -1,11 +1,19 @@
 session_page_title:
   value: "Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website"
 
+session_recording:
+  label: "Session Recording"
+  value: "https://youtu.be/wEZOqbHI-xc"
+
+session_presentation:
+  label: "Presentation"
+  value: "https://youtu.be/wEZOqbHI-xc"
+
 session_description:
-  value: "In this session, we will discuss the importance of redesigning Princeton's School of Public and International Affairs."
+  value: "In this session, we will discuss the importance of redesigning Princeton's School of Public and International Affairs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 session_video:
-  value: '<iframe width="200" height="113" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>'
+  value: '<iframe width="200" height="113" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Session video: Enabling the Change-Makers"></iframe>'
 
 session_experience_level:
   label: "Experience Level"
@@ -30,3 +38,7 @@ session_status:
 session_track:
   label: "Session Track"
   value: "Site Building and Using Drupal"
+
+supporting_document:
+  label: "Supporting Document"
+  value: "Slides for GovCon presentation: 100% Remote - 7 Tips to Successfully Manage a Fully Distributed Workforce"

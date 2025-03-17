@@ -82,6 +82,14 @@ const preview = {
       toc: true,
     },
     layout: 'fullscreen',
+
+    a11y: {
+      config: {
+        rules: [
+          { id: 'frame-tested', enabled: false }
+        ],
+      },
+    },
   }
 };
 
