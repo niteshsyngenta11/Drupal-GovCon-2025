@@ -1,7 +1,4 @@
 import logoTemplate from './logo.twig';
-
-import primaryLogo from '../../../assets/images/Default.png';
-import secondaryLogo from '../../../assets/images/Blue.png';
 import defaultLogo from '../../../logo.svg';
 
 export default {
@@ -13,13 +10,15 @@ const Template = (args) => logoTemplate(args);
 
 export const Primary = Template.bind({});
 Primary.args = {
-  src_path: primaryLogo,
+  storybook: true,
+  logo_type: "primary",
   src_alt: 'Primary Logo',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  src_path: secondaryLogo,
+  storybook: true,
+  logo_type: "secondary",
   src_alt: 'Secondary Logo',
 };
 

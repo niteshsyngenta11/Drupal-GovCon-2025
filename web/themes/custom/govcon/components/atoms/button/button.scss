@@ -1,12 +1,10 @@
 @use '@atoms/colors/color' as color;
 
-$radius: 0.35rem;
 $border-width: 2px;
-$color-bg: transparent;
 $offset: 4px;
 $transition: 0.3s;
 
-.button:not(.button-with-icon),
+.button:not(.button-with-icon, input),
 .wp-block-button:not(.button-with-icon) {
   font-family: "Poppins", serif !important;
   font-weight: 600 !important;
@@ -15,42 +13,30 @@ $transition: 0.3s;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   letter-spacing: 0;
-  background-color: $color-bg;
-  border-radius: $radius;
+  background-color: color.$skyblue;
+  border-radius: 4px;
   position: relative;
   cursor: pointer;
   text-decoration: none;
   color: color.$primary-black !important;
   z-index: 2;
+  box-shadow: inset $offset $offset 0px color.$white, $offset $offset 0px color.$skyblue;
+  transition: all $transition ease-in-out;
 
-  &.secondary::after {
+  &.secondary {
     background-color: color.$secondary;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: $offset;
-    left: $offset;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-radius: $radius;
-    transition: all $transition ease-in-out;
-    background-color: color.$skyblue;
+    box-shadow: inset $offset $offset 0px color.$white, $offset $offset 0px color.$secondary;
   }
 
   &:hover {
     outline: solid $border-width color.$primary-black;
     text-decoration: none;
+    box-shadow: inset 0px 0px;
   }
+}
 
-  &:hover::after {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+input.button {
+  color: color.$black;
 }
 
 a.button-with-icon,

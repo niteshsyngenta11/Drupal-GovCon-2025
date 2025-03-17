@@ -3,12 +3,22 @@
   * Logo Component
   *
   * Available variables:
+  * - logo_type: Based on Logo Type Path will added
+  * - storybook: Update the path based on Logo Type and No path set for Default Logo
   * - src_path: Image source URL (Required)
   * - src_alt: Alternative text for accessibility (Required)
   * - width: Image width in pixels (Optional, defaults to "auto")
   * - height: Image height in pixels (Optional, defaults to "auto")
   */
 #}
+
+{% set logo_path = storybook ? "images/" : "/web/themes/custom/govcon/assets/images/" %}
+
+{% if logo_type == 'primary' %}
+    {% set src_path = logo_path ~ 'Default.png' %}
+{% elseif logo_type == 'secondary' %}
+    {% set src_path = logo_path ~ 'Blue.png' %}
+{% endif %}
 
 <div class="logo">
   <img

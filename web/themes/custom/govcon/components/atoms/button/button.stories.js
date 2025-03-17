@@ -6,15 +6,9 @@ export default {
   title: 'Atoms/Button',
   component: Button,
   argTypes: {
-    label: { control: 'text' },
     modifier: {
       control: 'select',
-      options: ['primary', 'secondary'],
-    },
-    src_url: { control: 'text' },
-    src_target: {
-      control: 'select',
-      options: ['_self', '_blank'],
+      options: ['primary', 'secondary', 'button-with-icon icon--arrow-right icon-after'],
     },
   },
 };

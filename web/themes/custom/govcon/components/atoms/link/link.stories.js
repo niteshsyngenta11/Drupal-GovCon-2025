@@ -6,7 +6,7 @@ export default {
     return CreateLink({ ...args });
   },
   argTypes: {
-    link_url: { control: 'file' },
+    link_url: { control: 'text' },
     link_target: { control: 'text' },
     link_title: { control: 'text' },
     link_content: { control: 'text' },

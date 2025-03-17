@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import headerStories from "./header.stories";
+import headerTwig from "./header.twig";
+
+<Meta title="Organisms/Header" of={headerStories} name="Header Docs" />
+
+# **Header Component**
+
+The **Header** component serves as the main site navigation container, including the **logo**, **main menu**, and **user account menu**. It also includes a mobile-friendly hamburger button for responsive navigation.
+
+## **Component Preview**
+
+<Canvas>
+  <Story name="Header">
+    {headerTwig({
+      src: headerStories?.args?.src || '',
+      useraccount_menu: headerStories?.args?.useraccount_menu || [],
+      menuItems: headerStories?.args?.menuItems || [],
+    })}
+  </Story>
+</Canvas>
+
+## **Component Structure & Props**
+
+### **Logo (`header__logo`)**
+The `header__logo` block renders the site’s branding.
+
+- **`src_path`** – The source URL for the logo image. _(Required)_
+- **`src_alt`** – Alternative text for accessibility. _(Required)_
+
+### **User Account Menu (`header__useraccountmenu`)**
+The `header__useraccountmenu` block includes a navigation menu for user-related actions, such as login and account settings.
+
+- **`menu__items`** – An array of menu items for user navigation.
+- **`classes`** – Defines the styling for the user account menu. _(Defaults to `"upper__nav"`)_
+
+### **Main Navigation (`header__mainnavigation`)**
+The `header__mainnavigation` block renders the primary site navigation menu.
+
+- **`menu__items`** – An array of menu items for site navigation.
+- **`classes`** – Defines the styling for the main menu. _(Defaults to `"header__nav"`)_
+
+## **Hamburger Button**
+A mobile-friendly toggle button for the navigation menu.
+
+- **`aria-label`** – Ensures accessibility for screen readers.
+- **Three `<span>` elements** – Used for the visual representation of the hamburger icon.

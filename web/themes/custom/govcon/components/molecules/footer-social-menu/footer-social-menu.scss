@@ -15,4 +15,8 @@
     text-decoration: none;
     color: map.get(color.$colors, "light");
   }
+
+  .ext {
+    display: none;
+  }
 }

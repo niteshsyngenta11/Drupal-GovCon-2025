@@ -1,0 +1,21 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import * as colorsStories from "./colors.stories";
+
+<Meta title="Atoms/Colors" of={colorsStories} />
+
+# **Colors**
+
+The following colors are used throughout our site to maintain consistency in design and branding.
+
+## **Implementation**
+
+To apply colors, we provide predefined CSS classes for both text and background styling. Additionally, these classes are supported in Gutenberg.
+
+### **Available CSS Classes**
+- **`text-<color-name>`** – Sets the text color to the specified color.  
+- **`bg-<color-name>`** – Sets the background color to the specified color.
+
+### **Color Variants**
+Below are the available color palettes used in the project.
+
+<Canvas of={colorsStories.Palettes} />

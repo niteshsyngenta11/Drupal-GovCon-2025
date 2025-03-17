@@ -1,0 +1,40 @@
+import { Meta, Canvas, Controls, Story } from '@storybook/blocks';
+import * as IconStories from './icons.stories';
+
+<Meta of={IconStories} />
+
+# **Link**
+
+The Icon Atom component is used for rendering icons.
+
+## **Usage**
+
+To incorporate icons into your HTML tags or within your SCSS files, follow the guidelines below:
+
+### HTML Implementation
+
+Utilize the `icon--{icon_name}` class to seamlessly integrate icons into your HTML elements.
+
+Example:
+```html
+<a href="#" class="icon--facebook">Link with Arrow Icon</a>
+```
+Utilize the `text--{icon_color}` class to seamlessly inject color on icons into your HTML elements.
+
+Example:
+```html
+<a href="#" class="icon--facebook text-dark">Link with Arrow Icon</a>
+```
+
+### Use of Icon Mixin in SCSS Files
+
+To seamlessly incorporate icons into your stylesheets, you can utilize the `icon` mixin provided. Below is the syntax for integrating icons within your SCSS code:
+
+```scss
+@include icon({icon_name}, after);
+```
+
+## **Icon**
+
+<Canvas of={IconStories.icon} />
+<Controls of={IconStories.icon} />

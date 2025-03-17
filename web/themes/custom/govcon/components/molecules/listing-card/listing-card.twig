@@ -25,10 +25,10 @@
 
         {% if cta %}
           {% include "@atoms/button/button.twig" with {
-            label: cta.content,
+            link_content: cta.content,
             modifier: "button-with-icon icon--arrow-right icon-after text-cobalt",
-            src_url: cta.url,
-            src_target: cta.target
+            link_url: cta.url,
+            link_target: cta.target
           } %}
         {% endif %}
       </div>
