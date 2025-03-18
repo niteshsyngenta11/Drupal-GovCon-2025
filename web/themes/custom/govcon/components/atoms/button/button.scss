@@ -51,6 +51,8 @@ a.button-with-icon,
   align-items: center;
   gap: 4px;
   color: color.$cobalt;
+  background-color: transparent;
+  box-shadow: none !important;
 
   &.icon--arrow-right.icon-after:after {
     font-size: 12px;

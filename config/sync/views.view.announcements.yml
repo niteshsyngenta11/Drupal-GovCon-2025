@@ -283,8 +283,8 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<p><a href="/special-announcements" class="body-text">View All Announcements</a></p>'
-            format: basic_html
+            value: '<p class="text-light"><a href="/special-announcements">View All Announcements</a></p>'
+            format: full_html
           tokenize: false
       display_extenders: {  }
       block_description: 'Recent Announcement'

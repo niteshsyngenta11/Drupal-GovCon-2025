@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_background_image
     - field.field.node.landing_page.field_gutenberg_components
     - field.field.node.landing_page.field_metatags
     - node.type.landing_page
@@ -20,18 +21,19 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 104
+    weight: 2
     region: content
   field_metatags:
     type: metatag_empty_formatter
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 103
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_background_image: true

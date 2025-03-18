@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".header__menu");
+  const siteHeader = document.querySelector(".site-header");
 
   if (hamburger && menu) {
     hamburger.addEventListener("click", function () {
@@ -18,4 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
       parentItem.classList.toggle("open");
     });
   });
+
+  if (document.body.classList.contains("has-background-image")) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {
+        siteHeader.classList.add("header-color");
+      } else {
+        siteHeader.classList.remove("header-color");
+      }
+    });
+  }
 });
