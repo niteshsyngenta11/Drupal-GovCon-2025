@@ -26,6 +26,7 @@
         "drupal/menu_link_attributes": "^1.5",
         "drupal/metatag": "^2.1",
         "drupal/pathauto": "^1.13",
+        "drupal/seckit": "^2.0",
         "drupal/simple_sitemap": "^4.2",
         "drupal/structure_sync": "^2.0",
         "drupal/twig_debugger": "^1.1",
