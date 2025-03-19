@@ -1,0 +1,11 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+@use '@molecules/sponsor-listing/sponsor-listing.scss';
+
+.sponsors-container {
+  padding: 50px 16px;
+}
+
+.sponsors-heading {
+  color: map.get(color.$colors, "dark");
+}

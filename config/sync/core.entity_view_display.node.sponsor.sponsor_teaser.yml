@@ -1,8 +1,9 @@
-uuid: ff8c6c76-07b6-4bac-ba17-f65f80875396
+uuid: c6a185df-1037-425b-9f44-d43fc089bb0b
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.sponsor_teaser
     - field.field.node.sponsor.field_conference_year
     - field.field.node.sponsor.field_metatags
     - field.field.node.sponsor.field_sponsor_logo
@@ -14,25 +15,17 @@ dependencies:
     - link
     - metatag
     - user
-id: node.sponsor.default
+id: node.sponsor.sponsor_teaser
 targetEntityType: node
 bundle: sponsor
-mode: default
+mode: sponsor_teaser
 content:
-  field_conference_year:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 104
-    region: content
   field_metatags:
     type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 103
+    weight: 2
     region: content
   field_sponsor_logo:
     type: image
@@ -43,7 +36,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
   field_sponsor_url:
     type: link
@@ -55,19 +48,13 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 101
-    region: content
-  field_sponsorship_level:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 105
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_conference_year: true
+  field_sponsorship_level: true

@@ -1,0 +1,11 @@
+uuid: ae835d97-0b57-4b88-bb54-2c916772a601
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsor_teaser
+label: 'Sponsor Teaser'
+description: ''
+targetEntityType: node
+cache: true

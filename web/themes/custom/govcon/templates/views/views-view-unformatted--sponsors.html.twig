@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+{% set sponsors = [] %}
+
+{% for row in rows %}
+  {% set url = row["content"]["#row"]._entity.field_sponsor_url.uri %}
+  {% if url|slice(0, 9) == 'internal:' %}
+    {% set url = url|replace({'internal:': ''}) %}
+  {% endif %}
+  {% set sponsors = sponsors|merge([{
+    'logo_url': file_url(row["content"]["#row"]._entity.field_sponsor_logo.entity.uri.value),
+    'link': url,
+    'logo_alt': row["content"]["#row"]._entity.field_sponsor_logo.alt
+  }]) %}
+{% endfor %}
+
+{% embed "@molecules/sponsor-listing/sponsor-listing.twig" with {
+  sponsor_heading: title,
+  sponsors: sponsors,
+} %}
+{% endembed %}

@@ -14,7 +14,7 @@ session-archive:
   css:
     theme:
       dist/components/templates/session-archive/session-archive.css: {}
-      
+
 announcement:
   css:
     theme:
@@ -30,3 +30,8 @@ announcement-listing:
   css:
     theme:
       dist/components/organisms/announcement-listing/announcement-listing.css: {}
+
+sponsors:
+  css:
+    theme:
+      dist/components/organisms/sponsors/sponsors.css: {}
