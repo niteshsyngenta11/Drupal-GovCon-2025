@@ -1,3 +1,4 @@
+author_enable_full: false
 cambridge_landing_page_allowed_blocks:
   - core-embed/facebook
   - core-embed/flickr

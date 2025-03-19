@@ -1,0 +1,23 @@
+uuid: 3d268312-f5aa-4533-9d05-26aa3420c2be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.author
+  module:
+    - link
+id: node.author.field_website
+field_name: field_website
+entity_type: node
+bundle: author
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

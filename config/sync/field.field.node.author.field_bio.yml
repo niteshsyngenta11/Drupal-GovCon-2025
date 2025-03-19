@@ -1,0 +1,24 @@
+uuid: 230ff588-4144-4fdd-a0e9-6cd02a6702a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - filter.format.full_html
+    - node.type.author
+  module:
+    - text
+id: node.author.field_bio
+field_name: field_bio
+entity_type: node
+bundle: author
+label: Bio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long
