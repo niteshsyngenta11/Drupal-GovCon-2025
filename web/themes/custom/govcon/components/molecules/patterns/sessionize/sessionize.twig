@@ -1,0 +1,41 @@
+<div class="sessionize-container" style="max-width: 800px; margin: auto;">
+  <h3 id="sessionize-title">Sessionize</h3>
+  <p>Below is an embedded Sessionize Pattern.</p>
+
+  <iframe
+    id="sessionize-iframe"
+    width="100%"
+    title="{{ sessionize_type | capitalize }} Sessionize Embed"
+    style="border: none; overflow: hidden; height: 800px;">
+  </iframe>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sessionizeType = "{{ sessionize_type | default('speakers') }}";
+      const sessionizeURLs = {
+        speakers: "https://sessionize.com/api/v2/f3wnkr67/view/Speakers",
+        schedule: "https://sessionize.com/api/v2/2907q512/view/GridSmart"
+      };
+      const titles = {
+        speakers: "Sessionize Speaker List",
+        schedule: "Sessionize Event Schedule"
+      };
+      document.getElementById("sessionize-title").innerText = titles[sessionizeType];
+      const sessionizeHTML = `<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Sessionize Embed</title>
+        </head>
+        <body>
+          <div id="sessionize-content"></div>
+          <script type="text/javascript" src="${sessionizeURLs[sessionizeType]}"><\/script>
+        </body>
+        </html>`;
+      const blob = new Blob([sessionizeHTML], { type: "text/html" });
+      const blobURL = URL.createObjectURL(blob);
+      document.getElementById("sessionize-iframe").src = blobURL;
+    });
+  </script>
+</div>
