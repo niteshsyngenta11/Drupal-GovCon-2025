@@ -25,6 +25,7 @@ dependencies:
     - file
     - image
     - link
+    - media_library
     - metatag
     - path
     - text
@@ -141,14 +142,11 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
   field_video:
-    type: entity_reference_autocomplete
+    type: media_library_widget
     weight: 132
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
   path:
     type: path

@@ -5,7 +5,9 @@ $container-fluid-width: 100%;
 $spacer: 1rem;
 
 // Container Classes
-.container {
+.container,
+.messages__wrapper,
+#block-govcon-tabs {
   max-width: $container-width;
   width: 100%;
   margin: 0 auto;
@@ -226,4 +228,9 @@ $space-values: (
 
 .text-decoration-none {
   text-decoration: none !important;
+}
+
+.messages__wrapper,
+#block-govcon-tabs {
+  padding-top: 32px;
 }
