@@ -1,0 +1,56 @@
+uuid: 89fa0e2b-884f-4413-a86c-0434127f73c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.gutenberg
+    - node.type.landing_page
+    - node.type.special_announcement
+    - node.type.sponsor
+    - taxonomy.vocabulary.tags
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_ui
+    - file
+    - filter
+    - gutenberg
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+id: content_author
+label: 'Content Author'
+weight: 4
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer nodes'
+  - 'administer url aliases'
+  - 'administer user display'
+  - 'create landing_page content'
+  - 'create special_announcement content'
+  - 'create sponsor content'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete own landing_page content'
+  - 'delete own special_announcement content'
+  - 'delete own sponsor content'
+  - 'edit own landing_page content'
+  - 'edit own special_announcement content'
+  - 'edit own sponsor content'
+  - 'edit terms in tags'
+  - 'use editorial transition draft'
+  - 'use editorial transition send_to_review'
+  - 'use gutenberg'
+  - 'use text format gutenberg'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view the administration theme'

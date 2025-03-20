@@ -3,13 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.gutenberg
+    - node.type.landing_page
+    - node.type.special_announcement
+    - node.type.sponsor
+    - taxonomy.vocabulary.conference_year
+    - taxonomy.vocabulary.pattern_categories
+    - taxonomy.vocabulary.sponsorship_level
     - taxonomy.vocabulary.tags
+    - workflows.workflow.editorial
   module:
+    - admin_toolbar_search
     - comment
+    - content_moderation
     - contextual
     - editoria11y
     - file
+    - filter
     - govcon_custom
+    - gutenberg
     - node
     - path
     - system
@@ -26,17 +38,57 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer taxonomy'
   - 'administer url aliases'
+  - 'create landing_page content'
+  - 'create special_announcement content'
+  - 'create sponsor content'
+  - 'create terms in conference_year'
+  - 'create terms in sponsorship_level'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete all taxonomy revisions'
+  - 'delete any landing_page content'
+  - 'delete any special_announcement content'
+  - 'delete any sponsor content'
   - 'delete own files'
+  - 'delete terms in conference_year'
+  - 'delete terms in sponsorship_level'
+  - 'delete terms in tags'
+  - 'edit any landing_page content'
+  - 'edit any special_announcement content'
+  - 'edit any sponsor content'
   - 'edit own comments'
+  - 'edit terms in conference_year'
+  - 'edit terms in sponsorship_level'
   - 'edit terms in tags'
   - 'manage custom settings'
   - 'mark as hidden in editoria11y'
   - 'revert all revisions'
+  - 'revert all taxonomy revisions'
+  - 'revert term revisions in conference_year'
+  - 'revert term revisions in pattern_categories'
+  - 'revert term revisions in sponsorship_level'
+  - 'revert term revisions in tags'
+  - 'use admin toolbar search'
+  - 'use editorial transition archive'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition restore_from_archive'
+  - 'use editorial transition send_to_review'
+  - 'use gutenberg'
+  - 'use text format gutenberg'
   - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any unpublished content'
   - 'view editoria11y checker'
+  - 'view latest version'
   - 'view own unpublished content'
+  - 'view term revisions in conference_year'
+  - 'view term revisions in pattern_categories'
+  - 'view term revisions in sponsorship_level'
   - 'view the administration theme'
+  - 'view vocabulary labels'

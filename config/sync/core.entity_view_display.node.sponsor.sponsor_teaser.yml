@@ -20,6 +20,11 @@ targetEntityType: node
 bundle: sponsor
 mode: sponsor_teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_metatags:
     type: metatag_empty_formatter
     label: above
