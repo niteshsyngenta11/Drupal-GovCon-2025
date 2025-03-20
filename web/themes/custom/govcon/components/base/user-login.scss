@@ -1,0 +1,65 @@
+@use '@atoms/colors/color.scss' as color;
+@use '@base/mixins.scss' as mixins;
+@use './utilities.scss' as vars;
+@use "sass:map";
+
+#block-govcon-tabs {
+  ul {
+    &:not(.contextual-links) {
+      display: flex;
+      list-style: none;
+      column-gap: 40px;
+      border-bottom: 0.5px solid map.get(color.$colors, "black");
+      padding-bottom: 15px;
+      padding-left: 0;
+
+      @include mixins.media-breakpoint-down(md) {
+        flex-wrap: wrap;
+        row-gap: 20px;
+      }
+    }
+  }
+}
+
+.user-login-form,
+.user-pass {
+  max-width: vars.$container-width;
+  margin: 0 auto 32px auto;
+  padding: 0 16px;
+  display: grid;
+  row-gap: 20px;
+
+  .form-item {
+    display: grid;
+    row-gap: 15px;
+
+    input {
+      border: 1px solid map.get(color.$colors, "gray");
+      margin: 0 0 1em;
+      padding: .5em;
+
+      @include mixins.media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+  }
+
+  .form-submit {
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 3px;
+    background: map.get(color.$colors, "primary");
+    color: map.get(color.$colors, "white");
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background: map.get(color.$colors, "primary-dark");
+    }
+  }
+}
+
+.page-user article {
+  max-width: vars.$container-width;
+  margin: 0 auto 32px auto;
+  padding: 0 16px;
+}

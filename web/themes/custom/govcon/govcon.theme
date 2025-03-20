@@ -49,4 +49,15 @@ function govcon_preprocess_html(&$variables)
       }
     }
   }
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    // Add a class based on the node's content type.
+    $variables['attributes']['class'][] = 'node-type-' . $node->getType();
+  } elseif ($user = \Drupal::routeMatch()->getParameter('user')) {
+    // Add a class for user pages.
+    $variables['attributes']['class'][] = 'page-user';
+  } elseif ($taxonomy_term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    // Add a class for taxonomy term pages.
+    $variables['attributes']['class'][] = 'page-taxonomy-' . $taxonomy_term->getVocabularyId();
+  }
 }

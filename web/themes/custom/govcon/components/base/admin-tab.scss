@@ -1,0 +1,28 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
+#block-govcon-tabs {
+  ul {
+    &:not(.contextual-links) {
+      a {
+        background: map.get(color.$colors, "white");
+        padding: 10px;
+        text-decoration: none;
+        color: map.get(color.$colors, "dark");
+        border-radius: 4px;
+        box-shadow: 0 2px 5px map.get(color.$colors, "black");
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        &.is-active {
+          background: map.get(color.$colors, "light");
+          color: map.get(color.$colors, "dark");
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

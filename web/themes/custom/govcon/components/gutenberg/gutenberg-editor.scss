@@ -144,6 +144,12 @@ html :where(.wp-block) {
       gap: 32px;
     }
   }
+
+  a {
+    &:hover {
+      color: inherit;
+    }
+  }
 }
 
 .is-vertical {
