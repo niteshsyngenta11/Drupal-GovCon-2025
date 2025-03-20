@@ -23,6 +23,7 @@
         "drupal/focal_point": "^2.1",
         "drupal/google_analytics": "^4.0",
         "drupal/gutenberg": "^3.0@dev",
+        "drupal/linkit": "^7.0",
         "drupal/menu_link_attributes": "^1.5",
         "drupal/metatag": "^2.1",
         "drupal/migrate_plus": "^6.0",

@@ -5,7 +5,6 @@ namespace Drupal\govcon_custom\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
-use Drupal\node\Entity\Node;
 
 /**
  * Configure footer settings for this site.
@@ -31,6 +30,7 @@ class FooterSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('govcon_custom.settings');
+    
     $form['footer_left'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Footer Left'),
@@ -66,56 +66,18 @@ class FooterSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
     $form['footer_right']['footer_cta']['footer_cta_url'] = [
-      '#type' => 'textfield',
+      '#type' => 'linkit',
       '#title' => $this->t('CTA Button URL'),
-      '#description' => $this->t('Enter either a relative path (/<lorem-ipsum></lorem-ipsum>) or an absolute URL (<https://lorem-ipsum.com>).'),
+      '#description' => $this->t('Start typing to see a list of results. Click to select.'),
+      '#autocomplete_route_name' => 'linkit.autocomplete',
+      '#autocomplete_route_parameters' => [
+        'linkit_profile_id' => 'default',
+      ],
       '#default_value' => $config->get('footer_cta_url') ?? '',
       '#required' => TRUE,
     ];
+
     return parent::buildForm($form, $form_state);
-  }
-
-  /**
-   * Validate the given URL based on specified rules
-   *
-   * @param string $url
-   *   The URL to validate.
-   *
-   * @return bool
-   *   TRUE if the URL is valid, FALSE otherwise.
-   */
-  private function isValidUrl(string $url): bool {
-    if (filter_var($url, FILTER_VALIDATE_URL)) {
-      return TRUE;
-    }
-    if (strpos($url, '/') === 0) {
-      if (\Drupal::service('path.validator')->isValid($url)) {
-        return TRUE;
-      }
-      if (preg_match('/^\/node\/(\d+)$/', $url, $matches) && Node::load($matches[1])) {
-        return TRUE;
-      }
-    }
-    return FALSE;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-    // Validate CTA URL.
-    $url = trim($form_state->getValue('footer_cta_url'));
-    if (!$this->isValidUrl($url)) {
-      $form_state->setErrorByName('footer_cta_url', $this->t('Invalid URL.'));
-    }
-    // Validate uploaded file.
-    $fid = $form_state->getValue('footer_image');
-    if (!empty($fid[0]) && ($file = File::load($fid[0]))) {
-      $allowed_mime_types = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
-      if (!in_array($file->getMimeType(), $allowed_mime_types)) {
-        $form_state->setErrorByName('footer_image', $this->t('Only PNG, JPG, JPEG, and WEBP files are allowed.'));
-      }
-    }
   }
 
   /**
@@ -128,12 +90,14 @@ class FooterSettingsForm extends ConfigFormBase {
       $file->setPermanent();
       $file->save();
     }
+
     $this->config('govcon_custom.settings')
       ->set('footer_image', $file_id)
       ->set('footer_description', $form_state->getValue('footer_description'))
       ->set('footer_cta_label', $form_state->getValue('footer_cta_label'))
       ->set('footer_cta_url', $form_state->getValue('footer_cta_url'))
       ->save();
+
     parent::submitForm($form, $form_state);
   }
 }
