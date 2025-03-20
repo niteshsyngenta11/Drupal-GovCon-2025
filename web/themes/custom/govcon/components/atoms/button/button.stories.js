@@ -18,7 +18,9 @@ const Template = (args) => Button(args);
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const ButtonWithIcon = Template.bind({});
+export const Minimal = Template.bind({});
 
 Primary.args = buttonData.primary;
 Secondary.args = buttonData.secondary;
 ButtonWithIcon.args = buttonData.button_with_icon
+Minimal.args = buttonData.minimal;

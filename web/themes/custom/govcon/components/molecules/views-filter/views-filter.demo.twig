@@ -1,0 +1,9 @@
+<div class="container-fluid bg-dark">
+  <div class="container py-32">
+    {% embed "./views-filter.component.twig" %}
+      {% block search__exposed %}
+        {% include "./views-filter.content.demo.twig" %}
+      {% endblock search__exposed %}
+    {% endembed %}
+  </div>
+</div>

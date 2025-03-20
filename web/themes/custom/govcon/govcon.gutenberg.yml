@@ -2,6 +2,7 @@
 # Useful for tweaking the admin UI.
 libraries-edit:
   - govcon/editor
+  - govcon/exposed-form
 
 # Add client libraries to be attached to the node page.
 # Useful for custom blocks using javascript behaviors.

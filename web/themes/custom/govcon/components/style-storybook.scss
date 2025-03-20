@@ -11,11 +11,11 @@ div#storybook-root,
   padding: 2rem;
 }
 
-div#storybook-root:has(.site-header), div#storybook-root:has(.site-footer) {
+div#storybook-root:has(.site-header), div#storybook-root:has(.site-footer), div#storybook-root:has(.archive-session), div#storybook-root:has(.container-fluid) {
   padding: 0rem;
 }
 
-#story--atoms-button--primary, #story--atoms-button--secondary {
+#story--atoms-button--primary, #story--atoms-button--secondary, #story--atoms-button--minimal {
   height: 130px;
   display: flex;
   align-items: center;

@@ -1,0 +1,37 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import viewsFilterStories from "./views-filter.stories";
+import viewsFilterTwig from "./views-filter.demo.twig";
+
+<Meta title="Molecules/Forms/View Form" of={viewsFilterStories} name="View Form Docs" />
+
+# **View Form**
+
+The **View Form** component allows users to filter and refine data views dynamically. It provides input fields, dropdowns, and other controls to modify displayed results.
+
+## **Component Preview**
+
+<Canvas>
+  <Story name="Default View Form">
+    {viewsFilterTwig(viewsFilterStories?.args || {})}
+  </Story>
+</Canvas>
+
+## **Filter Options (`filter_options`)**
+
+The `filter_options` prop allows users to define the available filtering criteria for the view.
+
+### **Available Filter Options**
+| Filter Option | Description |
+|--------------|------------|
+| `"text"` | Text input field for searching by keywords. |
+| `"dropdown"` | Select dropdown for choosing categories. |
+| `"checkbox"` | Checkbox options for filtering based on boolean values. |
+
+## **Custom Classes (`classes`)**
+
+The `classes` prop allows additional styling to be applied to the view form.
+
+### **Applied Classes**
+| Class | Description |
+|-------|------------|
+| `"views-filter"` | Default styling for the views filter form. |

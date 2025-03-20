@@ -1,0 +1,21 @@
+<div class="archive-session">
+  <div class="archive-session__exposed-form py-32">
+  {% embed "@molecules/views-filter/views-filter.component.twig" %}
+    {% block search__exposed %}
+      {% include "@molecules/views-filter/views-filter.content.demo.twig" %}
+    {% endblock search__exposed %}
+  {% endembed %}
+  </div>
+  <div class="archive-session__listing py-32">
+    {% block listing_rows %}
+      {% for card in listing_cards %}
+        {% include "@molecules/listing-card/listing-card.twig" with card %}
+      {% endfor %}
+    {% endblock %}
+  </div>
+  <div class="archive-session__pager py-32">
+    {% block view__pager %}
+      {% include "@molecules/pager/pager.twig" %}
+    {% endblock view__pager %}
+  </div>
+</div>

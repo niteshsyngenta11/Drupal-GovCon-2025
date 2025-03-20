@@ -1,0 +1,17 @@
+{% set image = content.field_image[0] ?? null %}
+{% set image_alt = content.field_image[0]['#alt'] ?? "Sample image" %}
+
+{% include "@molecules/listing-card/listing-card.twig" with {
+    image: image,
+    image_alt: image_alt,
+    heading: node.label(),
+    description: content.body[0] ?? null,
+    cta: {
+        url: url,
+        content: "See Announcement"
+    },
+    session_track: content.field_session_track[0],
+    technical_level: content.field_experience_level[0],
+    conference_year: content.field_conference_year[0],
+    presenters: null,
+} %}

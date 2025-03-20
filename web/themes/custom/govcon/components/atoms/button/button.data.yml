@@ -14,3 +14,9 @@ button_with_icon:
   modifier: "button-with-icon icon--arrow-right icon-after"
   link_url: "#"
   link_target: '_self'
+
+minimal:
+  link_content: "Button"
+  modifier: "minimal"
+  link_url: "#"
+  link_target: '_self'

@@ -11,7 +11,10 @@ export default {
     heading: { control: 'text' },
     subheading: { control: 'text' },
     description: { control: 'text' },
-    fields: { control: 'object' },
+    session_track: { control: 'text', defaultValue: 'Site Building and Using Drupal' },
+    technical_level: { control: 'text', defaultValue: 'Beginner' },
+    conference_year: { control: 'text', defaultValue: '2021' },
+    presenters: { control: 'text', defaultValue: 'pixelite, jcloys' },
   },
 };
 
@@ -22,59 +25,15 @@ Default.args = data;
 
 export const WithoutImage = Template.bind({});
 WithoutImage.args = {
-  "heading": "Heading",
-  "subheading": "Subheading",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "cta": {
-    "url": "#",
-    "title": "Button",
-    "target": "_blank",
-    "content": "Button"
-  },
-  "fields": [
-    {
-      "label": "Field One",
-      "value": "Field one content"
-    },
-    {
-      "label": "Field Two",
-      "value": "Field two content"
-    },
-    {
-      "label": "Field Three",
-      "value": "Field three content"
-    },
-    {
-      "label": "Field Four",
-      "value": "Field Four content"
-    }
-  ]
+  ...data,
+  image: null,
 };
 
 export const WithoutFields = Template.bind({});
 WithoutFields.args = {
-  "image": "https://placehold.co/220x200.png",
-  "image_alt": "Sample image",
-  "heading": "Heading",
-  "subheading": "Subheading",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "cta": {
-    "url": "#",
-    "title": "Button",
-    "target": "_blank",
-    "content": "Button"
-  },
-};
-
-export const WithoutFieldsImage = Template.bind({});
-WithoutFieldsImage.args = {
-  "heading": "Heading",
-  "subheading": "Subheading",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "cta": {
-    "url": "#",
-    "title": "Button",
-    "target": "_blank",
-    "content": "Button"
-  },
+  ...data,
+  session_track: null,
+  technical_level: null,
+  conference_year: null,
+  presenters: null,
 };

@@ -17,11 +17,14 @@
 }
 
 .gutenberg-container {
-  > :not(.alignwide):not(.alignfull) {
+  > :not(.alignwide):not(.alignfull),
+  > .wp-block-group.alignfull > .wp-block-group__inner-container{
     max-width: utility.$container-width;
     margin-left: auto;
     margin-right: auto;
-    padding-inline: 16px;
+    @include mixins.media-breakpoint-up(md) {
+      padding-inline: 16px;
+    }
 
     .wp-block-columns {
       padding: 32px 0;

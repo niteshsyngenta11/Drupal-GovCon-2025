@@ -6,42 +6,59 @@
       </div>
     {% endif %}
 
-      <div class="text-left">
-        <h3 class="listing-card__heading">
-          {{ heading }}
-        </h3>
+    <div class="text-left">
+      <h3 class="listing-card__heading">
+        {{ heading }}
+      </h3>
 
-        {% if subheading %}
-          <h4 class="listing-card__subheading">
-            {{ subheading }}
-          </h4>
-        {% endif %}
+      {% if subheading %}
+        <h4 class="listing-card__subheading">
+          {{ subheading }}
+        </h4>
+      {% endif %}
 
-        {% if description %}
-          <div class="listing-card__description">
-            {{ description }}
-          </div>
-        {% endif %}
+      {% if description %}
+        <div class="listing-card__description">
+          {{ description }}
+        </div>
+      {% endif %}
 
-        {% if cta %}
-          {% include "@atoms/button/button.twig" with {
-            link_content: cta.content,
-            modifier: "button-with-icon icon--arrow-right icon-after text-cobalt",
-            link_url: cta.url,
-            link_target: cta.target
-          } %}
-        {% endif %}
-      </div>
+      {% if cta %}
+        {% include "@atoms/button/button.twig" with {
+          link_content: cta.content,
+          modifier: "button-with-icon icon--arrow-right icon-after text-cobalt",
+          link_url: cta.url,
+          link_target: cta.target
+        } %}
+      {% endif %}
     </div>
-
-    {% if fields %}
-      <div class="listing-card__fields body-text py-8 bg-skyblue d-flex">
-        {% for field in fields %}
-          <div class="listing-card__field d-flex">
-            <strong>{{ field.label }}:</strong>{{ field.value }}
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
   </div>
-  
+
+  {% if session_track or technical_level or conference_year or presenters %}
+    <div class="listing-card__fields body-text py-8 bg-skyblue d-flex">
+      {% if session_track %}
+        <div class="listing-card__field d-inline-flex">
+          <strong>Session Track: </strong> {{ session_track }}
+        </div>
+      {% endif %}
+
+      {% if technical_level %}
+        <div class="listing-card__field d-inline-flex">
+          <strong>Technical Level: </strong> {{ technical_level }}
+        </div>
+      {% endif %}
+
+      {% if conference_year %}
+        <div class="listing-card__field d-inline-flex">
+          <strong>Conference Year: </strong> {{ conference_year }}
+        </div>
+      {% endif %}
+
+      {% if presenters %}
+        <div class="listing-card__field d-inline-flex">
+          <strong>Presenter(s): </strong> {{ presenters }}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

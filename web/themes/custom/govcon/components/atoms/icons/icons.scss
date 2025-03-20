@@ -38,7 +38,7 @@ $uniqueid: string.unique-id();
     $char: '\e900';
   }
 
-  @if $filename ==chevron-right {
+  @if $filename ==chevron {
     $char: '\e902';
   }
 
@@ -66,6 +66,6 @@ $uniqueid: string.unique-id();
 $icons-values: (
   facebook: facebook,
   x: x,
-  chevron-right: chevron-right,
+  chevron: chevron,
   arrow-right: arrow-right
 );

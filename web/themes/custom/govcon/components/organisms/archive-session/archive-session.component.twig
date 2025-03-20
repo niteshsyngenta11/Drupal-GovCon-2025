@@ -1,0 +1,20 @@
+<div class="container-fluid bg-dark">
+  <div class="view{% if views_data.modifier %} {{ views_data.modifier }}-view{% endif %}">
+    <div class="view__filters py-32 {% if views_data.modifier %} {{ views_data.modifier }}-view__filters{% endif %}">
+      {% block view__filter %}
+      {% endblock %}
+    </div>
+    <div class="view__header{% if views_data.modifier %} {{ views_data.modifier }}-view__header{% endif %}">
+      {% block view__header %}
+      {% endblock %}
+    </div>
+    <div class="view__content py-32 d-flex flex-column gap-32 {% if views_data.modifier %} {{ views_data.modifier }}-view__content{% endif %}">
+      {% block view__content %}
+      {% endblock %}
+    </div>
+    <div class="py-32 view__pager{% if views_data.modifier %} {{ views_data.modifier }}-view__pager{% endif %}">
+      {% block view__pager %}
+      {% endblock %}
+    </div>
+  </div>
+</div>

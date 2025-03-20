@@ -28,6 +28,14 @@ $transition: 0.3s;
     box-shadow: inset $offset $offset 0px color.$white, $offset $offset 0px color.$secondary;
   }
 
+  &.minimal {
+    background-color: transparent;
+    color: color.$primary-black;
+    box-shadow: none;
+    outline: solid $border-width color.$primary-black;
+    outline-offset: -$border-width;
+  }
+
   &:hover {
     outline: solid $border-width color.$primary-black;
     text-decoration: none;

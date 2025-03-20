@@ -100,6 +100,7 @@ landing_page_allowed_content_block_types: {  }
 landing_page_allowed_drupal_blocks:
   - 'views_block:announcements-all_announcement'
   - 'views_block:announcements-recent_announcement'
+  - 'views_block:session_archive-session_archive_block'
 landing_page_enable_full: true
 landing_page_template: ''
 landing_page_template_lock: none
@@ -124,6 +125,7 @@ landing_page_allowed_image_styles:
   medium: medium
   thumbnail: thumbnail
   wide: wide
+  media_library: 0
 demo_allowed_image_styles:
   full: full
   large: large

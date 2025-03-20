@@ -31,6 +31,16 @@ announcement-listing:
     theme:
       dist/components/organisms/announcement-listing/announcement-listing.css: {}
 
+exposed-form:
+  css:
+    theme:
+      dist/components/molecules/views-filter/views-filter.css: {}
+
+pager:
+  css:
+    theme:
+      dist/components/molecules/pager/pager.css: {}
+
 sponsors:
   css:
     theme:

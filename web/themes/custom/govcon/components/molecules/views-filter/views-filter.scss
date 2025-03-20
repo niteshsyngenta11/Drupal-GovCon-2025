@@ -1,0 +1,106 @@
+@use '@atoms/colors/color' as color;
+@use '@base/mixins.scss' as mixins;
+@use '@atoms/icons/icons.scss' as icons;
+
+.views-exposed-form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 2rem;
+
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.33% - 1rem);
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: color.$light;
+      margin-bottom: 0.25rem;
+    }
+
+    input.form-text,
+    select.form-select {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      background: color.$smoke-white;
+      outline: none;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: color.$cobalt;
+      }
+    }
+  }
+
+  .form-type-select {
+    position: relative;
+    display: inline-block;
+    @include icons.icon('chevron', after);
+    
+    select.form-select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 2.5rem;      
+      cursor: pointer;
+      line-height: 1.5rem;
+    }
+  
+    &::after {
+      right: 10px;
+      top: 60%;
+      position: absolute;
+      pointer-events: none;
+      font-size: 6.75px;
+      color: #333;
+    }
+  }
+
+  .form-item:nth-child(4) {
+    flex: 0 0 33%;
+  }
+
+  .form-actions {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+
+    .form-submit {
+      background-color: transparent;
+      color: color.$light;
+      border: 1px solid color.$light;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: color.$light;
+        color: color.$black;
+      }
+    }
+  }
+
+  @include mixins.media-breakpoint-down(lg) {
+    .form-item {
+      flex: 1 1 calc(50% - 1rem);
+    }
+  }
+
+  @include mixins.media-breakpoint-down(md) {
+    .form-item {
+      flex: 1 1 100%;
+    }
+
+    .form-item:nth-child(4) {
+      flex: 1 1 100%;
+    }
+  }
+}

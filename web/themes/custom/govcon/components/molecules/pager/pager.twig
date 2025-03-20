@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * Theme override to display a pager.
+ *
+ * Available variables:
+ * - items: List of pager items.
+ *   The list is keyed by the following elements:
+ *   - first: Item for the first page; not present on the first page of results.
+ *   - previous: Item for the previous page; not present on the first page
+ *     of results.
+ *   - next: Item for the next page; not present on the last page of results.
+ *   - last: Item for the last page; not present on the last page of results.
+ *   - pages: List of pages, keyed by page number.
+ *   Sub-sub elements:
+ *   items.first, items.previous, items.next, items.last, and each item inside
+ *   items.pages contain the following elements:
+ *   - href: URL with appropriate query parameters for the item.
+ *   - attributes: A keyed list of HTML attributes for the item.
+ *   - text: The visible text used for the item link, such as "‹ Previous"
+ *     or "Next ›".
+ * - current: The page number of the current page.
+ * - ellipses: If there are more pages than the quantity allows, then an
+ *   ellipsis before or after the listed pages may be present.
+ *   - previous: Present if the currently visible list of pages does not start
+ *     at the first page.
+ *   - next: Present if the visible list of pages ends before the last page.
+ *
+ * @see template_preprocess_pager()
+ */
+#}
+
+{% set pager__base_class = 'pager' %}
+
+{% if items %}
+  {% set page_keys = items.pages|keys|sort|reverse %}
+  {% set max_page = page_keys|first|default(10) %}
+
+  {% if max_page > 1 %}
+    <nav class="{{ pager__base_class }}" aria-label="{{ pagination_id|default('Pagination') }}">
+      <ul class="{{ pager__base_class }}__items js-pager__items m-0">
+
+        {% set range = 2 %}
+        {% set start_ellipsis = false %}
+        {% set end_ellipsis = false %}
+
+        {# Determine when to show ellipses #}
+        {% if current > 4 %}
+          {% set start_ellipsis = true %}
+        {% endif %}
+        {% if current < max_page - 3 %}
+          {% set end_ellipsis = true %}
+        {% endif %}
+
+        {# Always show first page #}
+        <li class="{{ pager__base_class }}__item{% if current == 1 %} is-active{% endif %}">
+          <a class="{{ pager__base_class }}__link" href="{{ items.pages[1].href }}" title="Go to page 1">1</a>
+        </li>
+
+        {# Show start ellipsis if needed #}
+        {% if start_ellipsis %}
+          <li class="{{ pager__base_class }}__item {{ pager__base_class }}__item--ellipsis" role="presentation">&hellip;</li>
+        {% endif %}
+
+        {# Show range around current page #}
+        {% for key, item in items.pages %}
+          {% if key > 1 and key < max_page and key >= current - range and key <= current + range %}
+            <li class="{{ pager__base_class }}__item{% if current == key %} is-active{% endif %}">
+              <a class="{{ pager__base_class }}__link" href="{{ item.href }}" title="Go to page {{ key }}">{{ key }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+
+        {# Show end ellipsis if needed #}
+        {% if end_ellipsis %}
+          <li class="{{ pager__base_class }}__item {{ pager__base_class }}__item--ellipsis" role="presentation">&hellip;</li>
+        {% endif %}
+
+        {# Always show last page #}
+        {% if max_page > 1 %}
+          <li class="{{ pager__base_class }}__item{% if current == max_page %} is-active{% endif %}">
+            <a class="{{ pager__base_class }}__link" href="{{ items.pages[max_page].href }}" title="Go to page {{ max_page }}">{{ max_page }}</a>
+          </li>
+        {% endif %}
+
+      </ul>
+    </nav>
+  {% endif %}
+{% endif %}

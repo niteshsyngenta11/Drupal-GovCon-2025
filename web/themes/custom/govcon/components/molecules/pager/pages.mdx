@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas, Controls } from '@storybook/addon-docs';
+import * as PagerStories from './pager.stories';
+
+<Meta title="Molecules/Pager" />
+
+# Pager
+
+The **Pager** component provides a structured way to navigate through multiple pages of content. It follows accessibility best practices and maintains a clean, minimalist design.
+
+## Usage
+
+The `Pager` component includes:
+- **Page Numbers**: Displays sequential page numbers.
+- **Ellipsis (`...`)**: Indicates skipped page numbers.
+- **Active Page Highlight**: The current page is visually distinguished.
+- **Responsive Design**: Adapts to different screen sizes.
+
+## Example
+
+<Canvas of={PagerStories.Basic} />
+
+## Props
+
+<Controls of={PagerStories.Basic} />
+
