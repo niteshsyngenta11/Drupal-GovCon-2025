@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 name: 'Sponsorship Level'
 vid: sponsorship_level
-description: null
+description: 'Display the list of Sponsorship Level.'
 weight: 0
 new_revision: false
