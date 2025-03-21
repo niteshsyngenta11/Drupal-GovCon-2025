@@ -45,3 +45,8 @@ sponsors:
   css:
     theme:
       dist/components/organisms/sponsors/sponsors.css: {}
+
+author:
+  css:
+    theme:
+      dist/components/templates/author/author.css: {}

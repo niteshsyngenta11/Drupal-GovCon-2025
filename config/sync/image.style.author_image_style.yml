@@ -1,0 +1,15 @@
+uuid: ca93afe2-4f7d-42dd-84e2-eebd808e7ad8
+langcode: en
+status: true
+dependencies: {  }
+name: author_image_style
+label: 'Author Image Style'
+effects:
+  0b1145e3-239d-490d-be1e-50817ae3fcf2:
+    uuid: 0b1145e3-239d-490d-be1e-50817ae3fcf2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center
