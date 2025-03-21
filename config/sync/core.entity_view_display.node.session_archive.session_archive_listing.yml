@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.session_archive.field_status
     - field.field.node.session_archive.field_supporting_documents
     - field.field.node.session_archive.field_video
+    - image.style.large
     - node.type.session_archive
   module:
     - datetime
@@ -68,10 +69,13 @@ content:
     weight: 7
     region: content
   field_image:
-    type: image_url
+    type: image
     label: hidden
     settings:
+      image_link: ''
       image_style: large
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 1
     region: content

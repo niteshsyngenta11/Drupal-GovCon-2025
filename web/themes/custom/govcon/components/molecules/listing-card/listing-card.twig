@@ -2,7 +2,9 @@
   <div class="upper-card bg-light p-32 d-flex">
     {% if image %}
       <div class="listing-card__image">
-        <img src="{{ image }}" alt="{{ image_alt }}" class="border-xs">
+        {% block listing_image %}
+          <img src="{{ image }}" alt="{{ image_alt }}" class="border-xs">
+        {% endblock %}
       </div>
     {% endif %}
 
