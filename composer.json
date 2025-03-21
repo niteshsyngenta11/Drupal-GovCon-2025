@@ -18,6 +18,7 @@
         "drupal/core-composer-scaffold": "^11.0",
         "drupal/core-project-message": "^11.0",
         "drupal/core-recommended": "^11.0",
+        "drupal/critical_css": "^2.0",
         "drupal/editoria11y": "^2.2",
         "drupal/extlink": "^2.0",
         "drupal/focal_point": "^2.1",
