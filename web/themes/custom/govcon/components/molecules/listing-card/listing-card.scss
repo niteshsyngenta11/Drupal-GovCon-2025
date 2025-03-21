@@ -11,6 +11,10 @@
     }
   }
 
+  .listing-card__description > * {
+    font-size: 1rem;
+  }
+
   .listing-card__image {
     @include mixins.media-breakpoint-up(md) {
       max-width: 400px;
