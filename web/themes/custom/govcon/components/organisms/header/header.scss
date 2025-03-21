@@ -2,20 +2,33 @@
 @use '@base/mixins.scss' as mixins;
 @use '@molecules/menu/menu.scss';
 
+$offset: 4px;
+
 header {
-  z-index: 99;
+  z-index: 999;
   position: sticky;
   top: 0;
 }
 
 body {
   &.has-background-image {
+
     .site-header {
       max-width: 1368px;
       background: rgba(244, 250, 255, 0.6);
       box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
       margin: 16px auto 0;
+
+      .header__menu:not(.open) {
+        a.button.secondary {
+          box-shadow: inset $offset $offset 0px rgb(169 187 203), $offset $offset 0px color.$secondary;
+
+          &:hover {
+            box-shadow: inset 0px 0px;
+          }
+        }
+      }
 
       &.header-color {
         background: rgb(165 185 200);
@@ -39,6 +52,11 @@ body {
 
   img {
     max-width: 216px;
+    transition: all 0.3s ease;
+  }
+
+  &.sticky-header img {
+    max-width: 180px;
   }
 
   .hamburger {
@@ -105,7 +123,7 @@ body {
       }
     }
 
-    nav ul {
+    nav ul:not(.contextual-links) {
       display: block;
       text-align: left;
 

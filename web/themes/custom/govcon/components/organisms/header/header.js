@@ -20,13 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  if (document.body.classList.contains("has-background-image")) {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 50) {
-        siteHeader.classList.add("header-color");
-      } else {
-        siteHeader.classList.remove("header-color");
-      }
-    });
-  }
+  window.addEventListener("scroll", function () {
+    const hasBackgroundImage = document.body.classList.contains("has-background-image");
+    const isWideScreen = window.innerWidth > 991;
+    const scrolled = window.scrollY > 50;
+
+    if (hasBackgroundImage) {
+      siteHeader.classList.toggle("header-color", scrolled);
+      siteHeader.classList.toggle("sticky-header", scrolled);
+    } else if (isWideScreen) {
+      siteHeader.classList.toggle("sticky-header", scrolled);
+    }
+  });
 });
