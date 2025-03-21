@@ -2,10 +2,10 @@
 @use '@base/mixins.scss' as mixins;
 @use '@molecules/menu/menu.scss';
 
-$offset: 4px;
+$button-offset: 4px;
 
 header {
-  z-index: 999;
+  z-index: 401;
   position: sticky;
   top: 0;
 }
@@ -22,7 +22,7 @@ body {
 
       .header__menu:not(.open) {
         a.button.secondary {
-          box-shadow: inset $offset $offset 0px rgb(169 187 203), $offset $offset 0px color.$secondary;
+          box-shadow: inset $button-offset $button-offset 0px rgb(169 187 203), $button-offset $button-offset 0px color.$secondary;
 
           &:hover {
             box-shadow: inset 0px 0px;
