@@ -1,0 +1,22 @@
+uuid: a9c250cb-09c8-4d06-a623-8600f8208fb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: session_archive
+label: 'Session Archive'
+type: 'canonical_entities:node'
+pattern: '[node:field_conference_year:entity:name]/program/sessions/[node:title]'
+selection_criteria:
+  87f8e9be-a093-433f-8429-08a06bcec65f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 87f8e9be-a093-433f-8429-08a06bcec65f
+    context_mapping:
+      node: node
+    bundles:
+      session_archive: session_archive
+selection_logic: and
+weight: -5
+relationships: {  }

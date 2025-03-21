@@ -1,22 +1,22 @@
-uuid: b0cc419f-c400-4507-bb03-1c863f6acc26
+uuid: fa717091-cb56-42f9-9ef2-6c88806e9876
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: author
-label: Author
+id: landing_page_title_path
+label: 'Landing Page Title Path'
 type: 'canonical_entities:node'
-pattern: 'author/[node:field_first_name]'
+pattern: '[node:title]'
 selection_criteria:
-  a360c33e-cf9e-4041-b5f5-7111a25c0b66:
+  d58e5b3d-11db-474b-983a-8ec3f1c6473c:
     id: 'entity_bundle:node'
     negate: false
-    uuid: a360c33e-cf9e-4041-b5f5-7111a25c0b66
+    uuid: d58e5b3d-11db-474b-983a-8ec3f1c6473c
     context_mapping:
       node: node
     bundles:
-      author: author
+      landing_page: landing_page
 selection_logic: and
 weight: -5
 relationships: {  }
