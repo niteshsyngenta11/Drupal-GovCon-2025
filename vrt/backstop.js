@@ -8,7 +8,7 @@ if (process.env.PR_NUMBER) {
     env = `pr-${process.env.PR_NUMBER}`;
 }
 
-const url = process.env.SITE_TO_TEST || (env ? `https://${env}-drupal-govcon.pantheonsite.io` : "https://drupal-govcon.ddev.site");
+const url = process.env.SITE_TO_TEST || (env ? `https://${env}-drupal-govcon.pantheonsite.io` : "https://dev-drupal-govcon.pantheonsite.io");
 const subfolder = env || '';
 const path = `backstop_data/${subfolder}`;
 

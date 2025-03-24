@@ -1,9 +1,9 @@
 "use strict";
 
-let env = 'live';
+let env = 'dev';
 
 if (process.env.PR_NUMBER && !isNaN(parseInt(process.env.PR_NUMBER))) {
-  env = `pr-${process.env.PR_NUMBER}`;
+    env = `pr-${process.env.PR_NUMBER}`;
 } else {
     console.log("PR_NUMBER is not defined or is not a number");
 }
