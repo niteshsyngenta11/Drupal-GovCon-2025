@@ -19,9 +19,8 @@ Author.args = {
     first_name: "Anwesha",
     last_name: "Saha"
   },
-  author_image_demo: {
-    value: authorImage,
-  },
+  author_image: authorImage,
+  author_image_alt: "Author Image",
   author_job_title: {
     label: "Job Title",
     value: "Jr Web Developer"
@@ -31,7 +30,7 @@ Author.args = {
   },
   author_site_link: {
     label: "Website",
-    value: "Google",
+    value: "",
     href: "http://www.google.com"
   }
 };

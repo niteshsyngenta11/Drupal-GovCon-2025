@@ -12,8 +12,7 @@ session_presentation:
 session_description:
   value: "In this session, we will discuss the importance of redesigning Princeton's School of Public and International Affairs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
-session_video:
-  value: '<iframe width="200" height="113" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Session video: Enabling the Change-Makers"></iframe>'
+session_video: '<iframe width="200" height="113" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Session video: Enabling the Change-Makers"></iframe>'
 
 session_experience_level:
   label: "Experience Level"

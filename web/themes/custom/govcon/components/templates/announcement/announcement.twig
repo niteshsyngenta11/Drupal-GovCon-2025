@@ -1,18 +1,31 @@
 <div class="announcement">
-  <div class="announcement_container container">
-    <div class="announcement_container-page_title announcement_title">
-      <h1 class="announcement-page_title typography__heading">
-        <span>{{ announcement_page_title.value }}</span>
-      </h1>
-    </div>
-    <div class="announcement_container-description announcement-description">
-      <p class="body-text">{{ announcement_description.value }}</p>  
-    </div>
-    <div class="announcement_container-post_date announcement_content">
-        <div class="announcement_content-item body-text">
-          <span class="announcement_content-label">{{ announcement_post_date.label }}:</span>
-          {{ announcement_post_date.value| date("F j, Y") }}
-        </div>
+  <div class="announcement_container container p-0">
+    {% if announcement_page_title.value %}
+      <div class="announcement_container-page_title announcement_title">
+        <h1 class="announcement-page_title typography__heading">
+          <span>{{ announcement_page_title.value }}</span>
+        </h1>
       </div>
+    {% endif %}
+
+    {% if announcement_description.value %}
+      <div class="announcement_container-description announcement-description">
+        <p class="body-text">{{ announcement_description.value | raw }}</p>
+      </div>
+    {% endif %}
+
+    {% if announcement_post_date.value %}
+      <div class="announcement_container-post_date announcement_content">
+          <div class="announcement_content-item body-text">
+            {% if announcement_post_date.label %}
+              <span class="announcement_content-label">{{ announcement_post_date.label }}:</span>
+            {% endif %}
+            {% set cleaned_date = announcement_post_date.value | replace({'Sat, ' : '', ' -' : ''}) %}
+            <span class="announcement_date">{{ cleaned_date | date("F j, Y") }}</span>
+          </div>
+      </div>
+    {% endif %}
   </div>
 </div>
+
+

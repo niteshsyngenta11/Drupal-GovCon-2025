@@ -1,14 +1,18 @@
 {{ attach_library('govcon/author') }}
 
-{% include '@templates/author/author.twig' with {
+{% embed '@templates/author/author.twig' with {
   author_page_title: { value: label },
   author_name: { 
     label: 'Name', 
-    first_name: content.field_first_name, 
-    last_name: content.field_last_name 
+    first_name: content.field_first_name[0]['#context']['value'], 
+    last_name: content.field_last_name[0]['#context']['value'] 
   },
-  author_image: { value: content.field_picture },
-  author_job_title: { label: 'Job Title', value: content.field_job_title },
-  author_site_link: { label: 'Website', value: content.field_website },
-  author_bio: { label: 'Bio', value: content.field_bio }
+  author_image: content.field_picture[0],
+  author_job_title: { label: content.field_job_title['#title'], value: content.field_job_title[0]['#context']['value'] },
+  author_site_link: { label: content.field_website['#title'], value: content.field_website[0]['#title'] },
+  author_bio: { value: content.field_bio[0]['#text'] }
 } %}
+    {% block author_image %}
+        {{ content.field_picture }}
+    {% endblock %}
+{% endembed %}

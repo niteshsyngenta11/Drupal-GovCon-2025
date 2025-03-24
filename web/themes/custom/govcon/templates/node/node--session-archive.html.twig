@@ -1,15 +1,22 @@
 {{ attach_library('govcon/session-archive') }}
-{% include '@templates/session-archive/session-archive.twig' with {
+{% embed '@templates/session-archive/session-archive.twig' with {
   session_page_title: { value: label },  
-  session_recording: { label: 'Session Recording', value: content.field__sides_link },
-  session_video: { value: content.field_video },
-  session_description: { value: content.body },  
-  session_experience_level: { label: content.field_experience_level['#title'], value: content.field_experience_level },  
-  session_conference_year: { label: content.field_conference_year['#title'], value: content.field_conference_year },  
-  session_date_time: { label: content.field_session_date_time['#title'], value: content.field_session_date_time['#items'].0.value },  
-  session_room: { label: content.field_room['#title'], value: content.field_room },  
-  session_status: { label: content.field_status['#title'], value: content.field_status },  
-  session_track: { label: content.field_session_track['#title'], value: content.field_session_track },
-  supporting_document: { label: content.field_supporting_documents['#title'], value: content.field_supporting_documents }
+  session_recording: { label: content.field__sides_link['#title'], value: content.field__sides_link[0]['#title'] },
+  session_video: content.field_video[0],
+  session_description: { value: content.body[0]['#text'] },  
+  session_experience_level: { label: content.field_experience_level['#title'], value: content.field_experience_level[0]['#markup'] },  
+  session_conference_year: { label: content.field_conference_year['#title'], value: content.field_conference_year[0]['#title'] },  
+  session_date_time: { label: content.field_session_date_time['#title'], value: content.field_session_date_time[0]['#text'] },  
+  session_room: { label: content.field_room['#title'], value: content.field_room[0]['#context']['value'] },  
+  session_status: { label: content.field_status['#title'], value: content.field_status[0]['#markup'] },  
+  session_track: { label: content.field_session_track['#title'], value: content.field_session_track[0]['#context']['value'] },
+  supporting_document: { label: content.field_supporting_documents['#title'], value: content.field_supporting_documents[0] }
 } %}
-
+  {% block session_video %}
+    {{ content.field_video }}
+  {% endblock %}
+  {% block supporting_document %}
+    <span class="session_group-content_label item-label">{{ supporting_document.label }}:</span>
+    {{ content.field_supporting_documents }}
+  {% endblock %}
+{% endembed %}

@@ -1,3 +1,4 @@
+@use '@base/mixins.scss' as mixins;
 // Variables
 $container-width: 1400px;
 $container-wide: 1920px;
@@ -23,7 +24,11 @@ $spacer: 1rem;
 body {
   &:not(.node-type-landing_page) {
     .content-region {
-      padding: 48px 0;
+      padding: 32px 0;
+
+      @include mixins.media-breakpoint-up(md) {
+        padding: 48px 0;
+      }
     }
   }
 

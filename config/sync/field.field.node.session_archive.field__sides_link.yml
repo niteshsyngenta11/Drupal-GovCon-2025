@@ -11,7 +11,7 @@ id: node.session_archive.field__sides_link
 field_name: field__sides_link
 entity_type: node
 bundle: session_archive
-label: Link
+label: 'Session Recording'
 description: ''
 required: false
 translatable: false

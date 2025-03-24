@@ -2,8 +2,6 @@
 @use "sass:map";
 
 .author {
-  padding: 50px 0;
-
   &_container {
     &-page_title{
       color: map.get(color.$colors, "dark");
@@ -23,8 +21,9 @@
         color: map.get(color.$colors, "black");
       }
     }
-    
+
     &-bio {
+      margin-top: 10px;
       p {
         margin: 10px 0;
       }
@@ -33,11 +32,11 @@
     .author-content-item {
       display: flex;
       align-items: center;
-      margin: 15px 0;
-    
+      column-gap: 10px;
+      margin-top: 12px;
+
       &_label {
         display: inline-block;
-        margin: 4px 8px 0 0;
         padding: 4px 8px;
         background: map.get(color.$colors, "light");
         font-weight: 700;
