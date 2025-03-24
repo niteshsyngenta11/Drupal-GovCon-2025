@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+ddev init
+ddev exec -- composer update --no-interaction
+ddev exec -- drush deploy -y --no-interaction
+ddev exec -- drush cex -y --no-interaction

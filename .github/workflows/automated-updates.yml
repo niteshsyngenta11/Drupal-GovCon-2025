@@ -1,0 +1,93 @@
+name: Automated Application Updates
+
+on:
+  schedule:
+    - cron: "0 8 * * THU"
+  workflow_dispatch:
+
+env:
+  TERMINUS_TOKEN: ${{ secrets.TERMINUS_TOKEN }}
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+  php_version: '8.1'
+
+jobs:
+  update:
+    name: Update Application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Git user
+        uses: fregante/setup-git-user@77c1b5542f14ab6db4b8462d6857e31deb988b09
+
+      - name: Setup GitHub CLI
+        run: |
+          type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+          && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+          && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+          && sudo apt update \
+          && sudo apt install gh -y
+          gh --version
+
+      - uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.DP_PR_APP_ID }}
+          private_key: ${{ secrets.DP_PR_APP_KEY }}
+
+      - name: Setup SSH Keys
+        run: |
+          mkdir -p .ddev/homeadditions/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > .ddev/homeadditions/.ssh/id_rsa
+          echo "" > .ddev/homeadditions/.ssh/known_hosts
+          chmod 700 .ddev/homeadditions/.ssh
+          chmod 600 .ddev/homeadditions/.ssh/id_rsa
+
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+        with:
+          autostart: false
+
+      - name: Add Pantheon machine token to ddev environment variable
+        run: |
+          echo "TERMINUS_MACHINE_TOKEN=${{ secrets.TERMINUS_TOKEN }}" >> .ddev/.env
+
+      - name: Create settings.ci.php
+        run: |
+          cp web/sites/default/example.settings.ci.php web/sites/default/settings.ci.php
+
+      - name: Run updates
+        run: |
+          ddev application-update
+
+      - name: Delete SSH keys and environment variables
+        run: |
+          rm .ddev/homeadditions/.ssh/id_rsa
+          rm .ddev/homeadditions/.ssh/known_hosts
+          rm .ddev/.env
+
+      - name: Create pull request with any changes
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          # Close all previous open PRs using latest gh CLI syntax
+          gh pr list --author="app/actions-pr-workflows-trigger" --state=open --json number --jq '.[].number' | xargs -I {} gh pr close {} --comment "Automatically closing the PR in favor of new updates." --delete-branch
+
+          # Create new branch
+          branch_name=automated-update/`date +%Y-%m-%dT%H-%M-%S`
+          git checkout -b "$branch_name"
+          git add .
+
+          if git commit -m "Update application."; then
+            # Create or ensure label exists using latest gh CLI syntax
+            gh label create "automated application update" --description "Automatic application updates from workflow." --color FBCA04 --force
+
+            # Push branch and create PR using latest gh CLI syntax
+            git push origin "$branch_name"
+            # Create pull request with test results
+            gh pr create --title "Automated application updates for $(date +%Y-%m-%dT%H-%M-%S)." --body "Automated application updates." --label "automated application update"
+          else
+            echo "No changes to commit."
+          fi
