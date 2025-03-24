@@ -25,3 +25,6 @@ node_modules
 
 # Ignore .vscode folder.
 .vscode/
+
+# Ignore web/libraries.
+/web/libraries/

@@ -22,6 +22,8 @@ env:
   PRODUCTION_BRANCH: "main"
   PR_NUMBER: ${{ github.event.number }}
   TERMINUS_SITE: "drupal-govcon"
+  LHCI_GITHUB_TOKEN: ${{ github.token }}
+  LHCI_BUILD_CONTEXT__CURRENT_HASH: ${{ github.event.pull_request.head.sha || github.sha }}
 
 jobs:
   build:
@@ -137,3 +139,66 @@ jobs:
           git config --global user.email "devops@digitalpolygon.com"
           git config --global user.name "DevOps"
           ./.ci/deploy/pantheon/dev-multidev
+  vr_tests:
+    name: Run Visual Regression Tests
+    runs-on: ubuntu-latest
+    needs: ["build"]
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Setup Nodejs
+        uses: actions/setup-node@v4
+
+      - name: Install Dependencies
+        run: npm install -g netlify-cli
+
+      - name: Run Tests
+        working-directory: vrt
+        run: |
+          npm install
+          npm run backstop:reference
+          npm run backstop:test
+
+      - name: Deploy to Netlify
+        id: netlify_deploy
+        if: always()
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: './vrt/backstop_data'
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+          overwrites-pull-request-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - name: Comment Netlify URL on Pull request
+        uses: thollander/actions-comment-pull-request@v3
+        if: github.event_name == 'pull_request' && always()
+        with:
+          message: |
+            :rocket: Visual Regression Report can be accessed at ${{ steps.netlify_deploy.outputs.deploy-url }}/${{ env.PR_NUMBER && format('pr-{0}', env.PR_NUMBER) || (env.CI_BRANCH == 'main' && 'dev' || env.CI_BRANCH) }}/html_report/
+          pr-number: ${{ github.event.number }}
+          comment-tag: vrt-Report
+          mode: upsert
+
+  setup-performance-test:
+    name: Performance Tests
+    runs-on: ubuntu-latest
+    needs: ["build"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+      - name: Run Lighthouse
+        run: |
+          npm install -g @lhci/cli
+          lhci autorun

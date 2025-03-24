@@ -1,0 +1,19 @@
+{
+  "name": "govon-backstop",
+  "version": "1.0.0",
+  "description": "Contains Backstop JS configuration for Visual Regression Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backstop:init": "backstop init",
+    "backstop:test": "backstop test --config=backstop.js",
+    "backstop:reference": "backstop reference --config=backstop.js",
+    "backstop:approve": "backstop approve --config=backstop.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backstopjs": "^6.3.25",
+    "dotenv": "^16.0.3"
+  }
+}

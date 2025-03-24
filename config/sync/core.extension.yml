@@ -66,6 +66,7 @@ module:
   user: 0
   views_ui: 0
   workflows: 0
+  yoast_seo: 0
   extlink: 1
   pathauto: 1
   views: 10

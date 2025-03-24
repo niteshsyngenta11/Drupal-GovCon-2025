@@ -36,6 +36,7 @@
         "drupal/structure_sync": "^2.0",
         "drupal/twig_debugger": "^1.1",
         "drupal/twig_tweak": "^3.4",
+        "drupal/yoast_seo": "^2.1",
         "drush/drush": "^13.3",
         "pantheon-systems/drupal-integrations": "^11.0"
     },
