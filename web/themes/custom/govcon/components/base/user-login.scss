@@ -23,9 +23,6 @@
 
 .user-login-form,
 .user-pass {
-  max-width: vars.$container-width;
-  margin: 0 auto 32px auto;
-  padding: 0 16px;
   display: grid;
   row-gap: 20px;
 
@@ -56,10 +53,4 @@
       background: map.get(color.$colors, "primary-dark");
     }
   }
-}
-
-.page-user article {
-  max-width: vars.$container-width;
-  margin: 0 auto 32px auto;
-  padding: 0 16px;
 }
