@@ -46,10 +46,6 @@ environment_variables:
 auth_command:
   command: |
     set -eu -o pipefail
-    CURRENT_ENV="${CURRENT_ENV:-local}"
-    if [ "$CURRENT_ENV" != "ci" ]; then
-      ssh-add -l >/dev/null || (echo "Please 'ddev auth ssh' before running this command." && exit 1)
-    fi
     if ! command -v drush >/dev/null ; then echo "Please make sure your project contains drush, ddev composer require drush/drush" && exit 1; fi
     if [ -z "${TERMINUS_MACHINE_TOKEN:-}" ]; then echo "Please make sure you have set TERMINUS_MACHINE_TOKEN in ~/.ddev/global_config.yaml" && exit 1; fi
     terminus auth:login --machine-token="${TERMINUS_MACHINE_TOKEN}" || ( echo "terminus auth login failed, check your TERMINUS_MACHINE_TOKEN" && exit 1 )
