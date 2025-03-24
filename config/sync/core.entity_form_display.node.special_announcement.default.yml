@@ -5,13 +5,13 @@ dependencies:
   config:
     - field.field.node.special_announcement.body
     - field.field.node.special_announcement.field_conference_year
-    - field.field.node.special_announcement.field_critical_announcement_text
     - field.field.node.special_announcement.field_important_date
-    - field.field.node.special_announcement.field_is_critical
     - field.field.node.special_announcement.field_metatags
     - field.field.node.special_announcement.field_sort_order
     - node.type.special_announcement
+    - workflows.workflow.editorial
   module:
+    - content_moderation
     - datetime
     - metatag
     - path
@@ -45,26 +45,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_critical_announcement_text:
-    type: text_textfield
-    weight: 11
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_important_date:
     type: datetime_default
     weight: 8
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_is_critical:
-    type: boolean_checkbox
-    weight: 10
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
@@ -98,6 +83,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

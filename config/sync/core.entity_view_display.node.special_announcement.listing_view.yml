@@ -6,9 +6,7 @@ dependencies:
     - core.entity_view_mode.node.listing_view
     - field.field.node.special_announcement.body
     - field.field.node.special_announcement.field_conference_year
-    - field.field.node.special_announcement.field_critical_announcement_text
     - field.field.node.special_announcement.field_important_date
-    - field.field.node.special_announcement.field_is_critical
     - field.field.node.special_announcement.field_metatags
     - field.field.node.special_announcement.field_sort_order
     - node.type.special_announcement
@@ -30,6 +28,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
   field_important_date:
     type: datetime_custom
@@ -54,6 +57,4 @@ content:
     region: content
 hidden:
   field_conference_year: true
-  field_critical_announcement_text: true
-  field_is_critical: true
   field_sort_order: true
