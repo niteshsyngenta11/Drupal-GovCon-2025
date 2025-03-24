@@ -54,10 +54,6 @@ jobs:
         run: |
           echo "TERMINUS_MACHINE_TOKEN=${{ secrets.TERMINUS_TOKEN }}" >> .ddev/.env
 
-      - name: Create settings.ci.php
-        run: |
-          cp web/sites/default/example.settings.ci.php web/sites/default/settings.ci.php
-
       - name: Run updates
         run: |
           ddev application-update
