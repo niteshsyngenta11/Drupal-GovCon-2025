@@ -30,7 +30,6 @@ Author.args = {
   },
   author_site_link: {
     label: "Website",
-    value: "",
-    href: "http://www.google.com"
+    value: "http://www.google.com",
   }
 };
