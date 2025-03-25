@@ -1,18 +1,19 @@
 {{ attach_library('govcon/author') }}
+{% set author_image = content.field_picture[0] ?? null %}
 
 {% embed '@templates/author/author.twig' with {
   author_page_title: { value: label },
-  author_name: { 
-    label: 'Name', 
-    first_name: content.field_first_name[0]['#context']['value'], 
-    last_name: content.field_last_name[0]['#context']['value'] 
+  author_name: {
+    label: 'Name',
+    first_name: content.field_first_name[0]['#context']['value'],
+    last_name: content.field_last_name[0]['#context']['value']
   },
-  author_image: content.field_picture[0],
+  author_image: author_image,
   author_job_title: { label: content.field_job_title['#title'], value: content.field_job_title[0]['#context']['value'] },
   author_site_link: { label: content.field_website['#title'], value: content.field_website[0]['#title'] },
   author_bio: { value: content.field_bio[0]['#text'] }
 } %}
-    {% block author_image %}
+    {% block author__image %}
         {{ content.field_picture }}
     {% endblock %}
 {% endembed %}
