@@ -158,6 +158,25 @@ html :where(.wp-block) {
 .is-vertical {
   flex-direction: column;
 }
+.wp-block-image {
+  &.alignright, 
+  &.alignleft, 
+  &.aligncenter {
+    display: flex;
+  }
+}
+
+.alignright {
+  justify-content: flex-end;
+}
+
+.alignleft {
+  justify-content: flex-start;
+}
+
+.aligncenter {
+  justify-content: center;
+}
 
 body.has-background-image {
   background: linear-gradient(180deg, rgba(40, 90, 131, 0.9) 0%, #132B3F 100%), var(--background-image);
@@ -183,5 +202,11 @@ body.has-background-image {
         padding: 32px 16px !important;
       }
     }
+  }
+}
+
+.two-column-text-image {
+  @include mixins.media-breakpoint-down(md) {
+    flex-direction: column-reverse;
   }
 }
