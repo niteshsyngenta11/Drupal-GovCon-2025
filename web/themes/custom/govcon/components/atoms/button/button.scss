@@ -4,7 +4,7 @@ $border-width: 2px;
 $offset: 4px;
 $transition: 0.3s;
 
-.button:not(.button-with-icon, input),
+.button:not(.button-with-icon, input, .ui-button),
 .wp-block-button:not(.button-with-icon) {
   font-family: "Poppins", serif !important;
   font-weight: 600 !important;

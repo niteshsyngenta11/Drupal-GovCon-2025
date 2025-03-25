@@ -95,12 +95,6 @@ nav {
   }
 }
 
-.sticky-header {
-  nav.user-account-menu ul li {
-    padding-bottom: 16px;
-  }
-}
-
 @include mixins.media-breakpoint-down(lg) {
   nav {
     ul.main-menu {

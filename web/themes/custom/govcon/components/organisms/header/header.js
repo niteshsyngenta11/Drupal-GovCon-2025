@@ -27,8 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (hasBackgroundImage) {
       siteHeader.classList.toggle("header-color", scrolled);
-      siteHeader.classList.toggle("sticky-header", scrolled);
-    } else if (isWideScreen) {
+    }
+
+    if (isWideScreen) {
       siteHeader.classList.toggle("sticky-header", scrolled);
     }
   });

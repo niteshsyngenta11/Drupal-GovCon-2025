@@ -6,37 +6,45 @@ $button-offset: 4px;
 
 header {
   z-index: 401;
-  position: sticky;
   top: 0;
+  position: sticky;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+
+  &:has(.sticky-header) {
+    position: fixed;
+    top: 0;
+
+    +main {
+      margin-top: 13rem;
+    }
+  }
 }
 
-body {
-  &.has-background-image {
+.has-background-image {
+  .site-header {
+    max-width: 1368px;
+    background: rgba(244, 250, 255, 0.6);
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin: 16px auto 0;
 
-    .site-header {
-      max-width: 1368px;
-      background: rgba(244, 250, 255, 0.6);
-      box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
-      margin: 16px auto 0;
+    .header__menu:not(.open) {
+      a.button.secondary {
+        box-shadow: inset $button-offset $button-offset 0px rgb(169 187 203), $button-offset $button-offset 0px color.$secondary;
 
-      .header__menu:not(.open) {
-        a.button.secondary {
-          box-shadow: inset $button-offset $button-offset 0px rgb(169 187 203), $button-offset $button-offset 0px color.$secondary;
-
-          &:hover {
-            box-shadow: inset 0px 0px;
-          }
+        &:hover {
+          box-shadow: inset 0px 0px;
         }
       }
+    }
 
-      &.header-color {
-        background: rgb(165 185 200);
-      }
+    &.header-color {
+      background: rgb(165 185 200);
+    }
 
-      @include mixins.media-breakpoint-down(md) {
-        margin: 0 auto;
-      }
+    @include mixins.media-breakpoint-down(md) {
+      margin: 0 auto;
     }
   }
 }
@@ -55,8 +63,22 @@ body {
     transition: all 0.3s ease;
   }
 
-  &.sticky-header img {
-    max-width: 180px;
+  &.sticky-header {
+    padding-top: 12px;
+    margin-top: 0;
+
+    img {
+      max-width: 180px;
+    }
+
+    li {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    ul.dropdown-menu {
+      top: 60px;
+    }
   }
 
   .hamburger {
