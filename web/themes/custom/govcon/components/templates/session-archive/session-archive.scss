@@ -1,4 +1,5 @@
 @use '@atoms/colors/color.scss' as color;
+@use '@base/mixins.scss' as mixins;
 @use "sass:map";
 
 .session_archive {
@@ -6,6 +7,18 @@
     &-page_title {
       .session_page_title {
         color: map.get(color.$colors, "dark");
+      }
+    }
+
+    &-video {
+      iframe {
+        width: 50%;
+        height: 400px;
+
+        @include mixins.media-breakpoint-down(md) {
+          width: 100%;
+          height: 300px;
+        }
       }
     }
 
