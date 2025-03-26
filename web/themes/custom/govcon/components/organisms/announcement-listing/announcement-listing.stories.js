@@ -3,7 +3,7 @@ import data from './announcement-data.yml';
 import './announcement-listing.scss';
 
 export default {
-  title: "Organisms/Announcement Listing",
+  title: "Organisms/Special Announcement Listing",
   argTypes: {
     announcements: {
       control: "object",

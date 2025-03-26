@@ -1,0 +1,5 @@
+<div class="d-flex flex-column gap-32">
+  {% for announcement in announcements %}
+    {% include "@molecules/listing-card/listing-card.twig" with announcement %}
+  {% endfor %}
+</div>

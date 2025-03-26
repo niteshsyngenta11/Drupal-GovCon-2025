@@ -35,8 +35,6 @@ menu__items:
         url: '/community/code-of-conduct'
       - title: 'Media Policy'
         url: '/community/media-policy'
-      - title: 'On the Loss of Our Friend'
-        url: '/community/loss-of-our-friend'
       - title: 'Scholarships'
         url: '/community/scholarships'
       - title: 'Volunteering'

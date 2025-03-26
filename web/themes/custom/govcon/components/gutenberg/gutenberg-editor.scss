@@ -187,8 +187,8 @@ html :where(.wp-block) {
   justify-content: center;
 }
 
-body.has-background-image {
-  background: linear-gradient(180deg, rgba(40, 90, 131, 0.9) 0%, #132B3F 100%), var(--background-image);
+.has-background-image {
+  background: linear-gradient(180deg, rgba(40, 90, 131, 0.9) 0%, color.$dark 100%), var(--background-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -197,7 +197,7 @@ body.has-background-image {
 }
 
 @include mixins.media-breakpoint-down(md) {
-  body.has-background-image {
+  .has-background-image {
     background-size: 325%;
     background-position: top;
     background-attachment: scroll;
