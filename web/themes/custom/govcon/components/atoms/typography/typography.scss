@@ -15,38 +15,44 @@ body {
 
 // Headings
 h1,
-.h1 {
+.h1,
+.has-h-1-font-size {
   font-size: 40px;
   font-weight: 600;
   color: color.$primary-dark;
 }
 
 h2,
-.h2 {
+.h2,
+.has-h-2-font-size {
   font-size: 32px;
   font-weight: 600;
 }
 
 h3,
-.h3 {
+.h3,
+.has-h-3-font-size {
   font-size: 22px;
   font-weight: 600;
 }
 
 h4,
-.h4 {
+.h4,
+.has-h-4-font-size {
   font-size: 16px;
   font-weight: 600;
 }
 
 h5,
-.h5 {
+.h5,
+.has-h-5-font-size {
   font-size: 15px;
   font-weight: 500;
 }
 
 h6,
-.h6 {
+.h6,
+.has-h-6-font-size {
   font-size: 13px;
   font-weight: 500;
 }
