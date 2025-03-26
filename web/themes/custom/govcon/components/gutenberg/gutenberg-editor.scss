@@ -217,5 +217,6 @@ html :where(.wp-block) {
 .two-column-text-image {
   @include mixins.media-breakpoint-down(md) {
     flex-direction: column-reverse;
+    gap: 32px;
   }
 }
