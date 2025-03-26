@@ -164,6 +164,10 @@ $space-values: (
   margin-right: auto !important;
 }
 
+.visually-hidden {
+  visibility: hidden;
+}
+
 // Display Utilities
 .d-none {
   display: none !important;

@@ -68,15 +68,9 @@ p,
 
 // Inline text elements
 mark {
-  background-color: color.$secondary;
+  background-color: color.$primary-dark;
   padding: 0.2em;
   color: color.$light;
-}
-
-del,
-s {
-  text-decoration: line-through;
-  color: color.$gray;
 }
 
 ins {

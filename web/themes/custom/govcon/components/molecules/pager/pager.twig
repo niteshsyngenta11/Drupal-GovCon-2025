@@ -59,7 +59,9 @@
 
         {# Show start ellipsis if needed #}
         {% if start_ellipsis %}
-          <li class="{{ pager__base_class }}__item {{ pager__base_class }}__item--ellipsis" role="presentation">&hellip;</li>
+          <li class="{{ pager__base_class }}__item {{ pager__base_class }}__item--ellipsis">
+            <span aria-hidden="true">&hellip;</span>
+          </li>
         {% endif %}
 
         {# Show range around current page #}
@@ -73,7 +75,9 @@
 
         {# Show end ellipsis if needed #}
         {% if end_ellipsis %}
-          <li class="{{ pager__base_class }}__item {{ pager__base_class }}__item--ellipsis" role="presentation">&hellip;</li>
+          <li class="{{ pager__base_class }}__item {{ pager__base_class }}__item--ellipsis">
+            <span aria-hidden="true">&hellip;</span>
+          </li>
         {% endif %}
 
         {# Always show last page #}
