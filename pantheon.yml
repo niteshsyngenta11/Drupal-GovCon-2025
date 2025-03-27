@@ -9,3 +9,23 @@ protected_web_paths:
   - /private/
   - /sites/default/files/private/
   - /sites/default/files/config/
+
+workflows:
+  sync_code:
+    after:
+      - type: webphp
+        description: Execute database updates
+        script: private/scripts/database_updates.php
+
+      - type: webphp
+        description: Import configuration
+        script: private/scripts/drush_config_import.php
+  deploy:
+    after:
+      - type: webphp
+        description: Execute database updates
+        script: private/scripts/database_updates.php
+
+      - type: webphp
+        description: Import configuration
+        script: private/scripts/drush_config_import.php
