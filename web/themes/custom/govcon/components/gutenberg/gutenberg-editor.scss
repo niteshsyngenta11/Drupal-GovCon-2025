@@ -188,6 +188,7 @@ html :where(.wp-block) {
   justify-content: center;
 }
 
+.node-landing-page-edit-form.node-form:has(.field--name-field-background-image .field--name-thumbnail) .is-root-container,
 .has-background-image {
   background: linear-gradient(180deg, rgba(40, 90, 131, 0.9) 0%, color.$dark 100%), var(--background-image);
   background-size: cover;

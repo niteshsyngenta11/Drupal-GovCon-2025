@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Gutenberg Editor Page.
+ */
+function govcon_custom_preprocess_html(&$variables) {
+  $route_match = \Drupal::routeMatch();
+  $route_name = $route_match->getRouteName();
+  // Check For Edit Form Page
+  if ($route_name === 'entity.node.edit_form') {
+    $node = $route_match->getParameter('node');
+    // Check for Landing Page Content Type
+    if ($node instanceof \Drupal\node\NodeInterface && $node->bundle() === 'landing_page') {
+      // Check for Background Image Field
+      if ($node->hasField('field_background_image') && !$node->get('field_background_image')->isEmpty()) {
+        $media_entities = $node->get('field_background_image')->referencedEntities();
+        // Check for Media Entity
+        if (!empty($media_entities) && $media_entities[0] instanceof \Drupal\media\Entity\Media) {
+          $media = $media_entities[0];
+          // Check for Image Field
+          if ($media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
+            $file = $media->get('field_media_image')->entity;
+            if ($file instanceof \Drupal\file\Entity\File) {
+              $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
+              // Add CSS variable to style the background image
+              $variables['attributes']['style'][] = "--background-image: url('{$image_url}')";
+            }
+          }
+        }
+      }
+    }
+  }
+}
