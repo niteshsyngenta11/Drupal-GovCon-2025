@@ -1,0 +1,10 @@
+uuid: de3ccf48-a245-4131-803c-cf0de56e2ee4
+langcode: en
+status: true
+dependencies: {  }
+id: authors
+label: authors
+description: 'Migrate all the authors who has submitted the Sessions.'
+source_type: ''
+module: null
+shared_configuration: null

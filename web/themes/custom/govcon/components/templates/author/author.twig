@@ -14,11 +14,10 @@
         <div class="last-name">{{ author_name.last_name }}</div>
       </div>
     {% endif %}
+
     {% if author_image %}
       <div class="author_container-image">
-        {% block author__image %}
-          <img src="{{ author_image }}" alt="{{ author_image_alt }}" class="border-xs">
-        {% endblock %}
+        {{ author_image }}
       </div>
     {% endif %}
     {% if author_job_title.value %}

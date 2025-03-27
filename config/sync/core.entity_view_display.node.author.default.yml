@@ -5,15 +5,15 @@ dependencies:
   config:
     - field.field.node.author.field_bio
     - field.field.node.author.field_first_name
+    - field.field.node.author.field_image
     - field.field.node.author.field_job_title
     - field.field.node.author.field_last_name
-    - field.field.node.author.field_picture
     - field.field.node.author.field_website
     - image.style.author_image_style
     - node.type.author
   module:
+    - image
     - link
-    - media
     - text
     - user
 id: node.author.default
@@ -26,7 +26,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_first_name:
     type: string
@@ -36,13 +36,24 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: author_image_style
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 105
+    region: content
   field_job_title:
     type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_last_name:
     type: string
@@ -51,17 +62,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_picture:
-    type: media_thumbnail
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: author_image_style
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 3
     region: content
   field_website:
     type: link
@@ -73,7 +73,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   links:
     settings: {  }

@@ -1,0 +1,10 @@
+uuid: fe58dec9-fb1c-4acc-a080-ebe475594ea8
+langcode: en
+status: true
+dependencies: {  }
+id: sessions
+label: sessions
+description: 'Migrate all the archived sessions.'
+source_type: ''
+module: null
+shared_configuration: null

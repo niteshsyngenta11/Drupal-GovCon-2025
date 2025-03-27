@@ -1,0 +1,90 @@
+uuid: 11e785d7-d7d6-4cc1-acb7-9f96875ca57e
+langcode: en
+status: true
+dependencies: {  }
+id: article_csv_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: authors
+label: 'Import articles'
+source:
+  plugin: csv
+  path: 'public://migration/author.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - title
+  fields:
+    -
+      name: title
+      label: Title
+    -
+      name: first_name
+      label: 'First Name'
+    -
+      name: last_name
+      label: 'Last Name'
+    -
+      name: job_title
+      label: 'Job Title'
+    -
+      name: field_bio
+      label: Bio
+    -
+      name: author_image
+      label: 'Author Image'
+    -
+      name: website_link
+      lable: 'Website link'
+process:
+  title: title
+  field_bio/value: field_bio
+  field_bio/format:
+    plugin: default_value
+    default_value: full_html
+  field_first_name: first_name
+  field_last_name: last_name
+  field_job_title: job_title
+  field_website/uri: website_link
+  field_image:
+    plugin: file_import
+    source: author_image
+    destination: 'public://author-image/'
+    reuse: false
+  field_image/alt:
+    plugin: concat
+    source:
+      - first_name
+      - last_name
+    delimiter: ' '
+  field_image/title:
+    plugin: concat
+    source:
+      - first_name
+      - last_name
+    delimiter: ' '
+  field_author_image:
+    plugin: entity_generate
+    source: author_image
+    entity_type: media
+    bundle_key: bundle
+    bundle: image
+    value_key: mid
+    process:
+      name: title
+      field_media_image/target_id:
+        plugin: download
+        source: author_image
+        destination: 'public://imported_images/'
+      field_media_image/alt: title
+      field_media_image/title: title
+  type:
+    plugin: default_value
+    default_value: author
+destination:
+  plugin: 'entity:node'
+  default_bundle: author
+migration_dependencies: null

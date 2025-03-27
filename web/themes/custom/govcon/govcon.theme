@@ -59,7 +59,7 @@ function govcon_preprocess_html(&$variables)
     $variables['attributes']['class'][] = 'page-user';
   } elseif ($taxonomy_term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
     // Add a class for taxonomy term pages.
-    $variables['attributes']['class'][] = 'page-taxonomy-' . $taxonomy_term->getVocabularyId();
+    $variables['attributes']['class'][] = 'page-taxonomy-' . $taxonomy_term->bundle();
   }
 }
 

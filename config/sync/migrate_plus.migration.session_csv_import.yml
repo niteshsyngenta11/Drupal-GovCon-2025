@@ -1,0 +1,145 @@
+uuid: bebedc7c-6ee8-4fcb-a2bb-04e27e6bab21
+langcode: en
+status: true
+dependencies: {  }
+id: session_csv_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: sessions
+label: 'Import Sessions'
+source:
+  plugin: csv
+  path: 'public://migration/session.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - title
+  fields:
+    -
+      name: title
+      label: Title
+    -
+      name: body
+      label: 'Session Description'
+    -
+      name: field_session_co_presenter_s_
+      label: Co-Presenters
+    -
+      name: field_conference_year
+      label: 'Conference Year'
+    -
+      name: field_session_date_time
+      label: 'Date / Time'
+    -
+      name: field_experience_level
+      label: 'Experience Level'
+    -
+      name: field_female_attendees
+      lable: 'Female Attendees'
+    -
+      name: field_i_can_deliver_this_session
+      label: 'I can deliver this session'
+    -
+      name: field_slides_link
+      label: 'Session Recording'
+    -
+      name: field_session_room
+      label: 'Session Room'
+    -
+      name: field_male_attendees
+      label: 'Male Attendees'
+    -
+      name: field_room
+      label: Room
+    -
+      name: field_room_monitor
+      label: 'Room Monitor'
+    -
+      name: field_session_track
+      label: 'Session Track'
+    -
+      name: field_status
+      label: Status
+    -
+      name: field_files
+      label: 'Supporting Documents'
+    -
+      name: field_video
+      label: Video
+    -
+      name: field_image
+      label: Image
+    -
+      name: uid
+      label: Author
+    -
+      name: created
+      label: 'Submitted date'
+    -
+      name: status
+      label: 'Published Status'
+process:
+  title: title
+  status: status
+  created: created
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  field_session_date_time: field_session_date_time
+  field_conference_year:
+    plugin: taxonomy_term_name_to_id
+    source: field_conference_year
+  field_experience_level: field_experience_level
+  field_female_attendees: field_female_attendees
+  field_i_can_deliver_this_session: field_i_can_deliver_this_session
+  field_image:
+    plugin: file_import
+    source: field_image
+    destination: 'public://session-image/'
+    reuse: false
+  field_image/alt: title
+  field_image/title: title
+  field_male_attendees: field_male_attendees
+  field_room: field_room
+  field__sides_link/uri: field_slides_link
+  field_session_track: field_session_track
+  field_status: field_status
+  field_supporting_documents:
+    plugin: file_import
+    source: field_files
+    destination: 'public://session-documents/'
+    reuse: false
+  field_video:
+    plugin: entity_generate
+    source: field_video
+    entity_type: media
+    bundle_key: bundle
+    bundle: remote_video
+    value_key: field_media_oembed_video
+  field_presenter:
+    plugin: entity_lookup
+    source: uid
+    entity_type: node
+    value_key: title
+  field_co_presenter:
+    -
+      plugin: explode
+      delimiter: ','
+      source: field_session_co_presenter_s_
+    -
+      plugin: entity_lookup
+      entity_type: node
+      bundle: 'author'
+      value_key: title
+
+  type:
+    plugin: default_value
+    default_value: session_archive
+destination:
+  plugin: 'entity:node'
+  default_bundle: session_archive
+migration_dependencies: null

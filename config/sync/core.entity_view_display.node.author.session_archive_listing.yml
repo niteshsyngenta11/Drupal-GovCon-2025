@@ -1,0 +1,44 @@
+uuid: da3905e8-eaa2-4957-bc82-29da126684cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.session_archive_listing
+    - field.field.node.author.field_bio
+    - field.field.node.author.field_first_name
+    - field.field.node.author.field_image
+    - field.field.node.author.field_job_title
+    - field.field.node.author.field_last_name
+    - field.field.node.author.field_website
+    - image.style.large
+    - node.type.author
+  module:
+    - image
+    - user
+id: node.author.session_archive_listing
+targetEntityType: node
+bundle: author
+mode: session_archive_listing
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bio: true
+  field_first_name: true
+  field_job_title: true
+  field_last_name: true
+  field_website: true
