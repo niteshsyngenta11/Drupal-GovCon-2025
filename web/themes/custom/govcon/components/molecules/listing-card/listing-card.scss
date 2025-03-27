@@ -6,7 +6,7 @@
     flex-direction: row;
     gap: 2rem;
 
-    @include mixins.media-breakpoint-down(lg) {
+    @include mixins.media-breakpoint-down(md) {
       flex-direction: column;
     }
   }
@@ -16,14 +16,13 @@
   }
 
   .listing-card__image {
-    @include mixins.media-breakpoint-up(lg) {
+    @include mixins.media-breakpoint-up(md) {
       max-width: 220px;
       width: 100%;
     }
 
-    @include mixins.media-breakpoint-down(lg) {
+    @include mixins.media-breakpoint-down(md) {
       text-align: center;
-      margin: 0 auto;
     }
   }
 
