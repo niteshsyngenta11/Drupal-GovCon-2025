@@ -7,7 +7,7 @@ dependencies:
 id: author
 label: Author
 type: 'canonical_entities:node'
-pattern: 'author/[node:field_first_name]'
+pattern: 'author/[node:title]'
 selection_criteria:
   a360c33e-cf9e-4041-b5f5-7111a25c0b66:
     id: 'entity_bundle:node'
