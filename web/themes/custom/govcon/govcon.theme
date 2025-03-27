@@ -69,7 +69,7 @@ function govcon_preprocess_html(&$variables)
 function govcon_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (strpos($form_id, 'views_exposed_form') === 0) {
     if (isset($form['keys'])) {
-      $form['keys']['#attributes']['placeholder'] = t('Enter keywords...');
+      $form['keys']['#attributes']['placeholder'] = t('Search by Keywords');
     }
   }
 }

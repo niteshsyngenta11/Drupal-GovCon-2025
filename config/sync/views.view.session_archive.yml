@@ -210,7 +210,7 @@ display:
               content_editor: '0'
               administrator: '0'
               content_author: '0'
-            placeholder: 'Enter session track keywords ...'
+            placeholder: 'Search by Session track'
           is_grouped: false
           group_info:
             label: ''
