@@ -169,8 +169,8 @@ html :where(.wp-block) {
 }
 
 .wp-block-image {
-  &.alignright, 
-  &.alignleft, 
+  &.alignright,
+  &.alignleft,
   &.aligncenter {
     display: flex;
   }
@@ -227,4 +227,59 @@ html :where(.wp-block) {
     flex-direction: column-reverse;
     gap: 32px;
   }
+}
+
+// To fix the caching issue inside the admin page.
+.wp-container-core-columns-layout-1 {
+  flex-wrap:nowrap;
+  gap:2em var(--wp--preset--spacing--40);
+}
+
+.wp-container-core-group-layout-5 {
+  gap:0;flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.wp-container-core-group-layout-6{
+  gap:0;flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.wp-container-core-group-layout-7{
+  gap:var(--wp--preset--spacing--30);
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+.wp-container-core-group-layout-1 {
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.wp-container-core-group-layout-3 {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wp-container-core-columns-layout-2 {
+  flex-wrap: nowrap;
+  gap: 2em var(--wp--preset--spacing--30);
+}
+
+.wp-container-core-columns-layout-3 {
+  flex-wrap: nowrap;
+  gap: 2em var(--wp--preset--spacing--30);
+}
+
+.wp-container-core-columns-layout-4 {
+  flex-wrap: nowrap;
+  gap: 2em var(--wp--preset--spacing--20);
+}
+
+.wp-container-core-group-layout-12 {
+  flex-direction: column;
+  align-items: flex-start;
 }
