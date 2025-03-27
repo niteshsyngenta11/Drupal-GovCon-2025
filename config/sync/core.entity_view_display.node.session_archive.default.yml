@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.session_archive.body
     - field.field.node.session_archive.field__sides_link
+    - field.field.node.session_archive.field_co_presenter
     - field.field.node.session_archive.field_conference_year
     - field.field.node.session_archive.field_experience_level
     - field.field.node.session_archive.field_female_attendees
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.session_archive.field_image
     - field.field.node.session_archive.field_male_attendees
     - field.field.node.session_archive.field_metatags
+    - field.field.node.session_archive.field_presenter
     - field.field.node.session_archive.field_room
     - field.field.node.session_archive.field_session_date_time
     - field.field.node.session_archive.field_session_track
@@ -51,6 +53,14 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 106
+    region: content
+  field_co_presenter:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 116
     region: content
   field_conference_year:
     type: entity_reference_label
@@ -109,6 +119,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_presenter:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 115
     region: content
   field_room:
     type: string

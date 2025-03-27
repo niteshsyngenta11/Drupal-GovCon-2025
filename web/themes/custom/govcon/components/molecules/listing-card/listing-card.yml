@@ -11,4 +11,11 @@ cta:
 session_track: "Site Building and Using Drupal"
 technical_level: "Beginner"
 conference_year: "2021"
-presenters: "pixelite, jcloys"
+presenters:
+  - link_url: "https://www.johndoe.com"
+    link_content: "John Doe's Website"
+  - link_url: "https://www.janesmith.com"
+    link_content: "Jane Smith's Profile"
+  - link_url: "https://www.bobbrown.com"
+    link_content: "Bob Brown's Blog"
+

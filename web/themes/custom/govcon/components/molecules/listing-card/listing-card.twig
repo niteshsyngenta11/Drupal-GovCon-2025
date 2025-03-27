@@ -56,9 +56,17 @@
         </div>
       {% endif %}
 
+
       {% if presenters %}
-        <div class="listing-card__field d-inline-flex">
-          <strong>Presenter(s): </strong> {{ presenters }}
+        <div class="listing-card__field presenter-field d-flex">
+          <strong>Presenter(s):</strong>
+          {% for presenter in presenters -%}
+            {% include "@atoms/link/link.twig" with {
+              link_url: presenter.link_url,
+              link_content: presenter.link_content
+            } only %}
+            {% if not loop.last -%},{% endif %}
+          {%- endfor %}
         </div>
       {% endif %}
     </div>

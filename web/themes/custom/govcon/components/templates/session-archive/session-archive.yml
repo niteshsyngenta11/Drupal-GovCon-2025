@@ -1,9 +1,18 @@
 session_page_title:
   value: "Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website"
 
+presenters:
+  - link_url: "https://www.johndoe.com"
+    link_content: "John Doe's Website"
+  - link_url: "https://www.janesmith.com"
+    link_content: "Jane Smith's Profile"
+  - link_url: "https://www.bobbrown.com"
+    link_content: "Bob Brown's Blog"
+      
 session_recording:
   label: "Session Recording"
   value: "https://youtu.be/wEZOqbHI-xc"
+  link_url: "https://youtu.be/wEZOqbHI-xc"
 
 session_presentation:
   label: "Presentation"

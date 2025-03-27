@@ -1,10 +1,22 @@
 <div class="session_archive">
   <div class="session_archive-container container p-0">
-    {% if session_page_title.value %}
-      <div class="session_archive-container-page_title session_archive-title">
-        <h1 class="session_page_title typography__heading">
-          <span>{{ session_page_title.value }}</span>
-        </h1>
+    <div class="session_archive-container-page_title session_archive-title">
+      <h1 class="session_page_title typography__heading">
+        <span>{{ session_page_title.value }}</span>
+      </h1>
+    </div>
+    {% if presenters %}
+      <div class="session_archive-container-session_recording session_archive-session_recording session_group-content">
+        <div class="session_group-content-item">
+          <strong class="session_group-content_label item-label">Presenter(s):</strong>
+          {% for presenter in presenters -%}
+            {% include "@atoms/link/link.twig" with {
+              link_url: presenter.link_url,
+              link_content: presenter.link_content
+            } only %}
+            {% if not loop.last -%},{% endif %}
+          {%- endfor %}
+        </div>
       </div>
     {% endif %}
     {% if session_recording.value %}
@@ -13,7 +25,10 @@
           {% if session_recording.label %}
             <span class="session_group-content_label item-label">{{ session_recording.label }}:</span>
           {% endif %}
-          <a href="{{ session_recording.link }}">{{ session_recording.value }}</a>
+          {% include "@atoms/link/link.twig" with {
+            link_url: session_recording.link_url,
+            link_content: session_recording.value
+          } only %}
         </div>
       </div>
     {% endif %}

@@ -1,0 +1,29 @@
+uuid: 7982b177-0022-4def-82cb-a51f7dbc8b6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_presenter
+    - node.type.author
+    - node.type.session_archive
+id: node.session_archive.field_co_presenter
+field_name: field_co_presenter
+entity_type: node
+bundle: session_archive
+label: 'Co Presenter'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.session_archive.body
     - field.field.node.session_archive.field__sides_link
+    - field.field.node.session_archive.field_co_presenter
     - field.field.node.session_archive.field_conference_year
     - field.field.node.session_archive.field_experience_level
     - field.field.node.session_archive.field_female_attendees
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.session_archive.field_image
     - field.field.node.session_archive.field_male_attendees
     - field.field.node.session_archive.field_metatags
+    - field.field.node.session_archive.field_presenter
     - field.field.node.session_archive.field_room
     - field.field.node.session_archive.field_session_date_time
     - field.field.node.session_archive.field_session_track
@@ -47,21 +49,31 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 17
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
   field__sides_link:
     type: link_default
-    weight: 14
+    weight: 16
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_co_presenter:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_conference_year:
     type: options_select
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -73,7 +85,7 @@ content:
     third_party_settings: {  }
   field_female_attendees:
     type: number
-    weight: 11
+    weight: 13
     region: content
     settings:
       placeholder: ''
@@ -86,7 +98,7 @@ content:
     third_party_settings: {  }
   field_image:
     type: image_image
-    weight: 13
+    weight: 15
     region: content
     settings:
       progress_indicator: throbber
@@ -94,18 +106,28 @@ content:
     third_party_settings: {  }
   field_male_attendees:
     type: number
-    weight: 12
+    weight: 14
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_metatags:
     type: metatag_firehose
-    weight: 15
+    weight: 17
     region: content
     settings:
       sidebar: true
       use_details: true
+    third_party_settings: {  }
+  field_presenter:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_room:
     type: string_textfield
@@ -151,38 +173,38 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 22
+    weight: 24
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 21
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 19
+    weight: 21
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   simple_sitemap:
-    weight: 18
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 23
+    weight: 25
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 20
+    weight: 22
     region: content
     settings:
       display_label: true
@@ -197,7 +219,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 16
+    weight: 18
     region: content
     settings:
       match_operator: CONTAINS
