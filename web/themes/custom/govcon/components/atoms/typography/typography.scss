@@ -1,16 +1,29 @@
 @use '@atoms/colors/color.scss' as color;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@use "sass:string";
 
-body {
+$uniqueid: string.unique-id();
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/typography/Poppins-Regular.woff?v=#{$uniqueid}') format('woff'),
+      url('assets/fonts/typography/Poppins-Regular.ttf?v=#{$uniqueid}') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('assets/fonts/typography/RobotoMono-Regular.woff?v=#{$uniqueid}') format('woff'),
+      url('assets/fonts/typography/RobotoMono-Regular.ttf?v=#{$uniqueid}') format('truetype');
+  font-display: swap;
+}
+
+body,
+.has-roboto-mono-font-family {
   font-family: "Roboto Mono", sans-serif;
 }
 
 .has-poppins-font-family {
   font-family: "Poppins", sans-serif;
-}
-
-.has-roboto-mono-font-family {
-  font-family: "Roboto Mono", sans-serif;
 }
 
 // Headings
