@@ -300,7 +300,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<p class="text-light"><a href="/special-announcements">View All Announcements</a></p>'
+            value: '<p class="text-light"><a href="/special-announcements">View all announcements</a></p>'
             format: full_html
           tokenize: false
       display_extenders: {  }
