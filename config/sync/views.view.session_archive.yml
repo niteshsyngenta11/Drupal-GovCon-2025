@@ -197,7 +197,8 @@ display:
               anonymous: '0'
               content_editor: '0'
               administrator: '0'
-            placeholder: ''
+              content_author: '0'
+            placeholder: 'Enter session track keywords ...'
           is_grouped: false
           group_info:
             label: ''

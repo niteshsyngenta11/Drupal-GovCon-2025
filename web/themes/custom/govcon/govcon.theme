@@ -2,6 +2,7 @@
 
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_preprocess_HOOK() for page templates.
@@ -59,5 +60,16 @@ function govcon_preprocess_html(&$variables)
   } elseif ($taxonomy_term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
     // Add a class for taxonomy term pages.
     $variables['attributes']['class'][] = 'page-taxonomy-' . $taxonomy_term->getVocabularyId();
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function govcon_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'views_exposed_form') === 0) {
+    if (isset($form['keys'])) {
+      $form['keys']['#attributes']['placeholder'] = t('Enter keywords...');
+    }
   }
 }
