@@ -11,6 +11,7 @@ import footerMainMenuData from '../../molecules/footer-main-menu/footer-main-men
 import footerQuickLinkMenuData from '../../molecules/footer-quick-link-menu/footer-quick-link-menu.yml';
 import footerSocialMenuData from '../../molecules/footer-social-menu/footer-social-menu.yml';
 import primaryLogo from '../../../assets/images/Default.png';
+import bgImage from '../../../assets/images/bg-homepage.webp';
 
 export default {
   title: 'Pages/Homepage',
@@ -26,7 +27,7 @@ announcementData.viewAnnouncement.classes = ['text-light', 'h4'];
 
 export const Default = Template.bind({});
 Default.args = {
-  background_image: "https://dev-drupal-govcon.pantheonsite.io/sites/default/files/2025-03/bg-homepage.webp",
+  background_image: bgImage,
   src: defaultLogo,
   alt: 'Drupal GovCon Logo',
   useraccount_menu: useraccount_data.menu__items,
