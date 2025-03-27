@@ -33,7 +33,7 @@ session_conference_year:
 
 session_date_time:
   label: "Date/Time"
-  value: "Fri, 09/25/2020 - 1:30pm"
+  value: "Fri, 09/25/2020 - 1:30pm EDT"
 
 session_room:
   label: "Room"

@@ -81,12 +81,10 @@
 
           {% if session_date_time.value %}
             <div class="session_group-content-item date-time">
-                {% if session_date_time.label %}
-                  <span class="session_group-content_label">{{ session_date_time.label }}:</span>
-                {% endif %}
-
-                {% set cleaned_date = session_date_time.value | replace({'Mon, ' : '', ' -' : ''}) %}
-                <span class="item-content">{{ cleaned_date | date("D, m/d/Y - g:ia T") }}</span>
+              {% if session_date_time.label %}
+                <span class="session_group-content_label">{{ session_date_time.label }}:</span>
+              {% endif %}
+              <span class="item-content">{{ session_date_time.value }}</span>
             </div>
           {% endif %}
 
