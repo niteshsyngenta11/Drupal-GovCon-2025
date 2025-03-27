@@ -167,6 +167,7 @@ html :where(.wp-block) {
 .is-vertical {
   flex-direction: column;
 }
+
 .wp-block-image {
   &.alignright, 
   &.alignleft, 
@@ -204,6 +205,13 @@ html :where(.wp-block) {
   }
 
   .featured-section {
+    .wp-block-group:first-child, .announcement-card-row {
+      > h2, > p, > footer p {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
     .wp-block-column:first-child {
       margin: 0 -16px;
 
