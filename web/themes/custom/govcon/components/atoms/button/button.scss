@@ -5,7 +5,8 @@ $offset: 4px;
 $transition: 0.3s;
 
 .button:not(.button-with-icon, input, .ui-button),
-.wp-block-button:not(.button-with-icon) {
+.wp-block-button:not(.button-with-icon),
+.entity-moderation-form .form-submit {
   font-family: "Poppins", serif !important;
   font-weight: 600 !important;
   outline: solid $border-width color.$primary-black;
