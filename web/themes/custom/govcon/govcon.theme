@@ -78,10 +78,12 @@ function govcon_form_alter(&$form, FormStateInterface $form_state, $form_id) {
  * Implements hook_preprocess_node().
  */
 function govcon_preprocess_node(&$variables) {
-  if (!empty($variables['node']->get('field_supporting_documents')->entity)) {
-    $file = $variables['node']->get('field_supporting_documents')->entity;
-    $file_name = $file->getFilename();
-    $decoded_name = rawurldecode($file_name);
-    $file->setFilename($decoded_name);
+  if (!empty($variables['node']) && $variables['node']->getType() === 'session_archive') {
+    if (!empty($variables['node']->get('field_supporting_documents')->entity)) {
+      $file = $variables['node']->get('field_supporting_documents')->entity;
+      $file_name = $file->getFilename();
+      $decoded_name = rawurldecode($file_name);
+      $file->setFilename($decoded_name);
+    }
   }
 }
