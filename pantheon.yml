@@ -15,17 +15,17 @@ workflows:
     after:
       - type: webphp
         description: Execute database updates
-        script: private/scripts/database_updates.php
+        script: web/private/scripts/database_updates.php
 
       - type: webphp
         description: Import configuration
-        script: private/scripts/drush_config_import.php
+        script: web/private/scripts/drush_config_import.php
   deploy:
     after:
       - type: webphp
         description: Execute database updates
-        script: private/scripts/database_updates.php
+        script: web/private/scripts/database_updates.php
 
       - type: webphp
         description: Import configuration
-        script: private/scripts/drush_config_import.php
+        script: web/private/scripts/drush_config_import.php
