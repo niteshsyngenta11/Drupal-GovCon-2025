@@ -7,7 +7,6 @@ dependencies:
     - node.type.session_archive
     - taxonomy.vocabulary.conference_year
   module:
-    - datetime
     - node
     - options
     - search
@@ -85,8 +84,8 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: 'Next ›'
+            previous: '‹ Previous'
             first: '« First'
             last: 'Last »'
           expose:
@@ -130,33 +129,21 @@ display:
             format: full_html
           tokenize: false
       sorts:
-        field_conference_year_target_id:
-          id: field_conference_year_target_id
-          table: node__field_conference_year
-          field: field_conference_year_target_id
-          relationship: none
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: field_conference_year
           group_type: group
           admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
           plugin_id: standard
-          order: ASC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-        field_session_date_time_value:
-          id: field_session_date_time_value
-          table: node__field_session_date_time
-          field: field_session_date_time_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: datetime
           order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
       arguments: {  }
       filters:
         status:
@@ -374,7 +361,16 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        field_conference_year:
+          id: field_conference_year
+          table: node__field_conference_year
+          field: field_conference_year
+          relationship: none
+          group_type: group
+          admin_label: 'field_conference_year: Taxonomy term'
+          plugin_id: standard
+          required: false
       css_class: ''
       use_ajax: true
       header: {  }

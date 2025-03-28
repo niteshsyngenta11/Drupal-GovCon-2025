@@ -133,9 +133,8 @@ process:
     -
       plugin: entity_lookup
       entity_type: node
-      bundle: 'author'
+      bundle: author
       value_key: title
-
   type:
     plugin: default_value
     default_value: session_archive
