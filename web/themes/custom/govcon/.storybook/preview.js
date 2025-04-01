@@ -72,7 +72,7 @@ const preview = {
     options: {
       storySort: {
         method: 'alphabetical',
-        order: ['Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages', '*'],
+        order: ['Gutenberg', 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages', '*'],
       },
     },
     viewport: {
