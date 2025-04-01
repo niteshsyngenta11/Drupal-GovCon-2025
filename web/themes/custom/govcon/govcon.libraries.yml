@@ -8,7 +8,7 @@ global-styling:
 editor:
   css:
     theme:
-      dist/components/gutenberg/gutenberg-style.css: {}
+      dist/components/gutenberg-style.css: {}
 
 session-archive:
   css:
@@ -51,7 +51,7 @@ author:
     theme:
       dist/components/templates/author/author.css: {}
 
-session-speaker:  
+session-speaker:
   css:
     theme:
       dist/components/organisms/session-speakers/session-speaker.css: {}
