@@ -30,7 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (isWideScreen) {
-      siteHeader.classList.toggle("sticky-header", scrolled);
+      if (scrolled)
+      siteHeader.classList.add("sticky-header");
+      else
+      siteHeader.classList.remove("sticky-header");
     }
   });
 });
