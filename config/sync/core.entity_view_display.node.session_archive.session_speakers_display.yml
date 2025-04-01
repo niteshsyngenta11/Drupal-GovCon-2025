@@ -1,0 +1,64 @@
+uuid: 2fe04d64-6893-4004-ab8f-a252527c0be8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.session_speakers_display
+    - field.field.node.session_archive.body
+    - field.field.node.session_archive.field__sides_link
+    - field.field.node.session_archive.field_co_presenter
+    - field.field.node.session_archive.field_conference_year
+    - field.field.node.session_archive.field_experience_level
+    - field.field.node.session_archive.field_female_attendees
+    - field.field.node.session_archive.field_i_can_deliver_this_session
+    - field.field.node.session_archive.field_image
+    - field.field.node.session_archive.field_male_attendees
+    - field.field.node.session_archive.field_metatags
+    - field.field.node.session_archive.field_presenter
+    - field.field.node.session_archive.field_room
+    - field.field.node.session_archive.field_session_date_time
+    - field.field.node.session_archive.field_session_track
+    - field.field.node.session_archive.field_status
+    - field.field.node.session_archive.field_supporting_documents
+    - field.field.node.session_archive.field_video
+    - node.type.session_archive
+  module:
+    - options
+    - user
+id: node.session_archive.session_speakers_display
+targetEntityType: node
+bundle: session_archive
+mode: session_speakers_display
+content:
+  field_conference_year:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_status:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field__sides_link: true
+  field_co_presenter: true
+  field_experience_level: true
+  field_female_attendees: true
+  field_i_can_deliver_this_session: true
+  field_image: true
+  field_male_attendees: true
+  field_metatags: true
+  field_presenter: true
+  field_room: true
+  field_session_date_time: true
+  field_session_track: true
+  field_supporting_documents: true
+  field_video: true
+  links: true

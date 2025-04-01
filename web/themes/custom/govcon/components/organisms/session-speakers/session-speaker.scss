@@ -1,0 +1,15 @@
+@use '@atoms/colors/color' as color;
+@use '@base/mixins.scss' as mixins;
+@use '@molecules/session-speaker-row/session-speaker-row.scss';
+
+.session-list {
+  width: 100%;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+@include mixins.media-breakpoint-down(md) {
+  .session-header {
+    display: none;
+  }
+}

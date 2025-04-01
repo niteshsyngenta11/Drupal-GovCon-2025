@@ -1,0 +1,50 @@
+@use '@atoms/colors/color' as color;
+@use '@base/mixins.scss' as mixins;
+
+.session-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  padding: 12px;
+  border-bottom: 1px solid color.$gray;
+  background: color.$white;
+
+  &:nth-child(even) {
+    background: color.$smoke-white;
+  }
+}
+
+.session-header {
+  background: color.$primary;
+  color: color.$white;
+  font-weight: bold;
+}
+
+.session-cell a {
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@include mixins.media-breakpoint-down(md) {
+  .session-row {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .session-cell {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    font-size: 14px;
+
+    &::before {
+      content: attr(data-label) ": ";
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+}

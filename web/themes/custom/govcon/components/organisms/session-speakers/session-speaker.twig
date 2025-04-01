@@ -1,0 +1,19 @@
+<div class="session-list d-flex flex-column overflow-hidden mt-32">
+  {% include "@molecules/session-speaker-row/session-speaker-row.twig" with {
+    row_classes: "session-header text-uppercase",
+    title: "Title",
+    conference_year: "Conference Year",
+    status: "Status"
+  } %}
+
+  {% block session_speakers %}
+    {% for session in sessions %}
+      {% include "@molecules/session-speaker-row/session-speaker-row.twig" with {
+        title: session.title,
+        url: session.url,
+        conference_year: session.conference_year,
+        status: session.status
+      } %}
+    {% endfor %}
+  {% endblock %}
+</div>

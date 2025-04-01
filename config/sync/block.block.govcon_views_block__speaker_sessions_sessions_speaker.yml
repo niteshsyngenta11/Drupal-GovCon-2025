@@ -1,0 +1,33 @@
+uuid: 96805242-cef6-4417-bc32-85e341a20689
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.speaker_sessions
+  module:
+    - node
+    - views
+  theme:
+    - govcon
+id: govcon_views_block__speaker_sessions_sessions_speaker
+theme: govcon
+region: content
+weight: 2
+provider: null
+plugin: 'views_block:speaker_sessions-sessions_speaker'
+settings:
+  id: 'views_block:speaker_sessions-sessions_speaker'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      author: author
