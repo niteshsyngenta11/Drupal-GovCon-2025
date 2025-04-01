@@ -1,5 +1,8 @@
 <?php
 
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
 /**
  * Gutenberg Editor Page.
  */
@@ -25,6 +28,34 @@ function govcon_custom_preprocess_html(&$variables) {
               // Add CSS variable to style the background image
               $variables['attributes']['style'][] = "--background-image: url('{$image_url}')";
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function govcon_custom_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if (
+    ($view->id() === 'announcements' && $view->current_display === 'all_announcement') ||
+    ($view->id() === 'announcements' && $view->current_display === 'recent_announcement') ||
+    ($view->id() === 'sponsors' && $view->current_display === 'sponsors')
+  ) {
+
+    // Get the taxonomy term ID dynamically (can be from the URL, user input, etc.).
+    $config = \Drupal::config('govcon_custom.settings');
+    $conference_year_id = $config->get('conference_year') ?? '';
+
+    if (!empty($conference_year_id) && is_numeric($conference_year_id)) {
+
+      foreach ($query->where as &$where_group) {
+        foreach ($where_group['conditions'] as &$condition) {
+          if (strpos($condition['field'], 'node__field_conference_year.field_conference_year_target_id = :node__field_conference_year_field_conference_year_target_id') !== FALSE) {
+            $condition['value'] = [
+              ':node__field_conference_year_field_conference_year_target_id' => $conference_year_id];
           }
         }
       }

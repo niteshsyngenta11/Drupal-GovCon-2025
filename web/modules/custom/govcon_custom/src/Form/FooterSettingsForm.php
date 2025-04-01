@@ -30,7 +30,26 @@ class FooterSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('govcon_custom.settings');
-    
+
+    // Define the vocabulary machine name
+    $vocabulary = 'conference_year';
+
+    // Fetch taxonomy terms
+    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vocabulary);
+    $options = [];
+
+    foreach ($terms as $term) {
+      $options[$term->tid] = $term->name;
+    }
+    $options = array_reverse($options, true);
+
+    $form['conference_year'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Select Conference year'),
+      '#options' => $options,
+      '#default_value' => $config->get('conference_year') ?? [],
+    ];
+
     $form['footer_left'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Footer Left'),
@@ -96,7 +115,11 @@ class FooterSettingsForm extends ConfigFormBase {
       ->set('footer_description', $form_state->getValue('footer_description'))
       ->set('footer_cta_label', $form_state->getValue('footer_cta_label'))
       ->set('footer_cta_url', $form_state->getValue('footer_cta_url'))
+      ->set('conference_year', $form_state->getValue('conference_year'))
       ->save();
+
+    // Clear the cache once the form is saved.
+    \Drupal::service('cache_tags.invalidator')->invalidateTags(['rendered']);
 
     parent::submitForm($form, $form_state);
   }

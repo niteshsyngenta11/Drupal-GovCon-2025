@@ -21,8 +21,7 @@
   }
 }
 
-.user-login-form,
-.user-pass {
+form {
   display: grid;
   row-gap: 20px;
 
@@ -30,10 +29,12 @@
     display: grid;
     row-gap: 15px;
 
-    input {
+    input,
+    textarea {
       border: 1px solid map.get(color.$colors, "gray");
       margin: 0 0 1em;
       padding: .5em;
+      width: 100%;
 
       @include mixins.media-breakpoint-down(lg) {
         width: 100%;

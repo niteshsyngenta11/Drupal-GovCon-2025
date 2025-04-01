@@ -5,7 +5,7 @@ govcon_custom.settings:
   route_name: govcon_custom.settings
 
 govcon_custom.footer_settings_form:
-  title: 'Footer Settings'
-  description: 'Configure custom footer settings.'
+  title: 'Site Settings'
+  description: 'Configure custom site settings.'
   parent: govcon_custom.settings
   route_name: govcon_custom.footer_settings_form
