@@ -237,13 +237,13 @@ html :where(.wp-block) {
 }
 
 .wp-container-core-group-layout-5 {
-  gap:0;flex-direction:column;
+  flex-direction:column;
   align-items:flex-start;
   justify-content:center;
 }
 
 .wp-container-core-group-layout-6{
-  gap:0;flex-direction:column;
+  flex-direction:column;
   align-items:flex-start;
   justify-content:center;
 }
@@ -253,11 +253,6 @@ html :where(.wp-block) {
   flex-direction:column;
   align-items:flex-start;
   justify-content:center;
-}
-
-.wp-container-core-group-layout-1 {
-  flex-wrap: nowrap;
-  gap: 0;
 }
 
 .wp-container-core-group-layout-3 {
