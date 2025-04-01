@@ -157,6 +157,12 @@ html :where(.wp-block) {
     }
   }
 
+  .wp-block-column {
+    > .wp-block-group {
+      gap: 32px;
+    }
+  }
+
   a {
     &:hover {
       color: inherit;
