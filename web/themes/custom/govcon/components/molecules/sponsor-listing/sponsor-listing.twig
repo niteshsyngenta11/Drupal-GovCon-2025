@@ -9,7 +9,7 @@
     {% set logo_count = sponsors|length %}
     <div class="sponsor_listing-container-logos{% if logo_count == 1 %} single-logo{% endif %}">
       {% for sponsor in sponsors %}
-        <div class="sponsor_listing-container-logo">
+        <div class="sponsor_listing-container-logos-logo">
           <a href="{{ sponsor.link|default('#') }}" target="_blank">
             {% include "@atoms/logo/logo.twig" with {
               src_path: sponsor.logo_url,

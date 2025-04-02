@@ -22,6 +22,14 @@
   @include mixins.media-breakpoint-down(sm) {
     grid-template-columns: 1fr;
   }
+
+  &-logo {
+    img {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
 .sponsor_listing-container-heading {
