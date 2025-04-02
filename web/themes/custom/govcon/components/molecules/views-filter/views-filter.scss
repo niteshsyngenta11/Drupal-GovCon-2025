@@ -9,9 +9,12 @@
   row-gap: 2rem;
 
   .form-item {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 calc(33.33% - 1rem);
+    &.form-type-textfield,
+    &.form-type-select {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 calc(33.33% - 1rem);
+    }
 
     label {
       font-size: 0.875rem;
