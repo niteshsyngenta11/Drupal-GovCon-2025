@@ -1,6 +1,0 @@
-# Libraries to be added to the node/entity edit form when using Gutenberg editor.
-libraries-edit:
-  - cambridge_blocks/blocks
-# Libraries to be added to the node/entity view.
-libraries-view:
-  - cambridge_blocks/blocks
