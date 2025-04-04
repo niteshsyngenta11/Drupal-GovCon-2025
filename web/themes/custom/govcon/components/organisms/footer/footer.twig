@@ -4,9 +4,9 @@
       <div class="site__footer-container__content-left__column footer-left__column">
         <div class="footer-left__column-left_menu">
           <a href="/">
-            {% set logo_src = footer_data.src_path is defined and footer_data.src_path ? footer_data.src_path : base_path ~ directory ~ '/assets/images/Default.png' %}
+            {% set logo_src = footer_data.src_path is defined and footer_data.src_path ? footer_data.src_path : base_path ~ directory ~ '/assets/images/Default.webp' %}
             {% set logo_alt = footer_data.src_alt is defined and footer_data.src_alt ? footer_data.src_alt : 'Footer Logo' %}
-            {% include '@atoms/logo/logo.twig' with { src_path: logo_src, src_alt: logo_alt } %}
+            {% include '@atoms/logo/logo.twig' with { src_path: logo_src, src_alt: logo_alt, width: '127px', height: '120px' } %}
           </a>
           <div class="footer-left__column-left_menu-icon_menu">
             {% block footer__social__icons %}
