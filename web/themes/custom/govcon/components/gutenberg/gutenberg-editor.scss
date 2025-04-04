@@ -285,3 +285,11 @@ html :where(.wp-block) {
   flex-direction: column;
   align-items: flex-start;
 }
+
+.editor-styles-wrapper {
+  .block-editor-block-list__layout.is-root-container {
+    > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+      padding-inline: 16px;
+    }
+  }
+}
