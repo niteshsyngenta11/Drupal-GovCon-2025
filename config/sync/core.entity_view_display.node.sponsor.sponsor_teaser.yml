@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_url
     - field.field.node.sponsor.field_sponsorship_level
+    - image.style.medium
     - node.type.sponsor
   module:
     - image
@@ -37,7 +38,7 @@ content:
     label: above
     settings:
       image_link: ''
-      image_style: ''
+      image_style: medium
       image_loading:
         attribute: lazy
     third_party_settings: {  }

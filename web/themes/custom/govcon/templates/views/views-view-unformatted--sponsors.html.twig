@@ -24,7 +24,7 @@
     {% set url = url|replace({'internal:': ''}) %}
   {% endif %}
   {% set sponsors = sponsors|merge([{
-    'logo_url': file_url(row["content"]["#row"]._entity.field_sponsor_logo.entity.uri.value),
+    'logo_url': file_url(row["content"]["#row"]._entity.field_sponsor_logo.entity.uri.value | image_style('medium')),
     'link': url,
     'logo_alt': row["content"]["#row"]._entity.field_sponsor_logo.alt
   }]) %}
