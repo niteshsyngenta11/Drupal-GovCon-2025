@@ -129,15 +129,15 @@ display:
             format: full_html
           tokenize: false
       sorts:
-        weight:
-          id: weight
+        name:
+          id: name
           table: taxonomy_term_field_data
-          field: weight
+          field: name
           relationship: field_conference_year
           group_type: group
           admin_label: ''
           entity_type: taxonomy_term
-          entity_field: weight
+          entity_field: name
           plugin_id: standard
           order: DESC
           expose:
@@ -175,14 +175,14 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: string
-          operator: contains
+          operator: '='
           value: ''
           group: 1
           exposed: true
           expose:
             operator_id: field_session_track_value_op
-            label: 'Session Track'
-            description: ''
+            label: 'Session Track (field_session_track)'
+            description: null
             use_operator: false
             operator: field_session_track_value_op
             operator_limit_selection: false
@@ -193,23 +193,51 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-              content_author: '0'
-            placeholder: 'Search by Session track'
-          is_grouped: false
+            placeholder: null
+          is_grouped: true
           group_info:
-            label: ''
+            label: 'Session Track'
             description: ''
-            identifier: ''
+            identifier: field_session_track_value
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1:
+                title: 'Coding and Development'
+                operator: '='
+                value: 'Coding and Development'
+              2:
+                title: 'Community and Being Human'
+                operator: '='
+                value: 'Community and Being Human'
+              3:
+                title: 'Content Strategy and Analytics'
+                operator: '='
+                value: 'Content Strategy and Analytics'
+              4:
+                title: 'Design, UX, and Accessibility'
+                operator: '='
+                value: 'Design, UX, and Accessibility'
+              5:
+                title: 'Devops, Performance, Security, and Privacy'
+                operator: '='
+                value: 'Devops, Performance, Security, and Privacy'
+              6:
+                title: Keynote
+                operator: '='
+                value: Keynote
+              7:
+                title: 'Project and Team Management'
+                operator: '='
+                value: 'Project and Team Management'
+              8:
+                title: 'Site Building and Using Drupal'
+                operator: '='
+                value: 'Site Building and Using Drupal'
         field_experience_level_value:
           id: field_experience_level_value
           table: node__field_experience_level
@@ -301,6 +329,51 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: field_presenter
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Speakers
+            description: ''
+            use_operator: false
+            operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              content_author: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         keys:
           id: keys
           table: node_search_index
@@ -411,6 +484,15 @@ display:
           relationship: none
           group_type: group
           admin_label: 'field_conference_year: Taxonomy term'
+          plugin_id: standard
+          required: false
+        field_presenter:
+          id: field_presenter
+          table: node__field_presenter
+          field: field_presenter
+          relationship: none
+          group_type: group
+          admin_label: 'field_presenter: Content'
           plugin_id: standard
           required: false
       css_class: ''

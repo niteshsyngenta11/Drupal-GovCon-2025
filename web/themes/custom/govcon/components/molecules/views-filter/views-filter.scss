@@ -55,7 +55,7 @@
   
     &::after {
       right: 10px;
-      top: 60%;
+      bottom: 25%;
       position: absolute;
       pointer-events: none;
       font-size: 6.75px;
@@ -63,7 +63,8 @@
     }
   }
 
-  .form-item:nth-child(4) {
+  .form-item:nth-child(4),
+  .form-item:nth-child(5) {
     flex: 0 0 33%;
   }
 
@@ -102,7 +103,8 @@
       flex: 1 1 100%;
     }
 
-    .form-item:nth-child(4) {
+    .form-item:nth-child(4),
+    .form-item:nth-child(5) {
       flex: 1 1 100%;
     }
   }
