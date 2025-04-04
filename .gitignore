@@ -16,6 +16,7 @@
 
 # Ignore paths that contain user-generated content.
 /web/sites/default/files/
+/web/sites/default/settings.local.php
 /web/sites/default/private/
 /private_files/
 
