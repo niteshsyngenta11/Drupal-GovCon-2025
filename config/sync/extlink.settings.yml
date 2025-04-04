@@ -18,7 +18,7 @@ extlink_additional_tel_classes: ''
 extlink_exclude: ''
 extlink_include: ''
 extlink_exclude_noreferrer: ''
-extlink_class: ext
+extlink_class: '0'
 extlink_label: '(link is external)'
 extlink_img_class: false
 extlink_css_exclude: ''
@@ -26,7 +26,7 @@ extlink_css_include: ''
 extlink_css_explicit: ''
 extlink_mailto_class: '0'
 extlink_mailto_label: '(link sends email)'
-extlink_tel_class: tel
+extlink_tel_class: '0'
 extlink_tel_label: '(link is a phone number)'
 extlink_use_font_awesome: false
 extlink_font_awesome_classes:

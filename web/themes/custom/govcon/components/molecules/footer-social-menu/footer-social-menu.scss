@@ -14,9 +14,9 @@
     font-size: 28px;
     text-decoration: none;
     color: map.get(color.$colors, "light");
-  }
-
-  svg {
-    display: none;
+    
+    &.ext {
+      display: inline-block;
+    }
   }
 }
