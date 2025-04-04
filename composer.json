@@ -10,6 +10,8 @@
     },
     "require": {
         "composer/installers": "^2.0",
+        "drupal/acquia_connector": "^4.1",
+        "drupal/acquia_purge": "^1.5",
         "drupal/admin_toolbar": "^3.5",
         "drupal/agg_jscss_asyncdefer": "^1.0",
         "drupal/coffee": "^2.0",
