@@ -29,6 +29,14 @@ nav {
         .chevron-icon {
           display: none;
         }
+
+        &:last-child {
+          ul.dropdown-menu {
+            right: 0;
+            left: auto;
+            transform: translateX(0);
+          }
+        }
       }
 
       &.has-below::after {
