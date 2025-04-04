@@ -9,7 +9,7 @@ dependencies:
     - node.type.sponsor
     - taxonomy.vocabulary.conference_year
   content:
-    - 'taxonomy_term:conference_year:5c129028-0730-4bd4-92e6-8a51e89da31e'
+    - 'taxonomy_term:conference_year:47633ff7-3028-4e98-847d-c30b62b87500'
   module:
     - node
     - taxonomy
@@ -296,6 +296,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
+        field_weight_value:
+          id: field_weight_value
+          table: node__field_weight
+          field: field_weight_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         weight:
           id: weight
           table: taxonomy_term_field_data
@@ -360,7 +373,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            23: 23
+            6: 6
           group: 1
           exposed: false
           expose:
