@@ -4,6 +4,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_search: 0
   admin_toolbar_tools: 0
+  agg_jscss_asyncdefer: 0
   announcements_feed: 0
   automated_cron: 0
   big_pipe: 0
@@ -18,6 +19,7 @@ module:
   config_ignore: 0
   content_moderation: 0
   contextual: 0
+  critical_css: 0
   crop: 0
   datetime: 0
   dblog: 0

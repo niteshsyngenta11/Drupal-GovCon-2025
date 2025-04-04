@@ -60,6 +60,11 @@ header {
   background: color.$light;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
   padding: 20px 0 0;
+  height: 107px;
+
+  @include mixins.media-breakpoint-up(md) {
+    height: 184px;
+  }
 
   .header__branding {
     padding-bottom: 20px;
@@ -73,6 +78,7 @@ header {
   &.sticky-header {
     padding-top: 12px;
     margin-top: 0;
+    height: auto;
 
     img {
       max-width: 180px;

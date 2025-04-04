@@ -1,0 +1,5 @@
+js_all: none
+css_all: async
+libraries:
+  async:
+    - css_all

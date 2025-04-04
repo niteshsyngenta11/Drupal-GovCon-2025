@@ -41,6 +41,10 @@
   > :last-child {
     padding-bottom: 32px;
   }
+
+  p {
+    line-height: 1.6;
+  }
 }
 
 @include mixins.media-breakpoint-down(md) {
