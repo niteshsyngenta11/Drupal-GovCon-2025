@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_url
     - field.field.node.sponsor.field_sponsorship_level
+    - field.field.node.sponsor.field_weight
     - node.type.sponsor
   module:
     - image
@@ -75,4 +76,5 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_weight: true

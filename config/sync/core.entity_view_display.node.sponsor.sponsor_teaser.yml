@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_url
     - field.field.node.sponsor.field_sponsorship_level
+    - field.field.node.sponsor.field_weight
     - image.style.medium
     - node.type.sponsor
   module:
@@ -64,3 +65,4 @@ content:
 hidden:
   field_conference_year: true
   field_sponsorship_level: true
+  field_weight: true

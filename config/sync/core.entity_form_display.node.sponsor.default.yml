@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_url
     - field.field.node.sponsor.field_sponsorship_level
+    - field.field.node.sponsor.field_weight
     - image.style.thumbnail
     - node.type.sponsor
   module:
@@ -64,6 +65,13 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_weight:
+    type: number
+    weight: 14
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   moderation_state:
