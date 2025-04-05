@@ -1,0 +1,44 @@
+@use '@atoms/colors/color.scss' as color;
+@use '@base/mixins.scss' as mixins;
+@use "sass:map";
+
+.footer-main-menu {
+  color: map.get(color.$colors, "light");
+  display: flex;
+  justify-content: space-around;
+  column-gap: 20px;
+
+  @include mixins.media-breakpoint-down(md) {
+    flex-flow: wrap;
+    justify-content: flex-start;
+  }
+
+  a {
+    color: map.get(color.$colors, "light");
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-top: 20px;
+  }
+
+  > li {
+    @include mixins.media-breakpoint-down(md) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.footer-centre__column,
+#block-govcon-footer {
+  > ul {
+    > li {
+      > span {
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+}

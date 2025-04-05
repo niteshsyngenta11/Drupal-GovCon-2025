@@ -1,0 +1,159 @@
+import { Meta } from '@storybook/addon-docs';
+import * as styles from '../gutenberg-style.scss';
+import gbImg from "/dist/assets/images/gutenberg/image.png";
+import editorImg from "/dist/assets/images/gutenberg/editor.png";
+import patternsImg from "/dist/assets/images/gutenberg/patterns.png";
+import textColorImg from "/dist/assets/images/gutenberg/text-color.png";
+import blockSettingsImg from "/dist/assets/images/gutenberg/block-settings.png";
+import headingAlignmentImg from "/dist/assets/images/gutenberg/heading-alignment.png";
+import mxAuto from "/dist/assets/images/gutenberg/mx-auto.png";
+
+
+<style> {`ol {list-style-type: auto;}`}</style>
+
+<Meta title="Gutenberg/Gutenberg Editor" />
+
+# Gutenberg Editor Documentation
+
+<br />
+
+## Getting Started with Gutenberg
+
+### Accessing the Editor
+
+1. Navigate to your **Content > Add Content > Landing Page** in Drupal.
+2. The Gutenberg editor will load by default (if properly installed and configured)
+
+### Basic Interface Overview
+
+The Gutenberg interface consists of three main areas:
+
+<img src={gbImg} alt="Quick view of the Block Editor" />
+
+1. **Top Toolbar**
+   - Document settings (save, preview, publish)
+   - Undo/redo actions
+   - Block navigation
+   - Content structure
+
+2. **Content Canvas**
+   - Where you build your content using blocks
+   - Click the `+` button or type `/` to add new blocks or Patterns
+   <br />
+   <img src={editorImg} alt="Quick view of the Block Editor" />
+   <br />
+3. **Right Sidebar**
+   - Block-specific settings when a block is selected
+   - Add Spacing
+
+## Core Blocks Overview
+
+Gutenberg comes with numerous built-in blocks:
+
+### Common Blocks
+- Paragraph
+- Heading
+- Image
+- Gallery
+- List
+- File
+- Video
+- Custom HTML
+- Embed Widget
+
+### Layout Blocks
+- Buttons
+- Columns
+- Group
+- Media & Text
+- Separator
+- Spacer
+
+### Patterns
+- Two Column card
+- Horizontal Card
+- Hero Image
+- Hero Text with Card
+- Image with Text
+- Three Column Card
+- Vertical Card
+- Featured Sessions
+- Featured Card
+- Secondary Button
+- Button with Icon
+- Featured Section
+- Sessionize
+- Two Column with Image
+
+<img src={patternsImg} alt="Quick view of the Block Editor Patterns" width="450px" />
+
+## Working with Blocks
+
+### Adding Blocks
+1. In Gutenberg Click the `+` button in the top-left or within the content area
+2. Search for the block you want to add
+3. Click to insert or type `/` followed by the block name
+
+### Block Manipulation
+- **Move blocks**: Use the up/down arrows in the block toolbar or drag using the six-dot handle
+- **Change block type**: Click the block type in the toolbar to transform to a similar block
+- **Remove blocks**: Click the three-dot menu and select "Remove Block"
+
+## Styling and Layout
+
+### Changing Container Size
+1. Select the block you want to adjust
+2. In the right sidebar under "Block" settings
+3. Look for "Width" or "Size" options (available for certain blocks)
+4. Choose from predefined sizes or enter custom values
+
+### Applying Styling
+1. Select the block you want to style
+2. In the right sidebar, navigate to the "Styles" or "Color" tab
+3. Available options vary by block but typically include:
+   <br />
+   <img src={textColorImg} alt="Text Color Settings" width="450px" />
+   <br />
+   - Text color
+   - Background color
+   - Typography settings (If Options Not showing Click the three vertical dots to show hidden Options)
+   <br />
+   <img src={blockSettingsImg} alt="Block Settings" width="350px" />
+   <br />
+   - Padding/margin controls - Apply the mx-auto class to center the content within the container when a user selects horizontal margin spacing and then tries to reset it.
+   <br />
+   <img src={mxAuto} alt="Margin Auto" width="350px" />
+   <br />
+   - Font Family, Weight & Size 
+
+In the image given above, you can see multiple options for text configuration like boldness, links, and italics. The dropdown will show more advanced options.
+
+### Alignment Options
+
+<img src={headingAlignmentImg} alt="Text Alignment Settings" width="450px" />
+
+1. Select the block
+2. Use the alignment controls in the block toolbar
+3. Options typically include:
+   - Left
+   - Center
+   - Right
+   - None Width (Default)
+   - Wide width
+   - Full width
+
+## Advanced Features
+
+### Block Patterns
+Gutenberg includes predefined layouts called patterns:
+1. Click the `+` button to add a new block
+2. Navigate to the "Patterns" tab
+3. Browse available patterns
+4. Click to insert the complete layout
+
+### Keyboard Shortcuts
+- `Enter`: Create a new paragraph block
+- `/`: Quickly search for blocks
+- `Ctrl+Shift+D`: Duplicate selected block(s)
+- `Ctrl+Alt+T`: Insert new block before
+- `Ctrl+Alt+Y`: Insert new block after

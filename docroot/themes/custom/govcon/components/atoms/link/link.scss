@@ -1,0 +1,16 @@
+@use '@atoms/colors/color.scss' as color;
+
+a {
+  color: color.$cobalt;
+  &:hover {
+    color: color.$indigo;
+  }
+  &:visited {
+    color: color.$violet;
+  }
+
+  &:focus-visible,
+  &:focus-within {
+    outline: 2px solid color.$cobalt;
+  }
+}

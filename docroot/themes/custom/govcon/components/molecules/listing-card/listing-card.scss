@@ -1,0 +1,65 @@
+@use '@atoms/colors/color' as color;
+@use '@base/mixins.scss' as mixins;
+@use "sass:map";
+
+.listing-card {
+  .upper-card {
+    flex-direction: row;
+    gap: 2rem;
+
+    @include mixins.media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+
+  .listing-card__description > * {
+    font-size: 1rem;
+  }
+
+  .listing-card__image {
+    @include mixins.media-breakpoint-up(md) {
+      max-width: 220px;
+      width: 100%;
+    }
+
+    @include mixins.media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  .button-with-icon {
+    @include mixins.media-breakpoint-up(lg) {
+      margin-top: 32px;
+    }
+  }
+}
+
+.listing-card__fields {
+  overflow-wrap: anywhere;
+  flex-wrap: wrap;
+  column-gap: 8rem;
+  row-gap: 1rem;
+  padding-inline: 32px;
+
+  @include mixins.media-breakpoint-down(lg) {
+    padding-inline: 16px;
+  }
+}
+
+.listing-card__field {
+  @include mixins.media-breakpoint-down(lg) {
+    gap: 4px;
+  }
+}
+
+.presenter-field {
+  a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: map.get(color.$colors, "cobalt");
+
+    &:hover {
+      color: map.get(color.$colors, "indigo");
+    }
+  }
+}

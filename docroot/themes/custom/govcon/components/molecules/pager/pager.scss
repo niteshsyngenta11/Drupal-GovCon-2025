@@ -1,0 +1,33 @@
+@use '@atoms/colors/color' as color;
+
+.pager ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  list-style: none;
+
+  li {
+    font-weight: 400;
+    list-style-type: none;
+    margin: 0;
+
+    &.pager__item--ellipsis {
+      pointer-events: none;
+      color: color.$white;
+    }
+
+    a {
+      color: color.$white;
+      text-decoration: none;
+
+      &:hover {
+        color: color.$skyblue;
+      }
+    }
+
+    &.is-active a {
+      color: color.$skyblue;
+    }
+  }
+}

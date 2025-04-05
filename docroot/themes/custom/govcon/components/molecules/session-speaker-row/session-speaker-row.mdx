@@ -1,0 +1,25 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs';
+import * as Stories from './session-speaker-row.stories';
+
+<Meta title="Molecules/Session Speaker Row" of={Stories} />
+
+# Session Speaker
+
+The **Session Speaker Row** Molecules displays a structured row of speakers, each associated with sessions they are presenting.
+
+## Usage
+
+This component is primarily used to **showcase Session Speaker** at a Author Detail Page. It dynamically renders a list of session associated with selected Author with details such as session title, status and conference year.
+
+### Variables
+- `title`: The session title.
+- `conference_year`: The year of the conference.
+- `status`: The session’s acceptance status (e.g., "Accepted", "Backup").
+
+## Example
+
+<Canvas of={Stories.Session_Speaker_Row} />
+
+## Props
+
+<Controls of={Stories.Session_Speaker_Row} />

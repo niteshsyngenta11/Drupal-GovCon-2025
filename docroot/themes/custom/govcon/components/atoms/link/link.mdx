@@ -1,0 +1,24 @@
+import { Meta, Canvas, Controls, Story } from '@storybook/blocks';
+import * as LinkStories from './link.stories';
+
+<Meta title="Atoms/Links" of={LinkStories} />
+
+
+# **Link**
+
+The Link Atom component is utilized for rendering hyperlinks.
+
+## **Implementation**
+
+The Link atom component accepts the following props:
+
+- `link_url`: Specifies the target URL of the hyperlink.
+- `link_target`: Sets the target of the hyperlink.
+- `link_title`: Sets the title of the hyperlink.
+- `link_content`: Sets the content of the hyperlink.
+- `link_classes` : Sets the Link Classes
+
+## **Examples**
+
+<Canvas of={LinkStories.Link} />
+<Controls of={LinkStories.Link} />

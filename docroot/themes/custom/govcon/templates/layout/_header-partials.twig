@@ -1,0 +1,13 @@
+{% embed "@organisms/header/header.twig" %}
+  {% block header__logo %}
+    {{ page.header.govcon_sitebranding }}
+  {% endblock %}
+
+  {% block header__useraccountmenu %}
+    {{ page.header.govcon_useraccountmenu }}
+  {% endblock %}
+
+  {% block header__mainnavigation %}
+    {{ page.header.govcon_mainnavigation }}
+  {% endblock %}
+{% endembed %}

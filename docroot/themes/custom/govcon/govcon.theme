@@ -1,0 +1,89 @@
+<?php
+
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function govcon_preprocess_page(array &$variables)
+{
+  $config = \Drupal::config('govcon_custom.settings');
+  // Prepare footer data.
+  $footer_data = [
+    'src_path' => '',
+    'src_alt' => 'Drupal GovCon Footer Logo',
+    'footer_description' => $config->get('footer_description') ?? '',
+    'footer_cta_label' => $config->get('footer_cta_label') ?? '',
+    'footer_cta_url' => $config->get('footer_cta_url') ?? '',
+  ];
+  // Load the footer image if it's set.
+  if ($config && $fid = $config->get('footer_image')) {
+    if ($file = File::load($fid)) {
+      if ($image = $file->getFileUri()) {
+        $image_url = Drupal::service('file_url_generator')->generateAbsoluteString($image);
+        $footer_data['src_path'] = $image_url;
+      }
+    }
+  }
+  $variables['footer_data'] = $footer_data;
+}
+
+function govcon_preprocess_html(&$variables)
+{
+  // Add a class to the body element if the landing page contains a background image.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface && $node->bundle() === 'landing_page') {
+    if ($node->hasField('field_background_image') && !$node->get('field_background_image')->isEmpty()) {
+      $media_entities = $node->get('field_background_image')->referencedEntities();
+      if (!empty($media_entities) && $media_entities[0] instanceof Media) {
+        $media = $media_entities[0];
+        if ($media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
+          $file = $media->get('field_media_image')->entity;
+          if ($file instanceof File) {
+            $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
+            $variables['attributes']['class'][] = 'has-background-image';
+            $variables['attributes']['style'][] = "--background-image: url('{$image_url}')";
+          }
+        }
+      }
+    }
+  }
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    // Add a class based on the node's content type.
+    $variables['attributes']['class'][] = 'node-type-' . $node->getType();
+  } elseif ($user = \Drupal::routeMatch()->getParameter('user')) {
+    // Add a class for user pages.
+    $variables['attributes']['class'][] = 'page-user';
+  } elseif ($taxonomy_term = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    // Add a class for taxonomy term pages.
+    $variables['attributes']['class'][] = 'page-taxonomy-' . $taxonomy_term->bundle();
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function govcon_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'views_exposed_form') === 0) {
+    if (isset($form['keys'])) {
+      $form['keys']['#attributes']['placeholder'] = t('Search by Keywords');
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function govcon_preprocess_node(&$variables) {
+  if (!empty($variables['node']) && $variables['node']->getType() === 'session_archive') {
+    if (!empty($variables['node']->get('field_supporting_documents')->entity)) {
+      $file = $variables['node']->get('field_supporting_documents')->entity;
+      $file_name = $file->getFilename();
+      $decoded_name = rawurldecode($file_name);
+      $file->setFilename($decoded_name);
+    }
+  }
+}

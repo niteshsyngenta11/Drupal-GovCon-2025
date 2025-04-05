@@ -1,0 +1,36 @@
+<form class="views-exposed-form" role="search" aria-label="Session Filter Form">
+  <div class="js-form-item form-item form-type-textfield">
+    <label for="session-track">Session Track</label>
+    <input type="text" id="session-track" class="form-text" name="session_track" aria-describedby="session-track-desc">
+    <span id="session-track-desc" class="visually-hidden">Enter a session track to filter results.</span>
+  </div>
+
+  <div class="js-form-item form-item form-type-select">
+    <label for="experience-level">Experience Level</label>
+    <select id="experience-level" class="form-select" name="experience_level">
+      <option value="">- Any -</option>
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+    </select>
+  </div>
+
+  <div class="js-form-item form-item form-type-select">
+    <label for="conference-year">Conference Year</label>
+    <select id="conference-year" class="form-select" name="conference_year">
+      <option value="">- Any -</option>
+      <option value="2025">2025</option>
+    </select>
+  </div>
+
+  <div class="js-form-item form-item form-type-textfield">
+    <label for="text-search">Text Search</label>
+    <input type="text" id="text-search" name="keys" value="" size="15" maxlength="128" class="form-text" 
+      aria-describedby="text-search-desc">
+    <span id="text-search-desc" class="visually-hidden">Enter keywords to search sessions.</span>
+  </div>
+
+  <div class="form-actions js-form-wrapper form-wrapper d-flex gap-16">
+    <input type="submit" value="Filter" class="button js-form-submit form-submit minimal" aria-label="Apply filters">
+  </div>
+</form>

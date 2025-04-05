@@ -1,0 +1,15 @@
+@use '@atoms/colors/color' as color;
+@use '@molecules/announcement-card/announcement-card.scss';
+@use '@base/mixins.scss' as mixins;
+
+.announcement-card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@include mixins.media-breakpoint-down(lg) {
+  .all-announcement-link {
+    text-align: center;
+  }
+}

@@ -1,0 +1,14 @@
+@use '@atoms/colors/color.scss' as color;
+@use '@base/mixins.scss' as mixins;
+@use "sass:map";
+
+.footer-quick-links {
+  @include mixins.media-breakpoint-down(md) {
+    display: flex;
+    justify-content: center;
+  }
+
+  a {
+    color: map.get(color.$colors, "light");
+  }
+}

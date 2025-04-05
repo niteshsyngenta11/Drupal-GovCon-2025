@@ -1,0 +1,20 @@
+import { Meta, Story, Controls, Canvas } from '@storybook/addon-docs';
+import * as allAnnnouncement from './all-announcement.stories';
+
+<Meta title="Organisms/All Announcement" />
+
+# All Announcement Listing
+
+The **All Announcement Listing** component displays a list of all the announcment in Ascending to Date of announcements, each containing a Date as Heading, subheading, description, and a call-to-action link.
+
+## Usage
+
+This component is primarily used on **special-announcement view page** to display multiple all announcements in a structured format.
+
+## Example
+
+<Canvas of={allAnnnouncement.Default} />
+
+## Props
+
+<Controls of={allAnnnouncement.Default} />

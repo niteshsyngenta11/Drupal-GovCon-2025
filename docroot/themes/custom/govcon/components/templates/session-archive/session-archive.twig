@@ -1,0 +1,140 @@
+<div class="session_archive">
+  <div class="session_archive-container container p-0">
+    <div class="session_archive-container-page_title session_archive-title">
+      <h1 class="session_page_title typography__heading">
+        <span>{{ session_page_title.value }}</span>
+      </h1>
+    </div>
+    {% if presenters %}
+      <div class="session_archive-container-session_recording session_archive-session_recording session_group-content">
+        <div class="session_group-content-item">
+          <strong class="session_group-content_label item-label">Presenter(s):</strong>
+          {% for presenter in presenters -%}
+            {% include "@atoms/link/link.twig" with {
+              link_url: presenter.link_url,
+              link_content: presenter.link_content
+            } only %}
+            {% if not loop.last -%},{% endif %}
+          {%- endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if session_recording.value %}
+      <div class="session_archive-container-session_recording session_archive-session_recording session_group-content">
+        <div class="session_group-content-item">
+          {% if session_recording.label %}
+            <span class="session_group-content_label item-label">{{ session_recording.label }}:</span>
+          {% endif %}
+          {% include "@atoms/link/link.twig" with {
+            link_url: session_recording.link_url,
+            link_content: session_recording.value
+          } only %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if session_video %}
+      <div class="session_archive-container-video session_archive-video">
+        {% block session_video %}
+          {{ session_video | raw }}
+        {% endblock %}
+      </div>
+    {% endif %}
+
+    {% if session_description.value %}
+      <div class="session_archive-container-description session_archive-description body-text">
+        {{ session_description.value | raw }}
+      </div>
+    {% endif %}
+
+    {% if session_experience_level.value %}
+      <div class="session_archive-container-audience session_archive-audience">
+        <fieldset class="session_group">
+          <legend class="session_label">
+            <span>AUDIENCE</span>
+          </legend>
+          <div class="session_group-content">
+            <div class="session_group-content-item">
+              <span class="session_group-content_label">{{ session_experience_level.label }}:</span>
+              <div class="item-content">{{ session_experience_level.value }}</div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    {% endif %}
+
+    <div class="session_archive-container-schedule session_archive-schedule">
+      <fieldset class="session_group">
+        <legend class="session_label">
+          <span>SCHEDULE INFO</span>
+        </legend>
+        <div class="session_group-content">
+          {% if session_conference_year.value %}
+            <div class="session_group-content-item conference-year">
+                {% if session_conference_year.value %}
+                  <span class="session_group-content_label">{{ session_conference_year.label }}:</span>
+                  <div class="item-content">{{ session_conference_year.value }}</div>
+                {% endif %}
+            </div>
+          {% endif %}
+
+          {% if session_date_time.value %}
+            <div class="session_group-content-item date-time">
+              {% if session_date_time.label %}
+                <span class="session_group-content_label">{{ session_date_time.label }}:</span>
+              {% endif %}
+              <span class="item-content">{{ session_date_time.value }}</span>
+            </div>
+          {% endif %}
+
+          {% if session_room.value  %}
+            <div class="session_group-content-item session-room">
+                {% if session_room.label %}
+                  <span class="session_group-content_label">{{ session_room.label }}:</span>
+                {% endif %}
+                <div class="item-content">{{ session_room.value }}</div>
+            </div>
+          {% endif %}
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="session_archive-container-other-info session_archive-other_info">
+      {% if session_status.value %}
+        <div class="session_archive-other_info-status session_group-content">
+          <div class="session_group-content-item">
+            {% if session_status.label %}
+              <span class="session_group-content_label item-label">{{ session_status.label }}:</span>
+            {% endif %}
+            <div class="item-content">{{ session_status.value }}</div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if session_track.value %}
+        <div class="session_archive-other_info-session_track session_group-content">
+          <div class="session_group-content-item">
+            {% if session_track.label %}
+              <span class="session_group-content_label item-label">{{ session_track.label }}:</span>
+            {% endif %}
+            <div class="item-content">{{ session_track.value }}</div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if supporting_document.value %}
+        <div class="session_archive-other_info-supporting_document session_group-content">
+          <div class="session_group-content-item">
+            {% block supporting_document %}
+              {% if supporting_document.label %}
+                <span class="session_group-content_label item-label">{{ supporting_document.label }}:</span>
+              {% endif %}
+              <div class="item-content">{{ supporting_document.value }}</div>
+            {% endblock %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

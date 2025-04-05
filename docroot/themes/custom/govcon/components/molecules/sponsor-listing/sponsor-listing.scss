@@ -1,0 +1,46 @@
+@use '@atoms/colors/color.scss' as color;
+@use '@base/mixins.scss' as mixins;
+@use "sass:map";
+
+.sponsor_listing-container-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin: 50px 0;
+
+  &.single-logo {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    color: map.get(color.$colors, "dark");
+  }
+
+  @include mixins.media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
+
+  &-logo {
+    img {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.sponsor_listing-container-heading {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid map.get(color.$colors, "dark");
+
+  h2 {
+    @include mixins.media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+}

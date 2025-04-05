@@ -1,0 +1,39 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import mainMenuStories from "./main-menu.stories";
+import mainMenuTwig from "./main-menu.twig";
+
+<Meta title="Molecules/Menu/Main-Menu" of={mainMenuStories} name="Main Menu Docs" />
+
+# **Main Menu**
+
+The **Main Menu** component is the Main navigation menu used across the GovCon site. It supports structured navigation and can be customized with additional attributes.
+
+## **Component Preview**
+
+<Canvas>
+  <Story name="Main Menu">
+    {mainMenuTwig({ menu__items: mainMenuStories?.args?.menu__items || [] })}
+  </Story>
+</Canvas>
+
+## **Menu Type (`menu_type`)**
+
+The `menu_type` prop defines the type of menu being rendered.
+
+### **Available Menu Types**
+| Menu Type | Description |
+|-----------|------------|
+| `"main"` | The default primary navigation menu. |
+
+## **Custom Classes (`classes`)**
+
+The `classes` prop allows adding custom styling to the main menu.
+
+### **Applied Classes**
+| Class | Description |
+|-------|------------|
+| `"main__menu"` | Defines the default styling for the main navigation. |
+
+## **Twig Usage**
+```twig
+{% include "@molecules/menu/menu.twig" with { menu__items: menu__items, classes: 'main__menu', menu_type: 'main' } %}

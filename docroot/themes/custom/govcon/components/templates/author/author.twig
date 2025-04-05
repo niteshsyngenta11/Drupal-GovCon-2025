@@ -1,0 +1,45 @@
+<div class="author">
+  <div class="author_container container p-0">
+    {% if author_page_title.value %}
+      <div class="author_container-page_title">
+        <h1 class="author-page_title typography__heading">
+          <span>{{ author_page_title.value }}</span>
+        </h1>
+      </div>
+    {% endif %}
+    {% if author_name.first_name and author_name.last_name %}
+      <div class="author_container-name author-content-item body-text">
+        <span class="author-content-item_label">{{ author_name.label }}:</span>
+        <div class="first-name">{{ author_name.first_name }}</div>
+        <div class="last-name">{{ author_name.last_name }}</div>
+      </div>
+    {% endif %}
+
+    {% if author_image %}
+      <div class="author_container-image">
+        {{ author_image }}
+      </div>
+    {% endif %}
+    {% if author_job_title.value %}
+      <div class="author_container-job_title author-content-item body-text">
+        {% if author_job_title.label %}
+          <span class="author-content-item_label">{{ author_job_title.label }}:</span>
+        {% endif %}
+        {{ author_job_title.value }}
+      </div>
+    {% endif %}
+    {% if author_bio.value %}
+      <div class="author_container-bio body-text">
+        <p>{{ author_bio.value | raw }}</p>
+      </div>
+    {% endif %}
+    {% if author_site_link.value %}
+      <div class="author_container-site_link author-content-item body-text">
+        {% if author_site_link.label %}
+          <span class="author-content-item_label">{{ author_site_link.label }}:</span>
+        {% endif %}
+        <a href="{{ author_site_link.value }}">{{ author_site_link.value }}</a>
+      </div>
+    {% endif %}
+  </div>
+</div>

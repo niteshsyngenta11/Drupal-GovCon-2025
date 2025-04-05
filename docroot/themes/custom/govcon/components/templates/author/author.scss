@@ -1,0 +1,48 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
+.author {
+  &_container {
+    &-page_title{
+      color: map.get(color.$colors, "dark");
+    }
+
+    &-name{
+      column-gap: 6px;
+    }
+
+    &-image {
+      margin: 20px 0;
+    }
+
+    &-site_link {
+      a {
+        text-decoration: none;
+        &:hover {
+          color: map.get(color.$colors, "indigo");
+        }
+      }
+    }
+
+    &-bio {
+      margin-top: 10px;
+      p {
+        margin: 10px 0;
+      }
+    }
+
+    .author-content-item {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      margin-top: 12px;
+
+      &_label {
+        display: inline-block;
+        padding: 4px 8px;
+        background: map.get(color.$colors, "light");
+        font-weight: 700;
+      }
+    }
+  }
+}

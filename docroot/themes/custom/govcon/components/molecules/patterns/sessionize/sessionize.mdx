@@ -1,0 +1,56 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import sessionizeStories from "./sessionize.stories";
+import sessionizeTwig from "./sessionize.twig";
+
+<Meta title="Molecules/Patterns/Section/Sessionize" of={sessionizeStories} name="Sessionize" />
+
+# **Sessionize**
+
+The **Sessionize** component allows you to integrate **Sessionize Speaker List** and **Session Schedule** inside **Gutenberg's Custom HTML block**. It ensures that the Sessionize script is properly embedded while maintaining a responsive layout.
+
+
+## **Using Sessionize in Gutenberg**
+<br />
+
+### **Step 1: Add a Custom HTML Block**
+- Go to your **Gutenberg Editor**.
+- Click the **"+" button** to add a new block.
+- Search for "**Custom HTML**" and select it.
+- Paste your **Sessionize embed script** inside the block.
+
+### **Alternate Method: Using Gutenberg Patterns**
+If your site has a predefined **Sessionize pattern**, you can use it instead of manually adding an HTML block:
+
+- Go to the **Gutenberg Editor**.
+- Click on the **Patterns** tab in the block inserter.
+- Search for **"Sessionize"** in the patterns search.
+- Select the **Sessionize** pattern.
+- Paste your **Sessionize script** inside the pattern.
+
+
+### **Step 2: Paste the Sessionize Script**
+Copy and paste the relevant **Sessionize script** inside the block:
+
+#### **For Speaker List**
+```html
+<script type="text/javascript" src="https://sessionize.com/api/v2/f3wnkr67/view/Speakers"></script>
+```
+
+#### **For Schedule List**
+```html
+<script type="text/javascript" src="https://sessionize.com/api/v2/2907q512/view/GridSmart"></script>
+```
+
+### **Step 3: Save & Preview**
+- Click **"Preview"** to check if the embed is working.
+- Click **"Publish"** to save your changes.
+
+
+## **Sessionize Type (`sessionize_type`)**
+The `sessionize_type` prop defines which Sessionize data should be displayed.
+
+### **Available Options**
+| Type        | Description                |
+|------------|----------------------------|
+| `"speakers"` | Displays the **Speaker List**. |
+| `"schedule"` | Displays the **Event Schedule Grid**. |

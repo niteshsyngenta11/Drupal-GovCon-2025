@@ -1,0 +1,21 @@
+image: "https://placehold.co/220x200.png"
+image_alt: "Sample image"
+heading: "Heading"
+subheading: "Subheading"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+cta:
+  url: "#"
+  title: "Button"
+  target: "_blank"
+  content: "Button"
+session_track: "Site Building and Using Drupal"
+technical_level: "Beginner"
+conference_year: "2021"
+presenters:
+  - link_url: "https://www.johndoe.com"
+    link_content: "John Doe's Website"
+  - link_url: "https://www.janesmith.com"
+    link_content: "Jane Smith's Profile"
+  - link_url: "https://www.bobbrown.com"
+    link_content: "Bob Brown's Blog"
+

@@ -1,0 +1,40 @@
+<footer class="site__footer bg-dark">
+  <div class="site__footer-container container">
+    <div class="site__footer-container__content">
+      <div class="site__footer-container__content-left__column footer-left__column">
+        <div class="footer-left__column-left_menu">
+          <a href="/">
+            {% set logo_src = footer_data.src_path is defined and footer_data.src_path ? footer_data.src_path : base_path ~ directory ~ '/assets/images/Default.webp' %}
+            {% set logo_alt = footer_data.src_alt is defined and footer_data.src_alt ? footer_data.src_alt : 'Footer Logo' %}
+            {% include '@atoms/logo/logo.twig' with { src_path: logo_src, src_alt: logo_alt, width: '127px', height: '120px' } %}
+          </a>
+          <div class="footer-left__column-left_menu-icon_menu">
+            {% block footer__social__icons %}
+              {% include '@molecules/footer-social-menu/footer-social-menu.html.twig' with { items: footer_social_menu } %}
+            {% endblock %}
+          </div>
+          {% block footer__quick_links %}
+            {% include '@molecules/footer-quick-link-menu/footer-quick-link-menu.html.twig' with { items: footer_quick_link_menu } %}
+          {% endblock %}
+        </div>
+      </div>
+      <div class="site__footer-container__content-centre__column footer-centre__column">
+        {% block footer__main_menu %}
+          {% include '@molecules/footer-main-menu/footer-main-menu.html.twig' with { items: footer_main_menu } %}
+        {% endblock %}
+      </div>
+      {% if footer_data.footer_description or footer_data.footer_cta_url or footer_data.footer_cta_label %}
+        <div class="site__footer-container__content-right__column footer-right__column">
+          <div class="footer__cta_card">
+            {% include '@molecules/cta-card/cta-card.twig' with { description:footer_data.footer_description, cta_url:footer_data.footer_cta_url, cta_label:footer_data.footer_cta_label } %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="site__footer-container__text">
+      <p class="footer_text">
+        Website Built and Supported by <a href="https://www.digitalpolygon.com/">Digital Polygon</a>
+      </p>
+    </div>
+  </div>
+</footer>

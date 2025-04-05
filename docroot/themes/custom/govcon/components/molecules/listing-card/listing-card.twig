@@ -1,0 +1,74 @@
+<div class="listing-card border-xs">
+  <div class="upper-card bg-light p-32 d-flex">
+    {% if image %}
+      <div class="listing-card__image">
+        {% block listing_image %}
+          <img src="{{ image }}" alt="{{ image_alt }}" class="border-xs">
+        {% endblock %}
+      </div>
+    {% endif %}
+
+    <div class="text-left">
+      <h3 class="listing-card__heading">
+        {{ heading }}
+      </h3>
+
+      {% if subheading %}
+        <h4 class="listing-card__subheading">
+          {{ subheading }}
+        </h4>
+      {% endif %}
+
+      {% if description %}
+        <div class="listing-card__description">
+          {{ description }}
+        </div>
+      {% endif %}
+
+      {% if cta %}
+        {% include "@atoms/button/button.twig" with {
+          link_content: cta.content,
+          modifier: "button-with-icon icon--arrow-right icon-after text-cobalt",
+          link_url: cta.url,
+          link_target: cta.target
+        } %}
+      {% endif %}
+    </div>
+  </div>
+
+  {% if session_track or technical_level or conference_year or presenters %}
+    <div class="listing-card__fields body-text py-8 bg-skyblue d-flex">
+      {% if session_track %}
+        <div class="listing-card__field d-inline-flex">
+          <strong>Session Track: </strong> {{ session_track }}
+        </div>
+      {% endif %}
+
+      {% if technical_level %}
+        <div class="listing-card__field d-inline-flex">
+          <strong>Technical Level: </strong> {{ technical_level }}
+        </div>
+      {% endif %}
+
+      {% if conference_year %}
+        <div class="listing-card__field d-inline-flex">
+          <strong>Conference Year: </strong> {{ conference_year }}
+        </div>
+      {% endif %}
+
+
+      {% if presenters %}
+        <div class="listing-card__field presenter-field d-flex">
+          <strong>Presenter(s):</strong>
+          {% for presenter in presenters -%}
+            {% include "@atoms/link/link.twig" with {
+              link_url: presenter.link_url,
+              link_content: presenter.link_content
+            } only %}
+            {% if not loop.last -%},{% endif %}
+          {%- endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

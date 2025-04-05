@@ -1,0 +1,24 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
+.messages {
+  color: map.get(color.$colors, "white");
+  padding: 16px;
+  margin-bottom: 16px;
+
+  a {
+    color: map.get(color.$colors, "white");
+    &:hover {
+      color: map.get(color.$colors, "dark"); 
+    }
+  }
+
+  &--status {
+    background-color: map.get(color.$colors, "dark-blue");
+  }
+
+  &--error {
+    background-color: map.get(color.$colors, "secondary");
+  }
+}
+

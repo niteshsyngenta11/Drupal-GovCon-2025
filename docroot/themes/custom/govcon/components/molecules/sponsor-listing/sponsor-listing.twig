@@ -1,0 +1,23 @@
+<div class="sponsor_listing">
+  <div class="sponsor_listing-container">
+    {% if sponsor_heading %}
+      <div class="sponsor_listing-container-heading">
+        <h2 class="typography__heading">{{ sponsor_heading }}</h2>
+      </div>
+    {% endif %}
+
+    {% set logo_count = sponsors|length %}
+    <div class="sponsor_listing-container-logos{% if logo_count == 1 %} single-logo{% endif %}">
+      {% for sponsor in sponsors %}
+        <div class="sponsor_listing-container-logos-logo">
+          <a href="{{ sponsor.link|default('#') }}" target="_blank">
+            {% include "@atoms/logo/logo.twig" with {
+              src_path: sponsor.logo_url,
+              src_alt: sponsor.logo_alt|default('Sponsor Logo')
+            } %}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

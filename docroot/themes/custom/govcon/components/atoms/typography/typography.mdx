@@ -1,0 +1,40 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import typographyStories from "./typography.stories";
+import typographyTwig from "./typography.twig";
+
+<Meta title="Atoms/Typography" of={typographyStories} />
+
+# Typography
+
+Typography is an essential part of your design system.
+
+## Headings
+
+<Canvas>
+  <Story name="Typography">
+    {typographyTwig()}
+  </Story>
+</Canvas>
+
+### Styles
+
+| Heading | Font Size | Weight |
+|---------|----------|--------|
+| H1      | 40px     | 600    |
+| H2      | 32px     | 600    |
+| H3      | 22px     | 600    |
+| H4      | 16px     | 600    |
+| H5      | 15px     | 500    |
+| H6      | 13px     | 500    |
+
+## Body Text
+
+The body text follows the following style:
+
+| Size | Weight | Line Height |
+|------|--------|-------------|
+| 16px | 400    | 162%        |
+
+## Props
+
+<ArgTypes of={typographyStories} />

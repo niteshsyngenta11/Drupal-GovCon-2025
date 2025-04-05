@@ -1,0 +1,5 @@
+@use '@atoms/colors/color.scss' as color;
+
+.footer-menu__items {
+  background-color: color.$dark;
+}

@@ -1,0 +1,29 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs';
+import * as Stories from './sponsors.stories';
+
+<Meta title="Organisms/Sponsors" of={Stories} />
+
+# Sponsors
+
+The **Sponsors** component displays a list of sponsors with their logos and links.
+
+## Usage
+
+This component is primarily used in **partnership sections** to showcase sponsor logos in a structured format. It dynamically renders a list of sponsors, supporting the following variables:
+
+### Variables
+
+- **`sponsors_page_title`** *(optional)*: Sets the main page title for the sponsors section. This is rendered as an `<h1>` if defined.
+- **`sponsor_heading`** *(optional)*: Defines the heading for a specific sponsor category.
+- **`sponsors`** *(required)*: An array containing sponsor details such as:
+  - `logo_url`: The URL of the sponsor’s logo image.
+  - `link`: The external or internal link associated with the sponsor.
+  - `logo_alt`: Alternative text for accessibility.
+
+## Example
+
+<Canvas of={Stories.Sponsors} />
+
+## Props
+
+<Controls of={Stories.Sponsors} />

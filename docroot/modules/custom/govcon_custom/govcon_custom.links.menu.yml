@@ -1,0 +1,11 @@
+govcon_custom.settings:
+  title: 'GovCon Custom'
+  description: 'Manage custom site configurations.'
+  parent: system.admin_config
+  route_name: govcon_custom.settings
+
+govcon_custom.footer_settings_form:
+  title: 'Site Settings'
+  description: 'Configure custom site settings.'
+  parent: govcon_custom.settings
+  route_name: govcon_custom.footer_settings_form

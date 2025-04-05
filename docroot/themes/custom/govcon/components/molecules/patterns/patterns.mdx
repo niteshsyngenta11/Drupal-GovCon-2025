@@ -1,0 +1,139 @@
+
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+import * as featuredSession from "./featured-session/featured-session.stories";
+import * as featuredCard from "./card/featured-card/featured-card.stories";
+import * as horizontalCard from "./card/horizontal-card/horizontal-card.stories";
+import * as verticalCard from "./card/vertical-card/vertical-card.stories";
+import * as heroImage from "./hero-image/hero-image.stories";
+import * as heroTextCard from "./hero-text-with-card/hero-text-with-card.stories";
+import * as imageText from "./image-with-text/image-with-text.stories";
+import * as threeColumnCard from "./three-column-card/three-column-card.stories";
+import * as twoColumnCard from "./two-column-card/two-column-card.stories";
+import * as twoColumnWithImage from "./two-column-with-image/two-column-with-image.stories";
+import * as featuredSection from "./featured-section/featured-section.stories";
+
+
+
+# Gutenberg Patterns Guide
+
+This guide provides an overview of the available Gutenberg patterns and how to use them effectively.
+
+## Creating a Page in Drupal Gutenberg
+
+Gutenberg is a block-based editor that allows you to create and design pages easily. If you are new to Drupal and Gutenberg, follow these steps to create a page using the Gutenberg editor.
+
+### Step 1: Navigate to the Content Section
+- Log in to your Drupal admin panel.
+- Click on **Content** in the admin toolbar.
+- Click the **Add Content** button.
+
+### Step 2: Select the Landing Page Content Type
+- Choose **Landing Page** from the available content types.
+- The **Gutenberg editor** will automatically be enabled for this content type.
+
+### Step 3: Working with the Gutenberg Editor
+- The Gutenberg editor will now appear.
+- Enter a **Page Title** at the top of the editor.
+
+### Step 4: Using the Sidebar Options
+- On the right-hand side, you will find the **Sidebar** with various settings.
+- Adjust page attributes, Customize the URL, etc.
+
+### Step 5: Adding Patterns and Blocks
+To design your page, follow these steps:
+
+- Click the **“+” button** (Top Left Side) to add blocks.
+- Navigate to the **Patterns** section.
+- Choose the desired pattern from the available options.
+- Customize the text, images, and styles as needed.
+
+### Step 6: Publishing Your Page
+- Click **Preview** to see how your page looks.
+- Once completed, click **Save** to make it live.
+
+Now you have successfully created a page using Gutenberg in Drupal!
+
+
+## How to Use Gutenberg
+
+To use these patterns in Gutenberg:
+
+- Navigate to the **Patterns** section in the Gutenberg editor.  
+- Choose the desired pattern from the available options.  
+- Customize text, images, and styles as needed.  
+- Save and preview your changes.  
+
+
+## Available Patterns
+
+Below are the patterns available in Storybook for Gutenberg:
+
+### Featured Card
+
+**Usage:** A card-style pattern for showcasing key information with a featured design.
+
+<Canvas of={featuredCard.Default} />
+
+### Featured Sessions
+
+**Usage:** A layout to highlight important sessions or content.
+
+<Canvas of={featuredSession.Default} />
+
+### Featured Section
+
+**Usage:** A layout to highlight important sessions or content with Recent Announcement View.
+
+<Canvas of={featuredSection.Default} />
+
+### Two Column Card
+
+**Usage:** A layout with two equal columns, suitable for comparisons or dual content display.
+
+<Canvas of={twoColumnCard.Default} />
+
+### Horizontal Card
+
+**Usage:** A wide card layout, great for displaying content in a row format.
+
+<Canvas of={horizontalCard.Default} />
+
+### Hero Image
+
+**Usage:** A large image section used as a prominent banner or main visual.
+
+<Canvas of={heroImage.Default} />
+
+### Hero Text with Card
+
+**Usage:** A hero section with text and a featured card for additional content.
+
+<Canvas of={heroTextCard.Default} />
+
+### Image with Text
+
+**Usage:** A pattern combining an image and accompanying text, useful for storytelling or product showcases.
+
+<Canvas of={imageText.Default} />
+
+### Three Column Card
+
+**Usage:** A three-column layout ideal for presenting multiple features or categories.
+
+<Canvas of={threeColumnCard.Default} />
+
+### Vertical Card
+
+**Usage:** A tall card layout, best for long-format content or stacked information.
+
+<Canvas of={verticalCard.Default} />
+
+### Two Column with Image
+
+**Usage:** A layout with two equal columns, suitable for Text & Image or dual content display.
+
+<Canvas of={twoColumnWithImage.Default} />
+
+---
+
+_These patterns are designed to improve content presentation and user experience within Drupal._

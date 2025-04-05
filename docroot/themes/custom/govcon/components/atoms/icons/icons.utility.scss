@@ -1,0 +1,15 @@
+@use './icons' as icons;
+
+@each $icon, $name in icons.$icons-values {
+  .icon--#{"" + $name} {
+    @include icons.icon($name);
+
+    &.icon-after {
+      &::before {
+        content: none;
+        display: none;
+      }
+      @include icons.icon($name, after);
+    }
+  }
+}

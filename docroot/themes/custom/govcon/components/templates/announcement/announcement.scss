@@ -1,0 +1,16 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
+.announcement {
+  &_container {
+    &-page_title {
+      color: map.get(color.$colors, "dark");
+    }
+  }
+
+  .announcement_content-label {
+    padding: 4px 8px;
+    background: map.get(color.$colors, "light");
+    font-weight: 700;
+  }
+}

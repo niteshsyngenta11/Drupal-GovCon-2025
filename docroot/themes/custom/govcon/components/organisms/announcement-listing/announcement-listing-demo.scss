@@ -1,0 +1,7 @@
+@use '@base/mixins.scss' as mixin;
+
+@include mixin.media-breakpoint-down(md) {
+  .announcement-listing-container.p-32 {
+    padding-inline: 16px !important;
+  }
+}

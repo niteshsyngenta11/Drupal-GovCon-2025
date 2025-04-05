@@ -1,0 +1,57 @@
+global-styling:
+  css:
+    theme:
+      dist/components/style.css: {}
+  js:
+    dist/components/organisms/header/header.js: {}
+
+editor:
+  css:
+    theme:
+      dist/components/gutenberg-style.css: {}
+
+session-archive:
+  css:
+    theme:
+      dist/components/templates/session-archive/session-archive.css: {}
+
+announcement:
+  css:
+    theme:
+      dist/components/templates/announcement/announcement.css: {}
+
+listing-card:
+  css:
+    theme:
+      dist/components/molecules/listing-card/listing-card.css: {}
+      dist/components/organisms/announcement-listing/announcement-listing.css: {}
+
+announcement-listing:
+  css:
+    theme:
+      dist/components/organisms/announcement-listing/announcement-listing.css: {}
+
+exposed-form:
+  css:
+    theme:
+      dist/components/molecules/views-filter/views-filter.css: {}
+
+pager:
+  css:
+    theme:
+      dist/components/molecules/pager/pager.css: {}
+
+sponsors:
+  css:
+    theme:
+      dist/components/organisms/sponsors/sponsors.css: {}
+
+author:
+  css:
+    theme:
+      dist/components/templates/author/author.css: {}
+
+session-speaker:
+  css:
+    theme:
+      dist/components/organisms/session-speakers/session-speaker.css: {}

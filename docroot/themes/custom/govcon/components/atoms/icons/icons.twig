@@ -1,0 +1,17 @@
+<div class="icons-table">
+  <div class="icons__row header">
+    <div class="icons__col">Name</div>
+    <div class="icons__col">Icon Class</div>
+    <div class="icons__col">Icon</div>
+  </div>
+
+  {% for icon in icons %}
+    <div class="icons__row">
+      <div class="icons__col">{{ icon.name }}</div>
+      <div class="icons__col">icon--{{ icon.name }}</div>
+      <div class="icons__col">
+        <span class="icon icon--{{ icon.name }}"></span>
+      </div>
+    </div>
+  {% endfor %}
+</div>

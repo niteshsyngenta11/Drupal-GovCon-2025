@@ -1,0 +1,51 @@
+title: Special Announcement
+announcements:
+  - heading: "March 15, 2025"
+    subheading: "Test Special Announcement 2"
+    description: "Training schedules are now LIVE! Register for training!"
+    cta:
+      url: "#"
+      title: "See Announcement"
+      target: "_blank"
+      content: "See Announcement"
+      classes: ["announcement-link", "text-cobalt", "h4"]
+
+  - heading: "May 10, 2025"
+    subheading: "Event Registration Open"
+    description: "Register now for our upcoming event! Don't miss out on the chance to connect with industry leaders."
+    cta:
+      url: "#"
+      title: "See Announcement"
+      target: "_self"
+      content: "See Announcement"
+      classes: ["announcement-link", "text-cobalt", "h4"]
+
+  - heading: "July 20, 2025"
+    subheading: "System Maintenance Notice"
+    description: "We will be performing scheduled maintenance from 2 AM to 4 AM UTC. Please plan accordingly."
+    cta:
+      url: "#"
+      title: "See Announcement"
+      target: "_self"
+      content: "See Announcement"
+      classes: ["announcement-link", "text-cobalt", "h4"]
+
+  - heading: "October 31, 2025"
+    subheading: "Test Special Announcement 1"
+    description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+    cta:
+      url: "#"
+      title: "See Announcement"
+      target: "_self"
+      content: "See Announcement"
+      classes: ["announcement-link", "text-cobalt", "h4"]
+
+  - heading: "December 5, 2025"
+    subheading: "New Feature Release"
+    description: "Our latest feature update introduces powerful new tools to enhance your experience. Stay tuned for details!"
+    cta:
+      url: "#"
+      title: "See Announcement"
+      target: "_blank"
+      content: "See Announcement"
+      classes: ["announcement-link", "text-cobalt", "h4"]

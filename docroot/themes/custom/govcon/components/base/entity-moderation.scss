@@ -1,0 +1,54 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:map";
+
+.entity-moderation-form {
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &:last-child {
+      align-self: center;
+    }
+
+    .form-item {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      label {
+        padding: 10px;
+        background-color: map.get(color.$colors, "dark-blue");
+        color: map.get(color.$colors, "white");
+
+        &::after {
+          content: ":";
+          margin-left: 4px;
+        }
+      }
+
+      input {
+        border: solid 2px black;
+        padding: 6px;
+      }
+
+      .form-select {
+        padding: 4px;
+        background-color: map.get(color.$colors, "light");
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0px 2px 6px map.get(color.$colors, "black");
+        transition: box-shadow 0.3s ease-out;
+
+        &:hover {
+          box-shadow: 0px 5px 12px map.get(color.$colors, "black");
+          transition: box-shadow 0.25s ease-in;
+        }
+      }
+    }
+
+    #edit-submit {
+      margin-bottom: 0;
+    }
+  }
+}

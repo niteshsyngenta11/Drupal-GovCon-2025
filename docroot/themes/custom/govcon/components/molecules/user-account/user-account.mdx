@@ -1,0 +1,39 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import userAccountMenuStories from "./user-account.stories";
+import userAccountMenuTwig from "./user-account.twig";
+
+<Meta title="Molecules/Menu/User Account Menu Docs" of={userAccountMenuStories} name="User Account Menu Docs" />
+
+# **User Account Menu**
+
+The **User Account Menu** component provides navigation options related to user authentication and account management. It typically includes links to login, profile, and account settings.
+
+## **Component Preview**
+
+<Canvas>
+  <Story name="User Account Menu">
+    {userAccountMenuTwig({ menu__items: userAccountMenuStories?.args?.menu__items || [] })}
+  </Story>
+</Canvas>
+
+## **Menu Type (`menu_type`)**
+
+The `menu_type` prop defines the type of menu being rendered.
+
+### **Available Menu Types**
+| Menu Type | Description |
+|-----------|------------|
+| `"user_account"` | Displays user-related navigation options, such as login and account settings. |
+
+## **Custom Classes (`classes`)**
+
+The `classes` prop allows adding custom styling to the user account menu.
+
+### **Applied Classes**
+| Class | Description |
+|-------|------------|
+| `"user-account-menu"` | Defines the default styling for the user account navigation. |
+
+## **Twig Usage**
+```twig
+{% include "@molecules/menu/menu.twig" with { menu__items: menu__items, classes: 'user-account-menu', menu_type: 'user_account' } %}

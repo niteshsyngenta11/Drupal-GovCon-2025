@@ -1,0 +1,62 @@
+title: "Session Archive"
+listing_cards:
+  - image: "https://placehold.co/220x200.png"
+    image_alt: "Session Image"
+    heading: "Introduction to Drupal"
+    subheading: "Beginner Guide"
+    description: "Learn the basics of Drupal site building."
+    cta:
+      url: "#"
+      content: "View Session"
+    session_track: "Site Building and Using Drupal"
+    technical_level: "Beginner"
+    conference_year: "2025"
+    presenters: "pixelite, jcloys"
+
+  - image: "https://placehold.co/220x200.png"
+    image_alt: "Session Image"
+    heading: "Advanced Twig in Drupal"
+    subheading: "Deep Dive"
+    description: "Explore Twig for advanced Drupal theming."
+    cta:
+      url: "#"
+      content: "View Session"
+    session_track: "Theming and Frontend"
+    technical_level: "Advanced"
+    conference_year: "2025"
+    presenters: "janedoe, johndoe"
+
+pager__uid: 0
+current: 3
+items:
+  pages:
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''
+    - href: '#'
+      attributes: ''

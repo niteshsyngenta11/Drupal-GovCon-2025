@@ -1,0 +1,77 @@
+@use '@atoms/colors/color' as color;
+
+$border-width: 2px;
+$offset: 4px;
+$transition: 0.3s;
+
+.button:not(.button-with-icon, input, .ui-button),
+.wp-block-button:not(.button-with-icon),
+.entity-moderation-form .form-submit {
+  font-family: "Poppins", serif !important;
+  font-weight: 600 !important;
+  outline: solid $border-width color.$primary-black;
+  outline-offset: -$border-width;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  letter-spacing: 0;
+  background-color: color.$skyblue;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: color.$primary-black !important;
+  z-index: 2;
+  box-shadow: inset $offset $offset 0px color.$white, $offset $offset 0px color.$skyblue;
+  transition: all $transition ease-in-out;
+
+  &.secondary {
+    background-color: color.$secondary;
+    box-shadow: inset $offset $offset 0px color.$white, $offset $offset 0px color.$secondary;
+  }
+
+  &.minimal {
+    background-color: transparent;
+    color: color.$primary-black;
+    box-shadow: none;
+    outline: solid $border-width color.$primary-black;
+    outline-offset: -$border-width;
+  }
+
+  &:hover {
+    outline: solid $border-width color.$primary-black;
+    text-decoration: none;
+    box-shadow: inset 0px 0px;
+  }
+}
+
+input.button {
+  color: color.$black;
+}
+
+a.button-with-icon,
+.wp-block-button.button-with-icon {
+  font-family: "Poppins", serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem;
+  padding: 8px 0;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: color.$cobalt;
+  background-color: transparent;
+  box-shadow: none !important;
+
+  &.icon--arrow-right.icon-after:after {
+    font-size: 12px;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+  }
+
+  &:hover {
+    &.icon--arrow-right.icon-after::after {
+      transform: translateX(4px);
+    }
+  }
+}

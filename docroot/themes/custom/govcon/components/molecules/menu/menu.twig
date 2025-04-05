@@ -1,0 +1,63 @@
+<nav class="menu {{ classes | default('') }}" aria-label="{{ menu_type == 'main' ? 'Site Menu' : 'User Account Menu' }}">
+  <ul class="menu__list main-menu">
+    {% for item in menu__items %}
+      <li class="menu__item {% if item.below %} has-below {% endif %} {{ item.in_active_trail ? 'active' : '' }}">
+        {% set link_classes = ['menu__link', 'text-primary-black'] %}
+
+        {% if item.classes is defined and item.classes is not empty %}
+          {% set link_classes = link_classes|merge([item.classes]) %}
+        {% endif %}
+
+        {% if menu_type == 'main' %}
+          {% set link_classes = link_classes|merge(['h3']) %}
+        {% else %}
+          {% set link_classes = link_classes|merge(['body-text']) %}
+        {% endif %}
+
+        {% if item.url.options.attributes.class is defined %}
+          {% set link_classes = link_classes|merge(item.url.options.attributes.class) %}
+        {% endif %}
+
+        {% set link_target = item.url.options.attributes.target|default('_self') %}
+
+        {% include "@atoms/link/link.twig" with {
+          link_url: item.url,
+          link_title: item.title,
+          link_target: link_target,
+          link_content: item.title,
+          link_classes: link_classes
+         } %}
+
+        {% if item.below %}
+          <span class="chevron-icon icon--chevron"></span>
+          <ul class="submenu dropdown-menu">
+            {% for child in item.below %}
+              <li class="submenu__item {{ child.in_active_trail ? 'active' : '' }} ">
+                {% set child_classes = ['submenu__link', 'text-primary-black'] %}
+
+                {% if menu_type == 'main' %}
+                  {% set child_classes = child_classes|merge(['h3']) %}
+                {% else %}
+                  {% set child_classes = child_classes|merge(['body-text']) %}
+                {% endif %}
+
+                {% if child.url.options.attributes.class is defined %}
+                  {% set child_classes = child_classes|merge(child.url.options.attributes.class) %}
+                {% endif %}
+
+                {% set child_target = child.url.options.attributes.target|default('_self') %}
+                {% include "@atoms/link/link.twig" with {
+                    link_url: child.url,
+                    link_title: child.title,
+                    link_target: child_target,
+                    link_content: child.title,
+                    link_classes: child_classes
+                  } %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,0 +1,195 @@
+@use '@atoms/colors/color.scss' as color;
+@use "sass:string";
+
+$uniqueid: string.unique-id();
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/typography/Poppins-Regular.woff?v=#{$uniqueid}') format('woff'),
+      url('assets/fonts/typography/Poppins-Regular.ttf?v=#{$uniqueid}') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('assets/fonts/typography/RobotoMono-Regular.woff?v=#{$uniqueid}') format('woff'),
+      url('assets/fonts/typography/RobotoMono-Regular.ttf?v=#{$uniqueid}') format('truetype');
+  font-display: swap;
+}
+
+body,
+.has-roboto-mono-font-family {
+  font-family: "Roboto Mono", sans-serif;
+}
+
+.has-poppins-font-family {
+  font-family: "Poppins", sans-serif;
+}
+
+// Headings
+h1,
+.h1,
+.has-h-1-font-size {
+  font-size: 40px;
+  font-weight: 600;
+  color: color.$primary-dark;
+}
+
+h2,
+.h2,
+.has-h-2-font-size {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h3,
+.h3,
+.has-h-3-font-size {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h4,
+.h4,
+.has-h-4-font-size {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h5,
+.h5,
+.has-h-5-font-size {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+h6,
+.h6,
+.has-h-6-font-size {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+p,
+.body-text {
+  font-family: "Roboto Mono", "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+// Lead text
+.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: color.$dark;
+}
+
+// Inline text elements
+mark {
+  background-color: color.$primary-dark;
+  padding: 0.2em;
+  color: color.$light;
+}
+
+ins {
+  text-decoration: underline;
+  color: color.$primary-dark;
+}
+
+u {
+  text-decoration: underline;
+}
+
+small {
+  font-size: 0.875rem;
+  color: color.$dark;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid color.$primary-dark;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: color.$primary-dark;
+}
+
+.blockquote-footer {
+  font-size: 0.875rem;
+  color: color.$dark;
+  margin-top: 0.5rem;
+}
+
+// Alignment
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+section {
+  ul, ol {
+    padding-left: 32px;
+    margin: 16px 0;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: auto;
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
+}

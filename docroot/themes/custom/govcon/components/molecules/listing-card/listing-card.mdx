@@ -1,0 +1,36 @@
+import { Meta, Story, Canvas, Controls } from '@storybook/addon-docs';
+import * as ListingCardStories from './listing-card.stories';
+
+<Meta title="Molecules/Listing Card" of={ListingCardStories} />
+
+# Listing Card
+
+The **Listing Card** component provides a structured visual representation for listing-based content, such as announcements and sessions. It ensures consistency across the platform by standardizing the display of essential information.
+
+## Usage
+
+The `Listing Card` supports the following elements:
+- **Optional Image**: Displays an image if provided.
+- **Heading**: The main title of the listing.
+- **Subheading** (Optional): A supporting subtitle.
+- **Description**: A brief explanation or context.
+- **Call-to-Action (CTA)**: A button with a label and URL.
+- **Field Label/Value Pairs**: Additional structured metadata.
+
+## Example
+
+<Canvas of={ListingCardStories.Default} />
+
+## Props
+
+<Controls of={ListingCardStories.Default} />
+
+## Variations
+
+### Without Image
+
+<Canvas of={ListingCardStories.WithoutImage} />
+
+### Without Fields
+
+<Canvas of={ListingCardStories.WithoutFields} />

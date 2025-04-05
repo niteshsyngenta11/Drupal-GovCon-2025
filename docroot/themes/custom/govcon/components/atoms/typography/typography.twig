@@ -1,0 +1,120 @@
+<h1>
+  Typography
+</h1>
+<hr>
+<div class="typography">
+  {% for heading in headings %}
+  <br>
+  <{{ heading.type }} class="typography__heading">
+    {{ heading.type }} - Poppins
+  </{{ heading.type }}>
+  {% endfor %}
+  <hr>
+  <p class="body-text">
+  <br>
+    <strong>
+      Body Text - Roboto Mono
+    </strong>
+    <br>
+    The five boxing wizards jump quickly.
+  </p>
+</div>
+<hr>
+<br>
+<h2>
+  Lead Text
+</h2>
+<p class="lead">
+  This is a lead paragraph. It stands out from regular paragraphs.
+</p>
+
+<h2>
+  Inline text elements
+</h2>
+<p>
+  You can use the
+  <mark>
+    mark tag
+  </mark>
+  to highlight text.
+</p>
+<p>
+  <del>
+    This line of text is meant to be treated as deleted text.
+  </del>
+</p>
+<p>
+  <s>
+    This line of text is meant to be treated as no longer accurate.
+  </s>
+</p>
+<p>
+  <ins>
+    This line of text is meant to be treated as an addition to the document.
+  </ins>
+</p>
+<p>
+  <u>
+    This line of text will render as underlined.
+  </u>
+</p>
+<p>
+  <small>
+    This line of text is meant to be treated as fine print.
+  </small>
+</p>
+<p>
+  <strong>
+    This line rendered as bold text.
+  </strong>
+</p>
+<p>
+  <em>
+    This line rendered as italicized text.
+  </em>
+</p>
+<br>
+<hr>
+<br>
+<h2>
+  Blockquotes
+</h2>
+<blockquote>
+  <p>
+    A well-known quote, contained in a blockquote element.
+  </p>
+</blockquote>
+<blockquote class="blockquote">
+  <p>
+    A well-known quote, contained in a blockquote element.
+  </p>
+  <footer class="blockquote-footer">
+    Someone famous in
+    <cite title="Source Title">
+      Source Title
+    </cite>
+  </footer>
+</blockquote>
+
+<hr>
+<br>
+
+<h2>
+  Alignment
+</h2>
+
+<p class="text-left">
+  This text is aligned to the left.
+</p>
+
+<p class="text-center">
+  This text is centered.
+</p>
+
+<p class="text-right">
+  This text is aligned to the right.
+</p>
+
+<p class="text-justify">
+  This text is justified, meaning it adjusts spacing so that both the left and right edges of the text align evenly.
+</p>

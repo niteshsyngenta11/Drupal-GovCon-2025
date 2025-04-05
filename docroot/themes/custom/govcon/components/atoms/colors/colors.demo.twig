@@ -1,0 +1,24 @@
+<div class="demo__colours d-flex flex-column">
+  <h1 class="demo__title">Color</h1>
+
+  {% for palette in palettes %}
+    <h2 class="demo__palette-title">{{ palette.palette_heading }} Palette</h2>
+
+    <div class="demo__grid">
+      {% for color in palette.colors %}
+        {% set color_class = color.name|lower|replace({' ': '-'}) %}
+        <div class="demo__item d-flex flex-column">
+          <div class="demo__item__bg bg-{{ color_class }}"></div>
+          <div class="demo__item__info d-flex flex-column align-center">
+            <div class="demo__item__code">{{ color.code }}</div>
+            <div class="demo__item__name">{{ color.name }}</div>
+            <div class="demo__item__class">
+              <span title="Use for text color">text-{{ color_class }}</span> |
+              <span title="Use for background color">bg-{{ color_class }}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

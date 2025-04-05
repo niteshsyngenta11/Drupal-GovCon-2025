@@ -1,0 +1,27 @@
+{% macro menu_links(items, custom_class) %}
+  {% if items is not empty %}
+    <ul class="footer-menu__items {{ custom_class }}">
+      {% for item in items %}
+        <li class="footer-menu__item">
+          {% if item.below is not empty %}
+            <h4 class="footer-menu__title mb-0">{{ item.title }}</h4>
+            {{ _self.menu_links(item.below, custom_class) }}
+          {% else %}
+            <a href="{{ item.url }}" aria-label="{{ item.title }}">
+              {% if item.original_link.pluginDefinition.options.attributes is defined %}
+                <span {% for name, value in item.original_link.pluginDefinition.options.attributes %} {{ name }}="{{ value is iterable ? value|join(' ') : value }}" {% endfor %}></span>
+              {% elseif custom_class == 'footer-social-icons' %}
+                <span class="icon icon--{{ item.icon }}"></span>
+              {% else %}
+                <span>{{ item.title }}</span>
+              {% endif %}
+            </a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{% import _self as menus %}
+{{ menus.menu_links(items, custom_class) }}

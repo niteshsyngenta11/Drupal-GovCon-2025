@@ -1,0 +1,350 @@
+# Add client libraries to be attached to the node edit page where the editor is.
+# Useful for tweaking the admin UI.
+libraries-edit:
+  - govcon/editor
+  - govcon/exposed-form
+
+# Add client libraries to be attached to the node page.
+# Useful for custom blocks using javascript behaviors.
+# libraries-view:
+#   - gutenberg_starter/blocks
+
+# Add custom blocks to the following section.
+# The blocks defined here can be enabled or disabled for each content type.
+# custom-blocks:
+#   categories:
+#     - reference: text # The category where the block will be added.
+#       name: Text
+#       blocks:
+#         - id: text/factbox
+#           name: Factbox
+
+# Check theme support reference at https://developer.wordpress.org/block-editor/developers/themes/theme-support/
+# And https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/
+theme-support:
+  allowedMimeTypes:
+    jpg|jpeg|jpe: image/jpeg
+    png: image/png
+    gif: image/gif
+    mp3|m4a|m4b: audio/mpeg
+    mov|qt: video/quicktime
+    avi: video/avi
+    wmv: video/x-ms-wmv
+    mid|midi: audio/midi
+    pdf: application/pdf
+    mp4|m4v: video/mp4
+    webm: video/webm
+    ogv: video/ogg
+    txt|asc|c|cc|h|srt: text/plain
+    webp: image/webp
+
+  alignWide: true
+  supportsLayout: true
+  __unstableIsBlockBasedTheme: true
+  richEditingEnabled: true
+  canLockBlocks: true
+  imageDefaultSize: "original"
+  maxWidth: 1368
+
+  enableCustomUnits:
+    - "%"
+    - "px"
+    - "em"
+    - "rem"
+    - "vh"
+    - "vw"
+
+  disableCustomColors: false
+  disableCustomFontSizes: true
+  disableCustomGradients: false
+  disableCustomSpacingSizes: true
+  # CSS vars not supported yet.
+  # Check css/components/blocks.css for color related classes.
+  # Ex: .has-primary-color and .has-primary-background-color
+  # Usage for Gutenberg < 3.0
+  # colors:
+  # - name: Primary
+  #   slug: primary
+  #   color: "#0693e3"
+  # - name: Primary Light
+  #   slug: primary-light
+  #   color: "#6ac9ff"
+  # - name: Primary Dark
+  #   slug: primary-dark
+  #   color: "#0059a2"
+  # - name: Secondary
+  #   slug: secondary
+  #   color: "#e7643d"
+  # - name: Secondary Light
+  #   slug: secondary-light
+  #   color: "#f6b29d"
+  # - name: Secondary Dark
+  #   slug: secondary-dark
+  #   color: "#9e2404"
+  # - name: Tertiary
+  #   slug: tertiary
+  #   color: "#00a68d"
+  # - name: Tertiary Light
+  #   slug: tertiary-light
+  #   color: "#dcf0e2"
+  # - name: Tertiary Dark
+  #   slug: tertiary-dark
+  #   color: "#008088"
+  # - name: Dark
+  #   slug: dark
+  #   color: "#000000"
+  # - name: Light
+  #   slug: light
+  #   color: "#ffffff"
+
+  # Usage for Gutenberg < 3.0
+  # gradients:
+  # - name: Primary to secondary
+  #   gradient: linear-gradient(135deg,rgba(6, 147, 227, 1) 0%,rgb(231, 100, 61) 100%)
+  #   slug: primary-to-secondary
+  # - name: Vivid cyan blue to vivid purple
+  #   gradient: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)
+  #   slug: vivid-cyan-blue-to-vivid-purple
+  # - name: Secondary to dark
+  #   gradient: "linear-gradient(to right bottom, #e7643d, #d5542f, #c24521, #b03513, #9e2404)"
+  #   slug: secondary-to-dark
+
+  # All styles will be injected inline when using the editor and "wrapped" with
+  # .editor-styles-wrapper class to avoid conflicts with the backend styles.
+  styles:
+    - css:
+        # css/base/normalize.css: {}
+        # css/base/variables.css: {}
+        # css/base/fonts.css: {}
+        # css/base/base.css: {}
+        # css/components/blocks.css: {}
+        # css/components/form.css: {}
+        # css/gutenberg-editor.css: {}
+    - css: |-
+        /* "Inline" CSS is also supported.
+        .color-red {
+          color: red;
+        }  */
+
+  # fontSizes section is not supported by versions above 2.6.
+  # Check the section __experimentalFeatures/typography/fontSizes below.
+  # Usage for Gutenberg < 3.0
+  # fontSizes:
+  # - name: Extra Small
+  #   size: "0.8125rem"
+  #   slug: extra-small
+  # - name: Small
+  #   size: "0.875rem"
+  #   slug: small
+  # - name: Normal
+  #   size: "1.25rem"
+  #   slug: normal
+  # - name: Large
+  #   size: "2rem"
+  #   slug: large
+  # - name: Extra Large
+  #   size: "4rem"
+  #   slug: extra-large
+
+  __experimentalFeatures:
+    settings:
+      spacing:
+        blockGap: false
+
+    border:
+      radius: true
+      color: true
+      style: true
+      width: true
+
+    spacing:
+      margin: true
+      padding: true
+      blockGap: false
+      customSpacingSize: false
+      units:
+        - px
+        - em
+        - rem
+        - "%"
+      spacingSizes:
+        theme:
+          - name: 1
+            size: 8px
+            slug: 10
+          - name: 2
+            size: 16px
+            slug: 20
+          - name: 3
+            size: 32px
+            slug: 30
+          - name: 4
+            size: 64px
+            slug: 40
+          - name: 5
+            size: 128px
+            slug: 50
+          - name: 6
+            size: 172px
+            slug: 60
+
+    # layout must be defined when using align wide setting on version 3.0 or above.
+    layout:
+      contentSize: 1400px # added 1400 = 1368 + 32(Padding horizontal)
+      wideSize: 1920px
+    color:
+      custom: false
+      background: true
+      button: true
+      caption: true
+      defaultDuotone: false
+      defaultGradients: false
+      text: true
+      defaultPalette: false
+      heading: true
+      link: false
+      palette:
+        theme:
+          - name: Primary
+            slug: primary
+            color: "#285A83"
+          - name: Primary Lighter
+            slug: primary-lighter
+            color: "#7AD1E7"
+          - name: Primary Light
+            slug: primary-light
+            color: "#107DB5"
+          - name: Primary Dark
+            slug: primary-dark
+            color: "#213B75"
+          - name: Secondary
+            slug: secondary
+            color: "#F93E5A"
+          - name: Surface
+            slug: surface
+            color: "#F4FAFF"
+          - name: Tertiary
+            slug: tertiary
+            color: "#FFC7C6"
+          - name: Contrast
+            slug: contrast
+            color: "#3556D1"
+          - name: Dark
+            slug: dark
+            color: "#132B3F"
+          - name: Light
+            slug: light
+            color: "#ffffff"
+          - name: black
+            slug: black
+            color: "#000000"
+
+      customDuotone: true
+      duotone:
+        theme:
+          - colors:
+              - "#000"
+              - "#fff"
+            slug: "greyscale"
+            name: "Greyscale"
+          - colors:
+              - "#fff"
+              - "#000"
+            slug: "greyscale-negative"
+            name: "Greyscale (Negative)"
+
+      gradients:
+        theme:
+          - name: GovCon Primary Gradient
+            gradient: "linear-gradient(135deg, #285A83E5 0%, #132B3F 100%)"
+            slug: primary-govcon-gradient
+          - name: Primary to secondary
+            gradient: "linear-gradient(135deg, #CEBAFF 0%, #FFC884 100%)"
+            slug: primary-to-secondary
+          - name: Primary to contrast
+            gradient: "linear-gradient(135deg, #CEBAFF 0%, #3556D1 100%)"
+            slug: primary-to-contrast
+          - name: Secondary to light
+            gradient: "linear-gradient(to right bottom, #FFC884, #FFFFFF)"
+            slug: secondary-to-light
+
+    typography:
+      lineHeight: true
+      fontWeight: true
+      fontFamily: true
+      # Check css/components/blocks.css for font sizes classes.
+      fontSizes:
+        theme:
+          - name: Extra Small
+            size: "0.8125rem"
+            slug: extra-small
+          - name: Small
+            size: "0.875rem"
+            slug: small
+          - name: Normal
+            size: "1.25rem"
+            slug: normal
+          - name: Large
+            size: "2rem"
+            slug: large
+          - name: Extra Large
+            size: "4rem"
+            slug: extra-large
+          - name: H1
+            size: "40px"
+            weight: 600
+            lineHeight: "115%"
+            slug: h1
+          - name: H2
+            size: "32px"
+            weight: 600
+            lineHeight: "115%"
+            slug: h2
+          - name: H3
+            size: "22px"
+            weight: 600
+            lineHeight: "115%"
+            slug: h3
+          - name: H4
+            size: "16px"
+            weight: 600
+            lineHeight: "115%"
+            slug: h4
+          - name: H5
+            size: "15px"
+            weight: 500
+            lineHeight: "115%"
+            slug: h5
+          - name: H6
+            size: "13px"
+            weight: 500
+            lineHeight: "115%"
+            slug: h6
+      fontFamilies:
+        theme:
+          - name: Roboto Mono
+            slug: roboto-mono
+            fontFamily: "'Roboto Mono', monospace"
+          - name: Poppins
+            slug: poppins
+            fontFamily: "'Poppins', sans-serif"
+    styles:
+      spacing:
+        blockGap: 1.5rem
+
+    blocks:
+      # core/heading:
+      #   # Setting color to a block type will override the global color settings.
+      #   # Colors set here must be also defined in the global color settings.
+      #   color:
+      #     palette:
+      #       theme:
+      #         - slug: primary
+      #           color: "#CEBAFF"
+      #           name: Primary
+      core/button:
+        border:
+          radius: false
+          color: false
+          style: false
+          width: false

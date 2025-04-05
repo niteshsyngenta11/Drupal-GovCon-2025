@@ -1,0 +1,12 @@
+
+<div class="session-row gap-8 {{ row_classes }}">
+  <div class="session-cell text-left p-8" data-label="Title">
+    {% if url %}
+      <a href="{{ url }}">{{ title }}</a>
+    {% else %}
+      {{ title }}
+    {% endif %}
+  </div>
+  <div class="session-cell text-left p-8" data-label="Conference Year">{{ conference_year }}</div>
+  <div class="session-cell text-left p-8" data-label="Status">{{ status }}</div>
+</div>

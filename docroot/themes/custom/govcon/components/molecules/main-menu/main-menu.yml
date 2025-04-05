@@ -1,0 +1,39 @@
+type: "main"
+menu__items:
+  - title: "About"
+    url: "/about"
+    classes: ""
+    below:
+      - title: "What is Drupal GovCon?"
+        url: "/about-us"
+        classes: ""
+      - title: "Convince Your Boss"
+        url: "#"
+        classes: ""
+      - title: "Previous GovCons"
+        url: "/previous-events"
+        classes: ""
+  - title: "Community"
+    url: "/community"
+    classes: ""
+    below: []
+  - title: "Contact"
+    url: "/contact"
+    classes: ""
+    below: []
+  - title: "Program"
+    url: "/program"
+    classes: ""
+    below: []
+  - title: "Sponsors"
+    url: "/sponsors"
+    classes: ""
+    below: []
+  - title: "Store"
+    url: "/store"
+    classes: ""
+    below: []
+  - title: "Venue"
+    url: "/venue"
+    classes: ""
+    below: []

@@ -1,0 +1,44 @@
+import { Meta, Canvas, Controls, Story } from "@storybook/blocks";
+import * as buttonStories from "./button.stories";
+
+<Meta title="Atoms/Button" of={buttonStories} />
+
+# Button
+
+Buttons trigger actions in your application. Use them wisely.
+
+## **Implementation**
+
+The Button atom component accepts the following props similar to that of link with modifier props in addition:
+
+- `link_url`: Specifies the target URL of the button.
+- `link_target`: Sets the target of the button.
+- `link_title`: Sets the title of the button.
+- `link_content`: Sets the content of the button.
+- `modifier` : Sets the Button Classes
+
+## Variants
+
+### Primary Button
+
+A button with primary emphasis.
+
+<Canvas of={buttonStories.Primary} />
+
+### Secondary Button
+
+A button with secondary emphasis.
+
+<Canvas of={buttonStories.Secondary} />
+
+### Button With Icon
+
+A button with Icon emphasis.
+
+<Canvas of={buttonStories.ButtonWithIcon} />
+
+### Minimal Button
+
+A button with minimal emphasis.
+
+<Canvas of={buttonStories.Minimal} />

@@ -1,0 +1,14 @@
+<div class="{{ background_image ? 'has-background-image storybook-demo' : 'bg-primary-dark' }}" style="--background-image: url('{{  background_image }}'); padding-top: 16px;">
+  <div class="layout-container" id="page-wrapper">
+    {% include "@organisms/header/header.twig" %}
+    <main role="main">
+      <section class="content">
+        <div class="gutenberg-container">
+          {% include "@molecules/patterns/hero-text-with-card/hero-text-with-card.twig" with { heading_color: 'text-light' } %}
+          {% include "@molecules/patterns/featured-section/featured-section.twig" %}
+        </div>
+      </section>
+    </main>
+    {% include "@organisms/footer/footer.twig" %}
+  </div>
+</div>

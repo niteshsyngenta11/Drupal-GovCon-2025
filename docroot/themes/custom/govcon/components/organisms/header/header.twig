@@ -1,0 +1,36 @@
+<header>
+  <div class="site-header">
+    <div class="container d-flex align-center justify-between">
+      <div class="header__branding">
+        <a href="/">
+          {% block header__logo %}
+            {% include '@atoms/logo/logo.twig' with {
+              src_path: src,
+              src_alt: "home",
+            } %}
+          {% endblock %}
+        </a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="header__menu d-flex flex-column">
+        <div class="header__top__menu">
+          {% block header__useraccountmenu %}
+            {% include "@molecules/user-account/user-account.twig" with { menu__items: useraccount_menu, classes: 'upper__nav' } %}
+          {% endblock %}
+        </div>
+        <div class="header__bottom__menu">
+          {% block header__mainnavigation %}
+            {% include "@molecules/main-menu/main-menu.twig" with { menu__items: menuItems, classes: 'header__nav' } %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="ghost"></div>

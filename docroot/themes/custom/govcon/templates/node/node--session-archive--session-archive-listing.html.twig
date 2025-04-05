@@ -1,0 +1,37 @@
+{% set image = content.field_image[0] ?? null %}
+{% set all_presenters = [] %}
+
+{% if content.field_presenter and content.field_presenter[0]['#url'] and content.field_presenter[0]['#title'] %}
+  {% set presenter_url = content.field_presenter[0]['#url'].toString() %}
+  {% set all_presenters = all_presenters|merge([{
+    "link_url": presenter_url,
+    "link_content": content.field_presenter[0]['#title']
+  }]) %}
+{% endif %}
+{% for co_presenter in content.field_co_presenter %}
+  {% if co_presenter['#url'] and co_presenter['#title'] %}
+    {% set co_presenter_url = co_presenter['#url'].toString() %}
+    {% set all_presenters = all_presenters|merge([{
+      "link_url": co_presenter_url,
+      "link_content": co_presenter['#title']
+    }]) %}
+  {% endif %}
+{% endfor %}
+
+{% embed "@molecules/listing-card/listing-card.twig" with {
+    image: image,
+    heading: node.label(),
+    description: content.body[0] ?? null,
+    cta: {
+        url: url,
+        content: "Read More"
+    },
+    session_track: content.field_session_track[0],
+    technical_level: content.field_experience_level[0],
+    conference_year: content.field_conference_year[0],
+    presenters: all_presenters
+} %}
+    {% block listing_image %}
+        {{ content.field_image}}
+    {% endblock %}
+{% endembed %}

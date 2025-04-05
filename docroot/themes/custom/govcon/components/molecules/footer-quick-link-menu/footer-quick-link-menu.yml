@@ -1,0 +1,4 @@
+type: 'footer quick link'
+menu__items:
+  - title: 'Contact'
+    url: '/contact'

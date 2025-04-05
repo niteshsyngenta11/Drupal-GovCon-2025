@@ -1,0 +1,15 @@
+@use '@atoms/colors/color.scss' as color;
+
+.link__demo {
+  a {
+    color: color.$cobalt;
+
+    &.hover {
+      color: color.$indigo;
+    }
+
+    &.visited {
+      color: color.$violet;
+    }
+  }
+}

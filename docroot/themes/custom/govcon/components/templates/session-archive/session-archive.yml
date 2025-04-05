@@ -1,0 +1,52 @@
+session_page_title:
+  value: "Enabling the Change-Makers: Redesigning Princeton's School of Public and International Affairs Website"
+
+presenters:
+  - link_url: "https://www.johndoe.com"
+    link_content: "John Doe's Website"
+  - link_url: "https://www.janesmith.com"
+    link_content: "Jane Smith's Profile"
+  - link_url: "https://www.bobbrown.com"
+    link_content: "Bob Brown's Blog"
+      
+session_recording:
+  label: "Session Recording"
+  value: "https://youtu.be/wEZOqbHI-xc"
+  link_url: "https://youtu.be/wEZOqbHI-xc"
+
+session_presentation:
+  label: "Presentation"
+  value: "https://youtu.be/wEZOqbHI-xc"
+
+session_description:
+  value: "In this session, we will discuss the importance of redesigning Princeton's School of Public and International Affairs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+session_video: '<iframe width="200" height="113" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Session video: Enabling the Change-Makers"></iframe>'
+
+session_experience_level:
+  label: "Experience Level"
+  value: "Beginner"
+
+session_conference_year:
+  label: "Conference Year"
+  value: "2025"
+
+session_date_time:
+  label: "Date/Time"
+  value: "Fri, 09/25/2020 - 1:30pm EDT"
+
+session_room:
+  label: "Room"
+  value: "Mobomo"
+
+session_status:
+  label: "Status"
+  value: "Accepted"
+
+session_track:
+  label: "Session Track"
+  value: "Site Building and Using Drupal"
+
+supporting_document:
+  label: "Supporting Document"
+  value: "Slides for GovCon presentation: 100% Remote - 7 Tips to Successfully Manage a Fully Distributed Workforce"

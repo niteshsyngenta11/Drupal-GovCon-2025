@@ -1,0 +1,48 @@
+import { Meta, Canvas, Controls, Story } from "@storybook/blocks";
+import * as logoStories from "./logo.stories";
+
+<Meta title="Atoms/Logo" of={logoStories} />
+
+# **Logo Component**
+
+The Logo component is used to display different variations of the brand logo. It supports multiple variants based on the logo type.
+
+## **Implementation**
+
+The component uses the following properties:
+
+- **`logo_type`**: Determines which logo variation to display.  
+  - **Use case:** Defines the logo type, such as "primary" or "secondary". If no value is set, the default logo is used.  
+
+- **`storybook`**: Boolean value that determines the logo path.  
+  - **Use case:** When `true`, it uses `"images/"` as the path. Otherwise, it defaults to `"/web/themes/custom/govcon/assets/images/"`.  
+
+- **`src_path`**: The image source URL. _(Required)_  
+  - **Use case:** Specifies the file path of the logo image based on the `logo_type`.  
+
+- **`src_alt`**: Alternative text for accessibility. _(Required)_  
+  - **Use case:** Ensures screen readers can describe the logo for visually impaired users.  
+
+- **`width`**: The width of the logo in pixels. _(Optional, defaults to `"auto"`)_.  
+  - **Use case:** Allows specifying a fixed width for the logo.  
+
+- **`height`**: The height of the logo in pixels. _(Optional, defaults to `"auto"`)_.  
+  - **Use case:** Allows specifying a fixed height for the logo.  
+
+## **Variants**
+
+### 
+### **Default Logo**
+Displays the standard logo without any specific logo type.
+
+<Canvas of={logoStories.Default} />
+
+### **Primary Logo**
+The primary brand logo.
+
+<Canvas of={logoStories.Primary} />
+
+### **Secondary Logo**
+The secondary variation of the brand logo.
+
+<Canvas of={logoStories.Secondary} />

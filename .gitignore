@@ -6,18 +6,18 @@
 
 # Compose-managed files.
 /vendor/
-/web/core/
-/web/modules/contrib/
-/web/themes/contrib/
-/web/profiles/contrib/
+/docroot/core/
+/docroot/modules/contrib/
+/docroot/themes/contrib/
+/docroot/profiles/contrib/
 
 # Ignore configuration files that may contain sensitive information.
-/web/sites/*/services*.yml
+/docroot/sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
-/web/sites/default/files/
-/web/sites/default/settings.local.php
-/web/sites/default/private/
+/docroot/sites/default/files/
+/docroot/sites/default/settings.local.php
+/docroot/sites/default/private/
 /private_files/
 
 node_modules
@@ -27,5 +27,5 @@ node_modules
 # Ignore .vscode folder.
 .vscode/
 
-# Ignore web/libraries.
-/web/libraries/
+# Ignore docroot/libraries.
+/docroot/libraries/

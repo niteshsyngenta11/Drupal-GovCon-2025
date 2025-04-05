@@ -1,0 +1,51 @@
+import { Meta, Story, Controls, Canvas } from '@storybook/addon-docs';
+import * as announcementCard from './announcement-card.stories';
+
+<Meta title="Molecules/Announcement Card" />
+
+# Announcement Card
+
+The **Announcement Card** component displays an individual announcement with a title, date, description, and a call-to-action link.
+
+## Usage
+
+This component is primarily used in **announcement listings** on homepages or news sections.
+
+## **Implementation**
+
+The Announcement Card component displays key details about an announcement, including the title, date, description, and a call-to-action link.
+
+### **Props for the Announcement Card**
+- `title`: Sets the title of the announcement.  
+  **Example:** `"How to Release or Update Your Ticket"`  
+
+- `date`: Defines the date of the announcement.  
+  **Example:** `"August 5, 2024"`  
+
+- `description`: Provides a brief summary of the announcement.  
+  **Example:** `"Schedules change. Things happen. We understand. If you can't make the conference - or the days you're attending have changed - or you forgot to include..."`  
+
+### **Props for the Link Atom**
+- `link_url`: Specifies the target URL of the hyperlink.  
+  **Example:** `"#"`  
+
+- `link_target`: Sets the target of the hyperlink.  
+  **Example:** `"_self"`  
+
+- `link_title`: Sets the title of the hyperlink.  
+  **Example:** `"See Announcement"`  
+
+- `link_content`: Sets the text content of the hyperlink.  
+  **Example:** `"See Announcement"`  
+
+- `link_classes`: Using Button with Icon Class with Arrow by default for this Announcement Card.  
+  **Example:** `[""]`  
+
+
+## Example
+
+<Canvas of={announcementCard.Default} />
+
+## Props
+
+<Controls of={announcementCard.Default} />

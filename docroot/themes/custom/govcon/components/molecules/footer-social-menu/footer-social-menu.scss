@@ -1,0 +1,22 @@
+@use '@atoms/colors/color.scss' as color;
+@use '@base/mixins.scss' as mixins;
+@use "sass:map";
+
+.footer-social-icons {
+  display: flex;
+  column-gap: 20px;
+
+  @include mixins.media-breakpoint-down(md) {
+    justify-content: center;
+  }
+
+  a {
+    font-size: 28px;
+    text-decoration: none;
+    color: map.get(color.$colors, "light");
+    
+    &.ext {
+      display: inline-block;
+    }
+  }
+}

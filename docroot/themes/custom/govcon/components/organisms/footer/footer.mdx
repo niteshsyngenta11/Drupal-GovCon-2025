@@ -1,0 +1,52 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import footerStories from "./footer.stories";
+import footerTwig from "./footer.twig";
+
+<Meta title="Organisms/Footer" of={footerStories} name="Footer Docs" />
+
+# **Footer Component**
+
+The **Footer** component is a structured section at the bottom of the site, containing branding, navigation links, social media icons, and a call-to-action (CTA) section.
+
+## **Component Preview**
+
+<Canvas>
+  <Story name="Footer">
+    {footerTwig({
+      footer_data: footerStories?.args?.footer_data || {},
+      footer_social_menu: footerStories?.args?.footer_social_menu || [],
+      footer_quick_link_menu: footerStories?.args?.footer_quick_link_menu || [],
+      footer_main_menu: footerStories?.args?.footer_main_menu || [],
+    })}
+  </Story>
+</Canvas>
+
+## **Component Structure & Props**
+
+### **Logo (`footer__logo`)**
+The logo displayed in the footer section.
+
+- **`src_path`** – The source URL for the logo image. _(Defaults to `Default.png` if not provided)_
+- **`src_alt`** – Alternative text for accessibility. _(Defaults to `"Footer Logo"`)_
+
+### **Footer Social Icons (`footer__social__icons`)**
+The `footer__social__icons` block renders social media links.
+
+- **`items`** – An array of social media menu items.
+
+### **Quick Links (`footer__quick_links`)**
+The `footer__quick_links` block displays a list of important links.
+
+- **`items`** – An array of quick link menu items.
+
+### **Footer Main Menu (`footer__main_menu`)**
+The `footer__main_menu` block provides primary navigation options.
+
+- **`items`** – An array of footer menu items.
+
+### **Call-to-Action (CTA) (`footer__cta_card`)**
+A section that provides additional information or an action link In Drupal this can be updated from **Configuration > GovCon Custom**.
+
+- **`footer_description`** – A short text description. _(Optional)_
+- **`footer_cta_url`** – The URL for the CTA button. _(Optional)_
+- **`footer_cta_label`** – The label for the CTA button. _(Optional)_

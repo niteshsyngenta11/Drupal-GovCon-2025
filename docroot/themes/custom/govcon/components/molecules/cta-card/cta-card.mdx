@@ -1,0 +1,17 @@
+import { Meta, Story, Canvas, ArgTypes } from "@storybook/blocks";
+import ctaCardStories from "./cta-card.stories";
+import ctaCardTwig from "./cta-card.twig";
+
+<Meta title="Molecules/Footer CTA Card" of={ctaCardStories} name="Footer CTA Card" />
+
+# CTA Card
+
+The **CTA Card** component provides a prominent call-to-action section, displaying a description with a button.
+
+## Component Preview
+
+<Canvas>
+  <Story name="CTA Card">
+    {ctaCardTwig(ctaCardStories.args)}
+  </Story>
+</Canvas>

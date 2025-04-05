@@ -1,0 +1,14 @@
+<div class="sponsors-container container">
+  {% if sponsors_page_title %}
+    <h1 class="typography__heading">{{ sponsors_page_title  ~ "now"|date(" Y") }}</h1>
+  {% endif %}
+
+  {% block view__content %}
+    {% for section in sponsor_sections %}
+      {% include "@molecules/sponsor-listing/sponsor-listing.twig" with {
+        sponsor_heading: section.sponsor_heading,
+        sponsors: section.sponsors
+      } %}
+    {% endfor %}
+  {% endblock view__content %}
+</div>

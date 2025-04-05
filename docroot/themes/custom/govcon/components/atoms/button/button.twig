@@ -1,0 +1,20 @@
+{#
+  /**
+   * Button Component
+   *
+   * This template renders a button using the Link atom.
+   *
+   * Available variables & Class:
+   * - button: Default button class for base styling.
+   * - modifier: Additional button classes to modify the design (e.g., "primary", "secondary", "button-with-icon", "icon--arrow-right", "icon-after").
+   *
+   * Link atom variables:
+   * - link_url: The destination URL for the button.
+   * - link_target: Specifies how the link should be opened (e.g., "_self", "_blank").
+   * - link_content: The text or label displayed on the button.
+   */
+#}
+
+{% include "@atoms/link/link.twig" with {
+  link_classes: ["button", modifier|default('')]
+} %}

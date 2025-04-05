@@ -1,0 +1,34 @@
+name: "GovCon"
+type: theme
+description: "Drupal GovCon theme"
+core_version_requirement: ^10 || ^11
+package: Custom
+screenshot: screenshot-2.png
+"base theme": stable9
+
+# Regions
+regions:
+  header: "Header"
+  content: "Content"
+  footer: "Footer"
+
+libraries:
+  - gutenberg/blocks-view
+  - govcon/global-styling
+
+components:
+  namespaces:
+    atoms:
+      - components/atoms
+    molecules:
+      - components/molecules
+    organisms:
+      - components/organisms
+    templates:
+    - components/templates
+    pages:
+      - components/pages
+    partials:
+      - templates
+    components:
+      - components
