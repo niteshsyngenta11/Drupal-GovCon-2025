@@ -1,0 +1,21 @@
+form.agg-jscss-asyncdefer-settings {
+
+  .fieldgroup {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .form-radios {
+    display: flex;
+  }
+
+  .fieldset__label {
+    min-width: 20%;
+  }
+
+  .form-type--radio {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,10 @@
+name: 'Aggregation JS CSS async defer'
+type: module
+description: 'This module allows you to add attributes async or defer to every library and generate aggregation files with the attributes.'
+package: Performance
+core_version_requirement: ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2024-09-24
+version: '1.0.1'
+project: 'agg_jscss_asyncdefer'
+datestamp: 1727193355

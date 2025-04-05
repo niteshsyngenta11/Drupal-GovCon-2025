@@ -1,0 +1,5 @@
+agg_jscss_asyncdefer.settings:
+  title: "Aggregation JS CSS Async Defer Settings"
+  route_name: agg_jscss_asyncdefer.settings
+  parent: system.performance_settings
+  weight: 99

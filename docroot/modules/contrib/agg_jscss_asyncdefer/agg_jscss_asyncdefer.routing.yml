@@ -1,0 +1,7 @@
+agg_jscss_asyncdefer.settings:
+  path: '/admin/config/development/performance/agg-jscss-asyncdefer'
+  defaults:
+    _title: 'Aggregation JS CSS Async Defer Settings'
+    _form: 'Drupal\agg_jscss_asyncdefer\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

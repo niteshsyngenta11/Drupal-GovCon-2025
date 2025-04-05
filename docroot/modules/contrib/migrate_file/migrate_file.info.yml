@@ -1,0 +1,12 @@
+name: Migrate Files (extended)
+type: module
+description: Additional support for migrating files including importing files, downloading remote files, and using remote uris (without download).
+core_version_requirement: ^10.3 | ^11
+package: Migration
+dependencies:
+  - drupal:migrate
+
+# Information added by Drupal.org packaging script on 2024-11-22
+version: '3.0.0-alpha1'
+project: 'migrate_file'
+datestamp: 1732319733

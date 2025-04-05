@@ -1,0 +1,4 @@
+agg_jscss_asyncdefer.dashboard:
+  title: 'Aggregation JS CSS Async Defer'
+  route_name: agg_jscss_asyncdefer.settings
+  base_route: system.performance_settings

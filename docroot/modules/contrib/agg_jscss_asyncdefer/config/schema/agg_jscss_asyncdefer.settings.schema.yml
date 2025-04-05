@@ -1,0 +1,16 @@
+agg_jscss_asyncdefer.settings.*:
+  type: config_entity
+  label: 'Aggregation JS CSS Async Defer Settings'
+  mapping:
+    js_all:
+      type: string
+      label: 'JS all'
+    css_all:
+      type: string
+      label: 'CSS all'
+    libraries:
+      type: sequence
+      label: 'Defer Libraries'
+      sequence:
+        - type: string
+          label: 'Library'
