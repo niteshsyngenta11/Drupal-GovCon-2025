@@ -7,7 +7,7 @@
 set -eo pipefail
 
 echo "Running frontend build..."
-cd web/themes/custom/govcon
+cd docroot/themes/custom/govcon
 yarn install
 
 run_prod_build() {
