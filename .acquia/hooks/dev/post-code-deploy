@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Define path to docroot
+DOCROOT="/var/www/html/${AH_SITE_NAME}.${AH_SITE_ENVIRONMENT}/docroot"
+
+# Change to repo root
+cd /var/www/html/${AH_SITE_NAME}.${AH_SITE_ENVIRONMENT}
+
+# Run composer install
+composer install --no-dev --optimize-autoloader
+
+# (Optional) Rebuild cache
+drush cr -r "$DOCROOT"
+
+echo "Composer install completed during post-code-deploy."
