@@ -99,6 +99,8 @@ landing_page_allowed_blocks:
   - core/video
 landing_page_allowed_content_block_types: {  }
 landing_page_allowed_drupal_blocks:
+  - search_form_block
+  - system_breadcrumb_block
   - 'views_block:announcements-all_announcement'
   - 'views_block:announcements-recent_announcement'
   - 'views_block:session_archive-session_archive_block'
@@ -125,6 +127,8 @@ landing_page_allowed_image_styles:
   medium: medium
   thumbnail: thumbnail
   wide: wide
+  author_image_style: 0
+  linkit_result_thumbnail: 0
   media_library: 0
 demo_allowed_image_styles:
   full: full

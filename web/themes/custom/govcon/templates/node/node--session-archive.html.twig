@@ -40,7 +40,7 @@
   },
   session_date_time: {
     label: content.field_session_date_time['#title'],
-    value: content.field_session_date_time[0]['#markup']
+    value: content.field_session_date_time[0]['#markup'] is not empty ? content.field_session_date_time[0]['#markup'] ~ ' EDT' : ''
   },
   session_room: {
     label: content.field_room['#title'],

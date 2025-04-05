@@ -140,8 +140,8 @@ content:
     type: datetime_custom
     label: hidden
     settings:
-      timezone_override: America/New_York
-      date_format: 'D, m/d/Y - g:ia T'
+      timezone_override: UTC
+      date_format: 'D, m/d/Y - g:ia'
     third_party_settings: {  }
     weight: 101
     region: content

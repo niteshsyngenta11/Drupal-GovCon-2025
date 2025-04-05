@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Landing Page'
 type: landing_page
-description: null
+description: 'This content type stores the different Landing Pages on the site.'
 help: null
 new_revision: true
 preview_mode: 1
